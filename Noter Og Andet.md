@@ -4347,3 +4347,361 @@ $$
 Bayesian Networks are a fundamental tool in probabilistic reasoning, offering a structured way to model and infer relationships among random variables. Their ability to incorporate both prior knowledge and observational data makes them indispensable in fields ranging from healthcare to machine learning. However, their computational complexity and sensitivity to priors require careful consideration during implementation.
 # 5. Agile Software development
 
+# To be made into notes
+
+## 5.1 Professionel Software Engineering 
+There are still many reports of software projects going wrong and of “software
+failures.” Software engineering is criticized as inadequate for modern software
+development. However, in my opinion, many of these so-called software failures
+are a consequence of two factors:
+
+1. Increasing system complexity As new software engineering techniques help us
+	to build larger, more complex systems, the demands change. Systems have to be
+	built and delivered more quickly; larger, even more complex systems are
+	required; and systems have to have new capabilities that were previously
+	thought to be impossible. New software engineering techniques have to be
+	developed to meet new the challenges of delivering more complex software.
+1. Failure to use software engineering methods It is fairly easy to write computer
+	programs without using software engineering methods and techniques. Many
+	companies have drifted into software development as their products and services
+	have evolved. They do not use software engineering methods in their everyday
+	work. Consequently, their software is often more expensive and less reliable
+	than it should be. We need better software engineering education and training to
+	address this problem.
+
+
+Software engineering is intended to support professional software development
+rather than individual programming. It includes techniques that support program
+specification, design, and evolution, none of which are normally relevant for personal
+software development.
+
+each question and answer is a table row
+
+Question Answer
+What is software? Computer programs and associated documentation. Software
+products may be developed for a particular customer or may be
+developed for a general market.
+What are the attributes of good
+software?
+Good software should deliver the required functionality and
+performance to the user and should be maintainable, dependable
+and usable.
+What is software engineering? Software engineering is an engineering discipline that is concerned
+with all aspects of software production from initial conception to
+operation and maintenance.
+What are the fundamental
+software engineering activities?
+Software specification, software development, software validation
+and software evolution.
+What is the difference between
+software engineering and
+computer science?
+Computer science focuses on theory and fundamentals; software
+engineering is concerned with the practicalities of developing and
+delivering useful software.
+What is the difference between
+software engineering and system
+engineering?
+System engineering is concerned with all aspects of computerbased
+systems development including hardware, software and
+process engineering. Software engineering is part of this more
+general process.
+What are the key challenges
+facing software engineering?
+Coping with increasing diversity, demands for reduced delivery
+times and developing trustworthy software.
+What are the costs of software
+engineering?
+Roughly 60% of software costs are development costs, 40% are
+testing costs. For custom software, evolution costs often exceed
+development costs.
+What are the best software
+engineering techniques and
+methods?
+While all software projects have to be professionally managed and
+developed, different techniques are appropriate for different types
+of system. For example, games should always be developed using
+a series of prototypes whereas safety critical control systems
+require a complete and analyzable specification to be developed.
+There are no methods and techniques that are good for everything.
+What differences has the Internet
+made to software engineering?
+Not only has the Internet led to the development of massive, highly
+distributed, service-based systems, it has also supported the
+creation of an “app” industry for mobile devices which has
+changed the economics of software.
+
+
+Software engineers are concerned with developing software products, that is,
+software that can be sold to a customer. There are two kinds of software product:
+
+1. Generic products These are stand-alone systems that are produced by a
+development organization and sold on the open market to any customer who is
+able to buy them. Examples of this type of product include apps for mobile
+devices, software for PCs such as databases, word processors, drawing packages,
+and project management tools. This kind of software also includes “vertical”
+
+The critical distinction between these types of software is that, in generic products,
+the organization that develops the software controls the software specification.
+This means that if they run into development problems, they can rethink what is to
+be developed. For custom products, the specification is developed and controlled by
+the organization that is buying the software. The software developers must work to
+that specification.
+
+### 5.1.1 Software Engineering 
+
+Software engineering is an engineering discipline that is concerned with all aspects
+of software production from the early stages of system specification through to
+maintaining the system after it has gone into use. In this definition, there are two
+key phrases:
+1. Engineering discipline Engineers make things work. They apply theories, methods,
+and tools where these are appropriate. However, they use them selectively
+and always try to discover solutions to problems even when there are no applicable
+theories and methods. Engineers also recognize that they must work
+within organizational and financial constraints, and they must look for solutions
+within these constraints.
+2. All aspects of software production Software engineering is not just concerned
+with the technical processes of software development. It also includes activities
+such as software project management and the development of tools, methods,
+and theories to support software development.
+
+
+Table 
+Product characteristic Description
+Acceptability Software must be acceptable to the type of users for which it is
+designed. This means that it must be understandable, usable, and
+compatible with other systems that they use.
+Dependability and security Software dependability includes a range of characteristics including
+reliability, security, and safety. Dependable software should not
+cause physical or economic damage in the event of system failure.
+Software has to be secure so that malicious users cannot access or
+damage the system.
+Efficiency Software should not make wasteful use of system resources such
+as memory and processor cycles. Efficiency therefore includes
+responsiveness, processing time, resource utilization, etc.
+Maintainability Software should be written in such a way that it can evolve to
+meet the changing needs of customers. This is a critical attribute
+because software change is an inevitable requirement of a
+changing business environment.
+
+
+important so highlight it or something
+
+Software engineering is important for two reasons:
+1. More and more, individuals and society rely on advanced software systems. We need
+to be able to produce reliable and trustworthy systems economically and quickly.
+2. It is usually cheaper, in the long run, to use software engineering methods and
+techniques for professional software systems rather than just write programs as
+
+important so highlight it or something
+
+Four fundamental activities are common to all
+software processes.
+1. Software specification, where customers and engineers define the software that
+is to be produced and the constraints on its operation.
+2. Software development, where the software is designed and programmed.
+3. Software validation, where the software is checked to ensure that it is what the
+customer requires.
+4. Software evolution, where the software is modified to reflect changing customer
+and market requirements.
+
+there are four related issues that affect many different types of software:
+
+1. Heterogeneity Increasingly, systems are required to operate as distributed systems
+across networks that include different types of computer and mobile
+devices. As well as running on general-purpose computers, software may also
+have to execute on mobile phones and tablets. You often have to integrate new
+software with older legacy systems written in different programming languages.
+The challenge here is to develop techniques for building dependable software
+that is flexible enough to cope with this heterogeneity.
+2. Business and social change Businesses and society are changing incredibly
+quickly as emerging economies develop and new technologies become available.
+They need to be able to change their existing software and to rapidly
+develop new software. Many traditional software engineering techniques are
+time consuming, and delivery of new systems often takes longer than planned.
+They need to evolve so that the time required for software to deliver value to its
+customers is reduced.
+3. Security and trust As software is intertwined with all aspects of our lives, it is
+essential that we can trust that software. This is especially true for remote software
+systems accessed through a web page or web service interface. We have to
+make sure that malicious users cannot successfully attack our software and that
+information security is maintained.
+4. Scale Software has to be developed across a very wide range of scales, from
+very small embedded systems in portable or wearable devices through to
+Internet-scale, cloud-based systems that serve a global community.
+
+### 5.1.2 Software Engineering Diversity
+
+There are many different types of application, including:
+
+Important highlight or something or make them into subheaders
+
+1. Stand-alone applications These are application systems that run on a personal
+computer or apps that run on a mobile device. They include all necessary functionality
+and may not need to be connected to a network. Examples of such
+applications are office applications on a PC, CAD programs, photo manipulation
+software, travel apps, productivity apps, and so on.
+2. Interactive transaction-based applications These are applications that execute
+on a remote computer and that are accessed by users from their own computers,
+phones, or tablets. Obviously, these include web applications such as e-commerce
+applications where you interact with a remote system to buy goods and services.
+This class of application also includes business systems, where a business
+provides access to its systems through a web browser or special-purpose client
+program and cloud-based services, such as mail and photo sharing. Interactive
+applications often incorporate a large data store that is accessed and updated in
+each transaction.
+3. Embedded control systems These are software control systems that control and
+manage hardware devices. Numerically, there are probably more embedded systems
+than any other type of system. Examples of embedded systems include the
+software in a mobile (cell) phone, software that controls antilock braking in a
+car, and software in a microwave oven to control the cooking process.
+4. Batch processing systems These are business systems that are designed to process
+data in large batches. They process large numbers of individual inputs to
+create corresponding outputs. Examples of batch systems are periodic billing
+systems, such as phone billing systems, and salary payment systems.
+5. Entertainment systems These are systems for personal use that are intended to
+entertain the user. Most of these systems are games of one kind or another,
+which may run on special-purpose console hardware. The quality of the user
+interaction offered is the most important distinguishing characteristic of entertainment
+systems.
+6. Systems for modeling and simulation These are systems that are developed by
+scientists and engineers to model physical processes or situations, which include
+many separate, interacting objects. These are often computationally intensive
+and require high-performance parallel systems for execution.
+7. Data collection and analysis systems Data collection systems are systems that
+collect data from their environment and send that data to other systems for processing.
+The software may have to interact with sensors and often is installed in
+a hostile environment such as inside an engine or in a remote location. “Big
+data” analysis may involve cloud-based systems carrying out statistical analysis
+and looking for relationships in the collected data.
+8. Systems of systems These are systems, used in enterprises and other large organizations,
+that are composed of a number of other software systems. Some of
+these may be generic software products, such as an ERP system. Other systems
+in the assembly may be specially written for that environment.
+
+Important highlight or something or make them into subheaders
+
+Nevertheless, there are software engineering fundamentals that apply to all types
+of software systems:
+1. They should be developed using a managed and understood development process.
+The organization developing the software should plan the development
+process and have clear ideas of what will be produced and when it will be completed.
+Of course, the specific process that you should use depends on the type
+of software that you are developing.
+2. Dependability and performance are important for all types of system. Software
+should behave as expected, without failures, and should be available for use
+when it is required. It should be safe in its operation and, as far as possible,
+should be secure against external attack. The system should perform efficiently
+and should not waste resources.
+3. Understanding and managing the software specification and requirements (what
+the software should do) are important. You have to know what different customers
+and users of the system expect from it, and you have to manage their expectations
+so that a useful system can be delivered within budget and to schedule.
+4. You should make effective use of existing resources. This means that, where
+appropriate, you should reuse software that has already been developed rather
+than write new software
+
+### 5.1.3 Software Engineering Ethics
+
+1. Confidentiality You should normally respect the confidentiality of your employers
+or clients regardless of whether or not a formal confidentiality agreement
+has been signed.
+2. Competence You should not misrepresent your level of competence. You should
+not knowingly accept work that is outside your competence.
+3. Intellectual property rights You should be aware of local laws governing the
+use of intellectual property such as patents and copyright. You should be careful
+to ensure that the intellectual property of employers and clients is protected.
+4. Computer misuse You should not use your technical skills to misuse other people’s
+computers. Computer misuse ranges from relatively trivial (game playing
+on an employer’s machine) to extremely serious (dissemination of viruses or
+other malware).
+
+## 5.2 Software Processes 
+when describing processes, it is also important to describe who is
+involved, what is produced, and conditions that influence the sequence of activities:
+1. Products or deliverables are the outcomes of a process activity. For example, the
+outcome of the activity of architectural design may be a model of the software
+architecture.
+2. Roles reflect the responsibilities of the people involved in the process. Examples
+of roles are project manager, configuration manager, and programmer.
+3. Pre- and postconditions are conditions that must hold before and after a process
+activity has been enacted or a product produced. For example, before architectural
+design begins, a precondition may be that the consumer has approved all
+requirements; after this activity is finished, a postcondition might be that the
+UML models describing the architecture have been reviewed.
+
+### 5.2.1 Software Process Model
+
+Important highlight or something
+
+
+You can think of them as process frameworks that may be extended and adapted to create
+more specific software engineering processes.
+The general process models that I cover here are:
+1. The waterfall model This takes the fundamental process activities of specification,
+development, validation, and evolution and represents them as separate
+process phases such as requirements specification, software design, implementation,
+and testing.
+2. Incremental development This approach interleaves the activities of specification,
+development, and validation. The system is developed as a series of versions
+(increments), with each version adding functionality to the previous version.
+3. Integration and configuration This approach relies on the availability of reusable
+components or systems. The system development process focuses on
+configuring these components for use in a new setting and integrating them
+into a system.
+
+#### 5.2.1.1 The Waterfall Method
+
+![[Pasted image 20240904223553.png]]
+
+The first published model of the software development process was derived from
+engineering process models used in large military systems engineering (Royce
+1970). It presents the software development process as a number of stages, as shown
+in Figure 2.1. Because of the cascade from one phase to another, this model is known
+as the waterfall model or software life cycle. The waterfall model is an example of a
+plan-driven process. In principle at least, you plan and schedule all of the process
+activities before starting software development.
+The stages of the waterfall model directly reflect the fundamental software development
+activities:
+
+1. Requirements analysis and definition The system’s services, constraints, and
+goals are established by consultation with system users. They are then defined
+in detail and serve as a system specification.
+2. System and software design The systems design process allocates the requirements
+to either hardware or software systems. It establishes an overall system
+architecture. Software design involves identifying and describing the fundamental
+software system abstractions and their relationships.
+3. Implementation and unit testing During this stage, the software design is realized
+as a set of programs or program units. Unit testing involves verifying that
+each unit meets its specification.
+4. Integration and system testing The individual program units or programs are
+integrated and tested as a complete system to ensure that the software
+requirements have been met. After testing, the software system is delivered
+to the customer.
+5. Operation and maintenance Normally, this is the longest life-cycle phase. The
+system is installed and put into practical use. Maintenance involves correcting
+errors that were not discovered in earlier stages of the life cycle, improving the
+implementation of system units, and enhancing the system’s services as new
+requirements are discovered.
+
+The need for early commitment and system rework when changes are
+made means that the waterfall model is only appropriate for some types of system:
+1. Embedded systems where the software has to interface with hardware systems.
+Because of the inflexibility of hardware, it is not usually possible to delay decisions
+on the software’s functionality until it is being implemented.
+2. Critical systems where there is a need for extensive safety and security analysis
+of the software specification and design. In these systems, the specification and
+design documents must be complete so that this analysis is possible. Safety related
+problems in the specification and design are usually very expensive to
+correct at the implementation stage.
+3. Large software systems that are part of broader engineering systems developed
+by several partner companies. The hardware in the systems may be developed
+using a similar model, and companies find it easier to use a common model for
+hardware and software. Furthermore, where several companies are involved,
+complete specifications may be needed to allow for the independent development
+of different subsystems.
+The waterfall model is not the right process model in situations where informal
+team communication is possible and software requirements change quickly. Iterative
+development and agile methods are better for these systems.
+
+#### 5.2.1.2 The Incremental Development

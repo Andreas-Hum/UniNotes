@@ -23,9 +23,11 @@
             "id": "29dde95d0a404a6a",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.6.7"
+                "file": "Noter Og Andet.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -96,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Noter Og Andet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Noter Og Andet.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Noter Og Andet.md"
+              }
             }
           }
         ]
@@ -155,6 +161,10 @@
   },
   "active": "29dde95d0a404a6a",
   "lastOpenFiles": [
+    "Pasted image 20240904223553.png",
+    "Pasted image 20240904185445.png",
+    "Generalt/AI/Maze/Maze Solver Understanding Search Problems.md",
+    "Generalt/AI/Maze/images/Pasted image 20240824150746.png",
     "Generalt/AI/Tic tac Toe/TicTacToeAI.ipynb",
     "Generalt/AI/Tic tac Toe/Tic Tac Toe Understanding Adversarial Search and the Minimax AlgorithmUntitled.md",
     "Generalt/AI/Tic tac Toe",
@@ -167,11 +177,8 @@
     "Generalt/AI/AI examples I made/Tic tac Toe/Tic Tac Toe Understanding Adversarial Search and the Minimax AlgorithmUntitled.md",
     "Generalt/AI/AI examples I made/Tic tac Toe",
     "Generalt/AI/AI examples I made/Maze solver/TicTacToeAI.ipynb",
-    "Generalt/AI/Maze/images/AIMazeSearch.ipynb",
     "Generalt/AI/AI examples I made/Maze solver/Maze Solver Understanding Search Problems.md",
-    "Generalt/AI/Maze/images/Maze Solver Understanding Search Problems.md",
     "Generalt/AI/Maze/images/Pasted image 20240824150729.png",
-    "Generalt/AI/Maze/images/Pasted image 20240824150746.png",
     "Generalt/AI/Maze/images/Pasted image 20240824150701.png",
     "Generalt/AI/Maze/images/Pasted image 20240824150627.png",
     "Noter Og Andet.md",

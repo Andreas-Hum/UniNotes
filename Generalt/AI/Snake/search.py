@@ -81,8 +81,7 @@ class SnakeAI:
 
             for cur_state, action in actions:
                 if cur_state not in explored and not frontier.contains_state(cur_state):
-                    next_state = self.transition(state, cur_state, action)
-                    cost = self.calculate_cost(next_state, cur_state)
+                    cost = self.calculate_cost(state, cur_state)
                     frontier.add(cur_state, current_node, action, cost)
 
         # If no solution is found, switch to safe mode
@@ -115,105 +114,24 @@ class SnakeAI:
         return valid_moves
 
     def calculate_cost(self, state, position):
-        euclidean_distance = self.euclidean(position, state["food"])
-        flood_fill_score = self.flood_fill(state["grid"], position)
-        return euclidean_distance - flood_fill_score
+        return self.euclidean(position, state["food"])
 
     def euclidean(self, pos1, pos2):
         x1, y1 = pos1
         x2, y2 = pos2
         return math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
 
-    def flood_fill(self, grid, position):
-        visited = set()
-        stack = [position]
-        count = 0
-
-        while stack:
-            cy, cx = stack.pop()
-            if (
-                (cy, cx) in visited
-                or cy < 0
-                or cy >= len(grid)
-                or cx < 0
-                or cx >= len(grid[0])
-                or grid[cy][cx] == 1
-            ):
-                continue
-            visited.add((cy, cx))
-            count += 1
-            stack.extend([(cy - 1, cx), (cy + 1, cx), (cy, cx - 1), (cy, cx + 1)])
-
-        return count
-
-    def transition(self, state, position, action):
-        new_state = {
-            "snake": state["snake"][:],
-            "food": state["food"],
-            "score": state["score"],
-            "is_over": state["is_over"],
-            "grid": [row[:] for row in state["grid"]],
-            "head": position,
-            "direction": action,
-        }
-
-        head_y, head_x = position
-
-        if action == UP:
-            new_head = (head_y - 1, head_x)
-        elif action == RIGHT:
-            new_head = (head_y, head_x + 1)
-        elif action == DOWN:
-            new_head = (head_y + 1, head_x)
-        elif action == LEFT:
-            new_head = (head_y, head_x - 1)
-
-        # Check if snake runs into the wall or itself
-        if (
-            new_head[0] < 0
-            or new_head[0] >= len(new_state["grid"])
-            or new_head[1] < 0
-            or new_head[1] >= len(new_state["grid"][0])
-            or new_head in new_state["snake"]
-        ):
-            new_state["is_over"] = True
-            return new_state
-
-        # Check if snake eats the food
-        if new_head == new_state["food"]:
-            new_state["snake"].insert(0, new_head)
-            new_state["food"] = self._generate_food(new_state["grid"], new_state["snake"])
-            new_state["score"] += 1
-        else:
-            new_state["snake"].insert(0, new_head)
-            new_state["snake"].pop()
-
-        new_state["grid"] = self.update_grid(new_state["grid"], new_state["snake"], new_state["food"])
-
-        return new_state
-
-    def _generate_food(self, grid, snake):
-        while True:
-            food = (
-                random.randint(0, len(grid) - 1),
-                random.randint(0, len(grid[0]) - 1),
-            )
-            if food not in snake:
-                return food
-
-    def update_grid(self, grid, snake, food):
-        new_grid = [[0 for _ in range(len(grid[0]))] for _ in range(len(grid))]
-        for y, x in snake:
-            new_grid[y][x] = 1
-        new_grid[food[0]][food[1]] = 2  # Represent food with 2
-        return new_grid
+    def manhatten(self, pos1, pos2):
+        x1, y1 = pos1
+        x2, y2 = pos2
+        return abs(x1 - x2) + abs(y1 - y2)
 
     def safe_mode(self, state):
         possible_moves = self.get_valid_moves(state["grid"], state["head"])
         if possible_moves:
             best_move = max(
                 possible_moves,
-                key=lambda move: self.flood_fill(state["grid"], move[0]),
+                key=lambda move: self.manhatten(move[0], state["food"]),
             )
             return [best_move[1]]
         return []

@@ -16,7 +16,7 @@ GREEN = (0, 255, 0)
 GRAY = (40, 40, 40)
 
 # Game dimensions
-WIDTH, HEIGHT = 600, 400
+WIDTH, HEIGHT = 1000, 600
 BLOCK_SIZE = 20
 
 # Directions
@@ -193,7 +193,7 @@ class SnakeGame:
 def game_loop(snake_game, command_queue, move_event):
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
     clock = pygame.time.Clock()
-    FPS = 30
+    FPS = 60
 
     while not snake_game.is_over:
         for event in pygame.event.get():
