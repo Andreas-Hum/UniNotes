@@ -13,13 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Generalt/Math/Automata and Languages Definitions.md",
+                "file": "Noter Og Andet.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "29dde95d0a404a6a",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.7"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +96,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Generalt/Math/Automata and Languages Definitions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +112,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Generalt/Math/Automata and Languages Definitions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +133,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Generalt/Math/Automata and Languages Definitions.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,30 +153,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d7d3902ba5e037c6",
+  "active": "29dde95d0a404a6a",
   "lastOpenFiles": [
-    "5-semester/Agile Software/Exercices/Lecture 01 Group Exercises (1).docx",
-    "Generalt/Patterns for common problems.md",
+    "Generalt/AI/Tic tac Toe/TicTacToeAI.ipynb",
+    "Generalt/AI/Tic tac Toe/Tic Tac Toe Understanding Adversarial Search and the Minimax AlgorithmUntitled.md",
+    "Generalt/AI/Tic tac Toe",
+    "Generalt/AI/Snake/__pycache__/search.cpython-311.pyc",
+    "Generalt/AI/Snake/__pycache__",
+    "Generalt/AI/Snake/Snake.py",
+    "Generalt/AI/Snake/search.py",
+    "Generalt/AI/Snake",
+    "Generalt/AI/AI examples I made/Tic tac Toe/TicTacToeAI.ipynb",
+    "Generalt/AI/AI examples I made/Tic tac Toe/Tic Tac Toe Understanding Adversarial Search and the Minimax AlgorithmUntitled.md",
+    "Generalt/AI/AI examples I made/Tic tac Toe",
+    "Generalt/AI/AI examples I made/Maze solver/TicTacToeAI.ipynb",
+    "Generalt/AI/Maze/images/AIMazeSearch.ipynb",
+    "Generalt/AI/AI examples I made/Maze solver/Maze Solver Understanding Search Problems.md",
+    "Generalt/AI/Maze/images/Maze Solver Understanding Search Problems.md",
+    "Generalt/AI/Maze/images/Pasted image 20240824150729.png",
+    "Generalt/AI/Maze/images/Pasted image 20240824150746.png",
+    "Generalt/AI/Maze/images/Pasted image 20240824150701.png",
+    "Generalt/AI/Maze/images/Pasted image 20240824150627.png",
+    "Noter Og Andet.md",
     "Generalt/Math/Automata and Languages Definitions.md",
+    "Generalt/Patterns for common problems.md",
     "Generalt/AI/General Concepts and Techniques Overview.md",
     "Reading-other/Tansitions and trees.md",
     "Reading-other/Programming language design and impmentation.md",
     "Reading-other/Introduction to the theory of computations.md",
     "Reading-other/Introduction to compiler design.md",
     "Reading-other/CS-A programmers perspective.md",
-    "Noter Og Andet.md",
-    "5-semester/Machine intelligence/Images",
-    "5-semester/Database Systems/Images",
-    "5-semester/Agile Software/Images",
-    "5-semester/Machine intelligence/Exercices",
-    "5-semester/Database Systems/Exercices",
-    "5-semester/Agile Software/Exercices",
-    "5-semester/Machine intelligence/Lectures",
-    "5-semester/Database Systems/Untitled/Untitled",
-    "5-semester/Database Systems/Lectures",
-    "5-semester/Agile Software/Lectures",
     "5-semester/Untitled.md",
-    "Generalt/AI/AI examples I made/Maze solver/Maze Solver Understanding Search Problems.md",
     "Generalt/AI/AI examples I made/Maze solver/Tic Tac Toe Understanding Adversarial Search and the Minimax AlgorithmUntitled.md",
     "4.3.2 Probability Density Function.md",
     "Tic Tac Toe Minimax.md",
