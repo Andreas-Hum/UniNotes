@@ -16,7 +16,7 @@ GREEN = (0, 255, 0)
 GRAY = (40, 40, 40)
 
 # Game dimensions
-WIDTH, HEIGHT = 1000, 600
+WIDTH, HEIGHT = 1000, 1000
 BLOCK_SIZE = 20
 
 # Directions

@@ -13,14 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Noter Og Andet.md",
+                "file": "5-semester/Machine intelligence/Lectures/1/Noter.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "fdad2b5d354b10f8",
+        "type": "tabs",
+        "children": [
           {
-            "id": "29dde95d0a404a6a",
+            "id": "d0b5fe271087248f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +37,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,9 +164,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "29dde95d0a404a6a",
+  "active": "d0b5fe271087248f",
   "lastOpenFiles": [
+    "5-semester/Machine intelligence/Lectures/1/Noter.md",
     "Noter Og Andet.md",
+    "5-semester/Machine intelligence/Lectures/1",
     "Pasted image 20240905022444.png",
     "Pasted image 20240905021311.png",
     "Pasted image 20240904235145.png",
@@ -180,7 +187,6 @@
     "Generalt/AI/AI examples I made/Tic tac Toe/TicTacToeAI.ipynb",
     "Generalt/AI/AI examples I made/Tic tac Toe/Tic Tac Toe Understanding Adversarial Search and the Minimax AlgorithmUntitled.md",
     "Generalt/AI/AI examples I made/Tic tac Toe",
-    "Generalt/AI/AI examples I made/Maze solver/TicTacToeAI.ipynb",
     "Generalt/AI/AI examples I made/Maze solver/Maze Solver Understanding Search Problems.md",
     "Generalt/AI/Maze/images/Pasted image 20240824150729.png",
     "Generalt/AI/Maze/images/Pasted image 20240824150701.png",

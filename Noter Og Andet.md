@@ -55,6 +55,7 @@ Determanistic when the state resulting from an action is determined by an action
 
 Stochastic when there is a probability distribution over the resulting states
 
+Symbolic vs subsymbolic
 
 # 1. General Algorithms/Data Structures
 ## 1.1 Data Structures
@@ -4901,3 +4902,16 @@ details left to the programmer. Alternatively, it may be a list of
 changes to be made to a reusable component or a detailed design model
 expressed in the UML. The design model may then be used to automatically
 generate an implementation.
+
+
+
+
+
+
+
+
+
+
+
+
+
