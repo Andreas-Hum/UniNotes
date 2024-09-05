@@ -33,10 +33,6 @@ class Frontier:
         self.frontier = []
         self.goal = goal
 
-    def euclidean(self, state):
-        x1, y1 = state
-        x2, y2 = self.goal
-        return math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
 
     def add(self, state, parent, action, cost):
         if not isinstance(state, tuple):

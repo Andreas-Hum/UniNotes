@@ -2,6 +2,60 @@
 **Andreas Hummelmose**  
 *Computer Science Student, 5th Semester, Aalborg University*  
 [LinkedIn: Andreas Hummelmose](https://www.linkedin.com/in/andreas-hummelmose-77580a252/)
+
+# Noter til AI der skal addes
+
+Purpose agent,
+
+organization (group of agents working together)
+
+Trading agent (it gets goods and services for the user)
+
+Design space (might be state space)
+
+the world state so the state of the world 
+
+belief state (internal state)
+
+eviorment state
+
+
+
+The ten dimensions
+
+1 modularity
+
+2 planning horizon
+
+3 representation
+
+relation and individiual vproperty
+
+features of the state (could be position, direction or something) and why its good and sometimes easier to look for features instead of specific states
+
+4  Computational limits
+
+perfect rationality
+bounded rationality
+
+5 learning
+
+Knowledge is given or learned
+
+6 uncertainty
+
+Sensing uncertainty
+
+Fully observable means the agent knows the exact state of the world from the stimuli 
+Partially observable the agent does not directly observer the world state, this occurs when there are many possible states that can result from the same stimuli or when stimuli are misleading
+
+effect uncertainty
+
+Determanistic when the state resulting from an action is determined by an action and  the prior state
+
+Stochastic when there is a probability distribution over the resulting states
+
+
 # 1. General Algorithms/Data Structures
 ## 1.1 Data Structures
 ### 1.1.1 Linear Data Structures
@@ -2696,11 +2750,11 @@ Uninformed search, also known as blind search, is a type of search strategy that
 #### Common Uninformed Search Algorithms
 
 ##### Breadth-First Search (BFS)
- ![[#1.3.1.2 Breadth-First Search (BFS)|Breadth-First Search (BFS)]] 
+ ![[#1.2.1.3 Breadth-First Search (BFS)]] 
 ##### Depth-First Search (DFS) 
- ![[#1.3.1.3 Depth-First Search (DFS)|Depth-First Search (DFS)]]
+ ![[#1.2.1.4 Depth-First Search (DFS)|Depth-First Search (DFS)]]
 ##### Uniform-Cost Search (UCS) 
-![[#1.3.1.5 Uniform-Cost Search (UCS)|Uniform-Cost Search (UCS)]]
+![[#1.2.1.8 Uniform-Cost Search (UCS)|Uniform-Cost Search (UCS)]]
 #### Example:
 - In a maze-solving problem, a breadth-first search would explore all possible paths one step at a time, ensuring that the first solution found is the shortest in terms of the number of steps.
 
@@ -4705,3 +4759,145 @@ team communication is possible and software requirements change quickly. Iterati
 development and agile methods are better for these systems.
 
 #### 5.2.1.2 The Incremental Development
+Incremental development is based on the idea of developing an initial implementation,
+getting feedback from users and others, and evolving the software through
+several versions until the required system has been developed (Figure 2.2).
+Specification, development, and validation activities are interleaved rather than
+separate,
+with rapid feedback across activities.
+
+Important 
+Incremental software development, which is a fundamental part of agile
+development methods, is better than a waterfall approach for systems whose
+requirements are likely to change during the development process. This is the
+case for most business systems and software products. Incremental development
+reflects the way that we solve problems. We rarely work out a complete problem
+solution in advance but move toward a solution in a series of steps, backtracking
+when we realize that we have made a mistake. By developing the
+software incrementally, it is cheaper and easier to make changes in the software
+as it is being developed.
+Each increment or version of the system incorporates some of the functionality
+that is needed by the customer. Generally, the early increments of the system
+include the most important or most urgently required functionality. This means
+that the customer or user can evaluate the system at a relatively early stage in
+the development to see if it delivers what is required. If not, then only the current
+increment has to be changed and, possibly, new functionality defined for
+later increments.
+Incremental development has three major advantages over the waterfall model:
+
+1. The cost of implementing requirements changes is reduced. The amount of
+analysis and documentation that has to be redone is significantly less than is
+required with the waterfall model.
+2. It is easier to get customer feedback on the development work that has been
+done. Customers can comment on demonstrations of the software and see how
+much has been implemented. Customers find it difficult to judge progress from
+software design documents.
+3. Early delivery and deployment of useful software to the customer is possible,
+even if all of the functionality has not been included. Customers are able to use
+and gain value from the software earlier than is possible with a waterfall process.
+From a management perspective, the incremental approach has two problems:
+1. The process is not visible. Managers need regular deliverables to measure progress.
+If systems are developed quickly, it is not cost effective to produce documents
+that reflect every version of the system.
+2. System structure tends to degrade as new increments are added. Regular change
+leads to messy code as new functionality is added in whatever way is possible.
+It becomes increasingly difficult and costly to add new features to a system. To
+reduce structural degradation and general code messiness, agile methods suggest
+that you should regularly refactor (improve and restructure) the software.
+
+The problems of incremental development become particularly acute for large,
+complex, long-lifetime systems, where different teams develop different parts of the
+system. Large systems need a stable framework or architecture, and the responsibilities
+of the different teams working on parts of the system need to be clearly
+defined with respect to that architecture. This has to be planned in advance rather
+than developed incrementally.
+
+#### 5.2.1.2 Integration And Configuration
+![[Pasted image 20240904235145.png]]
+
+Three types of software components are frequently reused:
+1. Stand-alone application systems that are configured for use in a particular environment.
+These systems are general-purpose systems that have many features,
+but they have to be adapted for use in a specific application.
+2. Collections of objects that are developed as a component or as a package to be
+integrated with a component framework such as the Java Spring framework
+(Wheeler and White 2013).
+3. Web services that are developed according to service standards and that are
+available for remote invocation over the Internet
+
+based on
+integration and configuration. The stages in this process are:
+1. Requirements specification The initial requirements for the system are proposed.
+These do not have to be elaborated in detail but should include brief
+descriptions of essential requirements and desirable system features.
+2. Software discovery and evaluation Given an outline of the software requirements,
+a search is made for components and systems that provide the functionality
+required. Candidate components and systems are evaluated to see if
+they meet the essential requirements and if they are generally suitable for
+use in the system.
+3. Requirements refinement During this stage, the requirements are refined using
+information about the reusable components and applications that have been
+discovered. The requirements are modified to reflect the available components,
+and the system specification is re-defined. Where modifications are
+impossible, the component analysis activity may be reentered to search for
+alternative solutions.
+4. Application system configuration If an off-the-shelf application system that
+meets the requirements is available, it may then be configured for use to create
+the new system.
+5. Component adaptation and integration If there is no off-the-shelf system, individual
+reusable components may be modified and new components developed.
+These are then integrated to create the system.
+
+### 5.2.2 Process Activities
+
+The four basic process activities of specification, development, validation, and
+evolution are organized differently in different development processes. In the waterfall
+model, they are organized in sequence, whereas in incremental development
+they are interleaved. How these activities are carried out depends on the type of
+software being developed, the experience and competence of the developers, and the
+type of organization developing the software.
+
+#### 5.2.2.1 Software Specifications
+![[Pasted image 20240905021311.png]]
+
+There are three main activities in the requirements engineering process:
+1. Requirements elicitation and analysis This is the process of deriving the system
+requirements through observation of existing systems, discussions with potential
+users and procurers, task analysis, and so on. This may involve the development
+of one or more system models and prototypes. These help you understand
+the system to be specified.
+2. Requirements specification Requirements specification is the activity of translating
+the information gathered during requirements analysis into a document
+that defines a set of requirements. Two types of requirements may be included
+in this document. User requirements are abstract statements of the system
+requirements for the customer and end-user of the system; system requirements
+are a more detailed description of the functionality to be provided.
+3. Requirements validation This activity checks the requirements for realism,
+consistency, and completeness. During this process, errors in the requirements
+document are inevitably discovered. It must then be modified to correct
+these problems.
+
+
+#### 5.2.2.2 Software Design And Implementation
+![[Pasted image 20240905022444.png]]
+
+Figure 2.5
+shows four activities that may be part of the design process for information systems:
+1. Architectural design, where you identify the overall structure of the system, the
+principal components (sometimes called subsystems or modules), their relationships,
+and how they are distributed.
+2. Database design, where you design the system data structures and how these are
+to be represented in a database. Again, the work here depends on whether an
+existing database is to be reused or a new database is to be created.
+3. Interface design, where you define the interfaces between system components.
+This interface specification must be unambiguous. With a precise interface, a
+component may be used by other components without them having to know
+how it is implemented. Once interface specifications are agreed, the components
+can be separately designed and developed.
+4. Component selection and design, where you search for reusable components
+and, if no suitable components are available, design new software components.
+The design at this stage may be a simple component description with the implementation
+details left to the programmer. Alternatively, it may be a list of
+changes to be made to a reusable component or a detailed design model
+expressed in the UML. The design model may then be used to automatically
+generate an implementation.
