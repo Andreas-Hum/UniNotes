@@ -3,59 +3,9 @@
 *Computer Science Student, 5th Semester, Aalborg University*  
 [LinkedIn: Andreas Hummelmose](https://www.linkedin.com/in/andreas-hummelmose-77580a252/)
 
-# Noter til AI der skal addes
 
-Purpose agent,
+# AI noter der skal addes 
 
-organization (group of agents working together)
-
-Trading agent (it gets goods and services for the user)
-
-Design space (might be state space)
-
-the world state so the state of the world 
-
-belief state (internal state)
-
-eviorment state
-
-
-
-The ten dimensions
-
-1 modularity
-
-2 planning horizon
-
-3 representation
-
-relation and individiual vproperty
-
-features of the state (could be position, direction or something) and why its good and sometimes easier to look for features instead of specific states
-
-4  Computational limits
-
-perfect rationality
-bounded rationality
-
-5 learning
-
-Knowledge is given or learned
-
-6 uncertainty
-
-Sensing uncertainty
-
-Fully observable means the agent knows the exact state of the world from the stimuli 
-Partially observable the agent does not directly observer the world state, this occurs when there are many possible states that can result from the same stimuli or when stimuli are misleading
-
-effect uncertainty
-
-Determanistic when the state resulting from an action is determined by an action and  the prior state
-
-Stochastic when there is a probability distribution over the resulting states
-
-Symbolic vs subsymbolic
 
 # 1. General Algorithms/Data Structures
 ## 1.1 Data Structures
@@ -2235,8 +2185,26 @@ END STRUCT
 #### 2.1.1.2 Agent
 An agent is an entity that perceives its environment and acts upon that environment.
 
+##### Types of Agents
+- **Autonomous Agent**: Operates with no human interaction.
+  - **Example**: A self-driving car navigating through traffic without human intervention.
+- **Semi-Autonomous Agent**: Requires minimal human interaction.
+  - **Example**: A drone that autonomously follows a path but requires manual control for takeoff and landing.
+- **Software Agent (Bot)**: Operates as a software entity to perform specific tasks.
+  - **Example**: A chatbot providing customer service on a website.
+- **Purpose Agent**: Focuses on achieving specific goals.
+  - **Example**: A recommendation system suggesting products based on user preferences.
+- **Organization (Group of Agents)**: A collection of agents working together towards a common objective.
+  - **Example**: Multiple robots in a warehouse collaborating to sort and deliver packages.
+- **Trading Agent**: Specializes in obtaining goods and services for the user.
+  - **Example**: An algorithmic trading bot executing buy and sell orders on the stock market.
+##### Components
+- **State**: The current situation or environment in which the agent operates.
+- **Percept**: Information received from the environment.
+- **Action**: Operations the agent can perform based on its perception.
 ##### Example:
 - A robot navigating through a maze is an agent. It perceives its surroundings using sensors (like detecting walls) and acts by moving in different directions to find the exit.
+
 
 ##### Pseudocode:
 ```plaintext
@@ -2849,6 +2817,150 @@ FUNCTION TheoremProvingByContradiction(KB, A) -> Boolean
     RETURN False // No contradiction found, A is not proven
 END FUNCTION
 ```
+
+## 2.4 Agent Design Dimensions
+### 2.4.1 Agent
+An agent is an entity that perceives its environment and acts upon that environment.
+
+##### Types of Agents
+- **Autonomous Agent**: Operates with no human interaction.
+  - **Example**: A self-driving car navigating through traffic without human intervention.
+- **Semi-Autonomous Agent**: Requires minimal human interaction.
+  - **Example**: A drone that autonomously follows a path but requires manual control for takeoff and landing.
+- **Software Agent (Bot)**: Operates as a software entity to perform specific tasks.
+  - **Example**: A chatbot providing customer service on a website.
+- **Purpose Agent**: Focuses on achieving specific goals.
+  - **Example**: A recommendation system suggesting products based on user preferences.
+- **Organization (Group of Agents)**: A collection of agents working together towards a common objective.
+  - **Example**: Multiple robots in a warehouse collaborating to sort and deliver packages.
+- **Trading Agent**: Specializes in obtaining goods and services for the user.
+  - **Example**: An algorithmic trading bot executing buy and sell orders on the stock market.
+
+##### Components
+- **State**: The current situation or environment in which the agent operates.
+- **Percept**: Information received from the environment.
+- **Action**: Operations the agent can perform based on its perception.
+
+##### Example:
+- A robot navigating through a maze is an agent. It perceives its surroundings using sensors (like detecting walls) and acts by moving in different directions to find the exit.
+
+---
+
+### 2.4.2 Number of Agents
+
+Describes how an agent perceives and interacts with other agents:
+
+- **Single Agent Reasoning**: Assumes no other agents or considers them as part of nature with no impact on the agent's actions.
+  - **Example**: An autonomous vacuum cleaner operating in an empty room.
+
+- **Adversarial Reasoning**: Involves another agent where one's gain is another's loss, typical in zero-sum games.
+  - **Example**: A chess game where one player's win results in the other player's loss.
+
+- **Multiple Agent Reasoning**: Considers the presence and reasoning of other intelligent agents, requiring communication or coordination.
+  - **Example**: A team of robots working together to achieve a common goal.
+
+---
+
+### 2.4.3 Interactivity
+
+Explains how an agent performs computation and interacts with its environment:
+
+- **Offline Reasoning**: Computation is done before the agent acts, including pre-planned solutions.
+  - **Example**: A robot with a precomputed route to navigate a maze.
+
+- **Online Reasoning**: Computation occurs between observing the environment and taking action, requiring real-time processing.
+  - **Example**: A self-driving car adjusting its path in response to sudden obstacles.
+
+---
+
+### 2.4.4 Representation
+
+Describes the agent’s reasoning approach:
+
+- **States**: Direct representation of the world.
+  - **Example**: A grid-based map where each cell represents a different location.
+- **Features**: Attributes or properties that describe the state.
+  - **Example**: In a grid world, features might include obstacles, goals, and rewards in each cell.
+- **Individuals and Relations**: Complex representations involving entities and their relationships.
+  - **Example**: A social network analysis where individuals (nodes) are connected by relationships (edges).
+
+---
+
+### 2.4.5 Computational Limits
+
+- **Perfect Rationality**: Assumes no computational limitations.
+  - **Example**: An idealized AI that can process infinite data instantaneously.
+- **Bounded Rationality**: Considers computational constraints, using anytime algorithms where solution quality improves over time.
+  - **Example**: A real-world AI system that provides increasingly accurate recommendations as it processes more data.
+
+---
+
+### 2.4.6 Learning
+
+- **Knowledge Given**: Knowledge is provided to the agent.
+  - **Example**: A rule-based expert system with predefined rules and knowledge.
+- **Knowledge Learned**: The agent learns from data or experience, improving its behavior over time.
+  - **Example**: A machine learning model that improves its accuracy as it processes more examples.
+
+---
+
+### 2.4.7 Sensing Uncertainty
+
+- **Fully Observable**: The agent can determine the state of the world directly from stimuli.
+  - **Example**: A robot equipped with perfect sensors that provide complete information about its environment.
+- **Partially Observable**: The agent has incomplete or noisy observations, requiring probability distributions over possible states.
+  - **Example**: A self-driving car that must infer the positions of other vehicles and pedestrians based on incomplete sensor data.
+
+---
+
+### 2.4.8 Actuating Uncertainty
+
+- **Deterministic**: Actions have predictable outcomes.
+  - **Example**: A light switch that always turns on or off as expected.
+- **Stochastic**: Actions have probabilistic outcomes.
+  - **Example**: A robot arm that might miss its target due to variations in its precision.
+
+---
+
+### 2.4.9 Utility Theory
+
+Utility theory quantifies preferences over different outcomes or states, guiding agents to maximize expected utility.
+
+#### Utility Function
+Defines the desirability of outcomes numerically, allowing agents to make decisions based on maximizing expected utility.
+
+##### Example:
+- In a decision-making scenario where an agent can either go on a vacation or stay home, the utility function might assign values based on the agent's preferences:
+  - Vacation: Utility = 80
+  - Stay Home: Utility = 50
+- The agent will choose the option with the higher utility.
+
+---
+
+### 2.4.10 Modularity
+
+Modularity is typically expressed in terms of hierarchical decomposition. An agent’s structure can be categorized as:
+- **Flat**: No organizational structure.
+  - **Example**: A simple reactive robot with no internal architecture beyond its immediate sensors and actuators.
+- **Modular**: The system is decomposed into interacting modules.
+  - **Example**: A robotic system with separate modules for perception, planning, and action.
+- **Hierarchical**: The system is modular, with modules further decomposed into simpler modules or components.
+  - **Example**: An autonomous vehicle with a high-level planning module, a mid-level behavior module, and low-level control modules.
+
+---
+
+### 2.4.11 Planning Horizon
+
+The planning horizon determines how far the agent looks into the future:
+- **Non-Planning Agent**: Does not consider future stages.
+  - **Example**: A simple vacuum cleaner that performs actions based on immediate dirt detection without planning ahead.
+- **Finite Horizon Planner**: Considers a fixed number of stages.
+  - **Example**: A chess-playing program that looks ahead a fixed number of moves.
+- **Indefinite Horizon Planner**: Looks ahead a finite, but not predetermined, number of stages.
+  - **Example**: A navigation system that adapts its planning horizon based on the complexity of the route.
+- **Infinite Horizon Planner**: Plans indefinitely, often for ongoing processes.
+  - **Example**: A stock trading algorithm that continuously adjusts its strategies based on market conditions.
+
 # 3. Propositional Logic
 Propositional logic, also known as propositional calculus or sentential logic, is a branch of logic that deals with propositions—statements that are either true or false. It forms the foundation for more complex logical systems and is widely used in fields like mathematics, computer science, and artificial intelligence for reasoning and knowledge representation.
 
@@ -3732,7 +3844,7 @@ $$
 **Formula**:
 
 $$
-P(H|E) = \frac{P(E|H) \cdot P(H)}{P(E)}
+P(H|E) = \frac{P(E|H) \cdot P(H)}{P(E)} = \frac{P(E|H)\cdot P(H)}{P(E|H) \cdot P(H) + P(E|\neg H) \cdot P(\neg H)}
 $$
 
 where:
@@ -4402,516 +4514,952 @@ $$
 Bayesian Networks are a fundamental tool in probabilistic reasoning, offering a structured way to model and infer relationships among random variables. Their ability to incorporate both prior knowledge and observational data makes them indispensable in fields ranging from healthcare to machine learning. However, their computational complexity and sensitivity to priors require careful consideration during implementation.
 # 5. Agile Software development
 
-# To be made into notes
+## 5.1 Professional Software Engineering
 
-## 5.1 Professionel Software Engineering 
-There are still many reports of software projects going wrong and of “software
-failures.” Software engineering is criticized as inadequate for modern software
-development. However, in my opinion, many of these so-called software failures
-are a consequence of two factors:
+There are still many reports of software projects going wrong and of “software failures.” Software engineering is criticized as inadequate for modern software development. However, in my opinion, many of these so-called software failures are a consequence of two factors:
 
-1. Increasing system complexity As new software engineering techniques help us
-	to build larger, more complex systems, the demands change. Systems have to be
-	built and delivered more quickly; larger, even more complex systems are
-	required; and systems have to have new capabilities that were previously
-	thought to be impossible. New software engineering techniques have to be
-	developed to meet new the challenges of delivering more complex software.
-1. Failure to use software engineering methods It is fairly easy to write computer
-	programs without using software engineering methods and techniques. Many
-	companies have drifted into software development as their products and services
-	have evolved. They do not use software engineering methods in their everyday
-	work. Consequently, their software is often more expensive and less reliable
-	than it should be. We need better software engineering education and training to
-	address this problem.
+1. **Increasing system complexity**: As new software engineering techniques help us to build larger, more complex systems, the demands change. Systems have to be built and delivered more quickly; larger, even more complex systems are required; and systems have to have new capabilities that were previously thought to be impossible. New software engineering techniques have to be developed to meet new the challenges of delivering more complex software.
 
+2. **Failure to use software engineering methods**: It is fairly easy to write computer programs without using software engineering methods and techniques. Many companies have drifted into software development as their products and services have evolved. They do not use software engineering methods in their everyday work. Consequently, their software is often more expensive and less reliable than it should be. We need better software engineering education and training to address this problem.
 
-Software engineering is intended to support professional software development
-rather than individual programming. It includes techniques that support program
-specification, design, and evolution, none of which are normally relevant for personal
-software development.
+**Software engineering** is intended to support professional software development rather than individual programming. It includes techniques that support program specification, design, and evolution, none of which are normally relevant for personal software development.
 
-each question and answer is a table row
+### Question and Answer Table
 
-Question Answer
-What is software? Computer programs and associated documentation. Software
-products may be developed for a particular customer or may be
-developed for a general market.
-What are the attributes of good
-software?
-Good software should deliver the required functionality and
-performance to the user and should be maintainable, dependable
-and usable.
-What is software engineering? Software engineering is an engineering discipline that is concerned
-with all aspects of software production from initial conception to
-operation and maintenance.
-What are the fundamental
-software engineering activities?
-Software specification, software development, software validation
-and software evolution.
-What is the difference between
-software engineering and
-computer science?
-Computer science focuses on theory and fundamentals; software
-engineering is concerned with the practicalities of developing and
-delivering useful software.
-What is the difference between
-software engineering and system
-engineering?
-System engineering is concerned with all aspects of computerbased
-systems development including hardware, software and
-process engineering. Software engineering is part of this more
-general process.
-What are the key challenges
-facing software engineering?
-Coping with increasing diversity, demands for reduced delivery
-times and developing trustworthy software.
-What are the costs of software
-engineering?
-Roughly 60% of software costs are development costs, 40% are
-testing costs. For custom software, evolution costs often exceed
-development costs.
-What are the best software
-engineering techniques and
-methods?
-While all software projects have to be professionally managed and
-developed, different techniques are appropriate for different types
-of system. For example, games should always be developed using
-a series of prototypes whereas safety critical control systems
-require a complete and analyzable specification to be developed.
-There are no methods and techniques that are good for everything.
-What differences has the Internet
-made to software engineering?
-Not only has the Internet led to the development of massive, highly
-distributed, service-based systems, it has also supported the
-creation of an “app” industry for mobile devices which has
-changed the economics of software.
+| **Question**                                           | **Answer**                                                                                                                                                                                                 |
+|--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| What is software?                                      | Computer programs and associated documentation. Software products may be developed for a particular customer or may be developed for a general market.                                                     |
+| What are the attributes of good software?              | Good software should deliver the required functionality and performance to the user and should be maintainable, dependable, and usable.                                                                    |
+| What is software engineering?                          | Software engineering is an engineering discipline that is concerned with all aspects of software production from initial conception to operation and maintenance.                                          |
+| What are the fundamental software engineering activities? | Software specification, software development, software validation, and software evolution.                                                                                                                |
+| What is the difference between software engineering and computer science? | Computer science focuses on theory and fundamentals; software engineering is concerned with the practicalities of developing and delivering useful software.                                                 |
+| What is the difference between software engineering and system engineering? | System engineering is concerned with all aspects of computer-based systems development including hardware, software, and process engineering. Software engineering is part of this more general process.    |
+| What are the key challenges facing software engineering? | Coping with increasing diversity, demands for reduced delivery times, and developing trustworthy software.                                                                                                  |
+| What are the costs of software engineering?            | Roughly 60% of software costs are development costs, 40% are testing costs. For custom software, evolution costs often exceed development costs.                                                           |
+| What are the best software engineering techniques and methods? | While all software projects have to be professionally managed and developed, different techniques are appropriate for different types of systems. There are no methods and techniques that are good for everything. |
+| What differences has the Internet made to software engineering? | Not only has the Internet led to the development of massive, highly distributed, service-based systems, it has also supported the creation of an “app” industry for mobile devices, changing the economics of software. |
 
+### Types of Software Products
 
-Software engineers are concerned with developing software products, that is,
-software that can be sold to a customer. There are two kinds of software product:
+Software engineers are concerned with developing software products, that is, software that can be sold to a customer. There are two kinds of software products:
 
-1. Generic products These are stand-alone systems that are produced by a
-development organization and sold on the open market to any customer who is
-able to buy them. Examples of this type of product include apps for mobile
-devices, software for PCs such as databases, word processors, drawing packages,
-and project management tools. This kind of software also includes “vertical”
+1. **Generic products**: These are stand-alone systems that are produced by a development organization and sold on the open market to any customer who is able to buy them. Examples include apps for mobile devices, software for PCs such as databases, word processors, drawing packages, and project management tools.
 
-The critical distinction between these types of software is that, in generic products,
-the organization that develops the software controls the software specification.
-This means that if they run into development problems, they can rethink what is to
-be developed. For custom products, the specification is developed and controlled by
-the organization that is buying the software. The software developers must work to
-that specification.
+2. **Custom products**: These are systems commissioned by a specific customer. The software specification is developed and controlled by the organization that is buying the software. The software developers must work to that specification.
 
-### 5.1.1 Software Engineering 
+**Important:**
+The critical distinction between these types of software is that, in generic products, the organization that develops the software controls the software specification. For custom products, the specification is developed and controlled by the organization that is buying the software.
 
-Software engineering is an engineering discipline that is concerned with all aspects
-of software production from the early stages of system specification through to
-maintaining the system after it has gone into use. In this definition, there are two
-key phrases:
-1. Engineering discipline Engineers make things work. They apply theories, methods,
-and tools where these are appropriate. However, they use them selectively
-and always try to discover solutions to problems even when there are no applicable
-theories and methods. Engineers also recognize that they must work
-within organizational and financial constraints, and they must look for solutions
-within these constraints.
-2. All aspects of software production Software engineering is not just concerned
-with the technical processes of software development. It also includes activities
-such as software project management and the development of tools, methods,
-and theories to support software development.
+### 5.1.1 Software Engineering
 
+Software engineering is an engineering discipline concerned with all aspects of software production from the early stages of system specification through to maintaining the system after it has gone into use. There are two key phrases:
 
-Table 
-Product characteristic Description
-Acceptability Software must be acceptable to the type of users for which it is
-designed. This means that it must be understandable, usable, and
-compatible with other systems that they use.
-Dependability and security Software dependability includes a range of characteristics including
-reliability, security, and safety. Dependable software should not
-cause physical or economic damage in the event of system failure.
-Software has to be secure so that malicious users cannot access or
-damage the system.
-Efficiency Software should not make wasteful use of system resources such
-as memory and processor cycles. Efficiency therefore includes
-responsiveness, processing time, resource utilization, etc.
-Maintainability Software should be written in such a way that it can evolve to
-meet the changing needs of customers. This is a critical attribute
-because software change is an inevitable requirement of a
-changing business environment.
+1. **Engineering discipline**: Engineers make things work. They apply theories, methods, and tools where appropriate, but use them selectively and always try to discover solutions to problems even when there are no applicable theories and methods. Engineers also recognize that they must work within organizational and financial constraints and must look for solutions within these constraints.
 
+2. **All aspects of software production**: Software engineering is not just concerned with the technical processes of software development. It also includes activities such as software project management and the development of tools, methods, and theories to support software development.
 
-important so highlight it or something
+### Software Product Characteristics Table
 
+| **Product Characteristic** | **Description**                                                                                                                                                                    |
+|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Acceptability               | Software must be acceptable to the type of users for which it is designed. This means that it must be understandable, usable, and compatible with other systems that they use.   |
+| Dependability and security  | Software dependability includes a range of characteristics including reliability, security, and safety. Software has to be secure so that malicious users cannot access or damage the system. |
+| Efficiency                  | Software should not make wasteful use of system resources such as memory and processor cycles. Efficiency therefore includes responsiveness, processing time, resource utilization, etc. |
+| Maintainability             | Software should be written in such a way that it can evolve to meet the changing needs of customers. This is a critical attribute because software change is an inevitable requirement of a changing business environment. |
+
+**Important:**
 Software engineering is important for two reasons:
-1. More and more, individuals and society rely on advanced software systems. We need
-to be able to produce reliable and trustworthy systems economically and quickly.
-2. It is usually cheaper, in the long run, to use software engineering methods and
-techniques for professional software systems rather than just write programs as
 
-important so highlight it or something
+1. More and more, individuals and society rely on advanced software systems. We need to be able to produce reliable and trustworthy systems economically and quickly.
+2. It is usually cheaper, in the long run, to use software engineering methods and techniques for professional software systems rather than just write programs.
 
-Four fundamental activities are common to all
-software processes.
-1. Software specification, where customers and engineers define the software that
-is to be produced and the constraints on its operation.
-2. Software development, where the software is designed and programmed.
-3. Software validation, where the software is checked to ensure that it is what the
-customer requires.
-4. Software evolution, where the software is modified to reflect changing customer
-and market requirements.
+### Four Fundamental Software Process Activities
 
-there are four related issues that affect many different types of software:
+1. **Software specification**: Customers and engineers define the software that is to be produced and the constraints on its operation.
+2. **Software development**: The software is designed and programmed.
+3. **Software validation**: The software is checked to ensure that it meets the customer's requirements.
+4. **Software evolution**: The software is modified to reflect changing customer and market requirements.
 
-1. Heterogeneity Increasingly, systems are required to operate as distributed systems
-across networks that include different types of computer and mobile
-devices. As well as running on general-purpose computers, software may also
-have to execute on mobile phones and tablets. You often have to integrate new
-software with older legacy systems written in different programming languages.
-The challenge here is to develop techniques for building dependable software
-that is flexible enough to cope with this heterogeneity.
-2. Business and social change Businesses and society are changing incredibly
-quickly as emerging economies develop and new technologies become available.
-They need to be able to change their existing software and to rapidly
-develop new software. Many traditional software engineering techniques are
-time consuming, and delivery of new systems often takes longer than planned.
-They need to evolve so that the time required for software to deliver value to its
-customers is reduced.
-3. Security and trust As software is intertwined with all aspects of our lives, it is
-essential that we can trust that software. This is especially true for remote software
-systems accessed through a web page or web service interface. We have to
-make sure that malicious users cannot successfully attack our software and that
-information security is maintained.
-4. Scale Software has to be developed across a very wide range of scales, from
-very small embedded systems in portable or wearable devices through to
-Internet-scale, cloud-based systems that serve a global community.
+### Related Issues in Software Engineering
+
+1. **Heterogeneity**: Systems are increasingly required to operate as distributed systems across networks that include different types of computers and mobile devices.
+2. **Business and social change**: Businesses and society are changing quickly, requiring rapid software development to meet new demands.
+3. **Security and trust**: As software becomes intertwined with all aspects of our lives, it is essential to ensure its security and trustworthiness.
+4. **Scale**: Software must be developed across a very wide range of scales, from very small embedded systems to Internet-scale, cloud-based systems that serve a global community.
 
 ### 5.1.2 Software Engineering Diversity
 
 There are many different types of application, including:
 
-Important highlight or something or make them into subheaders
+1. **Stand-alone applications**: Application systems that run on a personal computer or apps that run on a mobile device. Examples include office applications, CAD programs, photo manipulation software, and travel apps.
+2. **Interactive transaction-based applications**: Applications that execute on a remote computer and are accessed by users from their own devices. Examples include web applications like e-commerce platforms and cloud-based services.
+3. **Embedded control systems**: Software control systems that manage hardware devices, such as software in mobile phones or software controlling antilock braking in cars.
+4. **Batch processing systems**: Business systems designed to process data in large batches, such as phone billing systems or salary payment systems.
+5. **Entertainment systems**: Systems for personal use intended to entertain the user, such as games running on consoles or mobile devices.
+6. **Systems for modeling and simulation**: Systems developed to model physical processes or situations, often requiring high-performance computing.
+7. **Data collection and analysis systems**: Systems that collect data from their environment and send it for processing, often involving cloud-based analysis.
+8. **Systems of systems**: Systems composed of multiple software systems, often used in enterprises and large organizations.
 
-1. Stand-alone applications These are application systems that run on a personal
-computer or apps that run on a mobile device. They include all necessary functionality
-and may not need to be connected to a network. Examples of such
-applications are office applications on a PC, CAD programs, photo manipulation
-software, travel apps, productivity apps, and so on.
-2. Interactive transaction-based applications These are applications that execute
-on a remote computer and that are accessed by users from their own computers,
-phones, or tablets. Obviously, these include web applications such as e-commerce
-applications where you interact with a remote system to buy goods and services.
-This class of application also includes business systems, where a business
-provides access to its systems through a web browser or special-purpose client
-program and cloud-based services, such as mail and photo sharing. Interactive
-applications often incorporate a large data store that is accessed and updated in
-each transaction.
-3. Embedded control systems These are software control systems that control and
-manage hardware devices. Numerically, there are probably more embedded systems
-than any other type of system. Examples of embedded systems include the
-software in a mobile (cell) phone, software that controls antilock braking in a
-car, and software in a microwave oven to control the cooking process.
-4. Batch processing systems These are business systems that are designed to process
-data in large batches. They process large numbers of individual inputs to
-create corresponding outputs. Examples of batch systems are periodic billing
-systems, such as phone billing systems, and salary payment systems.
-5. Entertainment systems These are systems for personal use that are intended to
-entertain the user. Most of these systems are games of one kind or another,
-which may run on special-purpose console hardware. The quality of the user
-interaction offered is the most important distinguishing characteristic of entertainment
-systems.
-6. Systems for modeling and simulation These are systems that are developed by
-scientists and engineers to model physical processes or situations, which include
-many separate, interacting objects. These are often computationally intensive
-and require high-performance parallel systems for execution.
-7. Data collection and analysis systems Data collection systems are systems that
-collect data from their environment and send that data to other systems for processing.
-The software may have to interact with sensors and often is installed in
-a hostile environment such as inside an engine or in a remote location. “Big
-data” analysis may involve cloud-based systems carrying out statistical analysis
-and looking for relationships in the collected data.
-8. Systems of systems These are systems, used in enterprises and other large organizations,
-that are composed of a number of other software systems. Some of
-these may be generic software products, such as an ERP system. Other systems
-in the assembly may be specially written for that environment.
+**Important:**
+Nevertheless, there are software engineering fundamentals that apply to all types of software systems:
 
-Important highlight or something or make them into subheaders
-
-Nevertheless, there are software engineering fundamentals that apply to all types
-of software systems:
 1. They should be developed using a managed and understood development process.
-The organization developing the software should plan the development
-process and have clear ideas of what will be produced and when it will be completed.
-Of course, the specific process that you should use depends on the type
-of software that you are developing.
-2. Dependability and performance are important for all types of system. Software
-should behave as expected, without failures, and should be available for use
-when it is required. It should be safe in its operation and, as far as possible,
-should be secure against external attack. The system should perform efficiently
-and should not waste resources.
-3. Understanding and managing the software specification and requirements (what
-the software should do) are important. You have to know what different customers
-and users of the system expect from it, and you have to manage their expectations
-so that a useful system can be delivered within budget and to schedule.
-4. You should make effective use of existing resources. This means that, where
-appropriate, you should reuse software that has already been developed rather
-than write new software
+2. Dependability and performance are important for all types of systems.
+3. Understanding and managing the software specification and requirements are crucial.
+4. Effective use of existing resources, including reusing software, is important.
 
 ### 5.1.3 Software Engineering Ethics
 
-1. Confidentiality You should normally respect the confidentiality of your employers
-or clients regardless of whether or not a formal confidentiality agreement
-has been signed.
-2. Competence You should not misrepresent your level of competence. You should
-not knowingly accept work that is outside your competence.
-3. Intellectual property rights You should be aware of local laws governing the
-use of intellectual property such as patents and copyright. You should be careful
-to ensure that the intellectual property of employers and clients is protected.
-4. Computer misuse You should not use your technical skills to misuse other people’s
-computers. Computer misuse ranges from relatively trivial (game playing
-on an employer’s machine) to extremely serious (dissemination of viruses or
-other malware).
+1. **Confidentiality**: Respect the confidentiality of your employers or clients, regardless of whether or not a formal confidentiality agreement has been signed.
+2. **Competence**: Do not misrepresent your level of competence. Do not knowingly accept work that is beyond your competence.
+3. **Intellectual property rights**: Be aware of local laws governing intellectual property and ensure that the intellectual property of employers and clients is protected.
+4. **Computer misuse**: Do not use your technical skills to misuse others' computers, from trivial game-playing to serious dissemination of viruses.
 
-## 5.2 Software Processes 
-when describing processes, it is also important to describe who is
-involved, what is produced, and conditions that influence the sequence of activities:
-1. Products or deliverables are the outcomes of a process activity. For example, the
-outcome of the activity of architectural design may be a model of the software
-architecture.
-2. Roles reflect the responsibilities of the people involved in the process. Examples
-of roles are project manager, configuration manager, and programmer.
-3. Pre- and postconditions are conditions that must hold before and after a process
-activity has been enacted or a product produced. For example, before architectural
-design begins, a precondition may be that the consumer has approved all
-requirements; after this activity is finished, a postcondition might be that the
-UML models describing the architecture have been reviewed.
+## 5.2 Software Processes
 
-### 5.2.1 Software Process Model
+When describing processes, it is important to describe who is involved, what is produced, and the conditions that influence the sequence of activities:
 
-Important highlight or something
+1. **Products or deliverables**: The outcomes of a process activity, such as a model of the software architecture.
+2. **Roles**: The responsibilities of the people involved in the process, such as project manager, configuration manager, and programmer.
+3. **Pre- and postconditions**: Conditions that must hold before and after a process activity is enacted or a product produced.
 
+### 5.2.1 Software Process Models
 
-You can think of them as process frameworks that may be extended and adapted to create
-more specific software engineering processes.
-The general process models that I cover here are:
-1. The waterfall model This takes the fundamental process activities of specification,
-development, validation, and evolution and represents them as separate
-process phases such as requirements specification, software design, implementation,
-and testing.
-2. Incremental development This approach interleaves the activities of specification,
-development, and validation. The system is developed as a series of versions
-(increments), with each version adding functionality to the previous version.
-3. Integration and configuration This approach relies on the availability of reusable
-components or systems. The system development process focuses on
-configuring these components for use in a new setting and integrating them
-into a system.
+**Important:**
+Process models can be thought of as frameworks that may be extended and adapted to create more specific software engineering processes. The general process models include:
 
-#### 5.2.1.1 The Waterfall Method
+1. **The waterfall model**: Represents the fundamental process activities of specification, development, validation, and evolution as separate process phases.
+2. **Incremental development**: Interleaves the activities of specification, development, and validation, developing the system as a series of versions.
+3. **Integration and configuration**: Relies on the availability of reusable components or systems, focusing on configuring these components for a new setting and integrating them into a system.
+
+#### 5.2.1.1 The Waterfall Model
+
 
 ![[Pasted image 20240904223553.png]]
 
-The first published model of the software development process was derived from
-engineering process models used in large military systems engineering (Royce
-1970). It presents the software development process as a number of stages, as shown
-in Figure 2.1. Because of the cascade from one phase to another, this model is known
-as the waterfall model or software life cycle. The waterfall model is an example of a
-plan-driven process. In principle at least, you plan and schedule all of the process
-activities before starting software development.
-The stages of the waterfall model directly reflect the fundamental software development
-activities:
+The first published model of the software development process was derived from engineering process models used in large military systems engineering (Royce, 1970). This model is known as the waterfall model or software life cycle.
 
-1. Requirements analysis and definition The system’s services, constraints, and
-goals are established by consultation with system users. They are then defined
-in detail and serve as a system specification.
-2. System and software design The systems design process allocates the requirements
-to either hardware or software systems. It establishes an overall system
-architecture. Software design involves identifying and describing the fundamental
-software system abstractions and their relationships.
-3. Implementation and unit testing During this stage, the software design is realized
-as a set of programs or program units. Unit testing involves verifying that
-each unit meets its specification.
-4. Integration and system testing The individual program units or programs are
-integrated and tested as a complete system to ensure that the software
-requirements have been met. After testing, the software system is delivered
-to the customer.
-5. Operation and maintenance Normally, this is the longest life-cycle phase. The
-system is installed and put into practical use. Maintenance involves correcting
-errors that were not discovered in earlier stages of the life cycle, improving the
-implementation of system units, and enhancing the system’s services as new
-requirements are discovered.
+The stages of the waterfall model directly reflect the fundamental software development activities:
 
-The need for early commitment and system rework when changes are
-made means that the waterfall model is only appropriate for some types of system:
-1. Embedded systems where the software has to interface with hardware systems.
-Because of the inflexibility of hardware, it is not usually possible to delay decisions
-on the software’s functionality until it is being implemented.
-2. Critical systems where there is a need for extensive safety and security analysis
-of the software specification and design. In these systems, the specification and
-design documents must be complete so that this analysis is possible. Safety related
-problems in the specification and design are usually very expensive to
-correct at the implementation stage.
-3. Large software systems that are part of broader engineering systems developed
-by several partner companies. The hardware in the systems may be developed
-using a similar model, and companies find it easier to use a common model for
-hardware and software. Furthermore, where several companies are involved,
-complete specifications may be needed to allow for the independent development
-of different subsystems.
-The waterfall model is not the right process model in situations where informal
-team communication is possible and software requirements change quickly. Iterative
-development and agile methods are better for these systems.
+1. **Requirements analysis and definition**: Establishing the system’s services, constraints, and goals in consultation with system users, serving as a system specification.
+2. **System and software design**: Allocating the requirements to hardware or software systems and establishing an overall system architecture.
+3. **Implementation and unit testing**: Realizing the software design as a set of programs or program units, and verifying that each unit meets its specification.
+4. **Integration and system testing**: Integrating the program units to create a complete system, ensuring the software requirements have been met, and delivering the system to the customer.
+5. **Operation and maintenance**: Installing the system and putting it into practical use, correcting errors, improving implementation, and enhancing the system’s services as new requirements are discovered.
 
-#### 5.2.1.2 The Incremental Development
-Incremental development is based on the idea of developing an initial implementation,
-getting feedback from users and others, and evolving the software through
-several versions until the required system has been developed (Figure 2.2).
-Specification, development, and validation activities are interleaved rather than
-separate,
-with rapid feedback across activities.
+The waterfall model is only appropriate for some types of systems, such as embedded systems, critical systems, and large software systems that are part of broader engineering systems.
 
-Important 
-Incremental software development, which is a fundamental part of agile
-development methods, is better than a waterfall approach for systems whose
-requirements are likely to change during the development process. This is the
-case for most business systems and software products. Incremental development
-reflects the way that we solve problems. We rarely work out a complete problem
-solution in advance but move toward a solution in a series of steps, backtracking
-when we realize that we have made a mistake. By developing the
-software incrementally, it is cheaper and easier to make changes in the software
-as it is being developed.
-Each increment or version of the system incorporates some of the functionality
-that is needed by the customer. Generally, the early increments of the system
-include the most important or most urgently required functionality. This means
-that the customer or user can evaluate the system at a relatively early stage in
-the development to see if it delivers what is required. If not, then only the current
-increment has to be changed and, possibly, new functionality defined for
-later increments.
+#### 5.2.1.2 Incremental Development
+![[Pasted image 20240906123542.png]]
+
+Incremental development is based on developing an initial implementation, getting feedback, and evolving the software through several versions until the required system has been developed. This approach is fundamental to agile development methods and is better for systems whose requirements are likely to change during the development process.
+
+**Important:**
 Incremental development has three major advantages over the waterfall model:
 
-1. The cost of implementing requirements changes is reduced. The amount of
-analysis and documentation that has to be redone is significantly less than is
-required with the waterfall model.
-2. It is easier to get customer feedback on the development work that has been
-done. Customers can comment on demonstrations of the software and see how
-much has been implemented. Customers find it difficult to judge progress from
-software design documents.
-3. Early delivery and deployment of useful software to the customer is possible,
-even if all of the functionality has not been included. Customers are able to use
-and gain value from the software earlier than is possible with a waterfall process.
-From a management perspective, the incremental approach has two problems:
-1. The process is not visible. Managers need regular deliverables to measure progress.
-If systems are developed quickly, it is not cost effective to produce documents
-that reflect every version of the system.
-2. System structure tends to degrade as new increments are added. Regular change
-leads to messy code as new functionality is added in whatever way is possible.
-It becomes increasingly difficult and costly to add new features to a system. To
-reduce structural degradation and general code messiness, agile methods suggest
-that you should regularly refactor (improve and restructure) the software.
+1. Reduced cost of implementing requirements changes.
+2. Easier customer feedback on the development work.
+3. Possible early delivery and deployment of useful software to the customer.
 
-The problems of incremental development become particularly acute for large,
-complex, long-lifetime systems, where different teams develop different parts of the
-system. Large systems need a stable framework or architecture, and the responsibilities
-of the different teams working on parts of the system need to be clearly
-defined with respect to that architecture. This has to be planned in advance rather
-than developed incrementally.
+However, the incremental approach has two problems from a management perspective:
 
-#### 5.2.1.2 Integration And Configuration
+1. The process is not visible.
+2. System structure tends to degrade as new increments are added.
+
+#### 5.2.1.3 Integration And Configuration
+
 ![[Pasted image 20240904235145.png]]
 
 Three types of software components are frequently reused:
-1. Stand-alone application systems that are configured for use in a particular environment.
-These systems are general-purpose systems that have many features,
-but they have to be adapted for use in a specific application.
-2. Collections of objects that are developed as a component or as a package to be
-integrated with a component framework such as the Java Spring framework
-(Wheeler and White 2013).
-3. Web services that are developed according to service standards and that are
-available for remote invocation over the Internet
 
-based on
-integration and configuration. The stages in this process are:
-1. Requirements specification The initial requirements for the system are proposed.
-These do not have to be elaborated in detail but should include brief
-descriptions of essential requirements and desirable system features.
-2. Software discovery and evaluation Given an outline of the software requirements,
-a search is made for components and systems that provide the functionality
-required. Candidate components and systems are evaluated to see if
-they meet the essential requirements and if they are generally suitable for
-use in the system.
-3. Requirements refinement During this stage, the requirements are refined using
-information about the reusable components and applications that have been
-discovered. The requirements are modified to reflect the available components,
-and the system specification is re-defined. Where modifications are
-impossible, the component analysis activity may be reentered to search for
-alternative solutions.
-4. Application system configuration If an off-the-shelf application system that
-meets the requirements is available, it may then be configured for use to create
-the new system.
-5. Component adaptation and integration If there is no off-the-shelf system, individual
-reusable components may be modified and new components developed.
-These are then integrated to create the system.
+1. Stand-alone application systems configured for use in a particular environment.
+2. Collections of objects developed as a component or package for integration with a framework.
+3. Web services developed according to service standards and available for remote invocation over the Internet.
+
+The stages in this process include:
+
+1. **Requirements specification**: Proposing the initial requirements for the system.
+2. **Software discovery and evaluation**: Searching for components and systems that provide the required functionality.
+3. **Requirements refinement**: Refining the requirements using information about the reusable components and applications.
+4. **Application system configuration**: Configuring an off-the-shelf application system that meets the requirements.
+5. **Component adaptation and integration**: Modifying and integrating reusable components to create the system.
 
 ### 5.2.2 Process Activities
 
-The four basic process activities of specification, development, validation, and
-evolution are organized differently in different development processes. In the waterfall
-model, they are organized in sequence, whereas in incremental development
-they are interleaved. How these activities are carried out depends on the type of
-software being developed, the experience and competence of the developers, and the
-type of organization developing the software.
+The four basic process activities—specification, development, validation, and evolution—are organized differently in different development processes.
 
 #### 5.2.2.1 Software Specifications
+
 ![[Pasted image 20240905021311.png]]
 
 There are three main activities in the requirements engineering process:
-1. Requirements elicitation and analysis This is the process of deriving the system
-requirements through observation of existing systems, discussions with potential
-users and procurers, task analysis, and so on. This may involve the development
-of one or more system models and prototypes. These help you understand
-the system to be specified.
-2. Requirements specification Requirements specification is the activity of translating
-the information gathered during requirements analysis into a document
-that defines a set of requirements. Two types of requirements may be included
-in this document. User requirements are abstract statements of the system
-requirements for the customer and end-user of the system; system requirements
-are a more detailed description of the functionality to be provided.
-3. Requirements validation This activity checks the requirements for realism,
-consistency, and completeness. During this process, errors in the requirements
-document are inevitably discovered. It must then be modified to correct
-these problems.
 
+1. **Requirements elicitation and analysis**: Deriving the system requirements through observation, discussions, task analysis, and the development of system models and prototypes.
+2. **Requirements specification**: Translating the information gathered during requirements analysis into a document that defines a set of requirements.
+3. **Requirements validation**: Checking the requirements for realism, consistency, and completeness, and modifying the document to correct problems.
 
 #### 5.2.2.2 Software Design And Implementation
+
 ![[Pasted image 20240905022444.png]]
 
-Figure 2.5
-shows four activities that may be part of the design process for information systems:
-1. Architectural design, where you identify the overall structure of the system, the
-principal components (sometimes called subsystems or modules), their relationships,
-and how they are distributed.
-2. Database design, where you design the system data structures and how these are
-to be represented in a database. Again, the work here depends on whether an
-existing database is to be reused or a new database is to be created.
-3. Interface design, where you define the interfaces between system components.
-This interface specification must be unambiguous. With a precise interface, a
-component may be used by other components without them having to know
-how it is implemented. Once interface specifications are agreed, the components
-can be separately designed and developed.
-4. Component selection and design, where you search for reusable components
-and, if no suitable components are available, design new software components.
-The design at this stage may be a simple component description with the implementation
-details left to the programmer. Alternatively, it may be a list of
-changes to be made to a reusable component or a detailed design model
-expressed in the UML. The design model may then be used to automatically
-generate an implementation.
+The design process for information systems includes:
+
+1. **Architectural design**: Identifying the overall structure of the system, the principal components, their relationships, and how they are distributed.
+2. **Database design**: Designing the system data structures and how they are to be represented in a database.
+3. **Interface design**: Defining the interfaces between system components.
+4. **Component selection and design**: Searching for reusable components and designing new software components if no suitable ones are available.
+
+#### 5.2.2.3 Software Validation
+
+![[Pasted image 20240905222242.png]]
+
+Software validation involves:
+
+1. **Component testing**: Testing the individual components making up the system.
+2. **System testing**: Integrating the components to create a complete system and testing it to ensure it meets functional and non-functional requirements.
+3. **Customer testing**: Testing the system by the customer to reveal errors, omissions, and requirements problems.
+
+#### 5.2.2.4 Software Evolution
+
+Rather than two separate processes, it is more realistic to think of software engineering as an evolutionary process where software is continually changed over its lifetime in response to changing requirements and customer needs.
+
+### 5.2.3 Coping With Change
+
+Change adds to the costs of software development because it usually means rework. Two related approaches may be used to reduce the costs of rework:
+
+1. **Change anticipation**: Including activities in the software process that can anticipate or predict possible changes before significant rework is required.
+2. **Change tolerance**: Designing the process and software so that changes can be easily made.
+
+#### 5.2.3.1 Prototyping
+
+![[Pasted image 20240905224244.png]]
+
+A software prototype can help anticipate changes that may be required:
+
+1. In the requirements engineering process, a prototype can help with the elicitation and validation of system requirements.
+2. In the system design process, a prototype can be used to explore software solutions and develop a user interface for the system.
+
+#### 5.2.3.2 Incremental Delivery
+
+![[Pasted image 20240905224429.png]]
+
+1. Customers can use the early increments as prototypes and gain experience that informs their requirements for later system increments. Unlike prototypes, these are part of the real system, so there is no relearning when the complete system is available.
+2. Customers do not have to wait until the entire system is delivered before they can gain value from it. The first increment satisfies their most critical requirements, so they can use the software immediately.
+3. The process maintains the benefits of incremental development in that it should be relatively easy to incorporate changes into the system.
+
+However, there are challenges with iterative delivery:
+
+1. Iterative delivery is problematic when the new system is intended to replace an existing system. Users need all of the functionality of the old system and are usually unwilling to experiment with an incomplete new system. It is often impractical to use the old and the new systems alongside each other as they are likely to have different databases and user interfaces.
+2. Most systems require a set of basic facilities that are used by different parts of the system. As requirements are not defined in detail until an increment is to be implemented, it can be hard to identify common facilities that are needed by all increments.
+3. The essence of iterative processes is that the specification is developed in conjunction with the software. However, this conflicts with the procurement model of many organizations, where the complete system specification is part of the system development contract. In the incremental approach, there is no complete system specification until the final increment is specified. This requires a new form of contract, which large customers such as government agencies may find difficult to accommodate.
 
 
 
+# Noter til database
+## Sql 
+### Basic
+ SQL (Structured Query Language)
+
+The SQL language has several parts:
+• Data-definition language (DDL). The SQL DDL provides commands for defining
+relation schemas, deleting relations, and modifying relation schemas.
+• Data-manipulation language (DML). The SQL DML provides the ability to query
+information from the database and to insert tuples into, delete tuples from, and
+modify tuples in the database.
+• Integrity. The SQL DDL includes commands for specifying integrity constraints
+that the data stored in the database must satisfy. Updates that violate integrity
+constraints are disallowed.
+• View definition. The SQL DDL includes commands for defining views.
+• Transaction control. SQL includes commands for specifying the beginning and end
+points of transactions.
+• Embedded SQL and dynamic SQL. Embedded and dynamic SQL define how SQL
+statements can be embedded within general-purpose programming languages, such
+as C, C++, and Java.
+• Authorization. The SQL DDL includes commands for specifying access rights to
+relations and views.
+
+SQL Data Definition
+The set of relations in a database are specified using a data-definition language (DDL).
+The SQL DDL allows specification of not only a set of relations, but also information
+about each relation, including:
+• The schema for each relation.
+• The types of values associated with each attribute
+• The integrity constraints.
+• The set of indices to be maintained for each relation.
+• The security and authorization information for each relation.
+• The physical storage structure of each relation on disk
+
+Basic Types
+The SQL standard supports a variety of built-in types, including:
+• char(n): A fixed-length character string with user-specified length n. The full form,
+character, can be used instead.
+• varchar(n): A variable-length character string with user-specified maximum length
+n. The full form, character varying, is equivalent.
+• int: An integer (a finite subset of the integers that is machine dependent). The full
+form, integer, is equivalent.
+• smallint: A small integer (a machine-dependent subset of the integer type).
+• numeric(p, d): A fixed-point number with user-specified precision. The number
+consists of p digits (plus a sign), and d of the p digits are to the right of the decimal
+point. Thus, numeric(3,1) allows 44.5 to be stored exactly, but neither 444.5 nor
+0.32 can be stored exactly in a field of this type.
+• real, double precision: Floating-point and double-precision floating-point numbers
+with machine-dependent precision.
+• float(n): A floating-point number with precision of at least n digits
+
+Basic Schema Definition
+We define an SQL relation by using the create table command. The following command
+creates a relation department in the database:
+create table department
+(dept name varchar (20),
+building varchar (15),
+budget numeric (12,2),
+primary key (dept name));
+• primary key (Aj 1 , Aj 2 , …, Aj m ): The primary-key specification says that attributes Aj 1 , Aj 2 , …, Aj m form the primary key for the relation. The primary-key attributes The primary-key attributes are required to be nonnull and unique; that is, no tuple can have a null value for a primary-key attribute, and no two tuples in the relation can be equal on all the primary-key attributes. Although the primary-key specification is optional, it is generally a good idea to specify a primary key for each relation.
+
+• foreign key (Ak1 , Ak2 , …, Akn ) references s: The foreign key specification says that the values of attributes (Ak1 , Ak2 , …, Akn ) for any tuple in the relation must correspond to values of the primary key attributes of some tuple in relation s. Figure 3.1 presents a partial SQL DDL definition of the university database we use in the text. The definition of the course table has a declaration “foreign key (dept name) references department”. This foreign-key declaration specifies that for each course tuple, the department name specified in the tuple must exist in the primary key attribute (dept name) of the department relation. Without this constraint, it is possible for a course to specify a nonexistent department name. Figure 3.1 also shows foreign-key constraints on tables section, instructor and teaches. Some database systems, including MySQL, require an alternative syntax, “foreign key (dept name) references department(dept name)”, where the referenced attributes in the referenced table are listed explicitly. • not null: The not null constraint on an attribute specifies that the null value is not allowed for that attribute; in other words, the constraint excludes the null value from the domain of that attribute. For example, in Figure 3.1, the not null constraint on the name attribute of the instructor relation ensures that the name of an instructor cannot be null.
 
 
+A newly created relation is empty initially. Inserting tuples into a relation, updating them, and deleting them are done by data manipulation statements insert, update, and delete, . To remove a relation from an SQL database, we use the drop table command. The drop table command deletes all information about the dropped relation from the database. The command drop table r;
+
+delete from r; The latter retains relation r, but deletes all tuples in r. The former deletes not only all tuples of r, but also the schema for r. After r is dropped, no tuples can be inserted into r unless it is re-created with the create table command. We use the alter table command to add attributes to an existing relation. All tuples in the relation are assigned null as the value for the new attribute. The form of the alter table command is alter table r add A D; where r is the name of an existing relation, A is the name of the attribute to be added, and D is the type of the added attribute. We can drop attributes from a relation by the command alter table r drop A; where r is the name of an existing relation, and A is the name of an attribute of the relation. Many database systems do not support dropping of attributes, although they will allow an entire table to be dropped.
+
+Basic Structure of SQL Queries
+
+Let us consider a simple query using our university example, “Find the names of all instructors.” Instructor names are found in the instructor relation, so we put that relation in the from clause. The instructor’s name appears in the name attribute, so we put that in the select clause. select name from instructor;
+
+In those cases where we want to force the elimination of duplicates, we insert the keyword distinct after select. We can rewrite the preceding query as: select distinct dept name from instructor;
+
+SQL allows us to use the keyword all to specify explicitly that duplicates are not removed: select all dept name from instructor;
+
+The select clause may also contain arithmetic expressions involving the operators +, −, ∗, and / operating on constants or attributes of tuples. For example, the query: select ID, name, dept name, salary * 1.1 from instructor; returns a relation that is the same as the instructor relation, except that the attribute salary is multiplied by 1.1.
+
+select name from instructor where dept name = 'Comp. Sci.' and salary > 70000;
+
+In SQL, to answer the above query, we list the relations that need to be accessed in the from clause and specify the matching condition in the where clause. The above query can be written in SQL as select name, instructor.dept name, building from instructor, department where instructor.dept name= department.dept name
+
+ction 3.4.1, we see how to avoid these problems by using the rename operation. We now consider the general case of SQL queries involving multiple relations. As we have seen earlier, an SQL query can contain three types of clauses, the select clause, the from clause, and the where clause. The role of each clause is as follows: • The select clause is used to list the attributes desired in the result of a query. • The from clause is a list of the relations to be accessed in the evaluation of the query. • The where clause is a predicate involving attributes of the relation in the from clause. A typical SQL query has the form: select A1, A2, …, An from r1, r2, …,rm where P;   Each Ai represents an attribute, and each ri a relation. P is a predicate. If the where clause is omitted, the predicate P is true.
+
+In general, the meaning of an SQL query can be understood as follows: 1. Generate a Cartesian product of the relations listed in the from clause. 2. Apply the predicates specified in the where clause on the result of Step 1. 3. For each tuple in the result of Step 2, output the attributes (or results of expressions) specified in the select clause.
+
+Additional Basic Operations A number of additional basic operations are supported in SQL
+
+The names of the attributes in the result are derived from the names of the attributes in the relations in the from clause. We cannot, however, always derive names in this way, for several reasons: First, two relations in the from clause may have attributes with the same name, in which case an attribute name is duplicated in the result. Second, if we use an arithmetic expression in the select clause, the resultant attribute does not have a name. Third, even if an attribute name can be derived from the base relations as in the preceding example, we may want to change the attribute name in the result. Hence, SQL provides a way of renaming the attributes of a result relation. It uses the as clause, taking the form:
+
+The as clause can appear in both the select and from clauses.3 For example, if we want the attribute name name to be replaced with the name instructor name, we can rewrite the preceding query as: select name as instructor name, course id from instructor, teaches where instructor.ID= teaches.ID; The as clause is particularly useful in renaming relations. One reason to rename a relation is to replace a long relation name with a shortened version that is more convenient to use elsewhere in the query. To illustrate, we rewrite the query “For all instructors in the university who have taught some course, find their names and the course ID of all courses they taught.” select T.name, S.course id from instructor as T, teaches as S where T.ID= S.ID;
+
+An identifier, such as T and S, that is used to rename a relation is referred to as a correlation name in the SQL standard, but it is also commonly referred to as a table alias, or a correlation variable, or a tuple variable.
+
+3.4.2 String Operations
+SQL specifies strings by enclosing them in single quotes, for example, 'Computer'. A
+single quote character that is part of a string can be specified by using two single quote
+characters; for example, the string “It’s right” can be specified by 'It''s right'.
+The SQL standard specifies that the equality operation on strings is case sensitive;
+as a result, the expression “'comp. sci.' = 'Comp. Sci.'” evaluates to false. However,
+some database systems, such as MySQL and SQL Server, do not distinguish uppercase
+from lowercase when matching strings; as a result, “'comp. sci.' = 'Comp. Sci.'” would
+evaluate to true on these systems. This default behavior can, however, be changed,
+either at the database level or at the level of specific attributes.
+SQL also permits a variety of functions on character strings, such as concatenating
+(using “∥”), extracting substrings, finding the length of strings, converting strings to
+uppercase (using the function upper(s) where s is a string) and lowercase (using the
+function lower(s)), removing spaces at the end of the string (using trim(s)), and so
+on. There are variations on the exact set of string functions supported by different
+database systems. See your database system’s manual for more details on exactly what
+string functions it supports.
+Pattern matching can be performed on strings using the operator like. We describe
+patterns by using two special characters:
+• Percent (%): The % character matches any substring.
+• Underscore ( ): The character matches any character.
+Patterns are case sensitive; 4 that is, uppercase characters do not match lowercase characters, or vice versa. To illustrate pattern matching, we consider the following examples:
+• 'Intro%' matches any string beginning with “Intro”.
+• '%Comp%' matches any string containing “Comp” as a substring, for example,
+'Intro. to Computer Science', and 'Computational Biology'.
+• ' ' matches any string of exactly three characters.
+• ' %' matches any string of at least three characters
+
+SQL expresses patterns by using the like comparison operator. Consider the query “Find the names of all departments whose building name includes the substring 'Watson'.” This query can be written as: select dept name from department where building like '%Watson%'; For patterns to include the special pattern characters (that is, % and ), SQL allows the specification of an escape character. The escape character is used immediately before a special pattern character to indicate that the special pattern character is to be treated like a normal character. We define the escape character for a like comparison using the escape keyword. To illustrate, consider the following patterns, which use a backslash (∖) as the escape character: • like 'ab∖%cd%' escape '∖' matches all strings beginning with “ab%cd”. • like 'ab∖∖cd%' escape '∖' matches all strings beginning with “ab∖cd”. SQL allows us to search for mismatches instead of matches by using the not like comparison operator. Some implementations provide variants of the like operation that do not distinguish lower- and uppercase. Some SQL implementations, notably PostgreSQL, offer a similar to operation that provides more powerful pattern matching than the like operation; the syntax for specifying patterns is similar to that used in Unix regular expressions.
+
+Attribute Specification in the Select Clause
+The asterisk symbol “ * ” can be used in the select clause to denote “all attributes.”
+Thus, the use of instructor.* in the select clause of the query:
+select instructor.*
+from instructor, teaches
+where instructor.ID= teaches.ID;
+indicates that all attributes of instructor are to be selected. A select clause of the form
+select * indicates that all attributes of the result relation of the from clause are selected.
+3.4.4 Ordering the Display of Tuples
+SQL offers the user some control over the order in which tuples in a relation are displayed. The order by clause causes the tuples in the result of a query to appear in sorted
+order. To list in alphabetic order all instructors in the Physics department, we write:
+84 Chapter 3 Introduction to SQL
+select name
+from instructor
+where dept name = 'Physics'
+order by name;
+By default, the order by clause lists items in ascending order. To specify the sort order,
+we may specify desc for descending order or asc for ascending order. Furthermore,
+ordering can be performed on multiple attributes. Suppose that we wish to list the
+entire instructor relation in descending order of salary. If several instructors have the
+same salary, we order them in ascending order by name. We express this query in SQL
+as follows:
+select *
+from instructor
+order by salary desc, name asc;
+3.4.5 Where-Clause Predicates
+SQL includes a between comparison operator to simplify where clauses that specify
+that a value be less than or equal to some value and greater than or equal to some other
+value. If we wish to find the names of instructors with salary amounts between $90,000
+and $100,000, we can use the between comparison to write:
+select name
+from instructor
+where salary between 90000 and 100000;
+instead of:
+select name
+from instructor
+where salary <= 100000 and salary >= 90000;
+Similarly, we can use the not between comparison operator.
+SQL permits us to use the notation (v1,v2, …,vn) to denote a tuple of arity n containing values v1,v2, …,vn; the notation is called a row constructor. The comparison
+operators can be used on tuples, and the ordering is defined lexicographically. For example, (a1, a2) <= (b1, b2) is true if a1 <= b1 and a2 <= b2; similarly, the two tuples
+are equal if all their attributes are equal. Thus, the SQL query:
+select name, course id
+from instructor, teaches
+where instructor.ID= teaches.ID and dept name = 'Biology';
+
+Figure 3.8 The c1 relation, listing courses taught in Fall 2017.
+can be rewritten as follows:5
+select name, course id
+from instructor, teaches
+where (instructor.ID, dept name) = (teaches.ID, 'Biology');
+
+Set Operations
+The SQL operations union, intersect, and except operate on relations and correspond to
+the mathematical set operations ∪, ∩, and −. We shall now construct queries involving
+the union, intersect, and except operations over two sets.
+• The set of all courses taught in the Fall 2017 semester:
+select course id
+from section
+where semester = 'Fall' and year= 2017;
+• The set of all courses taught in the Spring 2018 semester:
+select course id
+from section
+where semester = 'Spring' and year= 2018;
+In our discussion that follows, we shall refer to the relations obtained as the result of the
+preceding queries as c1 and c2, respectively, and show the results when these queries
+are run on the section relation of Figure 2.6 in Figure 3.8 and Figure 3.9. Observe that
+c2 contains two tuples corresponding to course id CS-319, since two sections of the
+course were offered in Spring 2018.
+
+null
+and: The result of true and unknown is unknown, false and unknown is false, while unknown and unknown is unknown. • or: The result of true or unknown is true, false or unknown is unknown, while unknown or unknown is unknown. • not: The result of not unknown is unknown.
+
+SQL uses the special keyword null in a predicate to test for a null value. Thus, to find all instructors who appear in the instructor relation with null values for salary, we write: select name from instructor where salary is null; The predicate is not null succeeds if the value on which it is applied is not null. SQL allows us to test whether the result of a comparison is unknown, rather than true or false, by using the clauses is unknown and is not unknown. 8 For example, select name from instructor where salary > 10000 is unknown;
+
+Aggregate Functions
+Aggregate functions are functions that take a collection (a set or multiset) of values as
+input and return a single value. SQL offers five standard built-in aggregate functions:9
+• Average: avg
+• Minimum: min
+• Maximum: max
+• Total: sum
+• Count: count
+The input to sum and avg must be a collection of numbers, but the other operators can
+operate on collections of nonnumeric data types, such as strings, as well.
+
+Aggregation with Grouping There are circumstances where we would like to apply the aggregate function not only to a single set of tuples, but also to a group of sets of tuples; we specify this in SQL using the group by clause. The attribute or attributes given in the group by clause are used to form groups. Tuples with the same value on all attributes in the group by clause are placed in one group. As an illustration, consider the query “Find the average salary in each department.” We write this query as follows: select dept name, avg (salary) as avg salary from instructor group by dept name
+
+query is erroneous. The meaning of a query containing aggregation, group by, or having clauses is defined by the following sequence of operations: 1. As was the case for queries without aggregation, the from clause is first evaluated to get a relation. 2. If a where clause is present, the predicate in the where clause is applied on the result relation of the from clause. 3. Tuples satisfying the where predicate are then placed into groups by the group by clause if it is present. If the group by clause is absent, the entire set of tuples satisfying the where predicate is treated as being in one group.. The having clause, if it is present, is applied to each group; the groups that do not satisfy the having clause predicate are removed. 5. The select clause uses the remaining groups to generate tuples of the result of the query, applying the aggregate functions to get a single result tuple for each group. To illustrate the use of both a having clause and a where clause in the same query, we consider the query “For each course section offered in 2017, find the average total credits (tot cred) of all students enrolled in the section, if the section has at least 2 students.” select course id, semester, year, sec id, avg (tot cred) from student, takes where student.ID= takes.ID and year = 2017 group by course id, semester, year, sec id having count (ID) >= 2; Note that all the required information for the preceding query is available from the relations takes and student, and that although the query pertains to sections, a join with section is not needed
+
+Set Membership SQL allows testing tuples for membership in a relation. The in connective tests for set membership, where the set is a collection of values produced by a select clause. The not in connective tests for the absence of set membership. As an illustration, reconsider the query “Find all the courses taught in the both the Fall 2017 and Spring 2018 semesters.” Earlier, we wrote such a query by intersecting two sets: the set of courses taught in Fall 2017 and the set of courses taught in Spring 2018. We can take the alternative approach of finding all courses that were taught in Fall 2017 and that are also members of the set of courses taught in Spring 2018. This formulation generates the same results as the previous one did, but it leads us to write our query using the in connective of SQL. We begin by finding all courses taught in Spring 2018, and we write the subquery: (select course id from section where semester = 'Spring' and year= 2018) We then need to find those courses that were taught in the Fall 2017 and that appear in the set of courses obtained in the subquery. We do so by nesting the subquery in the where clause of an outer query. The resulting query is: select distinct course id from section where semester = 'Fall' and year= 2017 and course id in (select course id from section where semester = 'Spring' and year= 2018); Note that we need to use distinct here because the intersect operation removes duplicates by default. This example shows that it is possible to write the same query several ways in SQL. This flexibility is beneficial, since it allows a user to think about the query in the way
+
+Set Comparison As an example of the ability of a nested subquery to compare sets, consider the query “Find the names of all instructors whose salary is greater than at least one instructor in the Biology department.” In Section 3.4.1, we wrote this query as follows:
+
+The above query also illustrates a feature of SQL where a correlation name from an outer query (S in the above query), can be used in a subquery in the where clause. A subquery that uses a correlation name from an outer query is called a correlated subquery.
+
+Subqueries in the From Clause SQL allows a subquery expression to be used in the from clause. The key concept applied here is that any select-from-where expression returns a relation as a result and, therefore, can be inserted into another select-from-where anywhere that a relation can appear. Consider the query “Find the average instructors’ salaries of those departments where the average salary is greater than $42,000.” 
 
 
+Modification of the Database
+We have restricted our attention until now to the extraction of information from the
+database. Now, we show how to add, remove, or change information with SQL.
+3.9.1 Deletion
+A delete request is expressed in much the same way as a query. We can delete only
+whole tuples; we cannot delete values on only particular attributes. SQL expresses a
+deletion by:
+delete from r
+where P;
+where P represents a predicate and r represents a relation. The delete statement first
+finds all tuples t in r for which P(t) is true, and then deletes them from r. The where
+clause can be omitted, in which case all tuples in r are deleted.
+
+Note that a delete command operates on only one relation. If we want to delete
+tuples from several relations, we must use one delete command for each relation. The
+predicate in the where clause may be as complex as a select command’s where clause.
+At the other extreme, the where clause may be empty. The request:
+delete from instructor;
+deletes all tuples from the instructor relation. The instructor relation itself still exists,
+but it is empty.
+Here are examples of SQL delete requests:
+• Delete all tuples in the instructor relation pertaining to instructors in the Finance
+department.
+delete from instructor
+where dept name = 'Finance';
+• Delete all instructors with a salary between $13,000 and $15,000.
+delete from instructor
+where salary between 13000 and 15000;
+• Delete all tuples in the instructor relation for those instructors associated with a
+department located in the Watson building.
+delete from instructor
+where dept name in (select dept name
+from department
+where building = 'Watson');
+This delete request first finds all departments located in Watson and then deletes
+all instructor tuples pertaining to those departments.
+Note that, although we may delete tuples from only one relation at a time, we may
+reference any number of relations in a select-from-where nested in the where clause of a
+delete. The delete request can contain a nested select that references the relation from
+which tuples are to be deleted. For example, suppose that we want to delete the records
+of all instructors with salary below the average at the university. We could write:
+delete from instructor
+where salary < (select avg (salary)
+from instructor);
+
+Insertion
+To insert data into a relation, we either specify a tuple to be inserted or write a query
+whose result is a set of tuples to be inserted. The attribute values for inserted tuples
+must be members of the corresponding attribute’s domain. Similarly, tuples inserted
+must have the correct number of attributes.
+The simplest insert statement is a request to insert one tuple. Suppose that we wish
+to insert the fact that there is a course CS-437 in the Computer Science department
+with title “Database Systems” and four credit hours. We write:
+insert into course
+values ('CS-437', 'Database Systems', 'Comp. Sci.', 4);
+
+Updates
+In certain situations, we may wish to change a value in a tuple without changing all
+values in the tuple. For this purpose, the update statement can be used. As we could
+for insert and delete, we can choose the tuples to be updated by using a query.
+Suppose that annual salary increases are being made, and salaries of all instructors
+are to be increased by 5 percent. We write:
+
+Summary
+• SQL is the most influential commercially marketed relational query language. The
+SQL language has several parts:
+° Data-definition language (DDL), which provides commands for defining relation schemas, deleting relations, and modifying relation schemas.
+° Data-manipulation language (DML), which includes a query language and commands to insert tuples into, delete tuples from, and modify tuples in the
+database.
+• The SQL data-definition language is used to create relations with specified
+schemas. In addition to specifying the names and types of relation attributes,
+SQL also allows the specification of integrity constraints such as primary-key constraints and foreign-key constraints.
+• SQL includes a variety of language constructs for queries on the database. These
+include the select, from, and where clauses.
+• SQL also provides mechanisms to rename both attributes and relations, and to
+order query results by sorting on specified attributes.
+• SQL supports basic set operations on relations, including union, intersect, and except, which correspond to the mathematical set operations ∪, ∩, and −.
+• SQL handles queries on relations containing null values by adding the truth value
+“unknown” to the usual truth values of true and false.
+• SQL supports aggregation, including the ability to divide a relation into groups,
+applying aggregation separately on each group. SQL also supports set operations
+on groups.
+• SQL supports nested subqueries in the where and from clauses of an outer query.
+It also supports scalar subqueries wherever an expression returning a value is permitted.
+• SQL provides constructs for updating, inserting, and deleting information.
+
+Review Terms
+• Data-definition language
+• Data-manipulation language
+• Database schema
+• Database instance
+• Relation schema
+• Relation instance
+• Primary key
+• Foreign key
+° Referencing relation
+° Referenced relation
+• Null value
+• Query language
+• SQL query structure
+° select clause
+° from clause
+° where clause
+• Multiset relational algebra
+• as clause
+• order by clause
+• Table alias
+• Correlation name (correlation variable, tuple variable)
+• Set operations
+° union
+° intersect
+° except
+• Aggregate functions
+° avg, min, max, sum, count
+° group by
+° having
+• Nested subqueries
+• Set comparisons
+° {<,<=,>,>=} { some, all }
+° exists
+° unique
+• lateral clause
+• with clause
+• Scalar subquery
+• Database modification
+° Delete
+° Insert
+° Update
+
+### Intermediate
+
+Join Expressions
+
+The natural join operation operates on two relations and produces a relation as the
+result. Unlike the Cartesian product of two relations, which concatenates each tuple of
+the first relation with every tuple of the second, natural join considers only those pairs
+of tuples with the same value on those attributes that appear in the schemas of both
+relations. So, going back to the example of the relations student and takes, computing:
+student natural join takes
+considers only those pairs of tuples where both the tuple from student and the tuple
+from takes have the same value on the common attribute, ID
+
+Join Conditions
+ we saw how to express natural joins, and we saw the join … using
+clause, which is a form of natural join that requires values to match only on specified
+attributes. SQL supports another form of join, in which an arbitrary join condition can
+be specified.
+The on condition allows a general predicate over the relations being joined. This
+predicate is written like a where clause predicate except for the use of the keyword on
+rather than where. Like the using condition, the on condition appears at the end of the
+join expression.
+Consider the following query, which has a join expression containing the on condition:
+select *
+from student join takes on student.ID = takes.ID;
 
 
+Outer Joins
+
+More generally, some tuples in either or both of the relations being joined may be “lost” in this way. The outer-join operation works in a manner similar to the join operations we have already studied, but it preserves those tuples that would be lost in a join by creating tuples in the result containing null values. For example, to ensure that the student named Snow from our earlier example appears in the result, a tuple could be added to the join result with all attributes from the student relation set to the corresponding values for the student Snow, and all the remaining attributes which come from the takes relation, namely, course id, sec id, semester, and year, set to null. Thus, the tuple for the student Snow is preserved in the result of the outer join. There are three forms of outer join: • The left outer join preserves tuples only in the relation named before (to the left of) the left outer join operation. 132 Chapter 4 Intermediate SQL • The right outer join preserves tuples only in the relation named after (to the right of) the right outer join operation. • The full outer join preserves tuples in both relations. In contrast, the join operations we studied earlier that do not preserve nonmatched tuples are called inner-join operations, to distinguish them from the outer-join operations. We now explain exactly how each form of outer join operates. We can compute the left outer-join operation as follows: First, compute the result of the inner join as before. Then, for every tuple t in the left-hand-side relation that does not match any tuple in the right-hand-side relation in the inner join, add a tuple r to the result of the join constructed as follows: • The attributes of tuple r that are derived from the left-hand-side relation are filled in with the values from tuple t. • The remaining attributes of r are filled with null values
+## 6 SQL and Database Concepts
+
+### 6.1 Database Concepts
+
+A database system is a collection of interrelated data and a set of programs that allow users to access and modify these data. A major purpose of a database system is to provide users with an abstract view of the data. That is, the system hides certain details of how the data are stored and maintained.
+
+#### 6.1.1 Data Models
+
+Underlying the structure of a database is the data model: a collection of conceptual tools for describing data, data relationships, data semantics, and consistency constraints. There are a number of different data models that we shall cover. The data models can be classified into four different categories:
+
+- **Relational Model**: The relational model uses a collection of tables to represent both data and the relationships among those data. Each table has multiple columns, and each column has a unique name. Tables are also known as relations. The relational model is an example of a record-based model. Record-based models are so named because the database is structured in fixed-format records of several types. Each table contains records of a particular type. Each record type defines a fixed number of fields, or attributes. The columns of the table correspond to the attributes of the record type. The relational data model is the most widely used data model, and a vast majority of current database systems are based on the relational model.
+
+- **Entity-Relationship Model**: The entity-relationship (E-R) data model uses a collection of basic objects, called entities, and relationships among these objects. An entity is a “thing” or “object” in the real world that is distinguishable from other objects. The entity-relationship model is widely used in database design.
+
+- **Semi-structured Data Model**: The semi-structured data model permits the specification of data where individual data items of the same type may have different sets of attributes. This is in contrast to the data models mentioned earlier, where every data item of a particular type must have the same set of attributes. JSON and Extensible Markup Language (XML) are widely used semi-structured data representations.
+
+- **Object-Based Data Model**: Object-oriented programming (especially in Java, C++, or C#) has become the dominant software-development methodology. This led initially to the development of a distinct object-oriented data model, but today the concept of objects is well integrated into relational databases. Standards exist to store objects in relational tables. Database systems allow procedures to be stored in the database system and executed by the database system. This can be seen as extending the relational model with notions of encapsulation, methods, and object identity.
+
+A large portion of this text is focused on the relational model because it serves as the foundation for most database applications.
+
+### 6.2 SQL
+
+#### 6.2.1 SQL Fundamentals
+
+##### 6.2.1.1 Example Tables
+
+**Students:**
+
+| StudentID | Name  | Age | Major          |
+|-----------|-------|-----|----------------|
+| 1         | Alice | 20  | Computer Science |
+| 2         | Bob   | 22  | Mathematics    |
+| 3         | Carol | 21  | Physics        |
+| 4         | Dave  | 23  | Chemistry      |
+| 5         | Eve   | 22  | Biology        |
+
+**Courses:**
+
+| CourseID | CourseName    | Credits | Instructor   |
+|----------|---------------|---------|--------------|
+| 101      | Math 101      | 4       | Dr. Smith    |
+| 102      | CS 101        | 3       | Prof. Jones  |
+| 103      | Physics 101   | 4       | Dr. Taylor   |
+| 104      | Chemistry 101 | 3       | Dr. Adams    |
+| 105      | Biology 101   | 4       | Prof. Green  |
+
+**Enrollments:**
+
+| EnrollmentID | StudentID | CourseID | EnrollmentDate |
+|--------------|-----------|----------|----------------|
+| 1            | 1         | 101      | 2024-09-01     |
+| 2            | 1         | 102      | 2024-09-02     |
+| 3            | 2         | 103      | 2024-09-03     |
+| 4            | 3         | 104      | 2024-09-04     |
+| 5            | 4         | 105      | 2024-09-05     |
+
+##### 6.2.1.2 SQL Language Structure
+
+SQL (Structured Query Language) is a powerful tool for managing and manipulating relational databases. It is divided into several key components:
+
+1. **Data Definition Language (DDL)**: This includes commands for defining, modifying, and deleting database structures. Common DDL commands are `CREATE TABLE`, `ALTER TABLE`, and `DROP TABLE`. These commands are used to establish the schema of the database, such as creating new tables and modifying existing ones.
+
+2. **Data Manipulation Language (DML)**: DML commands are used for querying and modifying data within tables. Key DML commands include `SELECT` for querying data, `INSERT` for adding new records, `UPDATE` for modifying existing records, and `DELETE` for removing records.
+
+3. **Data Control Language (DCL)**: This component includes commands for granting and revoking permissions to users, ensuring that only authorized individuals can access or modify the data. Commands such as `GRANT` and `REVOKE` are part of this category.
+
+4. **Transaction Control Language (TCL)**: TCL commands manage transactions in the database, ensuring that operations are processed reliably. Key commands include `BEGIN TRANSACTION`, `COMMIT`, and `ROLLBACK`.
+
+5. **Embedded SQL and Dynamic SQL**: These define how SQL statements can be integrated within general-purpose programming languages and how SQL can be dynamically constructed and executed.
+
+6. **Integrity Constraints**: SQL allows specifying rules to ensure data accuracy and consistency, such as primary keys, foreign keys, and unique constraints.
+
+7. **View Definition**: Views are virtual tables created by querying data from one or more tables. The `CREATE VIEW` command allows users to define and work with views.
+
+##### 6.2.1.3 Basic SQL Query Structure
+
+A typical SQL query retrieves data from one or more tables based on specified conditions. The structure of a basic SQL query is:
+
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition
+GROUP BY column_name
+HAVING condition
+ORDER BY column_name;
+```
+
+- **`SELECT`**: Specifies the columns to retrieve.
+- **`FROM`**: Indicates the table(s) from which to retrieve the data.
+- **`WHERE`**: Filters rows based on a condition.
+- **`GROUP BY`**: Groups rows that have the same values into summary rows.
+- **`HAVING`**: Sets a condition on groups created by `GROUP BY`.
+- **`ORDER BY`**: Sorts the result set based on one or more columns.
+
+##### Execution Order:
+1. **FROM**: Generate the Cartesian product of the tables.
+2. **WHERE**: Apply the filtering conditions to the rows.
+3. **GROUP BY**: Group the rows according to the specified columns.
+4. **HAVING**: Filter groups based on conditions.
+5. **SELECT**: Specify which columns or expressions to include in the final result.
+6. **ORDER BY**: Sort the results according to specified columns.
+
+##### 6.2.1.4 Basic Data Types
+
+SQL supports a variety of data types for different kinds of data:
+
+- **`CHAR(n)`**: A fixed-length character string with a length of `n` characters.
+- **`VARCHAR(n)`**: A variable-length character string with a maximum length of `n` characters.
+- **`INT`**: A standard integer type for storing whole numbers.
+- **`SMALLINT`**: A smaller integer type for storing smaller whole numbers.
+- **`NUMERIC(p, d)`**: A fixed-point number with precision `p` and scale `d`, where `p` is the total number of digits and `d` is the number of digits after the decimal point.
+- **`REAL`**, **`DOUBLE PRECISION`**: Floating-point numbers for storing approximate values with variable precision.
+- **`FLOAT(n)`**: A floating-point number with `n` digits of precision.
+
+#### 6.2.2 Advanced SQL Concepts
+
+##### 6.2.2.1 Joins
+
+Joins are used to combine rows from two or more tables based on a related column. There are several types of joins:
+
+- **INNER JOIN**: Returns records with matching values in both tables.
+```sql
+SELECT Students.Name, Courses.CourseName
+FROM Students
+INNER JOIN Enrollments ON Students.StudentID = Enrollments.StudentID
+INNER JOIN Courses ON Enrollments.CourseID = Courses.CourseID;
+```
+
+- **LEFT (OUTER) JOIN**: Returns all records from the left table and matched records from the right table. If no match is found, NULL values are returned for columns from the right table.
+```sql
+SELECT Students.Name, Courses.CourseName
+FROM Students
+LEFT JOIN Enrollments ON Students.StudentID = Enrollments.StudentID
+LEFT JOIN Courses ON Enrollments.CourseID = Courses.CourseID;
+```
+
+- **RIGHT (OUTER) JOIN**: Returns all records from the right table and matched records from the left table. If no match is found, NULL values are returned for columns from the left table.
+```sql
+SELECT Students.Name, Courses.CourseName
+FROM Enrollments
+RIGHT JOIN Students ON Enrollments.StudentID = Students.StudentID
+RIGHT JOIN Courses ON Enrollments.CourseID = Courses.CourseID;
+```
+
+- **FULL (OUTER) JOIN**: Returns all records when there is a match in either the left or right table. Non-matching rows will contain NULL values.
+```sql
+SELECT Students.Name, Courses.CourseName
+FROM Students
+FULL OUTER JOIN Enrollments ON Students.StudentID = Enrollments.StudentID
+FULL OUTER JOIN Courses ON Enrollments.CourseID = Courses.CourseID;
+```
+
+- **CROSS JOIN**: Returns the Cartesian product of both tables, combining every row from the first table with every row from the second table.
+```sql
+SELECT Students.Name, Courses.CourseName
+FROM Students
+CROSS JOIN Courses;
+```
+
+##### 6.2.2.2 Aggregation Functions
+
+Aggregation functions perform a calculation on a set of values and return a single value. Common functions include:
+
+- **`COUNT()`**: Counts the number of rows.
+- **`SUM()`**: Calculates the total sum of a numeric column.
+- **`AVG()`**: Calculates the average value of a numeric column.
+- **`MIN()`**: Finds the minimum value in a column.
+- **`MAX()`**: Finds the maximum value in a column.
+
+**Example:**
+To count the number of students in each major:
+```sql
+SELECT Major, COUNT(*) AS StudentCount
+FROM Students
+GROUP BY Major;
+```
+
+**Result:**
+
+| Major          | StudentCount |
+|----------------|--------------|
+| Computer Science | 1            |
+| Mathematics    | 1            |
+| Physics        | 1            |
+| Chemistry      | 1            |
+| Biology        | 1            |
+
+- **`HAVING`**: Sets a condition on groups created by `GROUP BY`. It is used to filter the results of aggregated data.
+```sql
+SELECT Major, COUNT(*) AS StudentCount
+FROM Students
+GROUP BY Major
+HAVING COUNT(*) > 1;
+```
+
+**Result:**
+
+| Major | StudentCount |
+|-------|--------------|
+| (No results) |
+
+##### 6.2.2.3 Keys
+
+- **Primary Keys**: A primary key is a unique identifier for each record in a table. It ensures that each record can be uniquely identified and accessed. A table can have only one primary key, which may consist of one or multiple columns (composite key). Primary key columns cannot contain NULL values and automatically create an index to speed up queries.
+
+- **Foreign Keys**: A foreign key is a column or set of columns in one table that refers to the primary key of another table. It establishes a relationship between the two tables and enforces referential integrity. Foreign keys ensure that the value in the foreign key column matches a value in the referenced primary key column.
+
+**Example**: Adding data with foreign keys:
+```sql
+INSERT INTO Students (StudentID, Name, Age, Major) VALUES (1, 'Alice', 20, 'Computer Science');
+INSERT INTO Courses (CourseID, CourseName, Credits, Instructor) VALUES (101, 'Math 101', 4, 'Dr. Smith');
+
+INSERT INTO Enrollments (EnrollmentID, StudentID, CourseID, EnrollmentDate)
+VALUES (1, 1, 101, '2024-09-01');
+```
+
+**Cascading Actions**:
+- **Cascading Updates**: When a record in the parent table is updated, related records in the child table are also updated.
+- **Cascading Deletes**: When a record in the parent table is deleted, related records in the child table are also deleted.
+
+**Example**: Cascading deletes:
+```sql
+-- Set up cascading delete
+ALTER TABLE Enrollments
+ADD CONSTRAINT fk_student
+FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+ON DELETE CASCADE;
+```
+
+Now, deleting a student will automatically remove related enrollments:
+```sql
+-- Delete StudentID from Students table
+DELETE FROM Students
+WHERE StudentID = 1;
+```
+
+The corresponding enrollments with `StudentID = 1` in the `Enrollments` table will also be deleted.
 
 
+##### 6.2.2.4 Subqueries
 
+Subqueries are queries nested inside other queries. They allow for more complex queries and can be used in `SELECT`, `INSERT`, `UPDATE`, and `DELETE` statements. Subqueries can be correlated or uncorrelated.
 
+- **Uncorrelated Subquery**: A subquery that does not reference columns from the outer query. It is executed once and used by the outer query.
+```sql
+SELECT Name
+FROM Students
+WHERE Major IN (SELECT Major FROM Students WHERE Age > 21);
+```
+
+- **Correlated Subquery**: A subquery that references columns from the outer query. It is executed repeatedly for each row processed by the outer query.
+```sql
+SELECT Name
+FROM Students s
+WHERE EXISTS (
+    SELECT 1
+    FROM Enrollments e
+    WHERE e.StudentID = s.StudentID AND e.EnrollmentDate < '2024-09-02'
+);
+```
+
+##### 6.2.2.5 Pattern Matching
+
+Pattern matching is used to search for a specified pattern within a column. The `LIKE` operator is commonly used for this purpose.
+
+- **Basic Pattern Matching**:
+    - `%` represents zero or more characters.
+    - `_` represents a single character.
+```sql
+SELECT Name
+FROM Students
+WHERE Name LIKE 'A%';  -- Names starting with 'A'
+```
+
+- **Advanced Pattern Matching**: You can use `ESCAPE` to define a custom escape character if the pattern contains special characters.
+```sql
+SELECT Name
+FROM Students
+WHERE Name LIKE 'A\_%' ESCAPE '\';  -- Names starting with 'A_' where '_' is treated as a literal character
+```
+
+##### 6.2.2.6 Boolean Expressions
+
+Boolean expressions are used to filter data based on conditions. They include:
+
+- **`BETWEEN`**: Checks if a value is within a range.
+```sql
+SELECT Name, Age
+FROM Students
+WHERE Age BETWEEN 20 AND 22;
+```
+
+- **`IN`**: Checks if a value is within a set of values.
+```sql
+SELECT Name
+FROM Students
+WHERE Major IN ('Computer Science', 'Mathematics');
+```
+
+- **`LIKE`**: Searches for a pattern within a column.
+```sql
+SELECT Name
+FROM Students
+WHERE Name LIKE 'C%';  -- Names starting with 'C'
+```
+
+- **`IS NULL`**: Checks if a value is NULL.
+```sql
+SELECT Name
+FROM Students
+WHERE Age IS NULL;
+```
+
+- **`NOT`**: Negates a condition.
+```sql
+SELECT Name
+FROM Students
+WHERE NOT (Major = 'Physics');
+```
+
+### ### Summary
+- **Joins**: Used to combine rows from multiple tables based on related columns.
+- **Aggregation Functions**: Perform calculations on sets of values and return a single value.
+- **Keys**: Ensure data integrity through unique identifiers (primary keys) and relationships (foreign keys).
+- **Subqueries**: Allow for complex queries by nesting queries inside other queries.
+- **Pattern Matching**: Searches for patterns within text columns.
+- **Boolean Expressions**: Filter data based on various conditions and ranges.
