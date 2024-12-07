@@ -1,35 +1,121 @@
+# Lecture 2: Constraint Satisfaction Problems (CSPs)
+
+### Key Concepts
+
+1. **Variable and Domain**:
+   - A **variable** $X$ has a **domain** $dom[X]$, which can be:
+     - Discrete (e.g., integers),
+     - Continuous (e.g., real numbers),
+     - Binary (e.g., $\{0, 1\}$).
+2. **Assignments**:
+   - An **assignment** maps variables to values in their domains:
+     - Example: $\{X_1 = v_1, X_2 = v_2, ..., X_k = v_k\}$, where $v_i \in dom[X_i]$.
+   - **Total assignment**: Every variable is assigned a value.
+   - If there are $n$ variables and each has a domain of size $d$, there are $d^n$ total assignments.
+3. **Constraints**:
+   - A **constraint** specifies conditions on variable assignments:
+     - **Unary constraint**: On a single variable (e.g., $B \leq 3$).
+     - **Binary constraint**: Between two variables (e.g., $A \leq B$).
+     - **k-ary constraint**: Involves $k$ variables (e.g., $A + B = C$ is ternary).
+   - An assignment **satisfies** a constraint if the condition evaluates to true. It **violates** a constraint if it evaluates to false.
+
+4. **Constraint Satisfaction Problem (CSP)**:
+   - A CSP consists of:
+     - A set of variables.
+     - A domain for each variable.
+     - A set of constraints.
+   - A **solution** is a total assignment that satisfies all constraints.
+
+---
+
+### Representation of CSPs
+
+1. **Constraint Graph**:
+   - Nodes:
+     - Circles/ovals represent **variables**.
+     - Rectangles represent **constraints**.
+   - Arcs:
+     - Connect variable nodes to constraint nodes in their scope.
+   - The constraint network is a **bipartite graph**.
+
+2. **Domain Representation**:
+   - Use a dictionary $dom$ where $dom[X]$ is the set of possible values for variable $X$.
+
+---
+
+### Arc Consistency
+
+- **Arc Consistency**:
+  - Suppose a constraint $c$ has scope $\{X, Y_1, ..., Y_k\}$.
+  - Arc $(X, c)$ is **arc consistent** if, for every value $x \in dom[X]$, there exist values $y_1 \in dom[Y_1], ..., y_k \in dom[Y_k]$ such that the assignment $\{X = x, Y_1 = y_1, ..., Y_k = y_k\}$ satisfies $c$.
+  - A network is **arc consistent** if all arcs are arc consistent.
+
+- **Improving Efficiency**:
+  - Use **domain splitting** (case analysis + search):
+    - Split a problem into disjoint cases (e.g., partition the domain).
+    - Apply arc consistency to simplify each case.
+
+---
+
+### Generalized Arc Consistency (GAC) Algorithm
+
+The **Generalized Arc Consistency (GAC) algorithm** is given in Figure 4.4. It takes in a CSP with:
+- **Variables**: $Vs$,
+- **Constraints**: $Cs$,
+- (Possibly reduced) **domains** specified by the dictionary $dom$, and
+- A **set of potentially inconsistent arcs**: $to\_do$.
+
+#### Initialization:
+- The set $to\_do$ initially consists of all arcs in the graph:
+  $$
+  \{\langle X, c \rangle \mid c \in Cs \text{ and } X \in scope(c)\}.
+  $$
+- The goal of the algorithm is to modify $dom$ to make the network arc consistent.
+
+#### Procedure:
+1. **While $to\_do$ is not empty**:
+   - Remove an arc $\langle X, c \rangle$ from $to\_do$.
+   - If the arc $\langle X, c \rangle$ is **not arc consistent**:
+     - Prune the domain of $X$ to make it arc consistent.
+     - Add all previously consistent arcs that could now be inconsistent to $to\_do$:
+       $$
+       \{\langle Z, c' \rangle \mid c' \neq c, X \in scope(c'), Z \neq X\}.
+       $$
+       These arcs involve:
+       - A different constraint $c'$ that involves $X$.
+       - A variable $Z$ in the scope of $c'$ other than $X$.
+2. **When $to\_do$ is empty**, the constraint graph is arc consistent.
+
+---
+
+### Explanation of Key Steps
+
+#### **What does pruning mean?**
+- When an arc $\langle X, c \rangle$ is **not arc consistent**, this means there is at least one value $x \in dom[X]$ that cannot satisfy the constraint $c$ with any valid assignment for the other variables in the scope of $c$. 
+- **Pruning** removes these invalid values from $dom[X]$, ensuring that $dom[X]$ only contains values that can satisfy $c$.
+
+#### **What does it mean to add arcs to $to\_do$?**
+- After pruning $dom[X]$, the domains of other variables connected to $X$ through different constraints may become invalid. 
+- To handle this:
+  - Arcs $\langle Z, c' \rangle$ are added back to $to\_do$, where:
+    - $c'$ is a constraint that involves $X$ (but is not the current constraint $c$ being processed).
+    - $Z$ is another variable in the scope of $c'$ (other than $X$).
+  - This ensures that all potentially inconsistent arcs caused by the domain changes of $X$ are rechecked for consistency.
+
+#### **When is the graph arc consistent?**
+- When $to\_do$ is empty, it means that:
+  - All arcs have been processed.
+  - The domains of all variables are pruned so that every value in a variable's domain satisfies all relevant constraints with some valid assignments for the other variables.
+
+---
+
+### Summary of GAC Algorithm:
+- **Input**: A CSP with variables, constraints, and domains.
+- **Output**: A pruned domain dictionary $dom$ such that the CSP is arc consistent.
+- **Key Idea**:
+  - Iteratively make arcs consistent by pruning domains and rechecking affected arcs until no further pruning is required.
 
 
+  
+# Lecture 03: Reasoning under Uncertainty and Bayesian Networks
 
-# lec 2
-
-Variable X has domain(X), it can be discreet, continuious a binary and so forth
-
-Given a set of variables, an assignment on the set of variables is a function from the variables into the domains of the variables. We write an assignment on {X1, X2,..., Xk} as {X1 = v1, X2 = v2,..., Xk = vk}, where vi is in domain(Xi). This assignment specifies that, for each i, variable Xi is assigned value vi. A variable can only be assigned one value in an assignment. A total assignment assigns a value to every variable.
-
-If there are n variables, each with domain size d, there are d^n total assignments.
-
-A unary constraint is a constraint on a single variable (e.g., B ≤ 3). A binary constraint is a constraint over a pair of variables (e.g., A ≤ B). In general, a k-ary constraint has a scope of size k. For example, A + B = C is a 3-ary (ternary) constraint. A constraint can be evaluated in an assignment that assigns a superset of the variables in the scope. The extra variables are ignored. For example, A ≤ B is true of the assignment {A = 3, B = 7,C = 5}. Assignment A satisfies constraint c if A assigns the variables in the scope of c and the condition of c evaluates to true for A restricted to the scope of c. Assignment A violates constraint c if A assigns the variables in the scope of c and the condition of c evaluates to false for that assignment. If an assignment A satisfies a constraint, then any assignment that is a superset of A also satisfies the constraint.
-
-
-A constraint satisfaction problem (CSP) consists of:
-• a set of variables
-• a domain for each variable
-• a set of constraints.
-A solution is a total assignment that satisfies all of the constraints
-
-• There is a node (drawn as a circle or an oval) for each variable.
-• There is a node (drawn as a rectangle) for each constraint.
-• For every constraint c, and for every variable X in the scope of c, there is
-an arc X, c	. The constraint network is thus a bipartite graph, with the
-two parts consisting of the variable nodes and the constraint nodes; each
-arc goes from a variable node to a constraint node.
-• There is also a dictionary dom with the variables as keys, where dom[X] is
-a set of possible values for variable X. dom[X] is initially the domain of X
-
-Suppose constraint c has scope {X,Y1,...,Yk}. Arc X, c	 is arc consistent
-if, for each value x ∈ dom[X], there are values y1,..., yk where yi ∈ dom[Yi],
-such that the assignment {X = x,Y1 = y1,...,Yk = yk} satisfies c. A network is
-arc consistent if all its arcs are arc consistent.
-
-we can do better by domain splitting, a form of case analysis that interleaves search and arc consistency. The idea is to split a problem into a number of disjoint cases and solve each case separately.
