@@ -11,6 +11,18 @@
             "id": "24953536d74b81d7",
             "type": "leaf",
             "state": {
+              "type": "pdf",
+              "state": {
+                "file": "5-semester/Machine intelligence/Exercises/4/exercises-04-bn-inference-solutions.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "exercises-04-bn-inference-solutions"
+            }
+          },
+          {
+            "id": "46dccb4faba870e9",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
                 "file": "Noter små.md",
@@ -22,20 +34,31 @@
             }
           },
           {
-            "id": "46dccb4faba870e9",
+            "id": "bd8f650adbd425a6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "5-semester/Machine intelligence/Exercises/2/Opgaver.md",
-                "mode": "source",
-                "source": false
+                "file": "5-semester/Machine intelligence/Exercises/3/exercises-03-uncertainty.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Opgaver"
+              "icon": "lucide-file-text",
+              "title": "exercises-03-uncertainty"
+            }
+          },
+          {
+            "id": "ddffe156c7f520cf",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "5-semester/Machine intelligence/Lectures/3/03-uncertainty.tex-post.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "03-uncertainty.tex-post"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -177,22 +200,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "24953536d74b81d7",
+  "active": "46dccb4faba870e9",
   "lastOpenFiles": [
+    "Noter Og Andet.md",
+    "5-semester/Machine intelligence/Lectures/3/03-uncertainty.tex-post.pdf",
+    "5-semester/Machine intelligence/Lectures/3/03-background.pdf",
+    "5-semester/Machine intelligence/Exercises/4/exercises-04-bn-inference-solutions.pdf",
+    "5-semester/Machine intelligence/Lectures/4/04-bn-inference.tex-post.pdf",
+    "5-semester/Machine intelligence/Exercises/3/exercises-03-uncertainty-solutions.pdf",
+    "5-semester/Machine intelligence/Exercises/3/exercises-03-uncertainty.pdf",
+    "5-semester/Machine intelligence/Exercises/4/exercises-04-bn-inference.pdf",
+    "5-semester/Machine intelligence/Lectures/4/BNDGII-causal_networks_and_d-separation.pdf",
+    "Noter små.md",
+    "Generalt/Math/Probability Formula Sheet.pdf",
     "Pasted image 20241203181617.png",
     "5-semester/Machine intelligence/Exercises/2/Opgaver.md",
-    "5-semester/Machine intelligence/Exercises/2/exercises-02-csp-solutions.pdf",
-    "5-semester/Machine intelligence/Exercises/2/exercises-02-csp.pdf",
-    "Noter små.md",
-    "5-semester/Machine intelligence/Lectures/2/02-csp.tex-post.pdf",
     "5-semester/Machine intelligence/Lectures/3/BNDGII-Constructing_Bayesian_networks.pdf",
-    "Noter Og Andet.md",
-    "5-semester/Machine intelligence/Exercises/1/exercises-01-agents-solutions (1).pdf",
-    "5-semester/Machine intelligence/Lectures/13/13-reinforcement-learning-post.pdf",
-    "5-semester/Machine intelligence/Exercises/13/13-reinforcement-learning.pdf",
-    "5-semester/Machine intelligence/Exercises/13/exercises-13-reinforcement-learning-solutions.pdf",
-    "5-semester/Machine intelligence/Exercises/12/exercises-12-mdps.pdf",
-    "5-semester/Machine intelligence/Exercises/12/exercises-12-mdps-solutions.pdf",
     "Generalt/IMAGES/Pasted image 20240904185445.png",
     "Generalt/IMAGES/Pasted image 20240904223553.png",
     "Generalt/IMAGES/Pasted image 20240904235145.png",
