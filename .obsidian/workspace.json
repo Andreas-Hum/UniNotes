@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "s.md",
+                "file": "Noter små.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "s"
+              "title": "Noter små"
             }
           }
         ],
@@ -53,7 +53,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -179,9 +180,14 @@
   "active": "29f0b0554526a5b6",
   "lastOpenFiles": [
     "Noter.md",
-    "Noter Og Andet.md",
-    "s.md",
     "Noter små.md",
+    "s.md",
+    "Noter Og Andet.md",
+    "Untitled.md",
+    "5-semester/Agile Software/component.png",
+    "5-semester/Machine intelligence/02-background.pdf",
+    "5-semester/Agile Software/incre.png",
+    "5-semester/Agile Software/waterfall.png",
     "image/Pasted image 20241203181617.png",
     "image",
     "5-semester/Agile Software/Noter.md",
@@ -191,9 +197,6 @@
     "image/Pasted image 20250122073925.png",
     "image/Pasted image 20250122073309.png",
     "image/Pasted image 20250122073116.png",
-    "image/Pasted image 20250122072405.png",
-    "image/Pasted image 20250122070453.png",
-    "image/Pasted image 20250121202847.png",
     "5-semester/Machine intelligence/Eksamensopgaver.md",
     "5-semester/Machine intelligence/Exercises/13/exercises-13-reinforcement-learning-solutions.pdf",
     "5-semester/Machine intelligence/Lectures/12/12-mdps-post.pdf",
@@ -202,8 +205,6 @@
     "5-semester/Machine intelligence/Lectures/4/04-bn-inference.tex-post.pdf",
     "5-semester/Machine intelligence/Lectures/4/BNDGII-causal_networks_and_d-separation.pdf",
     "5-semester/Machine intelligence/Exercises/4/exercises-04-bn-inference.pdf",
-    "Untitled.md",
-    "02-background.pdf",
     "5-semester/Machine intelligence/Exercises/5/Exercies.md",
     "5-semester/Machine intelligence/Exercises/5/exercises-05-supervised-learning-solutions.pdf",
     "5-semester/Machine intelligence/Exercises/2/Opgaver.md",
@@ -222,7 +223,6 @@
     "Reading-other/CS-A programmers perspective.md",
     "5-semester/Untitled.md",
     "Generalt/AI/AI examples I made/Maze solver/Tic Tac Toe Understanding Adversarial Search and the Minimax AlgorithmUntitled.md",
-    "4.3.2 Probability Density Function.md",
-    "Tic Tac Toe Minimax.md"
+    "4.3.2 Probability Density Function.md"
   ]
 }
