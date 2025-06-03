@@ -6,35 +6,79 @@
       {
         "id": "d65c482be406db14",
         "type": "tabs",
+        "dimension": 43.97374701670644,
         "children": [
-          {
-            "id": "406a5c1c553c5e6f",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "image/Pasted image 20241203181617.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20241203181617"
-            }
-          },
           {
             "id": "29f0b0554526a5b6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Noter små.md",
+                "file": "6-semester/Algorithms and Satisfiability/notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Noter små"
+              "title": "notes"
+            }
+          },
+          {
+            "id": "1e9a7d38bfdb5713",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "6-semester/Algorithms and Satisfiability/Exercises/Lecture 3/exercises-solutions.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "exercises-solutions"
+            }
+          }
+        ]
+      },
+      {
+        "id": "41d6712081c409a8",
+        "type": "tabs",
+        "dimension": 56.02625298329356,
+        "children": [
+          {
+            "id": "cc82fa8560df957f",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "6-semester/Algorithms and Satisfiability/Exercises/Lecture 3/exercises.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "exercises"
+            }
+          },
+          {
+            "id": "6ec4b22a649522e5",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "6-semester/Algorithms and Satisfiability/Lectures/Lecture 3/post-handout.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "post-handout"
+            }
+          },
+          {
+            "id": "86cce6429cb61024",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "6-semester/Algorithms and Satisfiability/Exercises/Lecture 3/exercises-solutions.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "exercises-solutions"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -179,50 +223,51 @@
   },
   "active": "29f0b0554526a5b6",
   "lastOpenFiles": [
-    "Noter.md",
+    "6-semester/Algorithms and Satisfiability/self_study2as.pdf",
+    "6-semester/Algorithms and Satisfiability/self_study2as.pdf.crdownload",
+    "6-semester/Algorithms and Satisfiability/self_study1ac.pdf",
+    "6-semester/Algorithms and Satisfiability/self_study1ac.pdf.crdownload",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/combo",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/javascript.php",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/javascript(1).php",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/javascript(2).php",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/combo(1)",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/styles.php",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/css2",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/__AAU_LEFT_RGB_UK.svg",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/__AAU_LEFT_WHITE_UK.svg",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/logo_topbar_rounded_orange.png",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/logo_topbar_rounded_orange(1).png",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/monologo.svg",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/unflagged.svg",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/ss1quiz_huffman.png",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/lecture3.png",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/residual_network.svg",
+    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/flow.svg",
     "Noter små.md",
-    "s.md",
     "Noter Og Andet.md",
-    "Untitled.md",
-    "5-semester/Agile Software/component.png",
-    "5-semester/Machine intelligence/02-background.pdf",
-    "5-semester/Agile Software/incre.png",
-    "5-semester/Agile Software/waterfall.png",
-    "image/Pasted image 20241203181617.png",
-    "image",
+    "Generalt/Dynamic programming/Dynamic Programming.md",
+    "Generalt/Dynamic programming/Tricks for Dynamic Programming.md",
+    "Generalt/Dynamic programming/Andet.md",
     "5-semester/Agile Software/Noter.md",
-    "image/Pasted image 20250122074526.png",
-    "image/Pasted image 20250122074407.png",
-    "image/Pasted image 20250122074403.png",
-    "image/Pasted image 20250122073925.png",
-    "image/Pasted image 20250122073309.png",
-    "image/Pasted image 20250122073116.png",
+    "Generalt/Math/Math definitions.md",
+    "Generalt/Math/Automata and Languages Definitions.md",
+    "6-semester/Algorithms and Satisfiability/notes.md",
+    "Noter.md",
+    "s.md",
+    "Untitled.md",
     "5-semester/Machine intelligence/Eksamensopgaver.md",
-    "5-semester/Machine intelligence/Exercises/13/exercises-13-reinforcement-learning-solutions.pdf",
-    "5-semester/Machine intelligence/Lectures/12/12-mdps-post.pdf",
-    "5-semester/Machine intelligence/Lectures/3/03-background.pdf",
-    "5-semester/Machine intelligence/Lectures/3/03-uncertainty.tex-post.pdf",
-    "5-semester/Machine intelligence/Lectures/4/04-bn-inference.tex-post.pdf",
-    "5-semester/Machine intelligence/Lectures/4/BNDGII-causal_networks_and_d-separation.pdf",
-    "5-semester/Machine intelligence/Exercises/4/exercises-04-bn-inference.pdf",
     "5-semester/Machine intelligence/Exercises/5/Exercies.md",
-    "5-semester/Machine intelligence/Exercises/5/exercises-05-supervised-learning-solutions.pdf",
     "5-semester/Machine intelligence/Exercises/2/Opgaver.md",
     "5-semester/Machine intelligence/Lectures/1/Noter.md",
     "Generalt/AI/Maze/Maze Solver Understanding Search Problems.md",
     "Generalt/AI/Tic tac Toe/Tic Tac Toe Understanding Adversarial Search and the Minimax AlgorithmUntitled.md",
     "Generalt/AI/AI examples I made/Tic tac Toe/Tic Tac Toe Understanding Adversarial Search and the Minimax AlgorithmUntitled.md",
     "Generalt/AI/AI examples I made/Maze solver/Maze Solver Understanding Search Problems.md",
-    "Generalt/Math/Automata and Languages Definitions.md",
     "Generalt/Patterns for common problems.md",
     "Generalt/AI/General Concepts and Techniques Overview.md",
     "Reading-other/Tansitions and trees.md",
     "Reading-other/Programming language design and impmentation.md",
-    "Reading-other/Introduction to the theory of computations.md",
-    "Reading-other/Introduction to compiler design.md",
-    "Reading-other/CS-A programmers perspective.md",
-    "5-semester/Untitled.md",
-    "Generalt/AI/AI examples I made/Maze solver/Tic Tac Toe Understanding Adversarial Search and the Minimax AlgorithmUntitled.md",
-    "4.3.2 Probability Density Function.md"
+    "Reading-other/Introduction to the theory of computations.md"
   ]
 }
