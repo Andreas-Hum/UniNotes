@@ -78,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -223,11 +223,12 @@
   },
   "active": "45ad9fff91bed64b",
   "lastOpenFiles": [
-    "6-semester/Modeling and Verification/Exercises/10/Solution10-1 (4).pdf",
+    "6-semester/Modeling and Verification/Lectures/9/Lecture9.pdf",
     "6-semester/Modeling and Verification/notes.md",
+    "Pasted image 20250609214706.png",
+    "6-semester/Modeling and Verification/Exercises/10/Solution10-1 (4).pdf",
     "6-semester/Modeling and Verification/Star opgaver.md",
     "6-semester/Modeling and Verification/Lectures/8/verificationCCS.pdf",
-    "6-semester/Modeling and Verification/Lectures/9/Lecture9.pdf",
     "6-semester/Modeling and Verification/Lectures/7/07 - HML with Recursion.pdf",
     "6-semester/Modeling and Verification/Lectures/6/06 - Tarskis Fixed Point Theorem.pdf",
     "6-semester/Modeling and Verification/Exercises/7/tut07.pdf",
@@ -244,7 +245,6 @@
     "Pasted image 20250609162549.png",
     "Pasted image 20250609160738.png",
     "Pasted image 20250609124129.png",
-    "Pasted image 20250609124115.png",
     "Generalt/Math/Math definitions.md",
     "Generalt/Math/Automata and Languages Definitions.md",
     "6-semester/Algorithms and Satisfiability/notes.md",

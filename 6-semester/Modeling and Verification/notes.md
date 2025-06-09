@@ -1487,7 +1487,7 @@ $$
 - $0$: the nil process (does nothing).
 
 Semantics is defined using Structural Operational Semantics (SOS rules).
-
+![[Pasted image 20250608000356.png]]
 ---
 
 ### 3️⃣ Parallel Composition and Restriction
@@ -1844,7 +1844,7 @@ If $P \xrightarrow{d} P'$ and $Q \xrightarrow{d} Q'$, then:
 $$
 P \mid Q \xrightarrow{d} P' \mid Q'
 $$
-
+![[Pasted image 20250609214706.png]]
 ---
 
 ### 3️⃣ Timed Bisimilarity
