@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "d65c482be406db14",
+        "id": "2531c2e9029cfa7e",
         "type": "tabs",
-        "dimension": 43.97374701670644,
+        "dimension": 50,
         "children": [
           {
-            "id": "29f0b0554526a5b6",
+            "id": "45ad9fff91bed64b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6-semester/Algorithms and Satisfiability/notes.md",
+                "file": "6-semester/Modeling and Verification/notes.md",
                 "mode": "source",
                 "source": false
               },
@@ -23,58 +23,58 @@
             }
           },
           {
-            "id": "1e9a7d38bfdb5713",
+            "id": "25df945a77b2221f",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "6-semester/Algorithms and Satisfiability/Exercises/Lecture 3/exercises-solutions.pdf"
+                "file": "6-semester/Modeling and Verification/Exercises/9/Tutorial 9 New Solutions 2020.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "exercises-solutions"
+              "title": "Tutorial 9 New Solutions 2020"
             }
           }
         ]
       },
       {
-        "id": "41d6712081c409a8",
+        "id": "6f05143bd04fda43",
         "type": "tabs",
-        "dimension": 56.02625298329356,
+        "dimension": 50,
         "children": [
           {
-            "id": "cc82fa8560df957f",
+            "id": "30146debd35e6898",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "6-semester/Algorithms and Satisfiability/Exercises/Lecture 3/exercises.pdf"
+                "file": "6-semester/Modeling and Verification/Lectures/7/07 - HML with Recursion.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "exercises"
+              "title": "07 - HML with Recursion"
             }
           },
           {
-            "id": "6ec4b22a649522e5",
+            "id": "b2e65545f34d69d8",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "6-semester/Algorithms and Satisfiability/Lectures/Lecture 3/post-handout.pdf"
+                "file": "6-semester/Modeling and Verification/Lectures/9/Lecture9.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "post-handout"
+              "title": "Lecture9"
             }
           },
           {
-            "id": "86cce6429cb61024",
+            "id": "cef6a5acdb0e39e9",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "6-semester/Algorithms and Satisfiability/Exercises/Lecture 3/exercises-solutions.pdf"
+                "file": "6-semester/Modeling and Verification/Exercises/10/Solution10-1 (4).pdf"
               },
               "icon": "lucide-file-text",
-              "title": "exercises-solutions"
+              "title": "Solution10-1 (4)"
             }
           }
         ],
@@ -221,38 +221,39 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d7d3902ba5e037c6",
+  "active": "45ad9fff91bed64b",
   "lastOpenFiles": [
-    "6-semester/Algorithms and Satisfiability/Exercises/Lecture 13/lecture13as.pdf",
-    "6-semester/Algorithms and Satisfiability/Exercises/Lecture 13/lecture13as.pdf.crdownload",
-    "6-semester/Algorithms and Satisfiability/Exercises/Lecture 13",
-    "6-semester/Algorithms and Satisfiability/Exercises/Ny mappe",
-    "6-semester/Algorithms and Satisfiability/Exercises/Lecture 12/lecture12as.pdf",
-    "6-semester/Algorithms and Satisfiability/Exercises/Lecture 12/lecture12as.pdf.crdownload",
-    "6-semester/Algorithms and Satisfiability/Exercises/Lecture 12",
-    "6-semester/Algorithms and Satisfiability/Exercises/Lecture 11/lecture11as.pdf",
-    "6-semester/Algorithms and Satisfiability/Exercises/Lecture 11/lecture11as.pdf.crdownload",
-    "6-semester/Algorithms and Satisfiability/Exercises/Lecture 11",
-    "6-semester/Algorithms and Satisfiability/Lectures/Lecture 13/as6.pdf",
-    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/__AAU_LEFT_RGB_UK.svg",
-    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/__AAU_LEFT_WHITE_UK.svg",
-    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/logo_topbar_rounded_orange.png",
-    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/logo_topbar_rounded_orange(1).png",
-    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/monologo.svg",
-    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/unflagged.svg",
-    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/ss1quiz_huffman.png",
-    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/lecture3.png",
-    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/residual_network.svg",
-    "6-semester/Algorithms and Satisfiability/Quiz_ Attempt review _ AAU Moodle_files/flow.svg",
+    "6-semester/Modeling and Verification/Exercises/10/Solution10-1 (4).pdf",
+    "6-semester/Modeling and Verification/notes.md",
+    "6-semester/Modeling and Verification/Star opgaver.md",
+    "6-semester/Modeling and Verification/Lectures/8/verificationCCS.pdf",
+    "6-semester/Modeling and Verification/Lectures/9/Lecture9.pdf",
+    "6-semester/Modeling and Verification/Lectures/7/07 - HML with Recursion.pdf",
+    "6-semester/Modeling and Verification/Lectures/6/06 - Tarskis Fixed Point Theorem.pdf",
+    "6-semester/Modeling and Verification/Exercises/7/tut07.pdf",
+    "6-semester/Modeling and Verification/Exercises/9/Tutorial 9.pdf",
+    "6-semester/Modeling and Verification/Exercises/9/Ex3.pdf",
+    "6-semester/Modeling and Verification/Exercises/9/Tutorial 9 New Solutions 2020.pdf",
+    "Pasted image 20250609163925.png",
+    "Pasted image 20250609163906.png",
+    "Pasted image 20250609163838.png",
+    "6-semester/Modeling and Verification/Exercises Solutions/Example exercise 8.pdf",
+    "Pasted image 20250609163711.png",
+    "Pasted image 20250609163657.png",
+    "Pasted image 20250609162623.png",
+    "Pasted image 20250609162549.png",
+    "Pasted image 20250609160738.png",
+    "Pasted image 20250609124129.png",
+    "Pasted image 20250609124115.png",
+    "Generalt/Math/Math definitions.md",
+    "Generalt/Math/Automata and Languages Definitions.md",
+    "6-semester/Algorithms and Satisfiability/notes.md",
     "Noter små.md",
     "Noter Og Andet.md",
     "Generalt/Dynamic programming/Dynamic Programming.md",
     "Generalt/Dynamic programming/Tricks for Dynamic Programming.md",
     "Generalt/Dynamic programming/Andet.md",
     "5-semester/Agile Software/Noter.md",
-    "Generalt/Math/Math definitions.md",
-    "Generalt/Math/Automata and Languages Definitions.md",
-    "6-semester/Algorithms and Satisfiability/notes.md",
     "Noter.md",
     "s.md",
     "Untitled.md",
@@ -266,8 +267,6 @@
     "Generalt/AI/AI examples I made/Maze solver/Maze Solver Understanding Search Problems.md",
     "Generalt/Patterns for common problems.md",
     "Generalt/AI/General Concepts and Techniques Overview.md",
-    "Reading-other/Tansitions and trees.md",
-    "Reading-other/Programming language design and impmentation.md",
-    "Reading-other/Introduction to the theory of computations.md"
+    "Reading-other/Tansitions and trees.md"
   ]
 }
