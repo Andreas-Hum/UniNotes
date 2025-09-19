@@ -6,7 +6,6 @@
       {
         "id": "2531c2e9029cfa7e",
         "type": "tabs",
-        "dimension": 50,
         "children": [
           {
             "id": "45ad9fff91bed64b",
@@ -14,71 +13,27 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6-semester/Modeling and Verification/notes.md",
+                "file": "7-semester/DS/Noter.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "notes"
+              "title": "Noter"
             }
           },
           {
-            "id": "25df945a77b2221f",
+            "id": "d54199ca92b223b6",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "6-semester/Modeling and Verification/Exercises/9/Tutorial 9 New Solutions 2020.pdf"
+                "file": "7-semester/DS/Distributed Systems Concepts and Design 5th Edition.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Tutorial 9 New Solutions 2020"
+              "title": "Distributed Systems Concepts and Design 5th Edition"
             }
           }
         ]
-      },
-      {
-        "id": "6f05143bd04fda43",
-        "type": "tabs",
-        "dimension": 50,
-        "children": [
-          {
-            "id": "30146debd35e6898",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "6-semester/Modeling and Verification/Lectures/7/07 - HML with Recursion.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "07 - HML with Recursion"
-            }
-          },
-          {
-            "id": "b2e65545f34d69d8",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "6-semester/Modeling and Verification/Lectures/9/Lecture9.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Lecture9"
-            }
-          },
-          {
-            "id": "cef6a5acdb0e39e9",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "6-semester/Modeling and Verification/Exercises/10/Solution10-1 (4).pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Solution10-1 (4)"
-            }
-          }
-        ],
-        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -213,6 +168,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -223,22 +179,27 @@
   },
   "active": "45ad9fff91bed64b",
   "lastOpenFiles": [
-    "6-semester/Modeling and Verification/Lectures/9/Lecture9.pdf",
+    "Noter Og Andet.md",
+    "7-semester/DS/Noter.md",
+    "7-semester/PP/programming-in-haskell_compress.pdf",
+    "7-semester/DS/Distributed Systems Concepts and Design 5th Edition.pdf",
+    "7-semester/DS/Exercises/Lecture 1/Exercises.md",
+    "7-semester/DS/Exercises/Lecture 1",
+    "7-semester/HCI/Lectures/Lecture 1/shci-00-organization.pdf",
+    "7-semester/HCI/Lectures/Lecture 1/Unconfirmed 863287.crdownload",
+    "7-semester/HCI/Lectures/Lecture 1/shci-01-big-issues.pdf",
+    "7-semester/HCI/Lectures/Lecture 1/Unconfirmed 402522.crdownload",
+    "7-semester/HCI/Lectures/Lecture 1",
+    "7-semester/HCI/Lectures/Ny mappe",
+    "7-semester/DS/Lectures/Lecture 1/Distributed_Systems_2025 1 aal.pdf",
+    "Noter små.md",
+    "Generalt/Dynamic programming/Andet.md",
     "6-semester/Modeling and Verification/notes.md",
     "Pasted image 20250609214706.png",
-    "6-semester/Modeling and Verification/Exercises/10/Solution10-1 (4).pdf",
     "6-semester/Modeling and Verification/Star opgaver.md",
-    "6-semester/Modeling and Verification/Lectures/8/verificationCCS.pdf",
-    "6-semester/Modeling and Verification/Lectures/7/07 - HML with Recursion.pdf",
-    "6-semester/Modeling and Verification/Lectures/6/06 - Tarskis Fixed Point Theorem.pdf",
-    "6-semester/Modeling and Verification/Exercises/7/tut07.pdf",
-    "6-semester/Modeling and Verification/Exercises/9/Tutorial 9.pdf",
-    "6-semester/Modeling and Verification/Exercises/9/Ex3.pdf",
-    "6-semester/Modeling and Verification/Exercises/9/Tutorial 9 New Solutions 2020.pdf",
     "Pasted image 20250609163925.png",
     "Pasted image 20250609163906.png",
     "Pasted image 20250609163838.png",
-    "6-semester/Modeling and Verification/Exercises Solutions/Example exercise 8.pdf",
     "Pasted image 20250609163711.png",
     "Pasted image 20250609163657.png",
     "Pasted image 20250609162623.png",
@@ -248,11 +209,8 @@
     "Generalt/Math/Math definitions.md",
     "Generalt/Math/Automata and Languages Definitions.md",
     "6-semester/Algorithms and Satisfiability/notes.md",
-    "Noter små.md",
-    "Noter Og Andet.md",
     "Generalt/Dynamic programming/Dynamic Programming.md",
     "Generalt/Dynamic programming/Tricks for Dynamic Programming.md",
-    "Generalt/Dynamic programming/Andet.md",
     "5-semester/Agile Software/Noter.md",
     "Noter.md",
     "s.md",
@@ -266,7 +224,6 @@
     "Generalt/AI/AI examples I made/Tic tac Toe/Tic Tac Toe Understanding Adversarial Search and the Minimax AlgorithmUntitled.md",
     "Generalt/AI/AI examples I made/Maze solver/Maze Solver Understanding Search Problems.md",
     "Generalt/Patterns for common problems.md",
-    "Generalt/AI/General Concepts and Techniques Overview.md",
-    "Reading-other/Tansitions and trees.md"
+    "Generalt/AI/General Concepts and Techniques Overview.md"
   ]
 }
