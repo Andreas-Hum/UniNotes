@@ -11,26 +11,36 @@
             "id": "45ad9fff91bed64b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "7-semester/DS/Noter.md",
-                "mode": "source",
-                "source": false
+                "file": "7-semester/PP/programming-in-haskell_compress.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Noter"
+              "icon": "lucide-file-text",
+              "title": "programming-in-haskell_compress"
             }
           },
           {
-            "id": "d54199ca92b223b6",
+            "id": "2e062070db1e1f38",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "7-semester/DS/Distributed Systems Concepts and Design 5th Edition.pdf"
+                "file": "7-semester/PP/Exercises/4/Kursusgang 4 - PP 2025 - Forberedelse DAT7-SW7.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Distributed Systems Concepts and Design 5th Edition"
+              "title": "Kursusgang 4 - PP 2025 - Forberedelse DAT7-SW7"
+            }
+          },
+          {
+            "id": "5ecb37659989b16c",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "7-semester/PP/Exercises/5/Kursusgang 5 - PP 2025 - DAT7-SW7.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Kursusgang 5 - PP 2025 - DAT7-SW7"
             }
           }
         ]
@@ -179,20 +189,23 @@
   },
   "active": "45ad9fff91bed64b",
   "lastOpenFiles": [
-    "Noter Og Andet.md",
-    "7-semester/DS/Noter.md",
+    "7-semester/PP/Exercises/2/Session 2 - PP 2024 - Problems.pdf",
+    "7-semester/PP/Exercises/4/Kursusgang 4 - PP 2025 - Forberedelse DAT7-SW7.pdf",
+    "7-semester/PP/Exercises/5/Kursusgang 5 - PP 2025 - DAT7-SW7.pdf",
+    "7-semester/PP/Exercises/5/Kursusgang 5 - PP 2025 - Opgaver - DAT7-SW7.pdf",
     "7-semester/PP/programming-in-haskell_compress.pdf",
-    "7-semester/DS/Distributed Systems Concepts and Design 5th Edition.pdf",
-    "7-semester/DS/Exercises/Lecture 1/Exercises.md",
-    "7-semester/DS/Exercises/Lecture 1",
-    "7-semester/HCI/Lectures/Lecture 1/shci-00-organization.pdf",
-    "7-semester/HCI/Lectures/Lecture 1/Unconfirmed 863287.crdownload",
-    "7-semester/HCI/Lectures/Lecture 1/shci-01-big-issues.pdf",
-    "7-semester/HCI/Lectures/Lecture 1/Unconfirmed 402522.crdownload",
-    "7-semester/HCI/Lectures/Lecture 1",
-    "7-semester/HCI/Lectures/Ny mappe",
-    "7-semester/DS/Lectures/Lecture 1/Distributed_Systems_2025 1 aal.pdf",
+    "7-semester/PP/Lectures/5/Kursusgang 5 - DAT7-SW7.pdf",
+    "7-semester/PP/Lectures/5/Kursusgang 5 - PP 2025 - DAT7-SW7.pdf",
+    "7-semester/PP/Lectures/4/Kursusgang 4 – Dagsorden – DAT7-SW7.pdf",
+    "7-semester/PP/Lectures/5",
+    "7-semester/PP/Exercises/5",
+    "7-semester/PP/Exercises/4/Kursusgang 4 - PP2025 - Opgaver - DAT7-SW7.pdf",
+    "7-semester/PP/Noter.md",
+    "7-semester/PP/Exercises/3/Untitled.canvas",
     "Noter små.md",
+    "7-semester/DS/Noter.md",
+    "Noter Og Andet.md",
+    "7-semester/DS/Exercises/Lecture 1/Exercises.md",
     "Generalt/Dynamic programming/Andet.md",
     "6-semester/Modeling and Verification/notes.md",
     "Pasted image 20250609214706.png",
@@ -222,8 +235,6 @@
     "Generalt/AI/Maze/Maze Solver Understanding Search Problems.md",
     "Generalt/AI/Tic tac Toe/Tic Tac Toe Understanding Adversarial Search and the Minimax AlgorithmUntitled.md",
     "Generalt/AI/AI examples I made/Tic tac Toe/Tic Tac Toe Understanding Adversarial Search and the Minimax AlgorithmUntitled.md",
-    "Generalt/AI/AI examples I made/Maze solver/Maze Solver Understanding Search Problems.md",
-    "Generalt/Patterns for common problems.md",
-    "Generalt/AI/General Concepts and Techniques Overview.md"
+    "Generalt/AI/AI examples I made/Maze solver/Maze Solver Understanding Search Problems.md"
   ]
 }
