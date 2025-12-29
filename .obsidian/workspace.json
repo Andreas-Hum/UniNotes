@@ -18,30 +18,6 @@
               "icon": "lucide-file-text",
               "title": "programming-in-haskell_compress"
             }
-          },
-          {
-            "id": "2e062070db1e1f38",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "7-semester/PP/Exercises/4/Kursusgang 4 - PP 2025 - Forberedelse DAT7-SW7.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Kursusgang 4 - PP 2025 - Forberedelse DAT7-SW7"
-            }
-          },
-          {
-            "id": "5ecb37659989b16c",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "7-semester/PP/Exercises/5/Kursusgang 5 - PP 2025 - DAT7-SW7.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Kursusgang 5 - PP 2025 - DAT7-SW7"
-            }
           }
         ]
       }
@@ -187,19 +163,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "45ad9fff91bed64b",
+  "active": "d7d3902ba5e037c6",
   "lastOpenFiles": [
-    "7-semester/PP/Exercises/2/Session 2 - PP 2024 - Problems.pdf",
-    "7-semester/PP/Exercises/4/Kursusgang 4 - PP 2025 - Forberedelse DAT7-SW7.pdf",
+    "7-semester/PP/Lectures/6/A paper by Hutton about fold.pdf",
+    "7-semester/PP/Lectures/6/Kursusgang 6 - Dagsorden - DAT7-SW7.pdf",
+    "7-semester/PP/Exercises/6/Kursusgang 6 - PP 2025 - Opgaver - DAT7-SW7.pdf",
+    "7-semester/PP/Exercises/6/Kursusgang 6 - PP 2025 - DAT7SW7.pdf",
+    "7-semester/PP/Exercises/6",
+    "7-semester/PP/Lectures/6",
     "7-semester/PP/Exercises/5/Kursusgang 5 - PP 2025 - DAT7-SW7.pdf",
+    "7-semester/PP/Exercises/4/Kursusgang 4 - PP 2025 - Forberedelse DAT7-SW7.pdf",
+    "7-semester/PP/Exercises/2/Session 2 - PP 2024 - Problems.pdf",
     "7-semester/PP/Exercises/5/Kursusgang 5 - PP 2025 - Opgaver - DAT7-SW7.pdf",
     "7-semester/PP/programming-in-haskell_compress.pdf",
-    "7-semester/PP/Lectures/5/Kursusgang 5 - DAT7-SW7.pdf",
-    "7-semester/PP/Lectures/5/Kursusgang 5 - PP 2025 - DAT7-SW7.pdf",
-    "7-semester/PP/Lectures/4/Kursusgang 4 – Dagsorden – DAT7-SW7.pdf",
-    "7-semester/PP/Lectures/5",
-    "7-semester/PP/Exercises/5",
-    "7-semester/PP/Exercises/4/Kursusgang 4 - PP2025 - Opgaver - DAT7-SW7.pdf",
     "7-semester/PP/Noter.md",
     "7-semester/PP/Exercises/3/Untitled.canvas",
     "Noter små.md",
