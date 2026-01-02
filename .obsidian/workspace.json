@@ -1,22 +1,20 @@
 {
   "main": {
-    "id": "17045f4f1648205a",
+    "id": "f77c044a222b8a1f",
     "type": "split",
     "children": [
       {
-        "id": "2531c2e9029cfa7e",
+        "id": "cd1cd78ff8da2345",
         "type": "tabs",
         "children": [
           {
-            "id": "45ad9fff91bed64b",
+            "id": "2facffc6756710d3",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "7-semester/PP/programming-in-haskell_compress.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "programming-in-haskell_compress"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -25,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "d615f9232de83022",
+    "id": "b60775daf8625524",
     "type": "split",
     "children": [
       {
-        "id": "c3b8894e0fecb825",
+        "id": "f0cf45a0c5ace46d",
         "type": "tabs",
         "children": [
           {
-            "id": "d7d3902ba5e037c6",
+            "id": "d41ab66c35a12def",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -46,13 +44,13 @@
             }
           },
           {
-            "id": "00bc44c1393035c4",
+            "id": "a5b3e02b54ec015d",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -63,7 +61,7 @@
             }
           },
           {
-            "id": "0322c555d0ce5b05",
+            "id": "c9bea178b5cabc15",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -76,93 +74,95 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
-    "id": "b8429fedaf6e64f7",
+    "id": "8c3e0ffd0254c284",
     "type": "split",
     "children": [
       {
-        "id": "f94aa4bc27afb5e2",
+        "id": "bc86e6bfa91d7bb6",
         "type": "tabs",
         "children": [
           {
-            "id": "d8ddc8c5c0af9843",
+            "id": "6f15fd664f7baf65",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "5-semester/Machine intelligence/Lectures/2/02-csp.tex-post.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": true,
+                "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 02-csp.tex-post"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "dabfe999cc002afc",
+            "id": "b06533a547ccd333",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "5-semester/Machine intelligence/Lectures/2/02-csp.tex-post.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 02-csp.tex-post"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "36771f2d28286593",
+            "id": "9342a00a2c4057ca",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Tags"
             }
           },
           {
-            "id": "c3d387a01f9bfc94",
+            "id": "633dbeba62d6d81c",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "5-semester/Machine intelligence/Lectures/2/02-csp.tex-post.pdf"
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 02-csp.tex-post"
+              "title": "Outline"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
+<<<<<<< Updated upstream
   "active": "45ad9fff91bed64b",
   "lastOpenFiles": [
     "7-semester/PP/A paper by Hutton about fold.pdf",
@@ -213,4 +213,8 @@
     "Generalt/AI/AI examples I made/Tic tac Toe/Tic Tac Toe Understanding Adversarial Search and the Minimax AlgorithmUntitled.md",
     "Generalt/AI/AI examples I made/Maze solver/Maze Solver Understanding Search Problems.md"
   ]
+=======
+  "active": "2facffc6756710d3",
+  "lastOpenFiles": []
+>>>>>>> Stashed changes
 }
