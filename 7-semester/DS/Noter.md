@@ -58,3 +58,96 @@ Abstract ways to view system behavior:
     - **Omission Failures:** A message is dropped or a process simply stops responding.
     - **Arbitrary (Byzantine) Failures:** The worst-case scenario where a process acts maliciously or sends "garbage" data.
 - **Security Model:** Focuses on protecting the system via **Confidentiality** (secrets stay secret), **Integrity** (data isn't altered), and **Availability** (the system stays reachable).
+
+
+
+# Lecture 2
+## Fundamental Models of Distributed Systems
+
+### 1. Model Definitions
+A model is an abstraction that defines the rules of a system.
+- **Message Passing:** Processes communicate solely by sending/receiving messages over channels. No shared memory exists.
+- **Shared Memory:** Processes communicate by reading/writing to a common address space.
+- **Interleaving Model:** We view concurrent executions as a linear sequence of events. Even if things happen at the same time, we model them as a specific "schedule" of steps.
+
+### 2. Synchronous vs. Asynchronous Systems
+This distinction is based on **Time**.
+
+- **Synchronous System:** There are known, strict upper and lower bounds on:
+	1. The time to execute a processing step.
+	2. The time to deliver a message.
+	3. The clock drift rate of each node.
+- **Asynchronous System:** There are **no bounds** on how long a process takes to compute or how long a message takes to arrive. This is the model of the Internet.
+
+---
+
+### 3. Failure Models
+Failures describe how a system departs from its expected behavior.
+
+#### Node (Process) Failures
+1. **Crash-Failure:** The process stops and does nothing else. It is "fail-silent."
+2. **Omission Failure:** The process "skips" an action (e.g., fails to send a message or fails to process a received one).
+3. **Arbitrary (Byzantine) Failure:** The worst case. The process can behave in any way, including sending conflicting or malicious data to different nodes.
+
+
+
+#### Communication Failures
+- **Omission:** Messages are dropped by the network.
+- **Arbitrary:** Message contents are corrupted or "ghost" messages appear.
+- **Timing:** (Only in synchronous systems) A message arrives, but it arrives outside the guaranteed time bound.
+
+---
+
+### 4. The Two Generals Problem
+A classic problem proving that **agreement is impossible** over an unreliable communication channel.
+
+- **The Scenario:** Two generals must agree to attack at the same time. If only one attacks, they lose. They communicate via messengers who can be captured (Omission failure).
+- **The "Small Proof" (Induction on Message Chain):**
+	- Suppose there is a protocol that requires $n$ messages to reach agreement.
+	- Let $m_n$ be the last message. Since the channel is unreliable, the sender of $m_n$ never knows if it arrived.
+	- If the protocol works even if $m_n$ is lost, then $m_n$ wasn't necessary.
+	- If $m_n$ wasn't necessary, then we only needed $n-1$ messages.
+	- By induction, we can reduce the required messages to zero, proving that no finite number of messages can ever guarantee agreement.
+
+
+
+---
+
+### 5. Common Knowledge & Muddy Children
+Knowledge is the foundation of agreement. 
+- **Individual Knowledge:** "I know $X$."
+- **Common Knowledge:** "Everyone knows $X$, and everyone knows that everyone knows $X$ (to infinity)."
+
+**The Muddy Children Puzzle:**
+- $k$ children have mud on their faces. They can see everyone's face but their own.
+- The father says: *"At least one of you has a muddy face."*
+- This creates **Common Knowledge**. Before he spoke, every child might have known there was a muddy face (because they saw others), but they didn't know that *everyone else* knew it.
+- **The Result:** Through rounds of silence, the children use the fact that "no one stepped forward" to deduce their own state. It proves that some tasks require a public announcement to become common knowledge before they can be solved.
+
+---
+
+### 6. Failure Detectors
+In asynchronous systems, you cannot distinguish a "crashed" process from a "very slow" one. Failure detectors provide a "hint" about which processes have failed.
+
+They are defined by two properties:
+1. **Completeness:** Does the detector eventually suspect all crashed processes?
+	- *Strong:* Every crashed process is suspected by **all** correct processes.
+2. **Accuracy:** Does the detector avoid suspecting healthy processes?
+	- *Strong:* No correct process is **ever** suspected.
+	- *Eventual ($\diamond$):* The detector might make mistakes initially but eventually stops suspecting correct processes.
+
+---
+
+### 7. Performance Measures
+How we quantify the efficiency of a distributed system.
+
+- **Latency:** The time delay between the start of an operation and its completion.
+- **Bandwidth:** The total amount of information that can be transmitted over the network in a given time.
+- **Throughput:** The rate at which the system completes requests (e.g., requests per second).
+- **Message Complexity:** The total number of messages sent to complete an algorithm.
+- **Space/Time Complexity:** The amount of memory or the number of steps required per node.
+
+**Service Levels:**
+- **SLI (Service Level Indicator):** What we measure (e.g., "95th percentile latency").
+- **SLO (Service Level Objective):** The target value (e.g., "Latency must be < 200ms").
+- **SLA (Service Level Agreement):** The contract: SLO + consequences of failing to meet it.
