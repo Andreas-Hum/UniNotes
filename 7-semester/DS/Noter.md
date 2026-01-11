@@ -151,3 +151,69 @@ How we quantify the efficiency of a distributed system.
 - **SLI (Service Level Indicator):** What we measure (e.g., "95th percentile latency").
 - **SLO (Service Level Objective):** The target value (e.g., "Latency must be < 200ms").
 - **SLA (Service Level Agreement):** The contract: SLO + consequences of failing to meet it.
+
+
+# Lecture 3 
+## Time and Global States in Distributed Systems
+
+### 1. Counting Time Locally and Remotely
+In a distributed system, time is a tool for ordering events and measuring intervals, but it is inherently problematic.
+- **Local Time:** Each computer has a physical hardware clock (typically a quartz crystal oscillator) that counts oscillations and stores them in a register. The OS scales this to a software clock $C_i(t)$.
+- **The Remote Problem:** There is no "global clock." Because messages take time to travel and network delays are unpredictable, we cannot perfectly synchronize clocks across different machines.
+- **Clock Drift:** Hardware clocks naturally lose or gain time at different rates. Most quartz clocks have a drift rate of about $10^{-6}$ seconds per second (1 second every 11.6 days).
+- **Clock Skew:** The instantaneous difference between the readings of any two clocks.
+
+### 2. Dealing with Time Disagreement (Synchronization)
+We synchronize clocks either to an external source (External Sync) or with each other (Internal Sync).
+
+**Cristian's Algorithm (External)**
+A client requests time from a centralized time server $S$.
+$$T_{\text{new}} = T_{\text{server}} + \frac{T_{\text{round}}}{2}$$
+- $T_{\text{new}}$: The time set on the client's clock.
+- $T_{\text{server}}$: The timestamp returned by the server.
+- $T_{\text{round}}$: The total round-trip time measured by the client.
+- **Accuracy:** The error is $\pm (\frac{T_{\text{round}}}{2} - \text{min})$, where $\text{min}$ is the minimum possible message delay.
+
+**The Berkeley Algorithm (Internal)**
+A coordinator polls all "slaves" for their times, calculates a fault-tolerant average (discarding outliers), and sends back an offset (e.g., "slow down by 2s") to each node.
+
+**Network Time Protocol (NTP)**
+A hierarchical system (Strata) designed to synchronize the Internet. It uses statistical filtering to handle high network jitter.
+
+---
+
+### 3. The Happens-Before Relation ($\to$)
+Defined by Leslie Lamport, this relation provides a partial ordering of events based on "causal" flow rather than physical time.
+
+**Definition Rules:**
+1. **Local Order:** If $a$ and $b$ are events in the same process, and $a$ comes before $b$, then $a \to b$.
+2. **Message Flow:** If $a$ is the sending of a message and $b$ is the receipt of that same message, then $a \to b$.
+3. **Transitivity:** If $a \to b$ and $b \to c$, then $a \to c$.
+
+**Concurrent Events ($\parallel$):**
+If $a \nrightarrow b$ and $b \nrightarrow a$, the events are **concurrent**. They have no causal relationship.
+
+
+---
+
+### 4. Logical Time and Clocks
+Logical clocks assign a number $L(e)$ to an event $e$ such that if $a \to b$, then $L(a) < L(b)$.
+
+**Lamport Logical Clocks**
+Each process $P_i$ maintains a counter $L_i$.
+- **Local Update:** Before each event, $L_i = L_i + 1$.
+- **Sending:** Attach current $L_i$ to the message.
+- **Receiving:** When receiving a message with timestamp $L_{\text{msg}}$, set $L_i = \max(L_i, L_{\text{msg}}) + 1$.
+- **Variables:** - $L_i$: Local logical clock value.
+	- $L_{\text{msg}}$: Timestamp attached to an incoming message.
+
+**Vector Clocks**
+Lamport clocks have a weakness: $L(a) < L(b)$ does **not** guarantee that $a \to b$. Vector clocks fix this by keeping a vector of size $N$ (number of processes).
+- **Update Rule:** Each process increments its own entry in its vector $V_i[i]$ for every local event. When receiving a vector $V_{\text{msg}}$, the process updates its local vector to the element-wise maximum: $V_i[j] = \max(V_i[j], V_{\text{msg}}[j])$.
+- **Causality Guarantee:** $V(a) < V(b) \iff a \to b$.
+
+---
+
+### 5. Timing Issues and Lamport Diagrams
+- **Timing Issue Example:** In a distributed database, two users might update the same row. Without logical ordering, different replicas might apply the updates in different orders, leading to inconsistency.
+- **Lamport Diagrams:** These visualize distributed executions using vertical lines for processes and slanted arrows for messages. They allow us to trace "causal paths" to see if one event could have influenced another.
