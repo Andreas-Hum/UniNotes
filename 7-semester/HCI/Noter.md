@@ -1,16 +1,5 @@
----
-tags:
-  - uni
-  - mobile-systems
-  - lecture-notes
-  - computer-science
-course: Mobile Information Systems
-lecture: 01 - Big Issues
-date: 2025-01-21
----
 
 # Lecture 01: Big Issues in Mobile Information Systems
-
 ## Overview
 Mobile Information Systems (MIS) differ from standard desktop computing due to specific constraints and contexts. The course highlights 7 key issues:
 1. Limited Power
@@ -22,7 +11,6 @@ Mobile Information Systems (MIS) differ from standard desktop computing due to s
 7. Sustainability
 
 ---
-
 ## 1. Power Supply
 The most critical constraint. Mobile devices are battery-dependent.
 
@@ -120,7 +108,6 @@ Mobile devices have limited screen real estate and no physical keyboard.
 
 ## 5. Context
 Context is more than just "Location."
-
 ### Types of Context
 * **Environmental:** Light, Sound, Motion (Are you on a bus?).
 * **Geometric:**
@@ -128,7 +115,6 @@ Context is more than just "Location."
     * *Relative:* Orientation, distance to other objects (6DOF).
 * **Social:** Who is around? (Privacy, manners in a church vs. subway).
 * **Activity:** What is the user *doing*? (Walking, sitting, taking a photo).
-
 
 ### The Recognition Problem
 Automatic context detection is difficult.
@@ -156,7 +142,7 @@ Mobile devices carry our most sensitive data (PINs, Location, Messages).
 
 ---
 
-# Review Questions
+## Review Questions
 1. Why is **Flash memory** preferred over HDD for mobile, despite the higher cost?
 	1. Flash memory unlike HDD has more space. It is in sense a very large place in a very small space. However the downside is the fact that its more expensive. It also uses less power which is a good way to make the phones more power efficient.
 2. Explain the **"Tail Energy"** concept in wireless communication.
@@ -170,16 +156,8 @@ Mobile devices carry our most sensitive data (PINs, Location, Messages).
 5. Why is **Context Recognition** risky for the user experience?
 	1. Its important for the fact that context is important, how does your phone know if your driving, or taking a bus. Can it know that your in a meeting and then simply stop giving you notifications? 
 
-
-
----
-tags: [uni, mobile-systems, lecture-notes, networks, location]
-course: Mobile Information Systems
-lecture: 02 - Location & Networks
-date: 2025-01-21
-
----
-
+## Exercise
+![[HCI_Exercises.pdf]]
 # Lecture 02: Location & Networks
 
 ## Part 1: Wireless Networks
@@ -277,7 +255,7 @@ The RF spectrum is a shared, limited resource. To allow multiple devices to comm
 
 ---
 
-# Review Questions
+## Review Questions
 1. What is the **Hidden Node Problem** in wireless networking, and how does **RTS/CTS** solve it?
 	1. The hidden node problem 
 2. Explain the difference between **FHSS** (Bluetooth) and **DSSS** (WiFi).
@@ -289,565 +267,1023 @@ The RF spectrum is a shared, limited resource. To allow multiple devices to comm
 	1. Geocoding you go from an adress to coodinates reverse does the opposite.
 5. Why is **Cell-based location** preferred over GPS for indoor applications?
 	1. Sattelites require a direct LOS (Line of sight) whereas cells use overlapping cells, each cell has a different frequency you can therefor see where you overlap. 
----
-tags: [uni, mobile-systems, lecture-notes, io, ux]
-course: Mobile Information Systems
-lecture: 03 - I/O on Small Screens
-date: 2025-01-21
----
-
 # Lecture 03: I/O on Small Screens
 
-## Part 1: Input (The Bottleneck)
+## 1. Input Challenges (Recap)
 
-Input is the primary bottleneck in mobile interaction. The bandwidth from User $\to$ Device is much lower than Device $\to$ User.
+Mobile interaction is primarily constrained by the physical size of the device and the nature of human-computer interaction in mobile contexts.
 
-### 1. Keypads (Hard Keys)
-Before touchscreens, physical keypads were standard.
-* **12-Key Pad (ISO/IEC 9995-8):** The standard 0-9, *, # layout.
-* **Text Entry Methods:**
-    * **Multi-tap:** Press '2' once for 'a', twice for 'b', etc. Slow and tedious.
-    * **Predictive (T9):** Press each key once. The system uses a dictionary to guess the word (disambiguation). "Good" sequences match unique words; "bad" sequences (collisions) require manual selection (e.g., "book" vs. "cool").
-
-### 2. Touchscreens
-The dominant input method today.
-
-| Feature | Resistive (Old) | Capacitive (Modern) |
-| :--- | :--- | :--- |
-| **Mechanism** | Two layers pressed together (Pressure). | Measures change in capacitance (Conductivity). |
-| **Input Tool** | Finger, Stylus, Fingernail (Anything). | Finger, Special Stylus (Conductive objects only). |
-| **Clarity** | Lower (extra plastic layers). | Higher (glass). |
-| **Multi-touch** | Generally No. | Yes. |
-| **Cost** | Cheap. | More Expensive. |
-
-### 3. Soft Keyboards
-Virtual keyboards on touchscreens introduce specific challenges:
-* **Lack of Haptics:** No physical "click" confirmation.
-* **Occlusion:** Your hand covers the keys (and the content).
-* **Fat Finger Problem:** Touch area is larger than the target.
-
-> [!TIP] Improvements
-> * **Landscape Mode:** Larger keys, but covers the whole screen.
-> * **Continuous Swipe (ShapeWriter/Swype):** Draw a line through letters. Uses geometric pattern matching + dictionary. Very fast.
-> * **Personalization:** Keyboards learn your slang and hit-zones over time.
-
-### 4. Gestures
-* **Bezel Swipe:** Starting a swipe from outside the screen (e.g., on the black frame) is distinct from an on-screen swipe. Used for system menus (iOS Control Center, Android Back).
-* **Palm Rejection:** Software must ignore accidental touches from the palm while holding the device.
+- **Haptic Feedback**: Unlike physical keyboards, touchscreens lack tactile confirmation.
+- **Occlusion**: The user's hand or fingers naturally cover parts of the display during interaction.
+- **Precision**: The "fat finger problem" refers to the fact that a finger covers a target and hits multiple pixels simultaneously.
+- **Midas Touch**: The lack of a "hover" state means every touch immediately triggers an action.
+- **Reachability**: Screen sizes have grown beyond the natural comfortable "Thumb Zone" for one-handed use.
 
 ---
 
-## Part 2: Visual Output (Displays)
+## 2. Touch Interaction Solutions
 
-Small screens mean low information density.
-
-### The Visual Angle
-To determine if a screen is "good enough" (Retina quality), we look at the **Visual Angle** ($\theta$), not just resolution. It depends on size ($S$) and distance ($D$).
-
-$$\theta = 2 \cdot \arctan \left( \frac{S}{2D} \right)$$
-
-* *Implication:* A phone held close needs higher PPI (Pixels Per Inch) than a TV viewed from across the room to appear equally "sharp."
-
-### Display Technologies
-
-#### 1. LCD (Liquid Crystal Display)
-* **Mechanism:** Backlight shines through liquid crystals which rotate to block/pass light.
-* **TN (Twisted Nematic):** Cheap, fast, but bad viewing angles and color.
-* **IPS (In-Plane Switching):** Good colors, great viewing angles, standard for modern phones.
-* **Pros/Cons:** Mature tech, but backlight is always on (no true black), consumes power even for black pixels.
-
-#### 2. OLED (Organic Light Emitting Diode)
-* **Mechanism:** Each pixel produces its own light.
-* **AMOLED:** Active Matrix OLED (used in phones).
-* **Pros:** Perfect blacks (pixels turn off), thinner, flexible (foldable phones!), lower power for dark content.
-* **Cons:** **Burn-in** (static images leave ghosts), degrades over time (blue subpixels die fastest).
-* **PenTile Matrix:** A subpixel layout (RG-BG) that shares subpixels.
-    * *Result:* Lower effective resolution than claimed. Text can look "fuzzy" or have color fringes.
-
-
-
-#### 3. E-Ink (Electrophoretic)
-* **Mechanism:** Tiny capsules with black and white pigments moved by electric charge.
-* **Pros:** **Bistable** (consumes power *only* when changing the image), readable in direct sunlight (reflective).
-* **Cons:** Very slow refresh rate (ghosting), monochrome (usually). Best for e-readers.
+### Haptic Feedback
+- **Physical Overlays**: Technologies like "Phorm" use microfluidics to create physical buttons that "grow" out of the screen.
+- **Vibration**: Standard vibration alerts provide a binary or patterned channel for confirmation.
+### Precision & Occlusion
+- **Offset Cursors**: Showing a cursor slightly above the finger to avoid occlusion.
+- **Handles & Menus**: Using specific handles for selection or menus that appear offset from the touch point.
+### The Midas Touch Problem
+- **Activation on Lift**: A common solution is to wait to trigger the action until the finger is lifted off the screen, allowing the user to adjust their aim.
 
 ---
 
-## Part 3: Non-Visual Output
+## 3. Input Modalities
 
-When the visual channel is overloaded (or the screen is in a pocket), we use other channels.
+### Gestures
+- **Discrete Gestures**: Tap, double tap, long press, swipe.
+- **Continuous Gestures**: Pinch-to-zoom (one of the few standardized gestures).
+- **Bezel Swipes**: Starting a gesture from the black frame of the device to trigger system-level actions (e.g., Back, Notification shade).
+- **Discoverability**: A major issue with gestures is that users often do not know which gestures are available.
+### Motion & Sensors
+- **Accelerometer/IMU**: Used for orientation switching (Portrait vs. Landscape), shaking to undo, or tilting for navigation.
+- **Vision (Camera)**: Used for barcode/QR code scanning, face tracking, and 3D reconstruction (SLAM).
 
-### 1. Audio
-* **Speech:** Text-to-Speech (TTS). Good for navigation, but slow and linear.
-* **Non-Speech Audio:**
-    * **Earcons:** *Abstract*, musical patterns. Arbitrary mapping (must be learned).
-        * *Example:* "Ding-Dong" = Doorbell. Nokia SMS tone = Morse code for "SMS".
-    * **Auditory Icons:** *Metaphorical*, natural sounds. Intuitive mapping.
-        * *Example:* Crumpling paper sound = Deleting a file. Typewriter sound = Typing.
+### Speech
+- **Speech Input**: Primarily used for hands-free scenarios like car navigation or simple assistants (Siri, Google).
+- **Offloading**: Complex recognition is usually offloaded to a cloud service.
+---
 
-### 2. Tactile (Haptics)
-* **Vibration:** Binary (on/off) or patterned. Used for notifications.
-* **Haptics:** Simulating texture or friction (e.g., Apple Taptic Engine).
-* **Microfluidics (Tactus):** Experimental tech where physical buttons "swell" out of a flat screen, then disappear.
+## 4. Output Modalities
 
-> [!SUMMARY] Output Comparison
-> * **Visual:** High bandwidth, requires attention.
-> * **Audio:** Omnidirectional (don't need to look), but intrusive and transient.
-> * **Tactile:** Private, low bandwidth, good for confirmation.
+### Audio Output
+- **Earcons**: Abstract musical patterns that require learning (e.g., a specific "ding" for a new email).
+- **Auditory Icons**: Natural, metaphorical sounds that are immediately intuitive (e.g., the sound of a trash can for deleting a file).
+
+### Display Technology
+- **LCD (Liquid Crystal Display)**: Requires a backlight; consumes power regardless of color displayed.
+- **OLED (Organic Light Emitting Diode)**: Each pixel is self-illuminating; black pixels are "off," which saves power.
+- **E-Ink (Electronic Paper)**: Bistable (consumes power only when the image changes) and highly readable in sunlight, but has very slow refresh rates.
+### Display Quality & Resolution
+- **PPI (Pixels Per Inch)**: Higher PPI is needed for handheld devices compared to TVs because they are held closer.
+- **PenTile Matrix**: A subpixel layout used in some OLED displays that shares subpixels to increase density but can result in "fuzzy" text or color fringes.
+
+---
+## 5. Text Entry Strategies
+- **Multi-tap**: Pressing a key multiple times for different letters (e.g., 2 for 'a', 22 for 'b').
+- **Predictive Text (T9)**: Using a dictionary to disambiguate single key presses.
+- **Shape Writing/Swyping**: Drawing a continuous path through letters to form words.
+
+---
+## Review Checklist
+1. Explain the **"Midas Touch Problem"** and how lift-off activation solves it.
+	1. The midas touch problem is the problem that when you touch  the screen an event fires you can sort of solve this by waiting for the user to lift their fingers off the screen before firing the event
+2. Differentiate between **Earcons** and **Auditory Icons**.
+	1. Earcons have to be learned while auditory is something we assosiate with the given thing being heard
+3. Why is **OLED** more energy-efficient for dark-themed apps?
+	1. Because OLED has its black pixels off unless needed unlike LED where everything is turned on at the same time
+4. What is the impact of **occlusion** on mobile UI design?
+	1. Occlusion is a big deal in UI design you have to be able to design a UI that is still intuative while some of it is hidden by the thumb or other fingers.
+
+## Presentation Notes: The "Throw App"
+### 1. Project Overview
+- **Goal:** Create an application that measures how high a user throws their phone into the air.
+- **Core Technology:** Uses the device's **Accelerometer** sensor to detect "Free Fall."
+- **Key Concept:** Utilizing implicit input (motion) rather than explicit input (touch/buttons)
+### 2. The Physical Principle (The "Why")
+- **Resting State:** When the phone is in your hand or on a table, the accelerometer measures **1g (approx 9.8 $m/s^2$)** due to Earth's gravity pushing against it.
+- **Free Fall State:** When an object is thrown or dropped, it enters "micro-gravity." The accelerometer readings for x, y, and z will all drop close to **0**.
+- **Detection Strategy:** We monitor the sensor stream. When the total G-force drops near zero, we know the throw has started. When it spikes back up, the phone has been caught.
+### 3. Implementation Details
+
+#### A. Sensor Fusion (Magnitude)
+- **Code:** `double gForce = sqrt(event.x^2 + event.y^2 + event.z^2);`
+- **Explanation:** We cannot just look at the Y-axis because the phone spins while flying. We calculate the **Magnitude** of the force vector. This ensures the app works regardless of the phone's orientation.
+#### B. The State Machine
+My code implements a simple 3-state logic:
+1. **Ready:** Monitoring sensor. G-Force is normal (~9.8).
+2. **In Air (Free Fall):** Triggered when `gForce < 2.0`.
+    - _Action:_ Start a stopwatch (`DateTime.now()`).
+    - _Visual Feedback:_ Background turns Blue.
+3. **Caught:** Triggered when `gForce > 2.0` (Impact).
+    - _Action:_ Stop stopwatch. Calculate height.
+#### C. Filtering Noise (Signal Processing)
+- **Thresholding:** I used a threshold of `2.0` rather than `0.0` to account for sensor noise and minor air resistance.
+- **Time Filter:** `if (flightTimeMs > 200)`
+    - _Reason:_ Hand tremors or putting the phone on a table quickly might look like free fall for 10-50ms. I filter out any "throws" shorter than 0.2 seconds to prevent false positives.
+        
+### 4. The Physics Calculation
+
+Once we have the **Total Flight Time**, I calculate the height:
+1. **Assumption:** The throw is symmetric (Time Up = Time Down).
+2. **Time to Apex:** $t = \text{TotalTime} / 2$.
+3. **Formula:** $h = \frac{1}{2} g t^2$
+    - $g = 9.81$
+    - This gives us the peak height in meters.
+### 5. Challenges & Limitations
+- **Centripetal Force:** If the phone spins violently while thrown, the accelerometer might measure the spin force (centripetal) instead of pure gravity. This could prevent the reading from dropping below 2.0, causing the app to "miss" the throw.
+- **Soft Catches:** If the user catches the phone very gently (decelerating slowly), the G-force might not spike immediately, leading to inaccurate timing.
+- **Safety:** I added `SystemChrome.setPreferredOrientations` to lock the screen in Portrait mode. Allowing rotation during a throw makes the UI unreadable and jittery.
+### 6. Demo
+_(Show the app)_
+- **Black Screen:** Ready.
+- **Blue Screen:** In Air (Instant feedback).
+- **Green Screen + Result:** Caught (Shows height).
+
+---
+# Lecture 04: UbiComp & IoT
+## 1. Ubiquitous Computing (UbiComp)
+
+**Core idea (Weiser, 1991):**
+- The most powerful technologies “disappear” into everyday life.
+- The goal is computing that feels _embedded_ and _natural_, not something you constantly “operate.”
+
+**Weiser’s 3 device classes:**
+- **Tabs**: wearable, centimeter-scale devices
+- **Pads**: handheld, decimeter-scale devices
+- **Boards**: meter-scale interactive displays  
+    → The lecture’s point: a lot of this vision has “mostly arrived” in hardware form.
+
+**But… has it really arrived?**
+- UbiComp isn’t only about _devices_ — it’s also about _interaction (or lack of interaction)_.
+- Related terms: **calm / ambient / pervasive computing**
+    - Implies _less manual setup_ and less “user effort.”
+- Practical example problem: even pairing/using multiple Bluetooth devices smoothly is still hard.
+---
+## 2. “Internet of Things” (IoT)
+**Framing:**
+- Often used as a broad marketing term.
+- Still, the core concept is clear: **connectivity everywhere**.
+
+**How IoT differs slightly from classic UbiComp:**
+- Less focus on personal interactive devices.
+- More focus on **smart objects + sensor networks**
+    - Examples: light bulbs, fridges, trash cans, water meters
+- Also overlaps with industrial visions like **Industry 4.0 / Factory of the Future**.
+
+**Stated goals:**
+- Automate mundane everyday tasks
+- Improve energy/resource efficiency
+- “Smarter” logistics (especially factories)
+
+**Less idealistic goals (implied):**
+- Sell more sensor/wireless modules
+- Collect more consumer data (sometimes surprisingly informative)
+---
+## 3. Big Issues in UbiComp/IoT
+
+### Energy / Power Supply
+- Scaling problem: imagine replacing batteries in **thousands** of devices.
+- Leads to interest in **energy harvesting** (see section 7).
+### Interaction & Usability
+- People already struggle managing **two** devices.
+- Question becomes: how do you manage **huge networks** of devices with minimal setup?
+### Privacy & Security
+- Massive amounts of personal and environmental data.
+- Needs strong protection — but IoT often ships with weak defaults.
+### Standards (or lack thereof)
+- Interoperability is a mess: different vendors, different protocols, different apps.
+- Results in “Device A can’t talk to App B” problems.
+---
+## 4. UbiComp/IoT Technology Landscape
+
+The lecture groups the enabling tech into:
+- **Wearables & interaction concepts**
+- **Sensor & mesh networks**
+- **Personal area networks** (e.g., BLE, NFC)
+---
+## 5. Wearables & Interaction Concepts
+**Wearable = body-worn, hands-free device**, e.g.:
+- Smartwatches, fitness trackers
+- Smart glasses (e.g., Google Glass)
+- Headsets/headphones (borderline but often included)
+
+**Why interaction is special here:**
+- Very small screens (or no screen)
+- New input styles:
+    - simple swipes
+    - shake/motion gestures
+    - voice commands
+### Smartwatches (high-level notes)
+**Why they became popular recently:**
+- They act as a **companion** to the smartphone (less heavy lifting on the watch)
+- Better sensors (motion, heart rate, etc.)
+- Better displays
+
+**Typical problems:**
+- Battery lifetime
+- Physical size constraints
+
+**Interaction style:**
+- Rough swipes / motion gestures (not “full smartphone gesture sets”)
+- Often tightly coupled to phone interaction (notifications, quick replies)
+
+**Common use cases:**
+- Notifications + short actions
+- Body/activity/sleep logging
+- “Quick glance” information
+---
+
+## 6. Sensor Networks, Mesh Networks, and LPWAN
+
+### Why “regular” network topologies struggle
+- Classic star/tree networks rely on **central hubs**.
+- IoT sensors are often:
+    - **low power**
+    - **short range**
+- So you’d need lots of hubs/gateways → expensive and annoying.
+### Mesh networks (the alternative)
+- Every device can act as a **relay/hub**.
+- Data may travel across multiple **hops**.
+- Network topology can change dynamically.
+
+**Forwarding strategies mentioned:**
+- **Flooding / rebroadcasting** (simple but can cause overhead)
+- **On-demand routing** (example: AODV)
+- **Pro-active routing** (examples: OLSR, B.A.T.M.A.N.; community networks like Freifunk)
+
+**Implementations mentioned:**
+- ZigBee (IEEE 802.15.4)
+- Bluetooth LE mesh (newer versions)
+- WiFi-based community meshes
+### LPWAN (Low Power Wide Area Networks)
+- Long range (roughly kilometers)
+- Very low bandwidth (good for tiny sensor updates)
+- Examples mentioned: LoRaWAN, Weightless, WiFi HaLow
+- Intended for things like smart meters and street lamps
+---
+## 7. Personal Area Networks (WPAN): Bluetooth → BLE → NFC
+
+### “Classic” WPAN idea
+- Goal: connect personal peripherals.
+- Historically: IrDA → Bluetooth.
+
+**Classic Bluetooth drawbacks (in this lecture’s framing):**
+- Higher power draw
+- Pairing/setup complexity
+### Bluetooth Low Energy (BLE / BTLE)
+**Key idea:** optimized for small battery sensors that should last months/years.
+**BLE characteristics:**
+- Same 2.4 GHz ISM band as classic Bluetooth
+- Smaller / less complex stack
+- Introduced in Bluetooth 4.0
+- Max data rate around 1 Mbit/s (lecture-level takeaway: not for heavy streaming)
+
+**Two roles:**
+- **Peripheral**
+    - broadcasts or connects to one central
+    - can notify central on value changes
+- **Central**
+    - scans, connects, receives notifications
+
+**Device “complexity classes” (practical categories):**
+- **Beacons**: static broadcasts (e.g., iBeacon UUID)
+- **Sensors**: broadcast/unicast sensor data; notification support reduces polling
+- **Bidirectional**: mostly for configuration/parameters rather than synchronous chat
+
+**Power concept to remember:**
+- Advertising interval heavily affects lifetime.
+- Power management is a core design constraint.
+### BLE protocol structure (names to recognize)
+- **GAP (Generic Access Profile)**  
+    Advertising, discovery, connection setup; small broadcast payload (+ optional extra on request).
+- **GATT (Generic Attribute Profile)**  
+    The main structure for “live” data: services + characteristics identified by UUIDs, publish/subscribe style, supports notifications.
+### Near Field Communication (NFC)
+**NFC basics:**
+- Very cheap tags, many physical form factors.
+- Subclass of RFID.
+- Passive tags are powered by the reader’s magnetic field.
+- Communication is short-range and based on field modulation.
+
+**Typical NFC characteristics:**
+- Very short range (centimeters)
+- Storage from tiny to moderate (think: “IDs/URLs up to small data blocks”)
+
+**Variants / types:**
+- Simple storage (NDEF-style use)
+- Smart cards with crypto (e.g., Mifare-like concept)
+- Java cards (programmable)
+- Card emulation (phone pretends to be a card)
+
+**Use cases:**
+- URLs/contact data in posters/business cards
+- Access control / student cards
+- Mobile payment
+- Passports (sensitive data)
+- Device-to-device sharing (historically, e.g., Android Beam)
+
+**Security notes:**
+- Public tags ideally should be write-protected (often they aren’t)
+- Risks include tag rewriting (e.g., malicious URLs)
+- Low-level protections (keys) can be attacked in practice
+- Higher-level: dedicated crypto apps in the chip (SIM-like security model)
+---
+## 8. Major IoT Problem Deep Dives
+
+### Energy supply → Energy harvesting
+
+Possible sources mentioned:
+- Light (sun/environment)
+- Vibration & sound
+- Temperature differences
+- Ambient EM radiation
+
+Tradeoffs:
+- Low efficiency (tiny power budgets)
+- Need storage (e.g., night time)
+### Privacy
+- BLE broadcasting can enable tracking.
+- Extra data leakage risk (e.g., broadcasting sensor data like pulse).
+- MAC randomization exists, but isn’t always used.
+- Classic tradeoff: **security/privacy vs ease of setup**
+- Real-world stalking risk examples: item trackers.
+### Security
+- Phones are already patch-challenged; IoT devices are often worse.
+- Many devices remain unpatched because users don’t notice or vendors don’t support them long.
+- Insecure IoT can become part of botnets and be used for attacks (e.g., DDoS).
+### Standards
+- Often “one standard per manufacturer.”
+- Sometimes common ground is IP; more recently, cross-vendor efforts exist (lecture mentions Matter).
+- Reality: a mix of protocols (HTTP, MQTT, ZigBee, etc.)
+- “Universal” approach idea: devices broadcast a URL (Physical Web / URIBeacon concept)
+    - Challenge: mapping the URL to the right meaning/control model.
+---
+
+## Review Checklist
+1. Explain UbiComp in Weiser’s sense: what does it mean for technology to “disappear” into everyday life?
+2. Tabs vs Pads vs Boards: give an example of each in modern terms.
+3. Why do mesh networks help IoT deployments compared to star/tree networks?
+4. BLE roles: what’s the difference between a central and a peripheral?
+5. What are GAP and GATT used for (at a high level)?
+6. Give two NFC use cases and one NFC security risk.
+7. Name the four big IoT issues highlighted: energy, interaction, privacy/security, and standards.
+## Presentation Notes: "Emoji Broadcast" (Wear OS)
+### 1. Project Overview
+- **Goal:** Create a localized, "serverless" chat application for Smartwatches.
+- **Core Technology:** Bluetooth Low Energy (BLE).
+- **Concept:** Instead of pairing devices or connecting to the internet, we use **BLE Advertising** to "shout" messages to anyone nearby and **BLE Scanning** to hear them.
+- **Use Case:** Proximity-based social interaction (e.g., sharing a mood in a classroom or club) without exchanging contact info.
+### 2. The Protocol: "Connectionless" Communication
+
+Standard Bluetooth involves pairing and bonding. We skipped that to make the interaction instant and fluid.
+- **Broadcaster Role (Peripheral):** To send a message, the watch turns into a beacon.
+    - _The Hack:_ We are embedding the message directly into the **Device Name** field of the advertisement packet.
+    - _Format:_ `sHCI:[Your_Emoji]` (e.g., `sHCI:😎`).
+- **Observer Role (Central):** To receive messages, the watch scans for _any_ advertising packets in the air.
+    - _Filtering:_ We ignore standard devices (Headphones, Fitbits) and only look for names starting with `"sHCI:"`.
+### 3. Implementation Details
+#### A. Permissions (The Gatekeeper)
+- **Android 12+ Requirements:** The code explicitly requests `BluetoothScan`, `BluetoothConnect`, and `BluetoothAdvertise`.
+- **Location:** We also ask for `Location` because, historically on Android, scanning for Bluetooth devices could be used to derive a user's physical location.
+#### B. The Scanning Logic (Listening)
+- **Stream:** We listen to `_centralManager.discovered`.
+- **Deduplication:**
+    - _Problem:_ BLE devices send advertisements ~3 times per second. We don't want the list to flicker or fill up with duplicates.
+    - _Solution:_ I used a `Map<String, String>` where the key is the sender's **UUID** (Unique ID). I only update the UI if the message content associated with that UUID changes.
+
+#### C. The Advertising Logic (Talking)
+- **Action:** When you type an emoji and hit send:
+    1. We construct the name: `"sHCI:" + text`.
+    2. **Important Step:** We strictly `stopAdvertising()` before `startAdvertising()`.
+    3. _Why?_ You cannot change the name of a live advertisement dynamically. You must tear down the old broadcast and erect a new one with the new payload.
+
+### 4. Wear OS Specifics (UI/UX)
+Developing for a watch is different from a phone:
+- **OLED Optimization:** The `backgroundColor` is set to `Colors.black`. On OLED watch screens, black pixels are off, which saves massive amounts of battery.
+- **Round Layout:** I used a `Center` widget with `Padding` to ensure content isn't clipped by the rounded corners of the watch face.
+- **Input Constraint:** Typing on a watch is hard. I set `TextInputAction.send` so the user can broadcast directly from the keyboard's action button, keeping interaction quick.
+### 5. Challenges
+- **Payload Limit:** The BLE Advertisement packet is tiny (31 bytes). The Device Name consumes most of this. This is why we restricted it to **Emojis** or very short words—long sentences would get truncated or dropped.
+- **Latency:** BLE scanning is power-constrained. It might take 1-3 seconds for a friend's new emoji to appear depending on the scan interval.
+### 6. Demo Flow
+1. **Scanning State:** App opens, shows "Scanning..." (Central Mode active).
+2. **Broadcasting:** I type "🔥". The app starts advertising `sHCI:🔥`.
+3. **Discovery:** Another watch nearby picks up the packet, strips the `sHCI:` prefix, and adds "🔥" to the feed.
+
+# Lecture 05: Mixed Reality
+
+## 1. Where AR fits: the Virtuality Continuum
+- **Augmented Reality (AR)** is part of the **“Virtuality Continuum”** (Milgram & Kishino, 1994).
+- AR is a **subclass of Mixed Reality (MR)**.
+- AR can be **roughly categorized by the ratio** between real and virtual content.
+---
+## 2. Definition of AR (Azuma, 1997)
+AR characteristics:
+- Mix of **real-world + virtual visual information**
+- **Interactive in real-time**
+- **Real and virtual elements are spatially aligned in 3D**
+
+Requirements (from the slides):
+- Visual input (real world) + visual output (virtual)
+- User input + fast graphics (to enable interaction)
+- **6D head tracking** (for spatial alignment)
+---
+## 3. AR history & pioneers (high-level timeline)
+- **1901**: first mention of the idea in a novel (“The Master Key” by L. Frank Baum)
+- **1968**: first head-mounted display (HMD) (“The Sword of Damocles” by Ivan Sutherland)
+- **1980**: first wearable HMD by Steve Mann
+---
+
+## 4. AR head-mounted displays (HMDs)
+
+### Optical see-through HMD
+How it works:
+- Uses a **beam combiner** + focus optics to overlay display image over the real-world view.
+Pros:
+- Direct view of the real world
+- Eye can focus at different distances
+Cons:
+- (Mostly) cannot “cover” real objects (3D occlusion problem)
+- Lag/alignment issues are more obvious
+### Video see-through HMD
+How it works:
+- Similar to VR displays + **camera** (video mixing).
+Pros:
+- Camera image can be used for tracking → less lag, better alignment real ↔ virtual
+- Real objects can be hidden/substituted
+Cons:
+- **Parallax error** (camera ↔ display)
+- Similar problems to VR displays (motion sickness)
+- Single focus distance
+---
+## 5. Commercial HMD examples mentioned
+Optical see-through:
+- Google Glass, Meta Wayfarer (**not AR!**)
+- Microsoft Hololens
+- Magic Leap
+Video see-through:
+- Smartphone goggles (Google Cardboard, Samsung Gear VR)
+- Meta Quest 3, Lenovo Mirage Solo
+- VR headset + add-on cameras
+---
+## 6. Practical issues with HMDs
+General HMD issues:
+- Brightness (especially outdoors/sunlight)
+- Field of view (FOV): human FOV ~180°, many HMDs only ~20°
+- Weight/comfort (can induce headaches)
+- Lag between:
+    - real and virtual content
+    - head and image movement
+- Safety concern: what if video see-through fails while crossing the street?
+Issues with Cardboard & similar:
+- Only a single camera on most devices → no 3D view for AR possible (“flat screen effect”)
+- (Mostly) no positional tracking, only rotation → higher probability of motion sickness
+- Unpredictable device capabilities
+- Uncomfortable weight distribution
+- Touchscreen inaccessible
+---
+## 7. HUDs and “diminished” reality
+### Heads-up displays (HUDs)
+- Mostly used in vehicles (car, airplane)
+- Shows navigation info, speed, horizon, etc.
+- Not always spatially aligned
+- Uses beam combiner (windshield) + 2D display
+### Augmented Diminished Reality (idea/example)
+- Not adding, but **removing** real-world content?
+- Example given: **HDR welding mask/goggles**
+    - Filters out welding arc    
+    - Other details remain visible    
+---
+## 8. Mobile devices as AR displays
+- Uses a “**window into virtual world**” metaphor
+- Usually no 3D display
+    - Except with tricks like Google Cardboard
+    - Parallax issues  
+- Primary problem highlighted: **location/tracking**
+---
+## 9. AR tracking & localization (core requirement)
+- Fundamental requirement: stable & reliable **head/view tracking**
+- Multiple approaches:
+    - **GPS + IMU**
+    - **Vision-based**
+    - Stereo/depth cameras
+    - SLAM algorithms
+### GPS + IMU
+- Sensor fusion for **6D pose (geo coordinates)**
+    - 3D position from GPS, 3D orientation from IMU 
+    - (Relatively) low accuracy & position
+    - Requires additional environment information
+- Best suited for large-scale applications (e.g., buildings)
+- Examples: Pokemon Go, Layar, Wikitude Browser
+### Vision-based tracking (overview)
+Primary goal: retrieve **6D pose**  
+Secondary goal: create environment map → enables interaction with environment
+Two paths mentioned:
+- With specialized hardware:
+    - Add-on stereo cameras / depth cameras
+    - iPad Pro (tablet with depth cam)
+- On arbitrary devices (single RGB camera):
+    - Marker-based (fiducial/image)
+    - SLAM algorithms
+### Stereo/depth cameras
+- Core idea: each pixel provides color + distance
+- Stereo cameras:
+    - 2 cameras in parallel
+    - Find stereo correspondences between 2 images
+    - Use camera/lens geometry to calculate distance
+- Depth cameras (single camera + emitter):
+    - ToF (time-of-flight): measure travel time of IR flash
+    - Structured light: shift in projected light pattern
+- Both require specialized hardware
+### Marker-based tracking
+- Use pre-defined markers/targets:
+    - **Fiducials**: printed black-and-white patterns
+    - **Image targets**: (flat) real-world objects
+- System detects pose relative to target
+Marker-based + SIFT:
+- **SIFT** = Scale Invariant Feature Transform
+    - Detects key points in images
+    - Describes them independent of size, rotation, …
+    - Descriptors can be matched across images → calculate geometric transformation
+### SLAM
+- **Simultaneous Localisation & Mapping**
+    - Creates 3D environment map + 6D camera pose
+    - Requires only a single camera
+    - Works on almost any device
+    - Creates stereo correspondences from motion
+    - (Optionally) uses IMU data to determine motion magnitude
+
+Practical notes from the slides:
+- Map generation requires significant processing power
+- Possible on most recent smartphones with ARKit/ARCore frameworks
+- Needs calibration data for camera (distortion) + IMU (alignment to camera)
+- Includes plane detection (floor, tables, walls) for object placement + shadows
+- Touchscreen-based interaction
+
+---
+## 10. Spatial AR / Projection Mapping
+- Projects augmentations directly onto the real world
+- Mostly static projector/camera setups
+    - e.g., buildings, cars, other large objects
+    - pico projectors for mobile use (mentioned as a question/idea)
+- Big problem: brightness vs power supply
+- Other issue: focus distance (laser projectors)
+- Requires:
+    - accurate environment maps
+    - object tracking
+Industrial usage example:
+- Project assembly instructions onto a workpiece (“Werklicht” by Extend3D)
+    - Needs high brightness & focal depth (laser projector required)
+    - Workpiece geometry needs to be known in advance → target for visual tracking (similar to image targets)
+---
+## 11. Interaction with AR (methods listed)
+- Touch screen (e.g., “Touch Projector”, AI Pin)
+- Individually tracked tools (e.g., Wiimote, gloves)
+- Optical recognition/tracking of hands
+
+---
+## 12. AR applications (examples listed)
+- AR still waiting for the “killer app”
+- Advertisements (Ikea, fashion)
+- Military: cockpits, weapon sights
+- Education (e.g., iSkull)
+- Repair & maintenance
+- Gaming (e.g., Ingress, Pokemon Go)
+- Medical applications (“X-ray vision”)
+- Navigation (only prototypes)
+---
+
+## 13. “Mobile” Virtual Reality (as covered here)
+- Meta Quest 1–3: no cables (mobile HW)
+- 4 low-res high-speed IR cameras
+    - tracking of hands/controllers
+    - “room-scale” 6DoF tracking
+- No obstacle detection, only pre-defined safety boundaries → needs large space
+- Possible workaround: “redirected walking”
+- General research topic in VR: locomotion
+---
+
+## Review Checklist
+1. What are the **three AR characteristics** in Azuma’s definition?
+2. Compare **optical see-through** vs **video see-through** HMDs: one pro + one con each.
+3. List the **main issues with HMDs** (brightness, FOV, weight, lag, safety).
+4. Why is **location/tracking** the primary problem for mobile AR displays?
+5. Name and describe the tracking approaches: **GPS+IMU**, **marker-based**, **stereo/depth**, **SLAM**.
+6. What does **SLAM** produce, and what extra features do ARKit/ARCore-style systems include (per the slides)?
+7. What does **projection mapping** require, and what is the “Werklicht” use case?
+# lecture: 06 - Case Studies
+## 1. Inside the Amazon Dash Button
+### What it is
+* A **prototypical IoT device**
+* A **single physical button** for ordering **one specific product** 
+### What’s inside (hardware highlights)
+* **Microcontroller** (reprogrammable)
+* **Board antenna**
+* **WiFi module**
+* **Button**
+* **Microphone** (“why?”)
+* **Battery** (non-rechargeable) 
+### The “chicken-and-egg” IoT setup problem
+
+Problem:
+* Needs **WiFi configuration**, but has **no normal UI**
+  → How do you enter network + password? 
+Solutions shown:
+* **Approach 1: Temporary local hotspot (Android style)**
+  * Dash creates its own hotspot
+  * Phone connects and sends WiFi credentials
+  * Dash closes hotspot, connects as a WiFi client 
+* **Approach 2: Side-channel configuration (iOS style)**
+  * iOS app sends config via **ultrasound**
+  * Dash listens for sound patterns and extracts config 
+* **Approach 3 (mentioned):** misuse of WiFi layer-2 frames (“ProbMe”) 
+
+---
+## 2. Tweaks without root access
+
+### Netguard: user-level network filtering
+* Android blocks **root-level** access to network (unless rooted)
+* **Loophole:** VPN apps are allowed at user level
+* Can be (ab-)used for **network filtering**
+* Useful for blocking **ads/trackers** 
+### PixOff: AMOLED battery saver
+* Selectively turns off **individual pixels**
+* **Doesn’t work for LCD** screens (prompted as “why?”)
+* Different visual patterns depending on user preference
+* “Currently not available in Play Store?” (as noted on slide) 
+### Secondary uses for old devices
+* **Kiosk mode apps**
+  * Lock device to a single app (music player, web browser)
+  * Useful for creating “appliances”
+* **Room surveillance**
+  * Use camera, microphone, IMU to watch for intruders
+  * Example listed: **Haven (open-source)** 
+### Macro / automation tools
+
+* Examples: **MacroDroid**, **Automate**
+* Sometimes close to a full development environment
+* Potential usability issues
+* Risk example: accidentally lock yourself out of your own device 
+
+---
+## 3. COVID-19 Contact Tracing (cartoon walk-through)
+
+Core mechanism shown:
+* Phones broadcast **random messages** every few minutes
+* Nearby phones **exchange** those messages
+* Both phones remember what they “said” and “heard” over the past **14 days** 
+If someone becomes a case:
+* They send their messages to a hospital/system
+* Because messages are random, **no personal info is revealed** to the hospital 
+Exposure notification:
+* Your phone can check whether it “heard” any messages from COVID-19 cases
+* If it heard **enough** messages (exposed long enough), you get alerted 
+
+---
+## 4. Apple AirTags & “Find My”
+
+### Standard process (BLE + public-key crypto)
+* Initial setup creates a **public/private keypair**
+* AirTag **broadcasts the public key** (BLE)
+* Other devices upload their own location, **encrypted with the public key**
+* Owner uses the **private key** to download + decrypt the GPS location 
+### Extra technologies and capabilities
+* iPhone 11+: **Ultra Wide Band (UWB)** for “last-meter” localization
+* Android devices can use **NFC** to identify an AirTag on contact 
+### 3 wireless technologies in one device (as listed)
+* **BTLE**: broadcasting public key (and audio notifications)
+* **NFC**: direct-touch identification & pairing
+* **UWB**: last-meter localization 
+### Issues noted
+* Not a large issue: **owner privacy** (due to public-key crypto)
+* Big issue: **stalking & theft**
+* iPhones try to detect unknown AirTags moving with you
+* Android needs a custom app 
+
+---
+## 5. Mobile Card Emulation
+
+### Two modes
+* **Host Card Emulation (HCE)** (top)
+  * Less secure: malware can interfere with payment process
+* **Secure Element Mode (SEM)** (bottom)
+  * Harder to implement: requires extra security chip (e.g., Apple Pay)
+* Google Pay: issues with carrier support (restricted SIM card access) 
+### Usage scenarios
+* Mobile payment (credit card)
+* Identification (national ID card) 
+### Pass-through to websites (complexity)
+* Many components may be involved:
+  * website, card issuer, certificate authority, browser, secure element, helper app, …
+* Difficult to debug and secure properly 
+
+---
+## 6. Computational Photography
+
+### Goal
+* Improve camera performance **beyond physical limits** 
+Examples listed:
+* Artificial **bokeh** effect (usually needs DSLR + large aperture)
+* “Night Sight” on **Pixel 4+** (usually needs tripod + long exposure) 
+### Superresolution / Superzoom (example)
+* Take a burst of several images quickly (**< 1 second**)
+* Merge into a final image with **2–3×** resolution/zoom of the sensor 
+### Approach + challenges (as listed)
+Approach:
+* Use minimal shifts between images to improve details
+* Example source of shifts: hand tremor measured with **IMU** (or artificial motion via **OIS**)
+* Takes advantage of the **Bayer pattern** 
+Challenges:
+* Moving objects
+* Image sensor noise
+* Unpredictable motion 
+### Cautionary note (slide’s point)
+* “Don’t overdo it…”
+* “AI” enhancement example: any blurry bright circle on black → “moon”
+* Can “hallucinate” non-existent details
+* Open question: how much postprocessing do we want? 
 
 ---
 
-# Review Questions
-1. Compare **Earcons** vs. **Auditory Icons**. Give an example of each.
-2. Why does an **OLED** screen potentially save battery compared to **LCD**, and when would it not?
-3. What is the **PenTile** matrix and how does it affect the perceived quality of a display?
-4. Explain the difference between **Resistive** and **Capacitive** touchscreens regarding input tools.
-5. Why is **E-Ink** considered "Bistable" and what is the benefit?
+## Review Checklist
 
+1. What is the Dash Button’s **setup problem**, and what are the two main solutions shown?
+2. Why can Netguard do network filtering **without root** (what OS feature does it leverage)?
+3. In the contact-tracing cartoon: what do phones broadcast, how long is it stored, and how do alerts happen?
+4. In “Find My”: what does the AirTag broadcast, and how is location reported + decrypted?
+5. Compare **HCE vs SEM**: which is less secure, and which requires extra hardware?
+6. For superresolution: what’s the **core trick** and what are the **three challenges** listed?
+---
+## **1. The Core Problem: RSSI is not Distance**
+The fundamental reason BLE contact tracing struggled is that it relies on **Received Signal Strength Indicator (RSSI)** to estimate distance. As learned in Lecture 02, signal strength is affected by absorption, reflection, and diffraction, making it a very noisy proxy for physical proximity.
 
 ---
-tags: [uni, mobile-systems, lecture-notes, ubicomp, iot]
-course: Mobile Information Systems
-lecture: 04 - Ubiquitous Computing & IoT
-date: 2025-01-21
+### **2. False Positives (Warning without Infection Risk)**
+**Scenario A: The "Thin Wall" Neighbor**
+- **Situation:** You are sitting on your couch reading. Your neighbor, who is COVID-positive, is sitting on their couch just on the other side of the drywall separating your apartments.
+- **Wireless Principle:** As discussed in **Lecture 02**, 2.4 GHz waves (BLE/WiFi) can penetrate standard building materials like drywall and wood. The signal passes through the wall effortlessly.
+- **Result:** The phones detect a strong signal (high RSSI) and log a "close contact" because the signal strength suggests you are within 1-2 meters. However, the virus cannot travel through the wall. You get a red warning notification the next day for an exposure that was physically impossible.
+
+**Scenario B: The "Traffic Light" Encounter**
+- **Situation:** You are in your car at a red light with the windows rolled up. Another car pulls up right next to you (within 1.5 meters). The driver is positive.
+- **Wireless Principle:** Glass allows RF signals to pass through relatively well (Lecture 02). While metal blocks signals, the windows provide a path for the BLE beacon to reach your phone.
+- **Result:** The phones handshake for the duration of the red light (2-3 minutes). The app registers a high-risk contact. In reality, you are in a sealed metal-and-glass box with a separate ventilation system.
 ---
+### **3. False Negatives (Exposure without Warning)**
+**Scenario A: The "Meatbag" Absorption (Body Shielding)**
+- **Situation:** You are standing in a crowded bus line, directly facing a contagious person (face-to-face, < 1m). Both of you have your phones in your _back_ pockets.
+- **Wireless Principle:** Lecture 02 noted that **2.4 GHz is the resonant frequency of water** (which is why microwaves work). The human body is mostly water.
+- **Result:** To reach your phone, the signal must travel through the infected person's torso and your torso. The human bodies absorb a massive amount of the signal energy. The phones perceive a very weak RSSI, interpreting it as the users being 10+ meters apart. The app filters this out as "safe distance," failing to warn you of a direct exposure.
 
-# Lecture 04: Ubiquitous Computing & IoT
-
-## 1. The Vision of Ubiquitous Computing (UbiComp)
-
-**Mark Weiser** (Xerox PARC, 1991) is the father of UbiComp. His seminal paper "The Computer for the 21st Century" laid the groundwork.
-
-> [!QUOTE] The Core Philosophy
-> "The most profound technologies are those that **disappear**. They weave themselves into the fabric of everyday life until they are indistinguishable from it."
-
-### The Three Waves of Computing
-Weiser described computing evolution in three distinct eras:
-
-1.  **Mainframe Era:** Many people share **one** computer. (1960s-70s)
-2.  **PC Era:** **One** person has **one** computer. (1980s-2000s)
-3.  **UbiComp Era:** **One** person interacts with **many** computers. (2000s-Present)
-
-
-
-### Core Concepts
-* **Disappearing Computer:** The technology fades into the background. You focus on the task, not the tool.
-* **Calm Computing:** Technology that informs but doesn't demand focus. It moves easily between the periphery and the center of attention.
-* **Context Awareness:** Devices understand the user's situation (location, activity, environment) and adapt accordingly.
+**Scenario B: The "Metal Canyon" Reflection (Multipath)**
+- **Situation:** You are in a modern train carriage or an elevator with many metal surfaces. You are standing 4 meters away from a sick person (technically "safe" by some standards, but let's say the train is poorly ventilated).
+- **Wireless Principle:** Metal causes **Multipath Scattering** and **Reflection** (Lecture 02).
+- **Result:** The signal bounces off the metal walls and ceiling, taking a longer path to reach your phone or interfering destructively (fading). The phone calculates the "Time of Flight" or signal strength based on this scattered path, miscalculating the distance as much further away than it is. Alternatively, destructive interference creates a "dead zone" where no packets are received at all.
 
 ---
+### **4. Mitigation Strategies (Speculation)**
+Based on "Alternative I/O" (Lecture 03/06) and "Wireless" (Lecture 02):
+**1. Ultrasound Handshakes (Alternative I/O Channel)**
+- **Concept:** Instead of relying solely on 2.4 GHz Radio, use the phone's **Speaker and Microphone**.
+- **Mitigation:** The phone emits a high-frequency audio chirp (ultrasound, inaudible to humans).
+- **Why it helps:** Unlike Radio waves, **sound does not travel well through glass or thick walls**. If your phone can "hear" the other phone, you occupy the same _air space_. This would eliminate the "Thin Wall" and "Traffic Light" false positives.
+**2. Context Awareness via IMU (Sensors)**
+- **Concept:** Use the Accelerometer and Gyroscope (Lecture 04).
+- **Mitigation:** If the phone detects that it is traveling at 50 km/h (driving) or walking pace, it can adjust its sensitivity.
+- **Why it helps:** If the IMU data shows zero movement for 2 hours (phone on a nightstand), the system could lower the "risk score" of fleeting signals passing by, assuming the user is stationary/indoors and protected by walls.
+**3. Ultra-Wideband (UWB) (Wireless Hardware)**
+- **Concept:** Newer phones have UWB chips (Lecture 02 mentions UWB/Pulse radio briefly in older contexts, but it's relevant here).
+- **Mitigation:** UWB uses **Time-of-Flight (ToF)** rather than signal strength to measure distance.
+- **Why it helps:** It measures exactly how long light takes to travel between devices. It is immune to the "Signal Strength" errors caused by body absorption (Scenario A False Negative), providing centimeter-level accuracy.
 
-## 2. The Internet of Things (IoT)
-
-IoT is the technical realization of the UbiComp vision. It refers to networking physical objects ("things") enabling them to collect and exchange data.
-
-* **Definition:** A global infrastructure for the information society, enabling advanced services by interconnecting (physical and virtual) things based on existing and evolving interoperable information and communication technologies.
-
-### Enabling Technologies (The Laws)
-The explosion of IoT is driven by hardware trends:
-* **Moore's Law:** Processing power doubles every ~18 months (Cheaper, smaller CPUs).
-* **Kryder's Law:** Storage density increases (Smaller, massive storage).
-* **Gilder's Law:** Bandwidth grows 3x faster than computing power.
+# Lecture 07: Introduction 
+## 1. What “Interactive Surfaces & Spaces” covers
+Main sections in this intro lecture:
+* Definition & differentiation
+* Big issues
+* Research context
+* Examples 
+---
+## 2. Definition
+### Interactive Surfaces
+What “surfaces” track:
+* **2D position** (+ **0.5** aka “fishtank”)
+* **1D rotation** 
+Surfaces: **input types** (cf. **TUIO 2.0**)
+* **(Multi-)Touch**: 2D positions (+ rotation, + hover)
+* **Pen/stylus**: ID, 2D position, rotation, angle, pressure, hover
+* **Tokens**: ID, 2D position, rotation
+* **“Blobs”**: 2D position, rotation, shape 
+### Interactive Spaces
+What “spaces” track:
+* **3D position**
+* **3D rotation** 
+Spaces: **input types**
+* **Tracked objects**: 3D position + 3D rotation = **6D pose**
+* **Tracked controllers**: 6D pose + buttons
+* **Hand pose** (cf. earlier lecture): 6D pose for all joints
+* **Full body pose** 
 
 ---
-
-## 3. Smart Dust & WSNs
-
-**Smart Dust:** Concept of tiny, wireless sensors (size of a grain of sand) that can detect light, temperature, vibration, etc.
-* **MEMS (Micro-Electro-Mechanical Systems):** The technology that makes tiny mechanical parts (gears, mirrors, sensors) on silicon chips possible.
-* **WSN (Wireless Sensor Networks):** Thousands of these "motes" communicating to form a network.
-
-### The "Mote" Architecture
-A single sensor node (mote) consists of:
-1.  **Sensors:** (Temp, light, etc.)
-2.  **Microcontroller:** (The brain, very low power)
-3.  **Transceiver:** (Radio for communication)
-4.  **Power Source:** (Battery or Energy Harvesting)
-
-> [!WARNING] The Power Bottleneck
-> Computing and sensing are cheap energy-wise. **Communication** (sending radio signals) is the most expensive operation.
-> *Strategy:* Process data locally (Edge Computing) and send only the result, rather than sending raw data.
+## 3. Differentiation questions (from the slides)
+* Is a **tablet** an interactive surface? A **smartphone**?
+* Is wearing an **MR headset** creating an interactive space? 
 
 ---
-
-## 4. Identification: RFID
-
-**Radio Frequency Identification (RFID)** is a key enabler for tracking "dumb" objects.
-
-### Components
-1.  **Tag (Transponder):** Attached to the object. Contains a chip + antenna.
-2.  **Reader (Interrogator):** Sends signal to the tag and reads the response.
-3.  **Backend:** Database mapping IDs to object info.
-
-
-
-### Tag Types
-| Type | Power Source | Range | Cost |
-| :--- | :--- | :--- | :--- |
-| **Passive** | None. Harvests energy from the Reader's signal. | Short (cm to m) | Very Cheap (~cents) |
-| **Active** | On-board Battery. | Long (100m+) | Expensive (~$20+) |
-| **Semi-Passive** | Battery for chip, but uses Reader energy to talk. | Medium | Medium |
-
-### Coupling Methods (How they talk)
-1.  **Inductive Coupling (Near Field):**
-    * Used in Low Frequency (LF) and High Frequency (HF).
-    * Works like a transformer (magnetic field).
-    * Range: Very short (touch to ~1m).
-2.  **Electromagnetic Backscatter (Far Field):**
-    * Used in Ultra High Frequency (UHF) and Microwave.
-    * Tag reflects the reader's radar signal (like a mirror).
-    * Range: Longer (up to ~10m for passive).
-
-### Frequencies
-* **LF (125-134 kHz):** Animal tracking, key fobs. Slow, penetrates water/tissue well.
-* **HF (13.56 MHz):** Smart cards, library books. Basis for **NFC**.
-* **UHF (860-960 MHz):** Supply chain, pallet tracking. Fast, but blocked by water/metal.
+## 4. Big Issues
+Similar to mobile devices:
+* Touch-related issues
+* Gestures and discoverability
+Unique to ISS:
+* Infrastructure requirements
+* Fatigue and reachability 
+---
+## 5. Research Context
+ISS conference series (ACM):
+* More involved setup / hardware requirements
+* Smaller user group than mobile devices (cf. ACM MobileHCI)
+* Therefore more “research”-centric applications 
+Related research areas:
+* Tangible Interaction (cf. ACM TEI)
+* Mixed Reality (cf. ACM VRST, IEEE VR) 
 
 ---
-
-## 5. Privacy & Security Issues
-
-UbiComp creates a "Panopticon" (surveillance state).
-
-* **Invisibility:** You don't know when you are being watched (sensors are hidden).
-* **Comprehensive:** Tracks location, health, social interactions, purchases.
-* **Langheinrich’s Principles:** Proposed guidelines for privacy in UbiComp:
-    1.  **Notice:** Tell the user they are being tracked.
-    2.  **Choice:** Allow opting out.
-    3.  **Proximity:** Data should be local (don't send everything to the cloud).
-    4.  **Anonymity:** Use pseudonyms.
-
----
-
-# Review Questions
-1. What is the fundamental difference between the **PC Era** and the **UbiComp Era** regarding the user-to-computer ratio?
-2. Explain the difference between **Inductive Coupling** and **Backscatter** in RFID. Which one enables longer range?
-3. Why is **Energy Harvesting** critical for Smart Dust?
-4. How does **Mark Weiser** define a "profound technology"?
-5. In a Wireless Sensor Network, why is it better to process data on the mote rather than sending raw data to the base station?
-
----
-tags: [uni, mobile-systems, lecture-notes, hci, case-studies]
-course: Mobile Information Systems
-lecture: 06 - Case Studies
-date: 2025-01-22
----
-
-# Lecture 06: HCI Case Studies
-
-This lecture explores unconventional interaction methods beyond the standard touchscreen, focusing on hands-free, socially acceptable, or invisible interfaces.
-
-## 1. The "Itchy Nose" (Nose-Based Interaction)
-
-**Problem:** How to interact with a wearable device (like Google Glass) without raising your hands or speaking aloud (socially awkward)?
-**Solution:** Use the nose as an input device.
-
-### Technology: Electrooculography (EOG)
-* **Principle:** The eye acts as a dipole (positive cornea, negative retina). Moving the eye creates a measurable potential field on the skin.
-* **Setup:** Electrodes placed on the nose pads of smart glasses.
-* **Mechanism:** When you rub your nose, you slightly wiggle your glasses. This movement relative to the skin is detected by the EOG electrodes.
-
-### Interaction
-* **Gestures:** Flicking the nose (left/right) or Pushing the nose.
-* **Social Acceptability:** Touching your face/scratching your nose is a common, natural human behavior. It is "invisible" interaction because observers just think you have an itch.
-* **Performance:** Recognition accuracy of ~80-90%.
+## 6. Examples shown
+### SandScape (2002)
+* Landscape simulator (with real sand/clay)
+* Example application areas: hydrodynamics, weather, architecture, … 
+### Reactable (2009)
+* Technically a musical instrument (synthesizer)
+* Interaction (mostly) through tokens/tangibles 
+### Interactive ads (2017)
+* Question: how to attract passersby to view a public display?
+* Shows overlay of people’s silhouettes on the screen
+* “Mirror” effect increases visibility 
+### Virtual Valcamonica (2018)
+* Visualize prehistoric rock carvings
+* Multiple display + collaboration features (using shutter glasses)
+* Large-scale tracking environment 
+### SPLOM Wall (2020)
+* SPLOM = ScatterPLOt Matrix
+* Visualization of large datasets
+* 4.1 m × 2.3 m wall display
+* Key question: “How to reach everything?” 
+### Anatomy Education (2024)
+* Study of mixed reality for “embryonic anatomy education”
+* “Better alone or in groups?” → requires shared space 
 
 ---
+## Review Checklist
+1. What’s the difference between **surfaces** and **spaces** in terms of tracked degrees of freedom?
+2. List the **surface input types** (TUIO 2.0 categories) and what each provides.
+3. What is a **6D pose**, and which “space” input types provide it?
+4. What are the **two big-issue categories**: (a) similar to mobile, (b) unique to ISS?
+5. Why is ISS research often more “research-centric” than MobileHCI (per the slides)?
+6. Pick two examples and state: what system it is + what interaction or problem it highlights.
 
-## 2. Muscle-Based Interaction (EMG)
+## solutions:
+- **Ship Navigation: Large Interactive Surface** – Replaces the traditional chart table with a shared digital surface, allowing multiple officers to collaborate on route planning and view large-scale nautical charts simultaneously.
+- **Emergency Response: Large Interactive Surface** – Provides a central "command center" wall or table where a team can gather to visualize the entire disaster area and coordinate resources on a shared map.
+- **Airhockey Game: Large Interactive Surface** – Offers the necessary multi-touch capabilities and direct horizontal interaction for four players to manipulate virtual pucks simultaneously in real-time.
+- **Collaborative Text Writing: Regular Laptop or Desktop Computer** – Physical keyboards are essential for efficient, precision text entry, as virtual keyboards on surfaces suffer from ergonomic issues like the "gorilla arm" effect.
+- **Air Traffic Control: Mixed-Reality Space** – Allows controllers to visualize the inherently 3D data of aircraft altitudes and trajectories in a spatial environment, reducing the cognitive load of interpreting 2D radar screens.
+# Lecture 08: ISS Technologies 
 
-**Problem:** How to control devices without holding anything, using the body's own capabilities.
-**Solution:** Electromyography (EMG) - sensing muscle activation.
-
-### Technology: EMG Armbands
-* **Device:** e.g., The Thalmic Myo (now discontinued).
-* **Mechanism:** Sensors on the forearm detect the electrical signals generated when finger/wrist muscles contract.
-* **Fusion:** Often combined with an IMU (Inertial Measurement Unit) to detect arm motion (swinging) vs. muscle state (clenching).
-
-### Applications
-* **Air Guitar:** Playing invisible instruments.
-* **Prosthetics:** Controlling robotic hands.
-* **Discrete Input:** Clenching a fist in a pocket to silence a phone.
-
-> [!WARNING] Challenges
-> * **Fatigue:** Holding a gesture (e.g., "Fist") is tiring ("Gorilla Arm" effect).
-> * **Calibration:** Signals vary wildly between users and even sweat levels.
-> * **Crosstalk:** Hard to distinguish specific fingers (e.g., Ring vs. Middle finger) from the forearm surface.
-
----
-
-## 3. Mobile Eye Tracking
-
-**Problem:** Using eyes for input is fast, but eyes are primarily for *perception*, not *control*.
-**The Midas Touch Problem:** If you look at something, do you want to select it? Or just look at it?
-
-### Interaction Techniques
-1.  **Dwell Time:** Stare at a button for X seconds. (Slow, tiring).
-2.  **Blinking:** Blink to click. (Unnatural, breaks visual contact).
-3.  **Smooth Pursuit:** The modern solution for public displays.
-
-### Smooth Pursuit
-* **Concept:** The human eye cannot move smoothly across a static background unless it is following a moving object.
-* **Mechanism:**
-    1.  The interface shows moving icons (e.g., floating bubbles).
-    2.  The user follows the one they want with their eyes.
-    3.  The system calculates the **correlation** between the eye's path and the object's path.
-* **Advantages:**
-    * **Calibration-Free:** Works instantly for anyone walking by.
-    * **Robust:** Hard to trigger accidentally.
-    * **Secure:** Can be used for PIN entry (nobody can see which moving number you are following).
+## 1. Overview: ISS tech stack
+Two big parts:
+* **Output**
+  * Head-Mounted Displays (HMDs)
+  * Screens & 3D glasses
+  * Sound & active tangibles
+* **Input**
+  * Touch & tangibles
+  * Depth cameras
+  * 6 DoF tracking 
 
 ---
+## 2. Output Technologies
 
-## 4. Floor-Based Interaction (Multitoe)
-
-**Problem:** High-resolution floor displays exist (GravitySpace), but how do we identify *who* is standing where?
-**Solution:** Identify users by their shoe soles.
-
-### Technology: FTIR (Frustrated Total Internal Reflection)
-* **Setup:** A glass floor with LEDs shining into the edge.
-* **Principle:** Light is trapped inside the glass. When an object (shoe) touches the surface, it "frustrates" the reflection, and light scatters downwards to a camera.
-* **Result:** A high-resolution "heatmap" of pressure points on the floor.
-
-### Interaction
-* **Identification:** The texture/pattern of the shoe sole acts as a unique fingerprint.
-* **User Model:** The system tracks the "sole print" to keep user identity persistent as they walk.
-* **Back-of-Device Metaphor:** Imagine the floor is the *back* of a tablet. You look down at the floor, but interact as if manipulating a mobile interface.
-* **Precision:** Feet are clumsy. Interaction must be low-precision (large targets).
+### Head-Mounted Displays (HMDs)
+* Used for **interactive spaces**
+* (Slides point to Lecture 5 for details) 
+### Screens (for interactive surfaces)
+* LCD/OLED displays
+* Projection screens 
+### Stereoscopic screens (3D)
+Core requirement:
+* Need some way to show **different images** to **left vs. right eye** 
+Options shown:
+* **Autostereoscopic** (e.g., parallax barrier / lenticular lens)
+  * Mostly **single-user**
+* **Glasses-based**
+  * **Shutter glasses** or **polarizing glasses**
+  * Requires **special projector and/or screen** 
+### Active Tangibles (tangibles as output)
+* Tangible objects can also be **output devices**
+* Can use **sound, light, motion, …** 
+### Sound zones
+* Slide raises the question: *Is this an interactive space?*
+* It can be “just (steerable) sound …” 
+---
+## 3. Input Technologies: Touch & Tangibles
+### Touch technology families
+* **Resistive**
+* **Capacitive**
+* **Optical** 
+### Resistive touch
+* Cheap, low-end technology (**no multitouch**)
+* Two conductive layers separated by spacers
+* Can be used with **gloves, pens, …** 
+### Capacitive touch
+Variant 1 (common in POS terminals etc.):
+* No multitouch
+* Robust, simple
+* Not usable with gloves 
+“Projected capacitive” (two variants):
+* **Mutual capacitance**: each row/column measured
+* **Self capacitance**: each crossing measured individually 
+### Optical touch (variants shown)
+* **FTIR (Frustrated Total Internal Reflection)** (projector/camera-based)
+* **Diffuse Illumination (DI)**
+* **Grid-based**: IR grid + sensors on opposite sides
+* **Laser rangefinder(s)**: suitable for very large screens
+* **In-cell sensing**: custom LCD screen with light-sensitive pixels
+  * Only one device mentioned: **Samsung SUR40**
+  * Pro: can detect hands, fingers, tokens, …
+  * Con: sensitive to stray light 
+### Tangible technologies (optical)
+* **Passive tokens**: ReacTIVision, AruCo, ByteTag, …
+  * Requires a **camera-based system**
+* “Inside-out” tracking with **active tangibles**
+  * Needs **no camera**
+  * But needs a **special surface pattern** 
+### Pen / stylus input
+* Most touch tech can detect pens (simulate a “fingertip”)
+* Special cases:
+  * **Apple Pencil / Wacom**: capacitive or wireless data channel to screen (angle, pressure, …)
+  * **Anoto (discontinued) / Tiptoi**: camera in tip scans invisible pattern on paper 
 
 ---
-
-# Review Questions
-
-1.  Why is **Smooth Pursuit** superior to **Dwell Time** for public display interaction?
-2.  Explain the **social acceptability** advantage of the "Itchy Nose" interface.
-3.  What physical phenomenon does **FTIR** rely on for floor sensing?
-4.  Why is **EMG** difficult to use for precise typing (individual finger control)?
-5.  What is the **Midas Touch** problem in the context of Eye Tracking?
-
+## 4. Input Technologies: Depth Cameras
+### What a depth camera provides
+* Regular camera: **color** value per pixel
+* Depth camera: **distance** value per pixel (often shown with a color map) 
+### Geometry-based depth cameras (principle)
+* Create two “views” of the scene
+* Match scene points between views
+* Determine angles for each scene point
+* Trigonometry happens → distance 
+### Geometry method 1: Stereo matching
+* Two images of the scene
+* Stereo matching of corresponding pixels
+* Ideally only needed on horizontal scanline
+* Examples listed: **Occipital Structure Sensor**, **Intel RealSense D4xx** 
+### Geometry method 2.1: Speckle pattern
+* Random dots pattern (random, but previously known)
+* “Patches” of the pattern can be matched
+* Depth resolution lower than image resolution
+* Example: **Kinect v1** 
+### Geometry method 2.2: Stripe pattern (Gray code)
+* Alternating stripes encode a binary ID for each pixel
+* Requires high frame rate or static scene (slide asks “why?”)
+* Requires IR projector
+* Example listed: **RealSense SR300 (~300 FPS)** 
+### Time-of-Flight (ToF) depth cameras
+Principle:
+* Emit (infrared) flash
+* Measure time until reflected light arrives
+* Math happens → distance
+* Example: **Kinect v2** 
+Practical ToF note (from slides):
+* Often measure **phase difference** (not direct time)
+  * A clock signal with frequency *f* modulates:
+    * IR emitter (“flash”)
+    * sensitivity of light sensor
+  * Result is phase difference
+  * Using *c* and *f* gives distance 
+### Depth–color alignment
+* Many depth cameras also have a “plain” color camera
+* Problem: find corresponding color for each depth pixel (or vice versa)
+* Requires intrinsic + extrinsic camera parameters
+  * Intrinsic: field of view, distortion, focal length, …
+  * Extrinsic: translation, rotation w.r.t. origin 
+### Point clouds
+* Each depth pixel → 3D point (x, y, z)
+* With color → (x, y, z, r, g, b) 
+### Depth cameras for ISS (why useful)
+* Use as a “filter”: ignore the surface itself, detect only objects
+* No planar surface necessary 
 ---
-tags: [uni, mobile-systems, lecture-notes, iss, interactive-surfaces]
-course: Mobile Information Systems
-lecture: 07 - Interactive Surfaces & Spaces (Intro)
-date: 2025-01-22
----
-
-# Lecture 07: Interactive Surfaces & Spaces (Introduction)
-
-This lecture shifts focus from mobile devices to **Interactive Surfaces and Spaces (ISS)**. The core idea is "The Computer in the Room" vs. "The Computer in the Pocket."
-
-## 1. What are Interactive Surfaces?
-Interactive surfaces blend the physical and digital worlds. They move beyond the "Mouse & Keyboard" paradigm (WIMP - Windows, Icons, Menus, Pointer) to **Natural User Interfaces (NUI)**.
-
-### Characteristics of ISS
-1.  **Direct Interaction:** Touching the data directly (fingers, pens, objects) rather than using a proxy device like a mouse.
-2.  **Multi-touch / Multi-user:** Supporting collaboration. Multiple people interacting simultaneously on the same hardware.
-3.  **Large Scale:** Often table-sized or wall-sized displays.
-
-### The Evolution of Interaction
-* **CLI (Command Line Interface):** Text-based, expert use.
-* **GUI (Graphical User Interface):** WIMP, Desktop metaphor.
-* **NUI (Natural User Interface):** Touch, gesture, speech. "Reality-based interaction".
-
-> [!NOTE] Weiser's Vision Revisited
-> ISS aligns with Mark Weiser's UbiComp vision: technology that weaves itself into everyday life. It transforms furniture (tables, walls) into computational devices.
-
----
-
-## 2. Hardware: How do we build them?
-
-Building a large interactive surface is different from a smartphone screen. We often use **Projectors** and **Cameras** instead of capacitive layers.
-
-### Optical Sensing (The Dominant Method)
-Most large tables use **Infrared (IR) Light** to detect touches. This avoids visual distraction because IR is invisible to the human eye but visible to cameras.
-
-#### Core Components
-1.  **Projector:** Displays the image (Visual spectrum).
-2.  **Camera:** Sees the touches (IR spectrum, requires an IR-pass filter).
-3.  **Illumination:** IR LEDs to light up the surface.
-
-### Sensing Techniques (The "Big Four")
-
-#### 1. FTIR (Frustrated Total Internal Reflection)
-* **Setup:** IR LEDs shine *into the edge* of an acrylic (glass) pane.
-* **Principle:** Light is trapped inside the glass by total internal reflection. When a finger touches the surface, it "frustrates" the reflection, causing light to scatter down to the camera.
-* **Pros:** Very high contrast, good for "blobs" (fingers).
-* **Cons:** Cannot see "hover" or objects (only things that physically touch and are somewhat oily/wet like skin).
-
-
-
-#### 2. DI (Diffuse Illumination)
-* **Setup:** IR LEDs shine *from behind* the screen (near the projector).
-* **Principle:** The camera sees the shadow or reflection of objects in front of the screen.
-* **Pros:** Can see objects (markers, fiducials) and hovering hands.
-* **Cons:** Lower contrast, sensitive to ambient light.
-
-#### 3. DSI (Diffused Surface Illumination)
-* **Setup:** A special acrylic sheet with tiny particles inside that scatter light.
-* **Principle:** Similar to FTIR, but the whole surface glows evenly. Touching it makes the finger brighter.
-* **Pros:** Uniform sensing.
-
-#### 4. LLP (Laser Light Plane)
-* **Setup:** Lasers create a "sheet" of light just above the surface.
-* **Principle:** Anything breaking the light sheet reflects the laser to the camera.
-* **Pros:** Extremely precise, works on any flat surface (even a normal wall).
-
+## 5. Input Technologies: 6DoF Tracking
+### Setup & hardware (as listed)
+* Uses **2 or more cameras** + **asymmetric targets**
+* Targets can be:
+  * **Reflectors** (Vicon, ART)
+  * **LEDs** (Meta, HTC)
+* Note on HTC Vive:
+  * Sensors on the tracker
+  * Light sources in the room 
+### Core idea (slides)
+* Intersection of rays from ≥ 2 cameras → 3D points
+* Unique point distances → target ID & orientation 
 ---
 
-## 3. Software: TUIO Protocol
-How does the hardware talk to the application?
-* **Problem:** Standard OS events (MouseClick) don't handle 10 fingers + 3 physical objects.
-* **Solution:** **TUIO (Tangible User Interface Object)** protocol.
-* **Mechanism:** Sends UDP packets containing:
-    * **2D Cursors:** Fingers (blobs).
-    * **2D Objects:** Tagged physical items (fiducials).
+## Review Checklist
 
----
-
-## 4. Tangible User Interfaces (TUI)
-ISS isn't just about touch; it's about **Tangibles**.
-* **Definition:** "Graspable User Interfaces." Using physical objects to manipulate digital data.
-* **Example:** Placing a physical knob on a screen to turn a digital volume dial.
-* **Bridge:** TUIs bridge the gap between the bits (digital) and atoms (physical).
-
-### Benefits of TUIs
-1.  **Haptic Feedback:** You can feel the object.
-2.  **Persistence:** The object stays there even if power goes out (unlike a digital window).
-3.  **Space Multiplexing:** Different tools for different functions (vs. Time Multiplexing: one mouse for everything).
-
----
-
-# Review Questions
-1.  Why is **FTIR** unable to detect a hovering hand, while **DI** can?
-2.  What is the **TUIO** protocol and why is it preferred over standard mouse events for ISS?
-3.  Explain the concept of **"Frustrated Total Internal Reflection"**.
-4.  What are the three core benefits of a **Tangible User Interface (TUI)**?
-5.  Why do optical ISS systems typically use **Infrared Light** instead of visible light for sensing?
+1. Name the **three output categories** for ISS (from the overview slide).
+2. What’s the main requirement for **stereoscopic screens**, and what’s the difference between autostereoscopic vs glasses-based approaches?
+3. List the **touch technology families** and one key property of each (as given on the slides).
+4. What optical touch variants are listed (FTIR, DI, grid-based, laser rangefinder, in-cell sensing)?
+5. What’s the difference between a regular camera and a **depth camera**?
+6. Compare depth camera methods: **stereo matching**, **speckle pattern**, **stripe/Gray code**, **ToF**.
+7. What do “intrinsic” vs “extrinsic” parameters refer to in depth–color alignment?
+8. What does “6DoF tracking” use (cameras + targets), and what geometric idea is used to recover 3D points?
 
 
----
-tags: [uni, mobile-systems, lecture-notes, iss, touch-technology]
-course: Mobile Information Systems
-lecture: 08 - ISS Technologies
-date: 2025-01-22
----
-
-# Lecture 08: ISS Technologies
-
-This lecture dives deeper into the specific hardware and software technologies used to build Interactive Surfaces, covering sensing methods, object tracking, and output displays.
-
-## 1. Touch Sensing Technologies
-Before optical systems took over large screens, several electrical methods were standard.
-
-### Resistive
-* **Mechanism:** Two conductive layers separated by spacer dots. Pressure connects the layers, creating a voltage divider.
-* **Types:**
-    * *4-Wire:* Cheap, but one axis usually breaks first.
-    * *5-Wire:* More robust, bottom layer handles both X/Y axes.
-* **Pros:** Very cheap, works with *any* stylus (pressure-based).
-* **Cons:** Low clarity (layers reduce light), single touch only, prone to damage.
-
-### Surface Acoustic Wave (SAW)
-* **Mechanism:** Transducers send ultrasonic waves across the glass surface. A soft finger absorbs some energy, reducing the wave amplitude at the receiver.
-* **Pros:** 100% clarity (pure glass), robust.
-* **Cons:** Requires "soft" input (finger) to absorb waves; hard plastic styluses won't work.
-
-### Capacitive
-* **Surface Capacitive:** Sensors at corners create a uniform field. A finger draws current, detectable at corners. Robust but limited resolution.
-* **Projected Capacitive (PCT):** The modern standard (Smartphones/Tablets).
-    * **Grid:** An X/Y grid of wires (often Indium Tin Oxide - ITO).
-    * **Interpolation:** Can detect touches *between* wires, offering very high resolution.
-    * **Multi-touch:** Natively supported.
-
----
-
-## 2. Optical Sensing (Camera-Based)
-For large tables/walls, we use cameras and Infrared (IR) light. This allows for massive scale and object tracking.
-
-### The "Big Four" Techniques
-
-#### 1. FTIR (Frustrated Total Internal Reflection)
-* **Setup:** IR LEDs shine into the *edge* of the glass.
-* **Action:** Light is trapped inside. A finger "frustrates" the reflection, scattering light down to the camera.
-* **Result:** High contrast "blobs" against a black background. Can detect pressure (blob size increases).
-* **Limitation:** Cannot see hovering objects or markers.
-
-
-
-#### 2. DI (Diffuse Illumination)
-* **Setup:** IR light shines from *behind* the screen (or reflected off the ceiling).
-* **Action:** Objects cast shadows or reflect light back to the camera.
-* **Result:** Can see "hovering" hands and **Fiducial Markers**.
-* **Limitation:** Lower contrast, lighting must be even.
-
-#### 3. DSI (Diffused Surface Illumination)
-* **Setup:** Uses a special acrylic with tiny scattering particles inside.
-* **Action:** Light entering the edge is scattered evenly across the surface. Touching it couples the light out.
-* **Result:** Similar to FTIR but with more uniform response.
-
-#### 4. LLP (Laser Light Plane)
-* **Setup:** Lasers create a thin "sheet" of light ~1mm above the surface.
-* **Action:** Fingers break the sheet and light up.
-* **Result:** Works on *any* flat surface (even a normal wall or floor).
-
----
-
-## 3. Object Tracking (Fiducials)
-Cameras allow us to track physical objects tagged with markers called **Fiducials**.
-
-### Topological Markers
-* **Type:** 2D Barcodes, QR Codes.
-* **Pros:** Huge number of unique IDs.
-* **Cons:** Computationally expensive to decode; usually rectangular.
-
-### Geometrical Markers (e.g., Reactivision)
-* **Type:** "Amoeba" markers. A central graph of dots.
-* **Mechanism:** The system identifies the ID based on the distances and angles between the center dot and leaf dots.
-* **Pros:** Very fast processing, rotation invariant, "organic" shapes.
-
-
-
----
-
-## 4. Software Frameworks
-
-### TUIO Protocol
-* **Standard:** A unified protocol for tables to talk to apps.
-* **Transport:** Uses UDP/OSC (Open Sound Control).
-* **Messages:**
-    * `2Dcur`: Cursors (fingers).
-    * `2Dobj`: Objects (fiducials) with ID, position, and rotation angle.
-
-### Application Layers
-* **libTISCH:** Old C++ framework, now mostly deprecated.
-* **Kivy:** Modern Python framework.
-    * Cross-platform (Windows, Linux, OS X, Android).
-    * Native multi-touch support via TUIO or OS events.
-    * GPU accelerated (OpenGL ES 2).
-
----
-
-## 5. Output Technologies
-
-### Projectors
-* **Front Projection:** Easy setup, but users cast shadows on the data.
-* **Rear Projection:** No shadows, but requires huge space behind the screen.
-* **Correction:**
-    * **Keystone (Digital):** Warps the image to fit. Losses resolution.
-    * **Lens Shift (Optical):** Moves the lens. Maintains full resolution (Preferred).
-
-### LCD Panels
-* **Challenge:** You can't put a camera *behind* a standard LCD (backlight blocks it).
-* **Solutions:**
-    * **Edge-lit LCDs:** Allow some transparency.
-    * **Switchable Glass:** Toggles between transparent (camera sees) and opaque (projector shows) at 60Hz.
-    * **Wedge Optics:** Microsoft PixelSense (formerly Surface 2.0) used wedge optics to put sensors inside the LCD pixels.
-
----
-
-# Review Questions
-1.  Why is **Projected Capacitive (PCT)** preferred over **Resistive** screens for smartphones?
-2.  Explain the difference between **Keystone Correction** and **Lens Shift**. Which preserves image quality?
-3.  Why can **Diffuse Illumination (DI)** detect fiducial markers while **FTIR** cannot?
-4.  What is the advantage of **Geometrical Markers (Reactivision)** over **QR codes** for interactive tables?
-5.  What mechanism does **Surface Acoustic Wave (SAW)** use to detect a touch, and why doesn't it work with a hard plastic stylus?
