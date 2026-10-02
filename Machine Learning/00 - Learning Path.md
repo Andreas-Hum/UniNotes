@@ -25,6 +25,8 @@ graph LR
   S2 --> S13[13 Time series]
   S5 --> S14[14 MLOps]
   S2 --> S15[15 Responsible AI]
+  S5 --> S16[16 Master's toolkit]
+  S9 --> S16
 ```
 
 ---
@@ -65,8 +67,8 @@ graph LR
 
 ## Stage 5 — Deep learning
 - [ ] PyTorch, CNNs, RNNs, Transformers, training tricks, generative models
-- Vault: [[CNN]] · [[RNN and LSTM]] · [[Transformers]] · [[Generative Models]] · [[Training Tricks]] · [[PyTorch Recipes]]
-- Resources: [Dive into Deep Learning (free, interactive)](https://d2l.ai/) · [Deep Learning book – Goodfellow et al. (free)](https://www.deeplearningbook.org/) · [Understanding Deep Learning – Prince (free)](https://udlbook.github.io/udlbook/) · [fast.ai Practical Deep Learning](https://course.fast.ai/) · [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning) · [PyTorch tutorials](https://pytorch.org/tutorials/)
+- Vault: [[CNN]] · [[RNN and LSTM]] · [[Transformers]] · [[Self-Supervised and Contrastive Learning]] · [[Generative Models]] · [[Training Tricks]] · [[PyTorch Recipes]]
+- Resources: [MIT 6.S191 — Introduction to Deep Learning (lecture playlist)](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI) · [course site & labs](https://introtodeeplearning.com/) · [Dive into Deep Learning (free, interactive)](https://d2l.ai/) · [Deep Learning book – Goodfellow et al. (free)](https://www.deeplearningbook.org/) · [Understanding Deep Learning – Prince (free)](https://udlbook.github.io/udlbook/) · [fast.ai Practical Deep Learning](https://course.fast.ai/) · [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning) · [PyTorch tutorials](https://pytorch.org/tutorials/)
 - Project: fine-tune a pretrained ResNet on your own image classes.
 - Checkpoint: explain residual connections, attention, and why AdamW.
 
@@ -79,9 +81,9 @@ graph LR
 - Resources: [Stanford CS231n](https://cs231n.stanford.edu/) · [CS231n notes](https://cs231n.github.io/) · [torchvision](https://pytorch.org/vision/stable/index.html)
 
 ## Stage 8 — Recommender systems
-- Vault: [[Recommender Systems Overview]] · [[Collaborative Filtering and Matrix Factorization]] · [[Content-Based and Hybrid Recommenders]] · [[Deep Learning Recommenders]] · [[Evaluating Recommenders]] · [[Recommender Systems Resources]]
+- Vault: [[Recommender Systems Overview]] · [[Collaborative Filtering and Matrix Factorization]] · [[Content-Based and Hybrid Recommenders]] · [[Deep Learning Recommenders]] · [[Evaluating Recommenders]] · [[Multimodal Recommender Systems]] · [[Recommender Systems Resources]]
 - Resources: [Google – Recommendation Systems course](https://developers.google.com/machine-learning/recommendation) · [Mining of Massive Datasets ch. 9 (free)](http://www.mmds.org/) · [D2L – Recommender Systems chapter](https://d2l.ai/chapter_recommender-systems/index.html)
-- Project: MovieLens recommender (MF → two-tower).
+- Project: MovieLens recommender (MF → two-tower), then a multimodal one on [Amazon Reviews 2023](https://amazon-reviews-2023.github.io/) with [MMRec](https://github.com/enoche/MMRec).
 
 ## Stage 9 — Probabilistic ML & Bayesian methods
 - Vault: [[Bayesian Inference]] · [[Probabilistic Graphical Models]] · [[Variational Inference]] · [[MCMC]] · [[Gaussian Processes]]
@@ -110,6 +112,12 @@ graph LR
 ## Stage 15 — Responsible AI
 - Vault: [[Explainability and Fairness]]
 - Resources: [Interpretable Machine Learning – C. Molnar (free)](https://christophm.github.io/interpretable-ml-book/) · [Fairness and Machine Learning (free)](https://fairmlbook.org/)
+
+## Stage 16 — Master's toolkit (theory, causality, research)
+- [ ] Learning theory · causal inference · research methods · paper reading
+- Vault: [[Learning Theory]] · [[Causal Inference]] · [[Research Skills]] · [[Paper Reading Template]] · [[Implement From Scratch]] · [[Masters Self-Assessment]] · [[Imposter Syndrome]]
+- Resources: [Understanding Machine Learning (free PDF)](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf) · [Stanford STATS214](https://web.stanford.edu/class/stats214/) · [Causal Inference: What If](https://miguelhernan.org/whatifbook) · [Brady Neal causal course](https://www.bradyneal.com/causal-inference-course) · [Karpathy's training recipe](https://karpathy.github.io/2019/04/25/recipe/) · [Deep Learning Tuning Playbook](https://github.com/google-research/tuning_playbook)
+- Checkpoint: reproduce one paper's main table and write it up with [[Paper Reading Template]].
 
 ---
 Back to [[00 - Machine Learning Index]].

@@ -5,7 +5,7 @@ tags: [ml, index, moc]
 
 Entry point for everything ML. Notes are linked to each other, so open the **graph view** to see how they connect.
 
-> [!tip] Start here → [[00 - Learning Path]]
+> [!tip] Start here → [[00 - Learning Path]] · feeling behind? → [[Masters Self-Assessment]]
 > A step-by-step route from Python and math basics through classical ML, deep learning, NLP, vision, recommender systems, LLMs and MLOps, with links to free books, courses and papers at every stage.
 > Your own course notes live in [[8-semester/ML/Notes|8-semester/ML]] and [[8-semester/ML/Lecture Notes 1-12|Lecture Notes 1-12]].
 
@@ -30,7 +30,7 @@ Every topic note ends with a **Learn more** section with links to external resou
 
 ## 04 · Deep learning
 - [[Neural Networks]] · [[Backpropagation]] · [[Optimizers]] · [[Activation Functions]]
-- [[CNN]] · [[RNN and LSTM]] · [[Transformers]] · [[Generative Models]] · [[Training Tricks]]
+- [[CNN]] · [[RNN and LSTM]] · [[Transformers]] · [[Self-Supervised and Contrastive Learning]] · [[Generative Models]] · [[Training Tricks]]
 
 ## 05 · Probabilistic ML
 - [[Bayesian Inference]] · [[Probabilistic Graphical Models]] · [[Variational Inference]] · [[MCMC]]
@@ -55,7 +55,7 @@ Every topic note ends with a **Learn more** section with links to external resou
 
 ## 12 · Recommender systems
 - [[Recommender Systems Overview]] · [[Collaborative Filtering and Matrix Factorization]] · [[Content-Based and Hybrid Recommenders]]
-- [[Deep Learning Recommenders]] · [[Evaluating Recommenders]] · [[Recommender Systems Resources]]
+- [[Deep Learning Recommenders]] · [[Multimodal Recommender Systems]] · [[Evaluating Recommenders]] · [[Recommender Systems Resources]]
 
 ## 13 · NLP
 - [[NLP Overview]] · [[Text Representations]]
@@ -74,3 +74,7 @@ Every topic note ends with a **Learn more** section with links to external resou
 
 ## 18 · Responsible AI
 - [[Explainability and Fairness]]
+
+## 19 · Master's toolkit
+- [[Masters Self-Assessment]] · [[Implement From Scratch]] · [[Imposter Syndrome]]
+- [[Learning Theory]] · [[Causal Inference]] · [[Research Skills]] · [[Paper Reading Template]]

@@ -20,6 +20,7 @@ Goal: predict which items a user will like (rating prediction) or produce a rank
 | **Matrix factorization** | latent user and item vectors | same note |
 | **Hybrid** | combine content and CF | handles cold start |
 | **Deep / two-tower / sequential** | neural encoders, transformers | [[Deep Learning Recommenders]] |
+| **Multimodal** | fuse image/text/audio item features with interactions | [[Multimodal Recommender Systems]] |
 | **Graph-based** | user–item bipartite graph, GNNs | [[Graph Neural Networks]], [[Link Prediction]] |
 | **Bandits / RL** | explore vs exploit online | [[RL Basics and MDPs]] |
 

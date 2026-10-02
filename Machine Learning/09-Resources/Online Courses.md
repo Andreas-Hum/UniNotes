@@ -17,6 +17,7 @@ All free unless noted. See [[00 - Learning Path]] for the order to take them in.
 - [**MIT 18.06 Linear Algebra** — Strang](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/)
 
 ## Deep learning
+- [**MIT 6.S191** — Introduction to Deep Learning (lecture playlist)](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI) · [course site & labs](https://introtodeeplearning.com/) — fast, up-to-date overview (intro, sequence models & transformers, CNNs, generative models, RL, LLMs) with Colab labs
 - [**3Blue1Brown — Neural Networks**](https://www.3blue1brown.com/topics/neural-networks) — visual intuition
 - [**Karpathy — Neural Networks: Zero to Hero**](https://karpathy.ai/zero-to-hero.html) — build micrograd → GPT
 - [**fast.ai — Practical Deep Learning for Coders**](https://course.fast.ai/)

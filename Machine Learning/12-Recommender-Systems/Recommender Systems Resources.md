@@ -22,9 +22,14 @@ tags: [ml, recsys, resources]
 - [Wide & Deep (2016)](https://arxiv.org/abs/1606.07792) · [NCF (2017)](https://arxiv.org/abs/1708.05031) · [SASRec (2018)](https://arxiv.org/abs/1808.09781) · [BERT4Rec (2019)](https://arxiv.org/abs/1904.06690) · [DLRM (2019)](https://arxiv.org/abs/1906.00091) · [LightGCN (2020)](https://arxiv.org/abs/2002.02126)
 - Covington, Adams, Sargin (2016) *Deep Neural Networks for YouTube Recommendations*
 
+## Multimodal recommendation
+- [Multimodal Recommender Systems: A Survey](https://arxiv.org/abs/2302.03883) · [MMRec toolbox](https://github.com/enoche/MMRec)
+- [VBPR](https://arxiv.org/abs/1510.01784) · [LATTICE](https://arxiv.org/abs/2104.09036) · [BM3](https://arxiv.org/abs/2207.05969) · [FREEDOM](https://arxiv.org/abs/2211.06924)
+- Full note: [[Multimodal Recommender Systems]]
+
 ## Datasets
 - [MovieLens (GroupLens)](https://grouplens.org/datasets/movielens/) — the standard benchmark
-- Amazon Reviews, Yelp, Last.fm, Netflix Prize, Criteo (CTR), MIND (news)
+- [Amazon Reviews 2023](https://amazon-reviews-2023.github.io/) (text + images), Yelp, Last.fm, Netflix Prize, Criteo (CTR), MIND (news)
 
 ## Libraries
 `implicit` · `surprise` · `LightFM` · [RecBole](https://recbole.io/) · TensorFlow Recommenders · TorchRec · Microsoft Recommenders · FAISS (ANN search)
