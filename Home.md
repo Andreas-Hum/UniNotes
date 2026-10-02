@@ -7,7 +7,6 @@ Start page for the vault. Each course has an index note listing its notes, exerc
 ## Semester 5
 
 - [[5-semester/Agile Software/Agile Software Index|Agile Software]]
-- [[5-semester/DB/DB Index|DB]]
 - [[5-semester/Machine intelligence/Machine intelligence Index|Machine intelligence]]
 
 ## Semester 6

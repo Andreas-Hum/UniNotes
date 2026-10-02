@@ -2,10 +2,6 @@
 
 Back to [[Home]].
 
-## Notes
-
-- [[8-semester/QIC/Notes|Notes]]
-
 ## Lectures
 
 - 1: [[8-semester/QIC/Lectures/1/IntroQuantum.pdf|IntroQuantum.pdf]]

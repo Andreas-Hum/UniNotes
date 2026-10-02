@@ -56,7 +56,3 @@ Back to [[Home]].
 - 11: [[5-semester/Machine intelligence/Lectures/11/11-multi-agent.tex-post.pdf|11-multi-agent.tex-post.pdf]]
 - 12: [[5-semester/Machine intelligence/Lectures/12/12-mdps-post.pdf|12-mdps-post.pdf]]
 - 13: [[5-semester/Machine intelligence/Lectures/13/13-reinforcement-learning-post.pdf|13-reinforcement-learning-post.pdf]]
-
-## Files
-
-- [[5-semester/Machine intelligence/02-background.pdf|02-background.pdf]]

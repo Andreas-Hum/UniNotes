@@ -8,7 +8,6 @@ Back to [[Home]].
 
 ## Exercises
 
-- 2: [[7-semester/PP/Exercises/2/Kursusgang 2 - PP 2025 - Forberedelse.pdf|Kursusgang 2 - PP 2025 - Forberedelse.pdf]]
 - 2: [[7-semester/PP/Exercises/2/Session 2 - PP 2024 - Problems.pdf|Session 2 - PP 2024 - Problems.pdf]]
 - 3: [[7-semester/PP/Exercises/3/Kursusgang 3 - DAT7-SW7.pdf|Kursusgang 3 - DAT7-SW7.pdf]]
 - 3: [[7-semester/PP/Exercises/3/Session 3 - PP 2024 - Problems.pdf|Session 3 - PP 2024 - Problems.pdf]]

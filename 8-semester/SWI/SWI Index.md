@@ -24,7 +24,6 @@ Back to [[Home]].
 
 - [[8-semester/SWI/SWI2026 Course overview.pdf|SWI2026 Course overview.pdf]]
 - [[8-semester/SWI/SWI202601 Introduction, Roles and Core Activities (2).pdf|SWI202601 Introduction, Roles and Core Activities (2).pdf]]
-- [[8-semester/SWI/SWI202602 The Problem-Solution Canvas (2).pdf|SWI202602 The Problem-Solution Canvas (2).pdf]]
 - [[8-semester/SWI/SWI202603 Rationale  Problem.pdf|SWI202603 Rationale  Problem.pdf]]
 - [[8-semester/SWI/SWI202604 Leverage.pdf|SWI202604 Leverage.pdf]]
 - [[8-semester/SWI/SWI202605 Solution.pdf|SWI202605 Solution.pdf]]
