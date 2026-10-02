@@ -6,3 +6,10 @@
 
 # System files
 .DS_Store
+# Python
+__pycache__/
+*.pyc
+
+# Flutter build output
+.dart_tool/
+build/
