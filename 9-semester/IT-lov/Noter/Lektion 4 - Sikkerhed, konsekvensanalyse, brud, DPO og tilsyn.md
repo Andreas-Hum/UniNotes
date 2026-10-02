@@ -150,4 +150,4 @@ Se [[Øvelsescases og løsningsskitser#Lektion 4]]: advokatfirma X (nedlagt DPO-
 - [ ] De tre kumulative betingelser for privates DPO-pligt.
 - [ ] Bøderammer i art. 83, stk. 4 og 5 – og hvorfor pålægger Datatilsynet ikke selv bøder?
 
-Forrige: [[Lektion 3 - Behandlingsgrundlag og de registreredes rettigheder]] · Næste: [[Lektion 5 - Cybercrime]]
+Forrige: [[Lektion 3 - Behandlingsgrundlag og de registreredes rettigheder]] · Oversigt: [[00 - IT-ret Oversigt]] · Næste: [[Lektion 5 - Cybercrime]]

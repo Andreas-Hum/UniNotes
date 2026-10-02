@@ -35,11 +35,11 @@ kursus: IT-ret (5 ECTS) – DAT9/SW9/DV5
 - **Kompetencer:** identificere og løse IT-retlige problemer, begrunde valg, formidle til både jurister og IT-folk.
 
 ## Kildemateriale i mappen
-- Pensumbog: `Books/Databeskyttelsesret-2022-11-263.pdf` – Henrik Udsen, *Databeskyttelsesret* (gratis: [databeskyttelsesret.dk](https://databeskyttelsesret.dk/))
-- Forordningen: `Books/EUROPA-PARLAMENTETS OG RÅDETS FORORDNING.pdf` – [GDPR på EUR-Lex](https://eur-lex.europa.eu/legal-content/DA/TXT/?uri=CELEX:32016R0679)
-- Databeskyttelsesloven: `Books/A20240028929.pdf` – LBK nr. 289 af 08/03/2024 ([retsinformation.dk](https://www.retsinformation.dk/eli/lta/2024/289))
-- Slides: `Lectures/1–5/`
-- Læseplan: `Læse- og pensumplan 2026.pdf` · Fagbeskrivelse: `Oversigt over IT-ret.pdf`
+- Pensumbog: [[Books/Databeskyttelsesret-2022-11-263.pdf|Databeskyttelsesret (PDF)]] – Henrik Udsen, *Databeskyttelsesret* (gratis: [databeskyttelsesret.dk](https://databeskyttelsesret.dk/))
+- Forordningen: [[Books/EUROPA-PARLAMENTETS OG RÅDETS FORORDNING.pdf|Forordningen (PDF)]] – [GDPR på EUR-Lex](https://eur-lex.europa.eu/legal-content/DA/TXT/?uri=CELEX:32016R0679)
+- Databeskyttelsesloven: [[Books/A20240028929.pdf|Databeskyttelsesloven (PDF)]] – LBK nr. 289 af 08/03/2024 ([retsinformation.dk](https://www.retsinformation.dk/eli/lta/2024/289))
+- Slides: [[Lectures/1/1. forelæsning IT-ret 2026.pdf|Lekt. 1]] · [[Lectures/2/2. forelæsning IT-ret 2026.pdf|Lekt. 2]] · [[Lectures/3/3. forelæsning IT-ret 2026.pdf|Lekt. 3]] · [[Lectures/4/4. forelæsning IT-ret 2026.pdf|Lekt. 4]] · [[Lectures/5/Slides til lektion om cybercrime.pdf|Lekt. 5]] (+ [[Lectures/5/Cybercrime og politiets efterforskning.pdf|Lentz-kapitlet]], [[Lectures/5/Hacking - forbrydelse eller digitalt selvforsvar_.pdf|Hacking-artiklen]])
+- Læseplan: [[Læse- og pensumplan 2026.pdf|Læse- og pensumplan 2026]] · Fagbeskrivelse: [[Oversigt over IT-ret.pdf|Oversigt over IT-ret]]
 
 ## Nyttige links
 - [Datatilsynet](https://www.datatilsynet.dk) – vejledninger og afgørelser · [bødesager](https://www.datatilsynet.dk/afgoerelser/boedesager)

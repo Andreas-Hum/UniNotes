@@ -168,4 +168,4 @@ Se [[Øvelsescases og løsningsskitser#Lektion 3]]: DataTech University (vælg b
 - [ ] Fristerne i art. 12, stk. 3 og art. 13/14.
 - [ ] Hvornår gælder dataportabilitet ikke?
 
-Forrige: [[Lektion 2 - Aktører og behandlingsprincipper]] · Næste: [[Lektion 4 - Sikkerhed, konsekvensanalyse, brud, DPO og tilsyn]]
+Forrige: [[Lektion 2 - Aktører og behandlingsprincipper]] · Oversigt: [[00 - IT-ret Oversigt]] · Næste: [[Lektion 4 - Sikkerhed, konsekvensanalyse, brud, DPO og tilsyn]]

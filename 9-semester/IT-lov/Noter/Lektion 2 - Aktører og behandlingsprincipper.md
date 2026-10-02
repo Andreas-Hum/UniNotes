@@ -127,4 +127,4 @@ Se [[Øvelsescases og løsningsskitser#Lektion 2]]: BB og virksomhed C (forkert 
 - [ ] Nævn de 6 + 1 principper i art. 5 med et eksempel fra praksis på hver.
 - [ ] Forenelighedstesten i art. 6, stk. 4.
 
-Forrige: [[Lektion 1 - GDPR intro, anvendelsesområde og begreber]] · Næste: [[Lektion 3 - Behandlingsgrundlag og de registreredes rettigheder]]
+Forrige: [[Lektion 1 - GDPR intro, anvendelsesområde og begreber]] · Oversigt: [[00 - IT-ret Oversigt]] · Næste: [[Lektion 3 - Behandlingsgrundlag og de registreredes rettigheder]]

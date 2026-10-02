@@ -106,4 +106,4 @@ Se løsningsskitser i [[Øvelsescases og løsningsskitser#Lektion 1]]:
 - [ ] Hvornår gælder husholdningsundtagelsen ikke (Ryneš, Lindqvist)?
 - [ ] Art. 3, stk. 1 vs. stk. 2 – og hvornår kræves en repræsentant?
 
-Næste: [[Lektion 2 - Aktører og behandlingsprincipper]]
+Oversigt: [[00 - IT-ret Oversigt]] · Næste: [[Lektion 2 - Aktører og behandlingsprincipper]]
