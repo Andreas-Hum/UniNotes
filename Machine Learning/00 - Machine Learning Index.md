@@ -7,7 +7,7 @@ Entry point for everything ML. Notes are linked to each other, so open the **gra
 
 > [!tip] Start here → [[00 - Learning Path]] · feeling behind? → [[Masters Self-Assessment]]
 > A step-by-step route from Python and math basics through classical ML, deep learning, NLP, vision, recommender systems, LLMs and MLOps, with links to free books, courses and papers at every stage.
-> Your own course notes live in [[8-semester/ML/Notes|8-semester/ML]] and [[8-semester/ML/Lecture Notes 1-12|Lecture Notes 1-12]].
+> Your own course notes live in [[8-semester/ML/ML Notes|8-semester/ML]] and [[8-semester/ML/Lecture Notes 1-12|Lecture Notes 1-12]].
 
 Every topic note ends with a **Learn more** section with links to external resources.
 
