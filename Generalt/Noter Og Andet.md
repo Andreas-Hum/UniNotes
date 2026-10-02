@@ -2749,7 +2749,7 @@ The objective in adversarial search is to determine a sequence of actions that l
 
 #### Examples:
 - **Chess**: Using adversarial search, an AI can determine the best possible move in a chess game by considering all potential responses from the opponent.
-- [[Tic Tac Toe Understanding Adversarial Search and the Minimax AlgorithmUntitled|Tic-Tac-Toe]]: Even in simpler games like tic-tac-toe, adversarial search helps in determining a strategy that guarantees a win or a draw.
+- [[Tic Tac Toe Understanding Adversarial Search and the Minimax Algorithm|Tic-Tac-Toe]]: Even in simpler games like tic-tac-toe, adversarial search helps in determining a strategy that guarantees a win or a draw.
 
 In adversarial search, finding an optimal solution involves not just minimizing your losses but also anticipating and countering your opponent's best moves. This is why the concepts of Minimax and Alpha-Beta Pruning are so integral—they enable the AI to efficiently find the best strategy by exploring the most relevant parts of the game tree.
 
