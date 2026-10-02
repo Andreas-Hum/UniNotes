@@ -113,7 +113,7 @@ Being a definite finite automata means that for each input symbol in $\Sigma$ a 
 
 Example of a DFA:
 
-![[Pasted image 20240316164951.png]]
+> [!warning] Missing image: `Pasted image 20240316164951.png` was never added to the vault.
 
 #### $Q$ is a finite set of states
 
@@ -306,7 +306,7 @@ We say that $M$ recognizes $A$ if $A=\{w| M \ \ \text{accepts} \ \ w\}$
 ### CFG and PDA equivalence
 
 
-![[Pasted image 20240421184047.png]]
+> [!warning] Missing image: `Pasted image 20240421184047.png` was never added to the vault.
 # Regular Expressions
 
 A regular expression is like an athematic expression expect that the value of a regular expression is a [[Automata and Languages Definitions#Language of an automata|language]] that a automata recognizes.

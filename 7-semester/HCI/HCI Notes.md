@@ -72,7 +72,7 @@ A signal isn't just "on" or "off". It has three zones:
 * **Absorption:** Energy absorbed by walls/water/bodies.
 * **Diffraction:** Bending around small obstacles.
 * **Interference:** Multiple transmitters on the same band (Crosstalk).
-* **Multipath Scattering:** Signal taking multiple paths to the receiver (can be used as an advantage in [[MIMO]] systems).
+* **Multipath Scattering:** Signal taking multiple paths to the receiver (can be used as an advantage in MIMO systems).
 
 ### Antennas
 * **Gain:** Efficiency of the antenna.

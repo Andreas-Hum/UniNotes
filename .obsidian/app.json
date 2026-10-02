@@ -7,5 +7,10 @@
     "downscalePercent": 100
   },
   "showLineNumber": false,
-  "promptDelete": false
+  "promptDelete": false,
+  "attachmentFolderPath": "Attachments",
+  "userIgnoreFilters": [
+    "7-semester/HCI/Exercises/3/flutter/",
+    "7-semester/HCI/Exercises/4/Flutter/"
+  ]
 }
