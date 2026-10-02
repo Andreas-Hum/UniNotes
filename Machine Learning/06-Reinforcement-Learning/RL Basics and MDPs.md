@@ -20,3 +20,8 @@ Monte Carlo, TD learning → [[Q-Learning and Policy Gradients]].
 
 ## Concepts
 Exploration vs exploitation (ε-greedy, UCB, Thompson sampling), on/off-policy, model-based vs model-free, discount factor.
+
+## Learn more
+- [Sutton & Barto (free)](http://incompleteideas.net/book/the-book-2nd.html) ch. 3–4
+- [David Silver RL course](https://www.davidsilver.uk/teaching/)
+- [Gymnasium](https://gymnasium.farama.org/)

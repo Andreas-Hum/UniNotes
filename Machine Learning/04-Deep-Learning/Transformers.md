@@ -25,3 +25,9 @@ AdamW + warm-up + cosine decay, pre-LN, mixed precision, gradient clipping ([[Op
 
 ## Beyond
 Fine-tuning, LoRA, RLHF ([[Q-Learning and Policy Gradients]]), retrieval-augmented generation, KV-cache, FlashAttention. Graph attention: [[Graph Neural Networks]].
+
+## Learn more
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [Karpathy – Zero to Hero](https://karpathy.ai/zero-to-hero.html) (build GPT)
+- [Stanford CS224n](https://web.stanford.edu/class/cs224n/)

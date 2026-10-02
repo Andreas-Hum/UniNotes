@@ -34,3 +34,6 @@ labels = KMeans(n_clusters=3, n_init=10).fit_predict(Z)
 ```
 
 Concepts: [[Cross-Validation and Model Selection]], [[Support Vector Machines]], [[Ensemble Methods]], [[Clustering]], [[PCA]], [[Gaussian Mixture Models and EM]].
+
+## Learn more
+- [scikit-learn user guide](https://scikit-learn.org/stable/user_guide.html)

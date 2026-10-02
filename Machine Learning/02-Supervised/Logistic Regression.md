@@ -22,3 +22,8 @@ Convex; gradient $\nabla_w=X^\top(\hat p-y)$. No closed form → [[Gradient Desc
 - It is a single-neuron [[Neural Networks|neural network]].
 
 See also [[Linear Models for Classification]], [[Information Theory]].
+
+## Learn more
+- [ISL / ISLP (free)](https://www.statlearning.com/) ch. 4
+- [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 4
+- [CS229 cheatsheets](https://stanford.edu/~shervine/teaching/cs-229/)

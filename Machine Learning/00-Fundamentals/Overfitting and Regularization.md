@@ -23,3 +23,8 @@ Always invertible for $\lambda>0$.
 
 ## Choosing $\lambda$
 Use [[Cross-Validation and Model Selection]], never the test set.
+
+## Learn more
+- [ISL / ISLP (free)](https://www.statlearning.com/) ch. 6
+- [scikit-learn – linear models (Ridge/Lasso)](https://scikit-learn.org/stable/modules/linear_model.html)
+- [StatQuest videos](https://statquest.org/video_index.html)

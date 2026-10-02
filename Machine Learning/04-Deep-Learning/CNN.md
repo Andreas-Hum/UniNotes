@@ -18,3 +18,8 @@ Classification, detection (YOLO, Faster R-CNN), segmentation (U-Net, Mask R-CNN)
 
 ## Tricks
 BatchNorm, data augmentation, transfer learning from ImageNet, mixed precision ([[Training Tricks]]).
+
+## Learn more
+- [Stanford CS231n](https://cs231n.stanford.edu/) · [notes](https://cs231n.github.io/)
+- [Dive into Deep Learning](https://d2l.ai/)
+- [ResNet paper](https://arxiv.org/abs/1512.03385)

@@ -18,3 +18,7 @@ Graph $G=(V,E)$ with adjacency $A$, degree $D$, Laplacian $L=D-A$.
 4. **GNNs**: message passing.
 
 Your lecture notes: [[8-semester/ML/Lecture Notes 1-12|Lectures 8–12]].
+
+## Learn more
+- [Stanford CS224W](https://web.stanford.edu/class/cs224w/)
+- [Hamilton – Graph Representation Learning (free)](https://www.cs.mcgill.ca/~wlh/grl_book/)

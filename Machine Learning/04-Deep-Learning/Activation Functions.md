@@ -15,3 +15,7 @@ tags: [ml, deep-learning]
 | Softmax | $e^{z_k}/\sum e^{z_j}$ | output layer for classes |
 
 Choice affects [[Backpropagation]] gradient flow and [[Training Tricks]] such as initialization (He for ReLU, Xavier for tanh).
+
+## Learn more
+- [Dive into Deep Learning](https://d2l.ai/)
+- [Understanding Deep Learning – Prince (free)](https://udlbook.github.io/udlbook/)

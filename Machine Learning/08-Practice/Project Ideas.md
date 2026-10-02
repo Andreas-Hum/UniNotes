@@ -10,3 +10,6 @@ tags: [ml, practice, projects]
 **Advanced** — text classification/QA with fine-tuned [[Transformers]]; link prediction on citation graphs ([[Link Prediction]], [[Graph Neural Networks]]); Bayesian A/B testing ([[Bayesian Inference]]); RL agent for CartPole/LunarLander ([[Q-Learning and Policy Gradients]]); VAE/diffusion on small images ([[Generative Models]]).
 
 Datasets: [[Datasets]]. Workflow: [[ML Workflow]].
+
+## Learn more
+- [Kaggle competitions & datasets](https://www.kaggle.com/datasets)

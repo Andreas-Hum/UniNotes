@@ -13,3 +13,6 @@ Find rare observations that differ from the norm.
 - **Time series**: residuals of forecasting models, change-point detection.
 
 Evaluate with PR-AUC since classes are extremely imbalanced ([[Model Evaluation and Metrics]]).
+
+## Learn more
+- [scikit-learn – novelty & outlier detection](https://scikit-learn.org/stable/modules/outlier_detection.html)

@@ -15,3 +15,8 @@ $$h^{(l)}=\phi\big(W^{(l)}h^{(l-1)}+b^{(l)}\big),\quad \hat y=h^{(L)}$$
 
 ## Why non-linear?
 Without $\phi$ the stack collapses to one linear map and cannot solve XOR ([[Linear Models for Classification]]).
+
+## Learn more
+- [3Blue1Brown – Neural Networks](https://www.3blue1brown.com/topics/neural-networks)
+- [Nielsen – Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/)
+- [Dive into Deep Learning](https://d2l.ai/)

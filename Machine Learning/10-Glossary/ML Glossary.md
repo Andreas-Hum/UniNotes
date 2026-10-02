@@ -47,3 +47,6 @@ tags: [ml, glossary]
 **Variance (model)** — sensitivity to training set
 **VC dimension** — capacity of a hypothesis class
 **Weight decay** — L2 penalty applied in the update
+
+## Learn more
+- [Google ML Glossary](https://developers.google.com/machine-learning/glossary)

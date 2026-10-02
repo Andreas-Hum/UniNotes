@@ -21,3 +21,7 @@ Class weights, resampling (SMOTE), threshold moving, PR-AUC. See [[Model Evaluat
 
 ## Pipeline rule
 Compute statistics on **train only**, apply to val/test.
+
+## Learn more
+- [scikit-learn – preprocessing](https://scikit-learn.org/stable/modules/preprocessing.html)
+- [scikit-learn – imputation](https://scikit-learn.org/stable/modules/impute.html)

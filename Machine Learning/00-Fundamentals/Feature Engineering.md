@@ -12,3 +12,7 @@ tags: [ml, fundamentals, features]
 - **Extraction**: [[PCA]], autoencoders, [[Kernel Methods]] (implicit feature maps).
 
 Non-linear feature maps $\phi(x)$ turn linear models into non-linear ones; see [[Linear Models for Classification]].
+
+## Learn more
+- [Kaggle Learn – Feature Engineering](https://www.kaggle.com/learn)
+- [scikit-learn – preprocessing](https://scikit-learn.org/stable/modules/preprocessing.html)

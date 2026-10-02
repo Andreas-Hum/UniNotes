@@ -17,3 +17,10 @@ Learn $p(x)$ to sample or score data.
 
 Reparameterization trick: $z=\mu+\sigma\odot\varepsilon$ makes sampling differentiable.
 Metrics: FID, Inception score, perplexity, log-likelihood ([[Model Evaluation and Metrics]]).
+
+## Learn more
+- [Understanding Deep Learning – Prince (free)](https://udlbook.github.io/udlbook/) ch. 14–18
+- [VAE](https://arxiv.org/abs/1312.6114)
+- [GAN](https://arxiv.org/abs/1406.2661)
+- [DDPM](https://arxiv.org/abs/2006.11239)
+- [Lil'Log – diffusion models](https://lilianweng.github.io/)

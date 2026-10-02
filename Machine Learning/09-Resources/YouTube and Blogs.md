@@ -3,11 +3,19 @@ tags: [ml, resources, media]
 ---
 # YouTube and Blogs
 
-## YouTube
-3Blue1Brown (neural nets, linear algebra) · StatQuest (Josh Starmer) · Andrej Karpathy · Yannic Kilcher (paper reviews) · Two Minute Papers · Sentdex · Serrano.Academy · Lex Fridman (interviews) · Stanford Online / MIT OpenCourseWare.
+## Video
+- [3Blue1Brown — Neural Networks](https://www.3blue1brown.com/topics/neural-networks) · [Essence of Linear Algebra](https://www.3blue1brown.com/lessons/eola-preview/) · [Essence of Calculus](https://www.3blue1brown.com/lessons/essence-of-calculus/)
+- [StatQuest — Josh Starmer](https://statquest.org/video_index.html)
+- [Andrej Karpathy — Zero to Hero](https://karpathy.ai/zero-to-hero.html)
+- Yannic Kilcher (paper walkthroughs), Two Minute Papers, Serrano.Academy, Stanford Online, MIT OpenCourseWare (search on YouTube)
 
-## Blogs & sites
-Distill.pub · Lilian Weng *Lil'Log* · Jay Alammar *The Illustrated Transformer* · Chris Olah's blog · Sebastian Ruder (NLP) · Sebastian Raschka · The Gradient · Towards Data Science (variable quality) · Papers With Code · Hugging Face blog · Google ML Glossary.
+## Blogs
+- [The Illustrated Transformer — Jay Alammar](https://jalammar.github.io/illustrated-transformer/) (also Illustrated BERT, GPT-2, word2vec)
+- [Lil'Log — Lilian Weng](https://lilianweng.github.io/) — deep dives on attention, diffusion, RL, agents
+- [Distill.pub](https://distill.pub/) — interactive articles (archived, still excellent)
+- [colah's blog — Chris Olah](https://colah.github.io/) — *Understanding LSTMs*
+- [Sebastian Raschka](https://sebastianraschka.com/blog/) — ML & LLM research
+- [Hugging Face blog](https://huggingface.co/blog)
 
-## Newsletters / community
-Import AI, The Batch, Latent Space · r/MachineLearning · Cross Validated (stats.stackexchange) · Kaggle forums.
+## Community
+r/MachineLearning · [Cross Validated](https://stats.stackexchange.com/) · Kaggle discussions · [Hugging Face Papers](https://huggingface.co/papers)

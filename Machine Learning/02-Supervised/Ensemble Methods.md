@@ -20,3 +20,8 @@ Combine many weak/diverse models for lower error.
 - Feature importance: impurity-based (biased) vs. permutation importance (preferred).
 
 See [[Bias-Variance Tradeoff]].
+
+## Learn more
+- [ISL / ISLP (free)](https://www.statlearning.com/) ch. 8
+- [scikit-learn – ensembles](https://scikit-learn.org/stable/modules/ensemble.html)
+- [XGBoost docs](https://xgboost.readthedocs.io/)

@@ -14,3 +14,7 @@ tags: [ml, fundamentals, workflow]
 9. **Deploy & monitor** — drift, latency, retraining.
 
 Checklist of mistakes: [[Common Pitfalls]]. Exam version: [[Exam Checklist]].
+
+## Learn more
+- [Made With ML](https://madewithml.com/)
+- [scikit-learn – choosing an estimator](https://scikit-learn.org/stable/machine_learning_map.html)

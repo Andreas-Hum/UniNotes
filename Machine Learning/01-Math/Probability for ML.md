@@ -29,3 +29,8 @@ $\mathbb E[X]$, $\mathrm{Var}(X)=\mathbb E[X^2]-\mathbb E[X]^2$, $\mathrm{Cov}$.
 Law of large numbers, CLT, Hoeffding bound (used in PAC arguments).
 
 See [[Information Theory]].
+
+## Learn more
+- [Mathematics for ML (free)](https://mml-book.github.io/) ch. 6
+- [Murphy – Probabilistic ML (free)](https://probml.github.io/pml-book/)
+- [StatQuest videos](https://statquest.org/video_index.html)

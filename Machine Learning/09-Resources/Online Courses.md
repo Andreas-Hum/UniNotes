@@ -3,39 +3,36 @@ tags: [ml, resources, courses]
 ---
 # Online Courses
 
-## Introductory
-- **Machine Learning Specialization** — Andrew Ng (Coursera/DeepLearning.AI).
-- **CS229** — Stanford (Ng / Ré), lecture notes are excellent.
-- **fast.ai Practical Deep Learning for Coders** — top-down, code first.
-- **Kaggle Learn** — short micro-courses (pandas, ML, feature engineering).
-- **Google Machine Learning Crash Course**.
+All free unless noted. See [[00 - Learning Path]] for the order to take them in.
 
-## Rigorous / theory
-- **Learning from Data** — Y. Abu-Mostafa (Caltech).
-- **MIT 6.036 / 6.390 Intro to ML**.
-- **CMU 10-701 / 10-715** — Machine Learning.
-- **Foundations of ML** — NYU (Mohri).
+## Beginner
+- [**Machine Learning Specialization** — Andrew Ng](https://www.coursera.org/specializations/machine-learning-introduction) (Coursera, free to audit)
+- [**Kaggle Learn**](https://www.kaggle.com/learn) — Python, pandas, intro ML, feature engineering micro-courses
+- [**Google Machine Learning Crash Course**](https://developers.google.com/machine-learning/crash-course)
+- [**StatQuest** video index](https://statquest.org/video_index.html) — every ML concept explained clearly
+
+## Intermediate / university level
+- [**Stanford CS229 — Machine Learning**](https://cs229.stanford.edu/) (lecture notes are excellent)
+- [**ISL with Python** companion videos](https://www.statlearning.com/online-courses)
+- [**MIT 18.06 Linear Algebra** — Strang](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/)
 
 ## Deep learning
-- **CS231n** — CNNs for visual recognition (Stanford).
-- **CS224n** — NLP with deep learning (Stanford).
-- **Deep Learning Specialization** — Ng.
-- **Andrej Karpathy: Neural Networks — Zero to Hero** (build micrograd, makemore, GPT).
-- **CS25** — Transformers United.
-- **Hugging Face NLP / LLM course**.
+- [**3Blue1Brown — Neural Networks**](https://www.3blue1brown.com/topics/neural-networks) — visual intuition
+- [**Karpathy — Neural Networks: Zero to Hero**](https://karpathy.ai/zero-to-hero.html) — build micrograd → GPT
+- [**fast.ai — Practical Deep Learning for Coders**](https://course.fast.ai/)
+- [**Deep Learning Specialization** — Ng](https://www.coursera.org/specializations/deep-learning)
+- [**Stanford CS231n — Deep Learning for Computer Vision**](https://cs231n.stanford.edu/) · [notes](https://cs231n.github.io/)
+- [**Stanford CS224n — NLP with Deep Learning**](https://web.stanford.edu/class/cs224n/)
+- [**Hugging Face LLM Course**](https://huggingface.co/learn/llm-course/chapter1/1)
 
-## Probabilistic / Bayesian
-- **Statistical Rethinking** — R. McElreath (lectures on YouTube).
-- **CS228** — Probabilistic Graphical Models (Stanford).
-- **Bayesian Methods for ML** — HSE (Coursera).
+## Specialised
+- [**Stanford CS224W — Machine Learning with Graphs**](https://web.stanford.edu/class/cs224w/)
+- [**David Silver — Reinforcement Learning**](https://www.davidsilver.uk/teaching/)
+- [**OpenAI Spinning Up in Deep RL**](https://spinningup.openai.com/)
+- [**Google — Recommendation Systems**](https://developers.google.com/machine-learning/recommendation)
+- [**Statistical Rethinking 2024** — McElreath (Bayesian)](https://github.com/rmcelreath/stat_rethinking_2024)
 
-## RL
-- **David Silver — RL Course** (UCL/DeepMind).
-- **CS285** — Deep RL (Berkeley, S. Levine).
-- **Hugging Face Deep RL course**; OpenAI **Spinning Up**.
-
-## Graphs
-- **CS224W** — Machine Learning with Graphs (Stanford, J. Leskovec).
-
-## Math
-- **3Blue1Brown** — Essence of Linear Algebra / Calculus; **MIT 18.06** Linear Algebra (Strang); **StatQuest**.
+## Production / MLOps
+- [**Made With ML**](https://madewithml.com/)
+- [**Stanford CS329S — ML Systems Design**](https://stanford-cs329s.github.io/)
+- [**Full Stack Deep Learning**](https://fullstackdeeplearning.com/course/)

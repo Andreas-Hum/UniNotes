@@ -19,3 +19,7 @@ tags: [ml, fundamentals]
 
 ## Parametric vs. non-parametric
 Parametric: fixed number of parameters (linear models). Non-parametric: complexity grows with data ([[k-Nearest Neighbors]], [[Gaussian Processes]], kernel methods).
+
+## Learn more
+- [ISL / ISLP (free)](https://www.statlearning.com/)
+- [Murphy – Probabilistic ML (free)](https://probml.github.io/pml-book/)

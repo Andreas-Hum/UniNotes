@@ -11,3 +11,7 @@ tags: [ml, math, information-theory]
 - **Jensen–Shannon** divergence: symmetric, used in original GAN analysis.
 
 Information gain $=H(\text{parent})-\sum\frac{n_k}{n}H(\text{child}_k)$.
+
+## Learn more
+- [Murphy – Probabilistic ML (free)](https://probml.github.io/pml-book/)
+- [Deep Learning book – Goodfellow et al.](https://www.deeplearningbook.org/) ch. 3

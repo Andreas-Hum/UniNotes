@@ -23,3 +23,7 @@ If $z=g(y),\ y=h(x)$: $\nabla_x z = J_h(x)^\top\,\nabla_y z$. This is [[Backprop
 - $\tanh' = 1-\tanh^2$, ReLU$'=\mathbb 1[z>0]$
 
 Used in [[Linear Regression]], [[Logistic Regression]], [[Neural Networks]].
+
+## Learn more
+- [The Matrix Cookbook (PDF)](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf)
+- [Mathematics for ML (free)](https://mml-book.github.io/) ch. 5

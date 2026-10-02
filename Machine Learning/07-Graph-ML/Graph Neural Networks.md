@@ -18,3 +18,10 @@ $$h_v^{(k)}=\mathrm{UPDATE}\Big(h_v^{(k-1)},\ \mathrm{AGG}\big(\{h_u^{(k-1)}:u\i
 - Libraries: PyTorch Geometric, DGL ([[Tools and Libraries]]).
 
 Used for [[Link Prediction]] and node/graph classification. Overview: [[Graph ML Overview]].
+
+## Learn more
+- [Hamilton – Graph Representation Learning (free)](https://www.cs.mcgill.ca/~wlh/grl_book/) ch. 5–7
+- [Stanford CS224W](https://web.stanford.edu/class/cs224w/)
+- [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/)
+- [GCN](https://arxiv.org/abs/1609.02907)
+- [GAT](https://arxiv.org/abs/1710.10903)

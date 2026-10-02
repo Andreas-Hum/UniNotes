@@ -20,3 +20,9 @@ Predict missing or future edges.
 
 ## Evaluation
 Hide a fraction of edges; sample negative non-edges; report ROC-AUC, AP, Hits@k ([[Model Evaluation and Metrics]]). Avoid leakage: remove test edges from the message-passing graph.
+
+## Learn more
+- [Stanford CS224W](https://web.stanford.edu/class/cs224w/)
+- [Hamilton – Graph Representation Learning (free)](https://www.cs.mcgill.ca/~wlh/grl_book/) ch. 3
+- [SEAL](https://arxiv.org/abs/1802.09691)
+- [OGB link prediction benchmarks](https://ogb.stanford.edu/)

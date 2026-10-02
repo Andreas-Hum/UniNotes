@@ -17,3 +17,7 @@ tags: [ml, practice]
 | Train/eval mode bugs (dropout, BN) | `model.eval()` ([[PyTorch Recipes]]) |
 | Non-reproducible results | seeds, logged configs |
 | Log of zero / overflow | log-sum-exp, clip probabilities |
+
+## Learn more
+- [Made With ML](https://madewithml.com/)
+- [Molnar – Interpretable ML](https://christophm.github.io/interpretable-ml-book/)

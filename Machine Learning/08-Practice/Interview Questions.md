@@ -35,3 +35,6 @@ Try answering aloud first. Links point to the answer.
 ## RL / Graph
 - Q-learning vs. SARSA → [[Q-Learning and Policy Gradients]]
 - Over-smoothing in GNNs → [[Graph Neural Networks]]
+
+## Learn more
+- [CS229 cheatsheets](https://stanford.edu/~shervine/teaching/cs-229/)

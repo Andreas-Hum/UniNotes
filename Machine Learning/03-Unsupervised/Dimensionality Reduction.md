@@ -18,3 +18,7 @@ tags: [ml, unsupervised, dimensionality-reduction]
 > Distances and cluster sizes in t-SNE / UMAP plots are not reliable. Do not over-interpret.
 
 Motivation: curse of dimensionality, noise, compression, visualization.
+
+## Learn more
+- [scikit-learn – manifold learning](https://scikit-learn.org/stable/modules/manifold.html)
+- [scikit-learn – decomposition](https://scikit-learn.org/stable/modules/decomposition.html)

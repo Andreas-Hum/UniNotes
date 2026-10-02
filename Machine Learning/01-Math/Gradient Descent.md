@@ -24,3 +24,8 @@ Convex + L-smooth: $O(1/t)$; strongly convex: linear rate. SGD needs decaying $\
 
 ## Debugging
 Overfit a tiny batch first; check loss goes down; gradient-check numerically. See [[Training Tricks]].
+
+## Learn more
+- [Dive into Deep Learning](https://d2l.ai/) – Optimization chapter
+- [Mathematics for ML (free)](https://mml-book.github.io/) ch. 7
+- [3Blue1Brown – Neural Networks](https://www.3blue1brown.com/topics/neural-networks)

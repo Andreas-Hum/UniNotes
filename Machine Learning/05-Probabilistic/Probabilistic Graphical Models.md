@@ -20,3 +20,7 @@ Parameters: MLE counts (fully observed) or [[Gaussian Mixture Models and EM|EM]]
 
 ## Examples
 [[Naive Bayes]], HMM, Kalman filter, LDA topic model, PPCA, mixture models. See your AI notes in [[5-semester/Machine intelligence/Noter små|Noter små]].
+
+## Learn more
+- [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 8
+- [Murphy – Probabilistic ML (free)](https://probml.github.io/pml-book/)

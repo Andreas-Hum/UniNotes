@@ -15,3 +15,7 @@ $$\mu_*=k_*^\top(K+\sigma^2I)^{-1}y,\qquad \Sigma_*=k_{**}-k_*^\top(K+\sigma^2I)
 - Used in Bayesian optimization of hyperparameters ([[Cross-Validation and Model Selection]]).
 
 Bayesian linear regression with basis functions is a GP with a finite-rank kernel ([[Bayesian Inference]]).
+
+## Learn more
+- [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 6
+- [scikit-learn – Gaussian processes](https://scikit-learn.org/stable/modules/gaussian_process.html)

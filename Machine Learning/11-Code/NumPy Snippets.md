@@ -48,3 +48,6 @@ for _ in range(100):
 ```
 
 Related: [[Linear Regression]], [[Logistic Regression]], [[PCA]], [[Clustering]], [[Kernel Methods]].
+
+## Learn more
+- [NumPy docs](https://numpy.org/doc/stable/)

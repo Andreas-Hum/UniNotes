@@ -17,3 +17,8 @@ Softmax + cross-entropy: $\delta^{(L)}=\hat p-y$.
 - Cost ≈ 2–3× a forward pass; cache activations (memory ↔ gradient checkpointing trade-off).
 - **Vanishing / exploding gradients**: products of Jacobians; mitigated by ReLU, residual connections, normalization, gradient clipping ([[Training Tricks]]).
 - Automatic differentiation in PyTorch/JAX does this for you ([[PyTorch Recipes]]).
+
+## Learn more
+- [3Blue1Brown – Neural Networks](https://www.3blue1brown.com/topics/neural-networks)
+- [Karpathy – Zero to Hero](https://karpathy.ai/zero-to-hero.html) (micrograd)
+- [Nielsen – Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/) ch. 2

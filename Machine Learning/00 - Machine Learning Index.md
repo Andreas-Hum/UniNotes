@@ -3,10 +3,13 @@ tags: [ml, index, moc]
 ---
 # Machine Learning — Map of Content
 
-Entry point for everything ML. Notes are linked with `[[wikilinks]]`, so open the **graph view** to see how they connect.
+Entry point for everything ML. Notes are linked to each other, so open the **graph view** to see how they connect.
 
-> [!tip] How to use
-> Follow the numbered folders top to bottom for a learning path, or jump straight to a topic below. Your own course notes live in [[8-semester/ML/Notes|8-semester/ML]].
+> [!tip] Start here → [[00 - Learning Path]]
+> A step-by-step route from Python and math basics through classical ML, deep learning, NLP, vision, recommender systems, LLMs and MLOps, with links to free books, courses and papers at every stage.
+> Your own course notes live in [[8-semester/ML/Notes|8-semester/ML]] and [[8-semester/ML/Lecture Notes 1-12|Lecture Notes 1-12]].
+
+Every topic note ends with a **Learn more** section with links to external resources.
 
 ## 00 · Fundamentals
 - [[What is Machine Learning]] · [[Learning Paradigms]] · [[Bias-Variance Tradeoff]]
@@ -49,3 +52,25 @@ Entry point for everything ML. Notes are linked with `[[wikilinks]]`, so open th
 
 ## 11 · Code
 - [[NumPy Snippets]] · [[scikit-learn Recipes]] · [[PyTorch Recipes]]
+
+## 12 · Recommender systems
+- [[Recommender Systems Overview]] · [[Collaborative Filtering and Matrix Factorization]] · [[Content-Based and Hybrid Recommenders]]
+- [[Deep Learning Recommenders]] · [[Evaluating Recommenders]] · [[Recommender Systems Resources]]
+
+## 13 · NLP
+- [[NLP Overview]] · [[Text Representations]]
+
+## 14 · Computer vision
+- [[Computer Vision Overview]]
+
+## 15 · LLMs & generative AI
+- [[LLMs Overview]] · [[Fine-tuning and Alignment]] · [[RAG and Agents]]
+
+## 16 · Time series
+- [[Time Series Forecasting]]
+
+## 17 · MLOps
+- [[MLOps Overview]]
+
+## 18 · Responsible AI
+- [[Explainability and Fairness]]

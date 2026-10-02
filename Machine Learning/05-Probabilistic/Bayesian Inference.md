@@ -13,3 +13,8 @@ $$\underbrace{p(\theta\mid D)}_{\text{posterior}}=\frac{\overbrace{p(D\mid\theta
 - Non-parametric: [[Gaussian Processes]].
 
 Foundations: [[Probability for ML]].
+
+## Learn more
+- [Murphy – Probabilistic ML (free)](https://probml.github.io/pml-book/)
+- [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 2–3
+- [Statistical Rethinking 2024](https://github.com/rmcelreath/stat_rethinking_2024)

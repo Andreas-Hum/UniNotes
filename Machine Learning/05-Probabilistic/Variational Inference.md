@@ -14,3 +14,8 @@ The gap is $D_{KL}(q\Vert p(z\mid x))$ ([[Information Theory]]).
 - Tools: Pyro, NumPyro, Stan (ADVI), TensorFlow Probability ([[Tools and Libraries]]).
 
 Alternative: [[MCMC]].
+
+## Learn more
+- [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 10
+- [Murphy – Probabilistic ML (free)](https://probml.github.io/pml-book/) vol. 2
+- [VAE paper](https://arxiv.org/abs/1312.6114)

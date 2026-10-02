@@ -16,3 +16,8 @@ $c_t=f_t\odot c_{t-1}+i_t\odot\tilde c_t,\quad h_t=o_t\odot\tanh c_t$.
 
 ## Variants
 Bidirectional, stacked, seq2seq with attention. Largely replaced by [[Transformers]] for NLP, but still used for small/streaming problems.
+
+## Learn more
+- [Dive into Deep Learning](https://d2l.ai/)
+- [colah – Understanding LSTMs](https://colah.github.io/)
+- [Stanford CS224n](https://web.stanford.edu/class/cs224n/)

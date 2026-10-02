@@ -19,3 +19,7 @@ Build on [[Gradient Descent]].
 - Adam: $\eta\approx10^{-3}$ (CNN/MLP), $10^{-4}$ for transformers; SGD+momentum often generalizes better for vision.
 - Use warm-up + cosine/linear decay.
 - Gradient clipping (norm 1.0) for [[RNN and LSTM]] and [[Transformers]].
+
+## Learn more
+- [Dive into Deep Learning](https://d2l.ai/) – Optimization chapter
+- [Adam paper](https://arxiv.org/abs/1412.6980)

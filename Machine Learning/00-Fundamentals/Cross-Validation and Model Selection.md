@@ -24,3 +24,8 @@ $\mathrm{AIC}=2k-2\ln\hat L$, $\mathrm{BIC}=k\ln N-2\ln\hat L$ — penalize mode
 
 > [!danger] Data leakage
 > Fit scalers, imputers, feature selectors **inside** each fold (use a pipeline). See [[Common Pitfalls]].
+
+## Learn more
+- [scikit-learn – cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html)
+- [scikit-learn – hyperparameter tuning](https://scikit-learn.org/stable/modules/grid_search.html)
+- [ISL / ISLP (free)](https://www.statlearning.com/) ch. 5

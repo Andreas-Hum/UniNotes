@@ -17,3 +17,8 @@ $$\mathbb{E}\big[(y-\hat f(x))^2\big] = \underbrace{\big(\mathbb{E}[\hat f(x)]-f
 > Over-parameterized deep nets show **double descent**: test error can fall again past the interpolation threshold.
 
 Related: [[Cross-Validation and Model Selection]].
+
+## Learn more
+- [ISL / ISLP (free)](https://www.statlearning.com/) ch. 2
+- [Elements of Statistical Learning (free)](https://hastie.su.domains/ElemStatLearn/) ch. 7
+- [CS229 cheatsheets](https://stanford.edu/~shervine/teaching/cs-229/)

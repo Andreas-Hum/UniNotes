@@ -21,3 +21,7 @@ Closure: sums, products, positive scalings of kernels are kernels.
 [[Support Vector Machines]], kernel ridge regression, kernel [[PCA]], [[Gaussian Processes]], kernel k-means.
 
 Scaling: $O(N^2)$ memory, $O(N^3)$ solve; use Nyström or random Fourier features.
+
+## Learn more
+- [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 6
+- [Elements of Statistical Learning (free)](https://hastie.su.domains/ElemStatLearn/) ch. 5–6

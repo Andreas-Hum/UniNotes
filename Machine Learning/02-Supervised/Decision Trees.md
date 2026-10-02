@@ -21,3 +21,8 @@ Max depth, min samples per leaf, **cost-complexity pruning**, validation pruning
 − unstable (high variance), axis-aligned boundaries
 
 Fix variance with [[Ensemble Methods]] (Random Forest, Gradient Boosting).
+
+## Learn more
+- [ISL / ISLP (free)](https://www.statlearning.com/) ch. 8
+- [scikit-learn – decision trees](https://scikit-learn.org/stable/modules/tree.html)
+- [StatQuest videos](https://statquest.org/video_index.html)

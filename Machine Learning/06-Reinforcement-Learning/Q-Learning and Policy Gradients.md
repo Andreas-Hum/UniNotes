@@ -18,3 +18,9 @@ Critic estimates $V$/$Q$, actor updates policy: A2C/A3C, **PPO** (clipped object
 ## Applications
 Games (AlphaGo), robotics, RLHF for language models ([[Transformers]]).
 Foundations: [[RL Basics and MDPs]].
+
+## Learn more
+- [Sutton & Barto (free)](http://incompleteideas.net/book/the-book-2nd.html) ch. 6 & 13
+- [OpenAI Spinning Up](https://spinningup.openai.com/)
+- [DQN](https://arxiv.org/abs/1312.5602)
+- [PPO](https://arxiv.org/abs/1707.06347)

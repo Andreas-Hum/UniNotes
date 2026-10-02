@@ -23,3 +23,8 @@ Projection onto col($X$): $P=X(X^\top X)^{-1}X^\top$.
 - $\mathrm{tr}(AB)=\mathrm{tr}(BA)$, $\mathrm{tr}(A)=\sum\lambda_i$, $\det A=\prod\lambda_i$
 - $(A+UCV)^{-1}$ Woodbury lemma: cheap updates of inverses
 - Gradients: [[Matrix Calculus Cheatsheet]]
+
+## Learn more
+- [Mathematics for ML (free)](https://mml-book.github.io/) ch. 2–4
+- [3Blue1Brown – Essence of Linear Algebra](https://www.3blue1brown.com/lessons/eola-preview/)
+- [MIT 18.06 – Strang](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/)

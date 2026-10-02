@@ -18,3 +18,8 @@ The log-likelihood never decreases (it maximizes a lower bound; same ELBO idea a
 - Singularities when a component collapses on one point: regularize $\Sigma$.
 - Choose $K$ with BIC ([[Cross-Validation and Model Selection]]).
 - k-means = GMM with equal spherical covariances and hard assignments.
+
+## Learn more
+- [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 9
+- [Mathematics for ML (free)](https://mml-book.github.io/) ch. 11
+- [scikit-learn – GMMs](https://scikit-learn.org/stable/modules/mixture.html)

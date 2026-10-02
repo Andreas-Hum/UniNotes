@@ -3,23 +3,18 @@ tags: [ml, resources, data]
 ---
 # Datasets
 
-## Tabular
-Iris, Wine, Titanic, California Housing, Adult/Census, Boston-free alternatives (Ames Housing), UCI ML Repository, OpenML, Kaggle.
+## Where to find data
+- [Kaggle Datasets](https://www.kaggle.com/datasets) · [UCI ML Repository](https://archive.ics.uci.edu/) · [OpenML](https://www.openml.org/) · [Hugging Face Datasets](https://huggingface.co/datasets) · [Google Dataset Search](https://datasetsearch.research.google.com/)
 
-## Vision
-MNIST, Fashion-MNIST, CIFAR-10/100, ImageNet, COCO, Pascal VOC, CelebA.
+## By domain
+| Domain | Datasets |
+|---|---|
+| Tabular | Iris, Wine, Titanic, California Housing, Adult/Census, Ames Housing |
+| Vision | MNIST, Fashion-MNIST, CIFAR-10/100, ImageNet, COCO, Pascal VOC, CelebA |
+| NLP | IMDB, SST-2, GLUE/SuperGLUE, SQuAD, WikiText |
+| Recommenders | [MovieLens](https://grouplens.org/datasets/movielens/), Amazon Reviews, Yelp, Last.fm, MIND (news), Criteo (CTR) |
+| Graph | Cora, CiteSeer, PubMed, [OGB](https://ogb.stanford.edu/), [SNAP](https://snap.stanford.edu/data/), QM9/ZINC |
+| Time series | UCR archive, M4/M5 competitions, electricity, traffic |
+| RL | [Gymnasium](https://gymnasium.farama.org/) (CartPole, LunarLander, Atari), MuJoCo |
 
-## NLP
-IMDB, SST, GLUE/SuperGLUE, SQuAD, WikiText, Common Crawl/The Pile, Hugging Face Hub.
-
-## Graph
-Cora, CiteSeer, PubMed (citation), OGB (Open Graph Benchmark), Zachary karate club, QM9/ZINC (molecules), SNAP.
-
-## Time series & other
-UCR archive, M4/M5 forecasting, MovieLens (recsys), LibriSpeech (audio).
-
-## RL environments
-Gymnasium (CartPole, LunarLander, Atari), MuJoCo, PettingZoo.
-
-Loaders: scikit-learn `datasets`, `torchvision`, `datasets` (HF), `torch_geometric.datasets` ([[Tools and Libraries]]).
-Ideas: [[Project Ideas]].
+Loaders: `sklearn.datasets`, `torchvision.datasets`, `datasets` (Hugging Face), `torch_geometric.datasets` ([[Tools and Libraries]]). Ideas: [[Project Ideas]].

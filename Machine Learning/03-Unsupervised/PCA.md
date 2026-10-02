@@ -22,3 +22,8 @@ Explained variance ratio $\frac{\sum_{i\le k}\lambda_i}{\sum\lambda_i}$ (e.g. â‰
 
 ## Limits
 Linear only, sensitive to scale, components hard to interpret. Non-linear alternatives in [[Dimensionality Reduction]].
+
+## Learn more
+- [Mathematics for ML (free)](https://mml-book.github.io/) ch. 10
+- [ISL / ISLP (free)](https://www.statlearning.com/) ch. 12
+- [StatQuest videos](https://statquest.org/video_index.html)

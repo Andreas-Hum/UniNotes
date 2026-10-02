@@ -17,3 +17,8 @@ Draw samples from $p(\theta\mid D)\propto p(D\mid\theta)p(\theta)$ without knowi
 Trace plots, effective sample size, $\hat R$ (≤ 1.01), burn-in, thinning.
 
 Compared with [[Variational Inference]]: slower but asymptotically exact. Context: [[Bayesian Inference]], [[Probabilistic Graphical Models]].
+
+## Learn more
+- [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 11
+- [PyMC docs](https://www.pymc.io/)
+- [Statistical Rethinking 2024](https://github.com/rmcelreath/stat_rethinking_2024)

@@ -29,3 +29,8 @@ $$\hat\theta = \arg\min_\theta \; \frac{1}{N}\sum_{i=1}^N \ell\big(f_\theta(x_i)
 - **Sequential decision making** — see [[RL Basics and MDPs]]
 
 See [[Learning Paradigms]] and [[ML Workflow]].
+
+## Learn more
+- [ISL / ISLP (free)](https://www.statlearning.com/)
+- [Stanford CS229](https://cs229.stanford.edu/)
+- [Google ML Crash Course](https://developers.google.com/machine-learning/crash-course)

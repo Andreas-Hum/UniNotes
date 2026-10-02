@@ -12,3 +12,7 @@ Predict by majority vote (classification) or mean (regression) of the $k$ closes
 - Speed-ups: k-d tree, ball tree, LSH, approximate NN (FAISS, HNSW).
 - Weighted voting $w_i=1/d_i$.
 - 1-NN error ≤ 2× Bayes error asymptotically (Cover–Hart).
+
+## Learn more
+- [scikit-learn – nearest neighbors](https://scikit-learn.org/stable/modules/neighbors.html)
+- [ISL / ISLP (free)](https://www.statlearning.com/) ch. 2

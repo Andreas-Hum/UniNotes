@@ -20,3 +20,7 @@ XOR is not linearly separable → use features $\phi(x)$, [[Kernel Methods]] or 
 ## LDA
 Shared covariance ⇒ linear boundary; separate covariances ⇒ quadratic (QDA).
 $$\delta_k(x)=x^\top\Sigma^{-1}\mu_k-\tfrac12\mu_k^\top\Sigma^{-1}\mu_k+\log\pi_k$$
+
+## Learn more
+- [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 4
+- [Elements of Statistical Learning (free)](https://hastie.su.domains/ElemStatLearn/) ch. 4

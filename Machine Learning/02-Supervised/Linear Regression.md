@@ -21,3 +21,8 @@ Linearity, independent errors, constant variance (homoscedasticity), no strong m
 
 ## Metrics
 RMSE, MAE, $R^2$ → [[Model Evaluation and Metrics]].
+
+## Learn more
+- [ISL / ISLP (free)](https://www.statlearning.com/) ch. 3
+- [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 3
+- [scikit-learn – linear models](https://scikit-learn.org/stable/modules/linear_model.html)

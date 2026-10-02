@@ -36,3 +36,7 @@ def attention(q, k, v):
 ```
 
 Checklist: `model.train()`/`model.eval()`, `zero_grad`, `no_grad` for eval, move data and model to the same device. See [[Training Tricks]], [[Optimizers]], [[Backpropagation]], [[Transformers]].
+
+## Learn more
+- [PyTorch tutorials](https://pytorch.org/tutorials/)
+- [Karpathy – Zero to Hero](https://karpathy.ai/zero-to-hero.html)

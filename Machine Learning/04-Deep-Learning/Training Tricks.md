@@ -26,3 +26,8 @@ Warm-up + decay schedules, gradient clipping, mixed precision (bf16), gradient a
 ## Transfer learning
 Freeze backbone → train head → unfreeze with small LR.
 Pitfalls: [[Common Pitfalls]]. Code: [[PyTorch Recipes]].
+
+## Learn more
+- [Karpathy – Zero to Hero](https://karpathy.ai/zero-to-hero.html)
+- [Stanford CS231n](https://cs231n.stanford.edu/) · [notes](https://cs231n.github.io/)
+- [Full Stack Deep Learning](https://fullstackdeeplearning.com/course/)

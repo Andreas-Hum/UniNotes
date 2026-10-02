@@ -21,3 +21,7 @@ Lagrangian $\mathcal L(x,\lambda)=f(x)+\sum\lambda_i g_i(x)$.
 | EM | alternate E and M | [[Gaussian Mixture Models and EM]] |
 
 Deep learning variants: [[Optimizers]].
+
+## Learn more
+- [Mathematics for ML (free)](https://mml-book.github.io/) ch. 5 & 7
+- [3Blue1Brown – Essence of Calculus](https://www.3blue1brown.com/lessons/essence-of-calculus/)

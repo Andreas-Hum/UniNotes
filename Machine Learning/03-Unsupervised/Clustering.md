@@ -22,3 +22,7 @@ Internal: silhouette, Davies–Bouldin. External: ARI, NMI ([[Model Evaluation a
 ## k-means objective
 $$J=\sum_i\lVert x_i-\mu_{c(i)}\rVert^2$$
 Converges to a local minimum, a hard-assignment special case of EM. Scale features first ([[Data Preprocessing]]).
+
+## Learn more
+- [scikit-learn – clustering](https://scikit-learn.org/stable/modules/clustering.html)
+- [ISL / ISLP (free)](https://www.statlearning.com/) ch. 12

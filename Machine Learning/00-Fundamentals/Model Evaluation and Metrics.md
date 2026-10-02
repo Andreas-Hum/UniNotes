@@ -31,3 +31,8 @@ Precision@k, MAP, NDCG, MRR. For graphs see [[Link Prediction]].
 > Accuracy on a 99%/1% split is meaningless. Always check the baseline (majority class).
 
 Splitting strategy: [[Cross-Validation and Model Selection]].
+
+## Learn more
+- [scikit-learn – metrics](https://scikit-learn.org/stable/modules/model_evaluation.html)
+- [CS229 cheatsheets](https://stanford.edu/~shervine/teaching/cs-229/)
+- [StatQuest videos](https://statquest.org/video_index.html)

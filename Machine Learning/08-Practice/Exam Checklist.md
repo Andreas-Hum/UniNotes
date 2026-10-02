@@ -17,3 +17,6 @@ tags: [ml, practice, exam]
 
 > [!tip] Strategy
 > Write dimensions of every matrix next to it. Most mistakes are transposes (rows vs. columns as samples).
+
+## Learn more
+- [CS229 cheatsheets](https://stanford.edu/~shervine/teaching/cs-229/)

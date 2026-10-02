@@ -20,3 +20,8 @@ Only **support vectors** have $\alpha_i>0$. Data enters only via dot products �
 RBF $k(x,x')=\exp(-\gamma\lVert x-x'\rVert^2)$: tune $C$ and $\gamma$ on a log grid; scale features first.
 
 Also: SVR (ε-insensitive regression), one-class SVM ([[Anomaly Detection]]).
+
+## Learn more
+- [ISL / ISLP (free)](https://www.statlearning.com/) ch. 9
+- [scikit-learn – SVMs](https://scikit-learn.org/stable/modules/svm.html)
+- [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 7

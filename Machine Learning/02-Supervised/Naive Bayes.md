@@ -19,3 +19,7 @@ $$p(y\mid x)\propto p(y)\prod_j p(x_j\mid y)$$
 - It is the simplest [[Probabilistic Graphical Models|graphical model]] (star-shaped Bayesian network).
 
 Compare: [[Logistic Regression]] (discriminative counterpart).
+
+## Learn more
+- [scikit-learn – Naive Bayes](https://scikit-learn.org/stable/modules/naive_bayes.html)
+- [CS229 cheatsheets](https://stanford.edu/~shervine/teaching/cs-229/)
