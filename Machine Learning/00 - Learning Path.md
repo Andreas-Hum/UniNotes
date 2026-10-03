@@ -120,7 +120,7 @@ graph LR
 - Checkpoint: reproduce one paper's main table and write it up with [[Paper Reading Template]].
 
 ## Anytime — Play
-Break up the reading: poke the [[Playgrounds]] after stages 2–5, do the [[Break the Model]] challenges after stage 2, and take the [[Guess the Output]] quiz after stage 5 (and again a month later). From stage 2 on, do one of the [[Weekly Challenges]] per week (week 03 fits best after stage 6, week 04 after stage 13).
+Break up the reading: poke the [[Playgrounds]] after stages 2–5, do the [[Break the Model]] challenges after stage 2, and take the [[Guess the Output]] quiz after stage 5 (and again a month later). From stage 2 on, do one of the [[Weekly Challenges]] per week (week 03 fits best after stage 6, week 04 after stage 13). Once you can train models, keep coming back to the [[Leaderboard]]: MNIST from stage 2 (and again after stage 5), MovieLens with stage 8, M4 Hourly with stage 13.
 
 ---
 Back to [[00 - Machine Learning Index]].

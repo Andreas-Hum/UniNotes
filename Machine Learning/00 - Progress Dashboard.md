@@ -77,6 +77,24 @@ dv.paragraph(counts.join(" · "));
 dv.table(["Topic", "Level", "Status"], lv.sort(p => -order[String(p.level).toUpperCase()]).map(p => [p.file.link, `${String(p.level).toUpperCase()} – ${names[String(p.level).toUpperCase()]}`, p.status]));
 ```
 
+## Leaderboard
+Current best per task in the [[Leaderboard]]:
+```dataviewjs
+const text = await dv.io.load("Machine Learning/20-Play/Leaderboard.md");
+const rows = [];
+for (const sec of text.split(/^## /m).filter(s => s.startsWith("Task"))) {
+  const dir = sec.match(/\((higher|lower) is better\)/), hi = !dir || dir[1] === "higher";
+  const entries = sec.split("\n").map(l => l.trim().replace(/^\||\|$/g, "").split("|").map(c => c.trim()))
+    .filter(c => c.length >= 3 && /^\d{4}-\d{2}-\d{2}$/.test(c[0]) && !isNaN(parseFloat(c[1])));
+  if (!entries.length) continue;
+  const base = entries.find(c => /^baseline/i.test(c[2])) || entries[0];
+  const best = entries.reduce((a, c) => (hi ? +c[1] > +a[1] : +c[1] < +a[1]) ? c : a);
+  const beaten = best !== base;
+  rows.push([sec.split("\n")[0].replace(/^Task \d+ · /, ""), `**${best[1]}**`, base[1], beaten ? "🏆 " + best[2] : "not beaten yet", entries.length - 1]);
+}
+dv.table(["Task", "Best", "Baseline", "Best method", "Attempts"], rows);
+```
+
 ## Today I Learned
 ```dataviewjs
 const tils = dv.pages('"Journal/TIL"').where(p => p.file.day && p.til && String(p.til).trim());
