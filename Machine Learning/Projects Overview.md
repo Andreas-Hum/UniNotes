@@ -13,6 +13,12 @@ tags: [ml, project, overview]
 | [[Naive Bayes]] | [[Project - SMS Spam Filter]] | generative classifiers, smoothing, choosing a threshold |
 | [[Clustering]] / [[PCA]] | [[Project - Image Compression]] | k-means, SVD, Eckart–Young, quality per bit |
 | [[CNN]] | [[Project - Game of Life CNN]] | what a convolution can represent vs. what SGD finds |
+| [[Bayesian Inference]] | [[Project - Kalman Filter Tracker]] | Gaussian predict/update, state estimation |
+| [[RL Basics and MDPs]] | [[Project - Study Method Bandits]] | exploration vs. exploitation, ε-greedy, UCB1, Thompson sampling |
+| [[Graph ML Overview]] | [[Project - PageRank of My Vault]] | PageRank and link prediction on your own Obsidian graph |
+| [[NLP Overview]] | [[Project - Danish Town Name Generator]] | character language models, NLL, sampling |
+| [[MLOps Overview]] | [[Project - Drift Detective]] | PSI, alerting, retraining, alert fatigue |
+| [[Explainability and Fairness]] | [[Project - Fairness Audit]] | demographic parity, equal opportunity, impossibility results |
 
 ## Elsewhere
 - [[Personal Projects]]: mini-GPT on your notes, your own recommender, Danish electricity prices, RAG over your notes, Danish mushrooms.
