@@ -122,5 +122,8 @@ graph LR
 ## Anytime — Play
 Break up the reading: poke the [[Playgrounds]] after stages 2–5, do the [[Break the Model]] challenges after stage 2, and take the [[Guess the Output]] quiz after stage 5 (and again a month later). From stage 2 on, do one of the [[Weekly Challenges]] per week (week 03 fits best after stage 6, week 04 after stage 13). Once you can train models, keep coming back to the [[Leaderboard]]: MNIST from stage 2 (and again after stage 5), MovieLens with stage 8, M4 Hourly with stage 13.
 
+## Anytime — Learn from the masters
+From stage 3 on, alternate months: reproduce one classic paper ([[Paper-to-Code Months]]) and explain one concept in a short animation ([[Explain-it Videos]]).
+
 ---
 Back to [[00 - Machine Learning Index]].

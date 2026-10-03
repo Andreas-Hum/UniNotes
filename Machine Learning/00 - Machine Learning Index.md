@@ -86,3 +86,7 @@ Every topic note ends with a **Learn more** section with links to external resou
 - [[Guess the Output]] – 12 predict-then-run quiz questions
 - [[Weekly Challenges]] – one evening, one dataset: beat the target score (4 challenges, increasing difficulty)
 - [[Leaderboard]] – beat the baseline (and then yourself) on 3 fixed tasks: MNIST, MovieLens top-10, M4 Hourly forecasting
+
+## 21 · Learn from the masters
+- [[Paper-to-Code Months]] – reproduce ResNet, word2vec, LightGCN and DDPM, one paper a month, with a write-up
+- [[Explain-it Videos]] – make a 3-minute Manim animation explaining one concept (worked example: gradient descent)
