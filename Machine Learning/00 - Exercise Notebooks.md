@@ -3,7 +3,7 @@ tags: [ml, exercises, index]
 ---
 # Exercise Notebooks
 
-**89 notebooks · 1494 exercises.**
+**94 notebooks · 1565 exercises.**
 
 One Jupyter notebook of exercises per topic, saved next to its note as `<Topic> - Exercises.ipynb`. Every exercise has a folded 💡 **Hint** and ✅ **Solution**. The mix is 🧠 concept, ✍️ pen-and-paper and 💻 NumPy coding, ordered ★☆☆ to ★★★. `check(...)` lines print ⏳ until you answer, then ✅ or ❌.
 
@@ -49,6 +49,7 @@ One Jupyter notebook of exercises per topic, saved next to its note as `<Topic> 
 
 ## 04-Deep-Learning
 - [Activation Functions](04-Deep-Learning/Activation%20Functions%20-%20Exercises.ipynb) · 15 exercises
+- [Attention Mechanism](04-Deep-Learning/Attention%20Mechanism%20-%20Exercises.ipynb) · 15 exercises
 - [Backpropagation](04-Deep-Learning/Backpropagation%20-%20Exercises.ipynb) · 15 exercises
 - [CNN](04-Deep-Learning/CNN%20-%20Exercises.ipynb) · 15 exercises
 - [Generative Models](04-Deep-Learning/Generative%20Models%20-%20Exercises.ipynb) · 16 exercises
@@ -95,7 +96,10 @@ One Jupyter notebook of exercises per topic, saved next to its note as `<Topic> 
 - [Text Representations](13-NLP/Text%20Representations%20-%20Exercises.ipynb) · 17 exercises
 
 ## 14-Computer-Vision
+- [CNN Architectures](14-Computer-Vision/CNN%20Architectures%20-%20Exercises.ipynb) · 15 exercises
 - [Computer Vision Overview](14-Computer-Vision/Computer%20Vision%20Overview%20-%20Exercises.ipynb) · 16 exercises
+- [Image Segmentation](14-Computer-Vision/Image%20Segmentation%20-%20Exercises.ipynb) · 13 exercises
+- [Object Detection](14-Computer-Vision/Object%20Detection%20-%20Exercises.ipynb) · 16 exercises
 
 ## 15-LLMs-and-GenAI
 - [Fine-tuning and Alignment](15-LLMs-and-GenAI/Fine-tuning%20and%20Alignment%20-%20Exercises.ipynb) · 17 exercises
@@ -103,6 +107,7 @@ One Jupyter notebook of exercises per topic, saved next to its note as `<Topic> 
 - [RAG and Agents](15-LLMs-and-GenAI/RAG%20and%20Agents%20-%20Exercises.ipynb) · 16 exercises
 
 ## 16-Time-Series
+- [Deep Learning for Time Series](16-Time-Series/Deep%20Learning%20for%20Time%20Series%20-%20Exercises.ipynb) · 12 exercises
 - [Time Series Forecasting](16-Time-Series/Time%20Series%20Forecasting%20-%20Exercises.ipynb) · 18 exercises
 
 ## 17-MLOps

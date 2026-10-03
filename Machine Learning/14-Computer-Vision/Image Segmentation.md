@@ -1,6 +1,7 @@
 ---
 tags: [ml, vision, segmentation]
 status: not-started
+notebook: not-started
 level:
 reviewed:
 ---
@@ -70,6 +71,10 @@ IoU $=60/(80+100-60)=0.5$. Dice $=2\cdot60/(80+100)=0.667$. Check: $2\cdot0.5/1.
 
 > [!question]- IoU is 0.6. What is Dice?
 > $2\cdot0.6/1.6=0.75$.
+
+## Practice
+[Image Segmentation - Exercises](Image%20Segmentation%20-%20Exercises.ipynb): concepts, pen-and-paper arithmetic and NumPy implementations with hints and solutions.
+**Project:** [[Project - U-Net from Scratch]] – train a U-Net from scratch and measure what its skip connections do
 
 ## Learn more
 - [U-Net — Ronneberger et al. 2015](https://arxiv.org/abs/1505.04597)
