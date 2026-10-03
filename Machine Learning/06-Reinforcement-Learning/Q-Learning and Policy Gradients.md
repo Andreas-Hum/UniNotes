@@ -165,6 +165,8 @@ Foundations: [[RL Basics and MDPs]].
 
 [Q-Learning and Policy Gradients - Exercises](Q-Learning%20and%20Policy%20Gradients%20-%20Exercises.ipynb): TD(0) on a random walk, SARSA vs Q-learning on the cliff, maximisation bias and Double Q-learning, REINFORCE on a bandit with and without a baseline, and the PPO clipped objective by hand.
 
+Learn by doing: [[RL Arcade]] – build Snake and Flappy Bird, then beat them with tabular Q-learning and a DQN (replay buffer, target network, ε-schedule).
+
 ## Learn more
 - [Sutton & Barto (free)](http://incompleteideas.net/book/the-book-2nd.html) ch. 6 & 13
 - [OpenAI Spinning Up](https://spinningup.openai.com/)

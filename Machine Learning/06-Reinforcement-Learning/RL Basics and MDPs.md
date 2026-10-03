@@ -164,6 +164,8 @@ Notice that the preferred action flipped between sweeps: early estimates can be 
 
 [RL Basics and MDPs - Exercises](RL%20Basics%20and%20MDPs%20-%20Exercises.ipynb): returns and discounting, Bellman equations as a linear system, value iteration and policy iteration by hand and in code, Monte Carlo evaluation, and ε-greedy vs UCB vs Thompson sampling on a bandit.
 
+Learn by doing: [[RL Arcade]] – Snake and Flappy Bird built from scratch as `reset()` / `step()` environments, with agents to train on them.
+
 **Project:** [[Project - Study Method Bandits]] – choose study methods with ε-greedy, UCB1 and Thompson sampling
 
 ## Learn more
