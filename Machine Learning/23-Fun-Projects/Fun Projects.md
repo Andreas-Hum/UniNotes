@@ -7,7 +7,7 @@ reviewed:
 # Fun Projects
 
 > [!summary] In one sentence
-> Ten small, game-like AI projects for an evening each: a Connect Four opponent, a Danish road-trip optimiser, a rock–paper–scissors mind reader, a Sudoku solver, evolving art, an A* pathfinder, twenty questions, CartPole neuroevolution, a 1961 matchbox learner and a melody composer. Each is a notebook with TODOs, ✅ checks and hidden solutions.
+> Small, game-like AI projects for an evening each: a Connect Four opponent, a Danish road-trip optimiser, a rock–paper–scissors mind reader, a Sudoku solver, evolving art, an A* pathfinder, twenty questions, CartPole neuroevolution, a 1961 matchbox learner and a melody composer. Each is a notebook with TODOs, ✅ checks and hidden solutions.
 
 | Project | The AI idea | Result with the reference solution |
 |---|---|---|
@@ -21,6 +21,8 @@ reviewed:
 | [CartPole Neuroevolution](CartPole%20Neuroevolution.ipynb) | evolution strategy on a 4-weight linear policy | balances the full 500 steps, also from 10 unseen starts |
 | [MENACE - Matchbox Tic-Tac-Toe](MENACE%20-%20Matchbox%20Tic-Tac-Toe.ipynb) | Michie's 1961 bead-counting reinforcement learner | loss rate vs. a random player 32 % → 19 % in 4,000 games |
 | [Markov Melody Machine](Markov%20Melody%20Machine.ipynb) | order-k Markov chains, synthesised to WAV | order 2 composes new tunes; order 4 copies 72 % of 8-note stretches |
+| 🎮 [Pixel Catch - DQN from Pixels](Pixel%20Catch%20-%20DQN%20from%20Pixels.ipynb) | Deep Q-Network with replay buffer + target network, input = raw pixels | catch rate 32 % (random) → 100 % after 400 episodes |
+| 🎮 [Kuhn Poker - Learning to Bluff](Kuhn%20Poker%20-%20Learning%20to%20Bluff.ipynb) | counterfactual regret minimisation (self-play) | game value −0.0565 (theory −1/18); bluffs with the jack 22 %, bets the king 3× as often (66 %) |
 
 ## What each one teaches
 - **Connect Four:** adversarial search, why move ordering makes pruning effective, and evaluation heuristics. It's the classical ancestor of AlphaZero (search + learned evaluation). See [[RL Basics and MDPs]].

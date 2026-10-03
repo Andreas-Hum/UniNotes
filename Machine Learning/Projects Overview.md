@@ -37,8 +37,12 @@ tags: [ml, project, overview]
 | [[LLMs Overview]] | [[Project - BPE Tokenizer on My Notes]] | byte-pair encoding, token costs across languages |
 | [[Classical Forecasting Models]] | [[Project - Forecasting Aalborg Temperature]] | climatology, persistence, AR(1) anomalies |
 | [[Experiment Tracking and Reproducibility]] | [[Project - Build Your Own Experiment Tracker]] | run logging, data fingerprints, seed noise |
+| [[Q-Learning and Policy Gradients]] 🎮 | [[Project - REINFORCE Plays CartPole]] | policy gradients with a neural policy |
+| [[RL Basics and MDPs]] 🎮 | [[Project - Blackjack Monte Carlo Control]] | Monte Carlo control, ε-greedy, house edge |
+| [[Q-Learning and Policy Gradients]] 🎮 | [[Project - AlphaZero-Lite Tic-Tac-Toe]] | MCTS + policy/value net + self-play |
 
 ## Elsewhere
+- 🎮 Games that learn: [[Project - REINFORCE Plays CartPole]], [[Project - AlphaZero-Lite Tic-Tac-Toe]], [[Project - Blackjack Monte Carlo Control]], Pixel Catch (DQN from pixels) and Kuhn Poker (CFR) in [[Fun Projects]], plus [[RL Arcade]] (Snake, Flappy Bird).
 - [[Fun Projects]]: Connect Four AI, Danish road trip, rock–paper–scissors mind reader, Sudoku solver, evolving art.
 - [[Personal Projects]]: mini-GPT on your notes, your own recommender, Danish electricity prices, RAG over your notes, Danish mushrooms.
 - [[Project - MovieLens Recommender]]: a 5-milestone recommender project.

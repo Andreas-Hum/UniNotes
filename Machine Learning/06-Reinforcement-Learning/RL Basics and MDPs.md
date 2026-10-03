@@ -170,6 +170,8 @@ Learn by doing: [[RL Arcade]] – Snake and Flappy Bird built from scratch as `r
 
 **Project:** [[Project - Gridworld Value Iteration]] – solve a slippery Aalborg gridworld exactly with value iteration
 
+**Project:** [[Project - Blackjack Monte Carlo Control]] – learn blackjack with Monte Carlo control
+
 ## Learn more
 - [Sutton & Barto (free)](http://incompleteideas.net/book/the-book-2nd.html) ch. 3–4
 - [David Silver RL course](https://www.davidsilver.uk/teaching/)
