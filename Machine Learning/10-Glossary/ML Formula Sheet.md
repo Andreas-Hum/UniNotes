@@ -229,4 +229,62 @@ aliases: [Formelsamling, Formula Sheet]
 | IPW estimate | $\frac1N\sum\Big[\frac{T_iY_i}{e(X_i)}-\frac{(1-T_i)Y_i}{1-e(X_i)}\Big]$, $e(x)=P(T=1\mid x)$ |
 | Backdoor adjustment | $p(y\mid do(x))=\sum_zp(y\mid x,z)p(z)$ |
 
+## 20. Training tricks → [[Training Tricks]], [[Optimizers]]
+| | |
+|---|---|
+| Cosine LR schedule | $\eta_t=\eta_{\min}+\tfrac12(\eta_{\max}-\eta_{\min})\big(1+\cos\frac{\pi t}{T}\big)$, often after linear warm-up |
+| Gradient clipping (norm) | $g\leftarrow g\cdot\min\!\big(1,\frac{c}{\lVert g\rVert}\big)$ |
+| Label smoothing | $y^{LS}=(1-\varepsilon)\,y_{\text{one-hot}}+\varepsilon/K$ |
+| LayerNorm | $\frac{x-\mu}{\sqrt{\sigma^2+\epsilon}}\gamma+\beta$, statistics over the *features* of one example |
+| Weight decay ≈ L2 (plain SGD only) | $\theta\leftarrow(1-\eta\lambda)\theta-\eta\nabla L$ |
+| Linear scaling rule | batch $\times k$ ⇒ learning rate $\times k$ (with warm-up) |
+
+## 21. LLMs and retrieval → [[LLMs Overview]], [[RAG and Agents]], [[Fine-tuning and Alignment]], [[RAG over My Notes]]
+| | |
+|---|---|
+| Temperature | $p_i=\frac{e^{z_i/T}}{\sum_je^{z_j/T}}$ ($T\to0$ greedy, $T>1$ flatter) |
+| Top-$k$ / top-$p$ | sample from the $k$ most likely / the smallest set with cumulative prob. $\ge p$ |
+| Cross-entropy ↔ perplexity | $\mathrm{PPL}=e^{\mathcal L}$ ($\mathcal L$ in nats per token) |
+| RoPE | rotate each pair $(x_{2i},x_{2i+1})$ at position $p$ by angle $p\,\theta_i$, $\theta_i=10000^{-2i/d}$ ⇒ $q_m^\top k_n$ depends only on $m-n$ |
+| Training compute | $C\approx6ND$ FLOPs ($N$ parameters, $D$ tokens) |
+| Chinchilla rule of thumb | compute-optimal $D\approx20N$ tokens |
+| KV cache | $2\cdot L\cdot d\cdot T\cdot b$ bytes per sequence ($L$ layers, $T$ tokens, $b$ bytes/value) |
+| Memory to train with Adam | ≈ 16 bytes/param (fp16 weights + grads, fp32 master + $m$ + $v$) |
+| DPO | $-\log\sigma\!\Big(\beta\log\frac{\pi_\theta(y_w\mid x)}{\pi_{\text{ref}}(y_w\mid x)}-\beta\log\frac{\pi_\theta(y_l\mid x)}{\pi_{\text{ref}}(y_l\mid x)}\Big)$ |
+| Cosine similarity | $\frac{u^\top v}{\lVert u\rVert\lVert v\rVert}$ (= dot product for normalised embeddings) |
+| BM25 | $\sum_{q}\mathrm{IDF}(q)\frac{f(q,D)(k_1+1)}{f(q,D)+k_1(1-b+b\frac{|D|}{\text{avgdl}})}$, $k_1\approx1.2$, $b\approx0.75$ |
+| Reciprocal rank fusion | $\mathrm{RRF}(d)=\sum_{\text{rankers}}\frac1{k+\mathrm{rank}(d)}$, rank from 1, $k=60$ |
+| Recall@k / hit@k | fraction of queries with a relevant item in the top $k$ |
+
+## 22. Classic papers in one line each → [[Paper-to-Code Months]]
+| | |
+|---|---|
+| ResNet | $y=\mathrm{ReLU}(F(x)+\mathrm{shortcut}(x))$ |
+| word2vec SGNS | $-\log\sigma(u_o^\top v_c)-\sum_{k=1}^K\log\sigma(-u_k^\top v_c)$, noise $\propto f(w)^{3/4}$, keep prob. $\sqrt{t/f(w)}$ |
+| PPMI (≈ what SGNS factorises) | $\max\!\big(0,\log\frac{p(i,j)}{p(i)p(j)}\big)$ |
+| LightGCN | $E^{(k+1)}=D^{-1/2}AD^{-1/2}E^{(k)}$, $E=\frac1{K+1}\sum_kE^{(k)}$ |
+| DDPM reverse step | $x_{t-1}=\frac1{\sqrt{\alpha_t}}\big(x_t-\frac{\beta_t}{\sqrt{1-\bar\alpha_t}}\epsilon_\theta(x_t,t)\big)+\sigma_tz$, $\sigma_t^2=\beta_t$ |
+| Fold-in a new user (ALS) | $p_u=(Q_I^\top Q_I+\lambda I)^{-1}Q_I^\top r_u$ |
+
+## 23. Statistics for comparing models → [[Model Evaluation and Metrics]], [[Probability for ML]]
+| | |
+|---|---|
+| Std. error of an accuracy | $\sqrt{p(1-p)/n}$ (e.g. $p=0.88$, $n=108$ ⇒ ≈ 3 points) |
+| 95 % CI of a mean | $\bar x\pm1.96\,s/\sqrt n$ (use $t_{n-1}$ for small $n$) |
+| Paired t-test | $t=\frac{\bar d}{s_d/\sqrt n}$ on per-fold/per-example differences $d$ |
+| McNemar (two classifiers, same test set) | $\chi^2=\frac{(|b-c|-1)^2}{b+c}$, $b,c$ = examples only one model gets right |
+| Bootstrap CI | resample the test set with replacement $B$ times, take the 2.5 / 97.5 percentiles |
+| Bonferroni | test each of $m$ hypotheses at $\alpha/m$ |
+| Cohen's $d$ | $\frac{\bar x_1-\bar x_2}{s_{\text{pooled}}}$ |
+
+## 24. Calibration, fairness, explainability → [[Explainability and Fairness]]
+| | |
+|---|---|
+| Brier score | $\frac1N\sum(p_i-y_i)^2$ |
+| ECE | $\sum_m\frac{|B_m|}{N}\,\big|\mathrm{acc}(B_m)-\mathrm{conf}(B_m)\big|$ over confidence bins $B_m$ |
+| Temperature scaling | $\mathrm{softmax}(z/T)$, fit $T$ on validation NLL |
+| Demographic parity gap | $|P(\hat y=1\mid A=0)-P(\hat y=1\mid A=1)|$ |
+| Equalised odds | equal TPR **and** FPR across groups |
+| Shapley value | $\phi_i=\sum_{S\subseteq F\setminus\{i\}}\frac{|S|!\,(|F|-|S|-1)!}{|F|!}\big[v(S\cup\{i\})-v(S)\big]$ |
+
 See also: [[ML Glossary]] · [[Exam Checklist]] · [[8-semester/ML/cheetsheet|Course cheat sheet (8th semester)]]
