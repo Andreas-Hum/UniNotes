@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RL Arcade</title>
+<style>
+:root{--bg:#f7f7f5;--panel:#ffffff;--ink:#1d1d1f;--muted:#6b6b70;--line:#d9d9dd;--a:#2f6fdb;--b:#d9480f;--good:#2b8a3e;--bad:#e03131;--accent:#7048e8;--sky:#d0ebff;--board:#f1f3f5;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141416;--panel:#1d1d21;--ink:#ececf0;--muted:#9a9aa3;--line:#33333a;--a:#5b8ff9;--b:#ff7a45;--good:#51cf66;--bad:#ff6b6b;--accent:#9775fa;--sky:#1c2c3c;--board:#232328;}}
+:root[data-theme="dark"]{--bg:#141416;--panel:#1d1d21;--ink:#ececf0;--muted:#9a9aa3;--line:#33333a;--a:#5b8ff9;--b:#ff7a45;--good:#51cf66;--bad:#ff6b6b;--accent:#9775fa;--sky:#1c2c3c;--board:#232328;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{padding:16px;max-width:1000px;margin:0 auto}
+h1{font-size:22px;margin:0 0 4px}
+header p{margin:0;color:var(--muted)}
+nav{display:flex;flex-wrap:wrap;gap:6px;max-width:1000px;margin:0 auto;padding:0 16px}
+nav button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:7px 12px;border-radius:8px;cursor:pointer;font:inherit}
+nav button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+main{max-width:1000px;margin:12px auto 40px;padding:0 16px}
+section{display:none;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+section.on{display:block}
+h2{margin:0 0 6px;font-size:18px}
+.lead{color:var(--muted);margin:0 0 10px}
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:16px}
+@media (max-width:760px){.wrap{grid-template-columns:1fr}}
+canvas{width:100%;border:1px solid var(--line);border-radius:8px;background:var(--bg);display:block;touch-action:manipulation}
+canvas.game{aspect-ratio:1/1;max-width:480px;margin:0 auto}
+canvas.curve{aspect-ratio:3/1;margin-top:10px}
+.side{display:flex;flex-direction:column;gap:10px}
+.side label{display:flex;flex-direction:column;font-size:13px;color:var(--muted)}
+.side input[type=range]{width:100%}
+.row{display:flex;flex-wrap:wrap;gap:6px}
+.side button,.row button{border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:6px 10px;border-radius:7px;cursor:pointer;font:inherit;font-size:13px}
+.side button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.side button:disabled{opacity:.5;cursor:default}
+.stat{font:13px/1.6 ui-monospace,Menlo,Consolas,monospace;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px;white-space:pre-wrap;min-height:4em}
+.try{font-size:13px;border-left:3px solid var(--accent);padding:4px 10px;margin-top:12px}
+.try b{color:var(--accent)}
+.pad{display:none;justify-content:center;gap:6px;margin-top:8px}
+.pad.on{display:flex}
+.pad button{border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:10px 16px;border-radius:8px;font:inherit;cursor:pointer}
+</style>
+</head>
+<body>
+<header>
+<h1>RL Arcade</h1>
+<p>Watch a Q-table learn Snake and Flappy Bird in your browser, see what it sees, then try to beat it yourself. Same games and state encodings as the notebooks.</p>
+</header>
+<nav id="tabs">
+<button data-t="snake" class="on">Snake</button>
+<button data-t="flappy">Flappy Bird</button>
+</nav>
+<main>
+
+<section id="snake" class="on">
+<h2>Snake – tabular Q-learning on 11 yes/no features</h2>
+<p class="lead">The agent sees only: danger ahead/right/left, its heading, and which way the food is. That is at most 2<sup>11</sup> = 2048 table rows × 3 actions (straight, turn right, turn left).</p>
+<div class="wrap">
+<div>
+<canvas id="snC" class="game" width="400" height="400"></canvas>
+<div class="pad" id="snPad"><button data-a="2">↺ left</button><button data-a="0">↑ straight</button><button data-a="1">↻ right</button></div>
+<canvas id="snCurve" class="curve" width="600" height="200"></canvas>
+</div>
+<div class="side">
+<div class="row"><button class="primary" id="snTrain">Train 500 games</button><button id="snWatch">Watch agent</button></div>
+<div class="row"><button id="snPlay">Play yourself</button><button id="snTest">Test 100 games</button><button id="snReset">Reset agent</button></div>
+<label><span>learning rate α = <span id="snAv">0.10</span></span><input type="range" id="snA" min="0.01" max="1" step="0.01" value="0.1"></label>
+<label><span>discount γ = <span id="snGv">0.90</span></span><input type="range" id="snG" min="0" max="0.99" step="0.01" value="0.9"></label>
+<label><span>watch speed = <span id="snSv">12</span> steps/s</span><input type="range" id="snS" min="2" max="60" step="1" value="12"></label>
+<div class="stat" id="snStat"></div>
+<div class="stat" id="snQ"></div>
+</div>
+</div>
+<div class="try"><b>Try this:</b> (1) <i>Watch agent</i> before training – it goes straight into a wall. (2) Train 500 games, watch again. (3) Train another 1000: the score plateaus around 15–25 – watch how it dies: it curls into a pocket of its own body, because it only sees the three cells next to its head. (4) Guess first, then check: <i>Reset</i>, set γ = 0 (no thought for the future at all) and train 1500 games. Surprise – in our runs the myopic snake did <i>better</i> (test mean 20–22 vs 13–19 with γ = 0.9, four seeds). With only three cells of vision there is nothing to plan for: the immediate reward already says “eat” and “don't die”. (5) <i>Play yourself</i> with the arrow keys, WASD or the buttons – can you beat the table?</div>
+</section>
+
+<section id="flappy">
+<h2>Flappy Bird – tabular Q-learning on a discretised state</h2>
+<p class="lead">Distance to the next pipe (6 boxes), gap centre − bird height (17 boxes), vertical speed (18 values): 1836 rows × 2 actions (glide, flap). Ties go to <i>glide</i>, and the table starts at zero.</p>
+<div class="wrap">
+<div>
+<canvas id="fbC" class="game" width="400" height="400"></canvas>
+<canvas id="fbCurve" class="curve" width="600" height="200"></canvas>
+</div>
+<div class="side">
+<div class="row"><button class="primary" id="fbTrain">Train 500 games</button><button id="fbWatch">Watch agent</button></div>
+<div class="row"><button id="fbPlay">Play yourself</button><button id="fbTest">Test 100 games</button><button id="fbReset">Reset agent</button></div>
+<label><span>death reward = <span id="fbDv">-10</span></span><input type="range" id="fbD" min="-20" max="-1" step="1" value="-10"></label>
+<label><span>exploration ε = <span id="fbEv">0.000</span></span><input type="range" id="fbE" min="0" max="0.1" step="0.005" value="0"></label>
+<label><span>learning rate α = <span id="fbAv">0.50</span></span><input type="range" id="fbA" min="0.05" max="1" step="0.05" value="0.5"></label>
+<label><span>watch speed = <span id="fbSv">40</span> frames/s</span><input type="range" id="fbS" min="5" max="240" step="5" value="40"></label>
+<div class="stat" id="fbStat"></div>
+<div class="stat" id="fbQ"></div>
+</div>
+</div>
+<div class="try"><b>Try this:</b> (1) Train 1500 games (3 clicks) with the default death reward −10 and ε = 0, then watch. (2) <i>Reset</i>, set the death reward to −1 and train 1500 again: the bird barely learns – with ε = 0 it only tries flapping where gliding looks worse than 0, and a −1 crash is outweighed by ten frames of +0.1. (3) Keep −1 but set ε = 0.01: a little randomness rescues it. (4) Push ε to 0.1 – too much randomness: in our runs it scored lower on average than ε = 0.01. (5) <i>Play yourself</i>: Space, ↑ or a click/tap on the game flaps. Games are capped at 50 pipes.</div>
+</section>
+
+</main>
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function mulberry32(a) { return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+const argmax = q => { let b = 0; for (let i = 1; i < q.length; i++) if (q[i] > q[b]) b = i; return b; };
+const fmt = (x, d = 2) => (x >= 0 ? " " : "") + x.toFixed(d);
+
+/* ================= Snake environment (same rules as the notebook) ================= */
+const DIRS = [[-1, 0], [0, 1], [1, 0], [0, -1]];        // up, right, down, left as [d_row, d_col]
+const SN_FEATURES = ["danger ahead", "danger right", "danger left", "heading up", "heading right", "heading down", "heading left", "food up", "food right", "food down", "food left"];
+class Snake {
+  constructor(seed, size = 10) { this.size = size; this.rand = mulberry32(seed); this.maxHunger = 4 * size * size; }
+  reset() {
+    const c = this.size >> 1; this.heading = 1;
+    this.body = [[c, c], [c, c - 1], [c, c - 2]];
+    this.score = 0; this.steps = 0; this.hunger = 0; this.placeFood(); return this.state();
+  }
+  placeFood() {
+    const free = [];
+    for (let r = 0; r < this.size; r++) for (let c = 0; c < this.size; c++) if (!this.body.some(b => b[0] === r && b[1] === c)) free.push([r, c]);
+    this.food = free.length ? free[Math.floor(this.rand() * free.length)] : null;
+  }
+  hits(r, c) {   // the tail cell is safe: it moves away on the same step
+    if (r < 0 || c < 0 || r >= this.size || c >= this.size) return true;
+    for (let i = 0; i < this.body.length - 1; i++) if (this.body[i][0] === r && this.body[i][1] === c) return true;
+    return false;
+  }
+  step(a) {
+    this.heading = (this.heading + [0, 1, 3][a]) % 4;
+    const [dr, dc] = DIRS[this.heading], h = [this.body[0][0] + dr, this.body[0][1] + dc];
+    this.steps++; this.hunger++;
+    if (this.hits(h[0], h[1])) return [this.state(), -10, true];
+    this.body.unshift(h);
+    if (this.food && h[0] === this.food[0] && h[1] === this.food[1]) {
+      this.score++; this.hunger = 0; this.placeFood(); return [this.state(), 10, this.food === null];
+    }
+    this.body.pop();
+    return [this.state(), 0, this.hunger >= this.maxHunger];
+  }
+  state() {
+    const [hr, hc] = this.body[0], danger = t => { const [dr, dc] = DIRS[(this.heading + t + 4) % 4]; return this.hits(hr + dr, hc + dc) ? 1 : 0; };
+    const [fr, fc] = this.food || [hr, hc];
+    return [danger(0), danger(1), danger(-1), +(this.heading === 0), +(this.heading === 1), +(this.heading === 2), +(this.heading === 3),
+            +(fr < hr), +(fc > hc), +(fr > hr), +(fc < hc)];
+  }
+}
+const snIndex = s => s.reduce((acc, b, i) => acc + (b << i), 0);
+
+/* ================= Flappy environment (same physics as the notebook) ================= */
+const FB = { H: 100, X: 20, R: 2, GAP: 30, PIPE_W: 8, SPACING: 45, SPEED: 1, GRAVITY: 0.5, FLAP_V: 3.5, MAX_FALL: -5 };
+class Flappy {
+  constructor(seed, deathReward = -10, maxScore = 50) { this.rand = mulberry32(seed); this.death = deathReward; this.maxScore = maxScore; }
+  gap() { return 25 + 50 * this.rand(); }
+  reset() {
+    this.y = 50; this.v = 0; this.score = 0; this.steps = 0;
+    this.pipes = [0, 1, 2].map(i => [FB.X + 40 + i * FB.SPACING, this.gap()]);
+    return this.state();
+  }
+  step(a) {
+    this.v = a === 1 ? FB.FLAP_V : Math.max(this.v - FB.GRAVITY, FB.MAX_FALL);
+    this.y += this.v; this.steps++;
+    let reward = 0.1;
+    for (const p of this.pipes) {
+      const right = p[0] + FB.PIPE_W; p[0] -= FB.SPEED;
+      if (right >= FB.X - FB.R && FB.X - FB.R > p[0] + FB.PIPE_W) { this.score++; reward = 1; }
+    }
+    if (this.pipes[0][0] + FB.PIPE_W < 0) { this.pipes.shift(); this.pipes.push([this.pipes[this.pipes.length - 1][0] + FB.SPACING, this.gap()]); }
+    const crashed = !(FB.R <= this.y && this.y <= FB.H - FB.R) ||
+      this.pipes.some(([x, g]) => x - FB.R < FB.X && FB.X < x + FB.PIPE_W + FB.R && Math.abs(this.y - g) > FB.GAP / 2 - FB.R);
+    if (crashed) return [this.state(), this.death, true];
+    return [this.state(), reward, this.score >= this.maxScore];
+  }
+  state() {   // in game units: [y, v, dx to next pipe, gap centre − y]
+    const p = this.pipes.find(q => q[0] + FB.PIPE_W > FB.X - FB.R);
+    return [this.y, this.v, p[0] - FB.X, p[1] - this.y];
+  }
+}
+const FB_ROWS = 6 * 17 * 18;
+function fbIndex([, v, dx, dy]) {
+  const dxb = Math.min(5, Math.max(0, Math.floor(dx / 9)));
+  const dyb = Math.min(8, Math.max(-8, Math.round(dy / 4))) + 8;
+  const vb = Math.round(v / 0.5) + 10;
+  return (dxb * 17 + dyb) * 18 + vb;
+}
+
+/* ================= Generic Q-learning lab ================= */
+function makeLab(o) {
+  const lab = Object.assign({ mode: "idle", timer: null, curve: [], games: 0, test: null }, o);
+  lab.reset = () => { lab.Q = Array.from({ length: lab.rows }, () => new Float64Array(lab.nA)); lab.curve = []; lab.games = 0; lab.test = null; lab.rand = mulberry32(1); };
+  lab.policy = s => argmax(lab.Q[lab.index(s)]);
+  lab.trainGame = env => {
+    const p = lab.params(), eps = lab.eps();
+    let s = lab.index(env.reset()), done = false;
+    while (!done) {
+      const a = lab.rand() < eps ? Math.floor(lab.rand() * lab.nA) : argmax(lab.Q[s]);
+      const [st2, r, d] = env.step(a); done = d;
+      const s2 = lab.index(st2), q = lab.Q[s];
+      let best = lab.Q[s2][0]; for (let i = 1; i < lab.nA; i++) best = Math.max(best, lab.Q[s2][i]);
+      q[a] += p.alpha * ((done ? r : r + p.gamma * best) - q[a]);
+      s = s2;
+    }
+    lab.games++; lab.curve.push(env.score);
+  };
+  lab.stop = () => { clearTimeout(lab.timer); lab.timer = null; lab.mode = "idle"; lab.ui(); };
+  lab.train = (n = 500) => {
+    lab.stop(); lab.mode = "train"; lab.ui();
+    const env = lab.makeEnv(1000 + lab.games);
+    let left = n;
+    const chunk = () => {
+      const t0 = performance.now();
+      while (left > 0 && performance.now() - t0 < 30) { lab.trainGame(env); left--; }
+      lab.drawCurve(); lab.ui();
+      if (left > 0) lab.timer = setTimeout(chunk, 0); else lab.stop();
+    };
+    chunk();
+  };
+  lab.evaluate = (n = 100) => {
+    const env = lab.makeEnv(123), sc = [];
+    for (let i = 0; i < n; i++) { let s = env.reset(), done = false; while (!done) [s, , done] = env.step(lab.policy(s)); sc.push(env.score); }
+    lab.test = { mean: sc.reduce((a, b) => a + b, 0) / n, best: Math.max(...sc) }; lab.ui();
+  };
+  lab.run = (human) => {   // animate: watch the greedy agent, or let the human play
+    lab.stop(); lab.mode = human ? "play" : "watch"; lab.human = null; lab.who = human ? "you" : "agent";
+    lab.env = lab.makeEnv(Math.floor(Math.random() * 1e9)); lab.s = lab.env.reset(); lab.done = false; lab.ui();
+    const tick = () => {
+      if (!lab.done) {
+        const a = human ? lab.humanAction() : lab.policy(lab.s);
+        [lab.s, , lab.done] = lab.env.step(a);
+      }
+      lab.draw(); lab.showQ();
+      if (lab.done) { lab.timer = setTimeout(() => { lab.mode = "idle"; lab.ui(); }, 0); return; }
+      lab.timer = setTimeout(tick, 1000 / (human ? lab.humanSpeed : +lab.speed.value));
+    };
+    lab.draw(); lab.timer = setTimeout(tick, human ? 600 : 200);
+  };
+  lab.visited = () => lab.Q.reduce((n, q) => n + (q.some(x => x !== 0) ? 1 : 0), 0);
+  lab.ui = () => {
+    const last = lab.curve.slice(-100), avg = last.length ? last.reduce((a, b) => a + b, 0) / last.length : 0;
+    let t = `games trained   ${lab.games}\nrows visited    ${lab.visited()} of ${lab.rows}\navg last 100    ${avg.toFixed(2)}${lab.extraStat ? "\n" + lab.extraStat() : ""}`;
+    if (lab.test) t += `\ngreedy test     ${lab.test.mean.toFixed(2)} (best ${lab.test.best})`;
+    if (lab.env && lab.who) t += `\n${lab.who}: score ${lab.env.score}${lab.done ? "  – game over" : ""}`;
+    if (lab.mode === "train") t += "\ntraining…";
+    lab.stat.textContent = t;
+    lab.pad && lab.pad.classList.toggle("on", lab.mode === "play");
+  };
+  lab.drawCurve = () => {
+    const c = lab.curveC, x = c.getContext("2d"), W = c.width, H = c.height, L = 34, B = 18;
+    x.clearRect(0, 0, W, H); x.font = "11px system-ui"; x.fillStyle = css("--muted");
+    const n = lab.curve.length, ymax = Math.max(5, ...lab.curve);
+    x.fillText(String(ymax), 4, 12); x.fillText("0", 4, H - B); x.fillText(`${n} games`, W - 70, H - 4);
+    x.fillText(lab.unit + " per training game (thin) · rolling mean of 50 (thick)", L, H - 4);
+    if (!n) return;
+    const px = i => L + (W - L - 8) * (n === 1 ? 0 : i / (n - 1)), py = v => (H - B) - (H - B - 8) * v / ymax;
+    x.strokeStyle = css("--line"); x.lineWidth = 1; x.beginPath();
+    lab.curve.forEach((v, i) => i ? x.lineTo(px(i), py(v)) : x.moveTo(px(i), py(v))); x.stroke();
+    x.strokeStyle = css("--accent"); x.lineWidth = 2.5; x.beginPath(); let sum = 0;
+    lab.curve.forEach((v, i) => { sum += v - (i >= 50 ? lab.curve[i - 50] : 0); const m = sum / Math.min(i + 1, 50); i ? x.lineTo(px(i), py(m)) : x.moveTo(px(i), py(m)); });
+    x.stroke();
+  };
+  lab.reset();
+  return lab;
+}
+
+/* ================= Snake tab ================= */
+const sn = makeLab({
+  rows: 2048, nA: 3, index: snIndex, unit: "food", stat: $("snStat"), curveC: $("snCurve"), speed: $("snS"), pad: $("snPad"), humanSpeed: 7,
+  makeEnv: seed => new Snake(seed),
+  params: () => ({ alpha: +$("snA").value, gamma: +$("snG").value }),
+  eps: () => Math.max(0.01, Math.pow(0.995, sn.games)),
+  extraStat: () => `ε (next game)   ${Math.max(0.01, Math.pow(0.995, sn.games)).toFixed(3)}`,
+});
+sn.humanAction = () => { const a = sn.human ?? 0; sn.human = null; return a; };
+sn.draw = () => {
+  const c = $("snC"), x = c.getContext("2d"), n = 10, k = c.width / n;
+  x.fillStyle = css("--board"); x.fillRect(0, 0, c.width, c.height);
+  if (!sn.env) return;
+  const e = sn.env;
+  if (e.food) { x.fillStyle = css("--b"); x.beginPath(); x.arc((e.food[1] + .5) * k, (e.food[0] + .5) * k, k * .38, 0, 7); x.fill(); }
+  e.body.forEach(([r, cc], i) => { x.fillStyle = i ? css("--good") : css("--ink"); x.fillRect(cc * k + 1, r * k + 1, k - 2, k - 2); });
+  // the agent's view: the three cells it checks for danger
+  const [hr, hc] = e.body[0];
+  [0, 1, -1].forEach(t => {
+    const [dr, dc] = DIRS[(e.heading + t + 4) % 4], r = hr + dr, cc = hc + dc;
+    x.strokeStyle = e.hits(r, cc) ? css("--bad") : css("--a"); x.lineWidth = 2; x.setLineDash([4, 3]);
+    x.strokeRect(cc * k + 3, r * k + 3, k - 6, k - 6); x.setLineDash([]);
+  });
+  if (sn.done) { x.fillStyle = "rgba(0,0,0,.45)"; x.fillRect(0, c.height / 2 - 24, c.width, 48); x.fillStyle = "#fff"; x.font = "bold 20px system-ui"; x.textAlign = "center"; x.fillText(`game over – score ${e.score}`, c.width / 2, c.height / 2 + 7); x.textAlign = "left"; }
+};
+sn.showQ = () => {
+  if (!sn.env) { $("snQ").textContent = "Q-values of the current state appear here while a game runs.\nDashed squares: the 3 cells the agent checks (red = danger)."; return; }
+  const s = sn.env.state(), q = sn.Q[snIndex(s)], b = argmax(q), on = SN_FEATURES.filter((f, i) => s[i]);
+  $("snQ").textContent = `state: ${on.join(", ")}\nrow ${snIndex(s)}\n` +
+    ["straight", "right", "left"].map((n, i) => `${i === b ? "▶" : " "} Q(${n.padEnd(8)}) = ${fmt(q[i])}`).join("\n");
+  sn.ui();
+};
+$("snTrain").onclick = () => sn.train(500);
+$("snWatch").onclick = () => sn.run(false);
+$("snPlay").onclick = () => sn.run(true);
+$("snTest").onclick = () => { sn.stop(); sn.evaluate(100); };
+$("snReset").onclick = () => { sn.stop(); sn.reset(); sn.env = null; sn.who = null; sn.drawCurve(); sn.draw(); sn.showQ(); sn.ui(); };
+$("snPad").querySelectorAll("button").forEach(b => b.onclick = () => { sn.human = +b.dataset.a; });
+$("snA").oninput = () => $("snAv").textContent = (+$("snA").value).toFixed(2);
+$("snG").oninput = () => $("snGv").textContent = (+$("snG").value).toFixed(2);
+$("snS").oninput = () => $("snSv").textContent = $("snS").value;
+
+/* ================= Flappy tab ================= */
+const fb = makeLab({
+  rows: FB_ROWS, nA: 2, index: fbIndex, unit: "pipes", stat: $("fbStat"), curveC: $("fbCurve"), speed: $("fbS"), humanSpeed: 40,
+  makeEnv: seed => new Flappy(seed, +$("fbD").value),
+  params: () => ({ alpha: +$("fbA").value, gamma: 0.99 }),
+  eps: () => +$("fbE").value,
+});
+fb.humanAction = () => { const a = fb.human ? 1 : 0; fb.human = false; return a; };
+fb.draw = () => {
+  const c = $("fbC"), x = c.getContext("2d"), k = c.width / 100, Y = y => c.height - y * k;
+  x.fillStyle = css("--sky"); x.fillRect(0, 0, c.width, c.height);
+  if (!fb.env) return;
+  const e = fb.env;
+  x.fillStyle = css("--good");
+  e.pipes.forEach(([px, g]) => { x.fillRect(px * k, Y(g - FB.GAP / 2), FB.PIPE_W * k, (g - FB.GAP / 2) * k); x.fillRect(px * k, 0, FB.PIPE_W * k, Y(g + FB.GAP / 2)); });
+  // the agent's view: horizontal distance and vertical offset to the next gap centre
+  const [, , dx, dy] = e.state();
+  x.strokeStyle = css("--a"); x.lineWidth = 1.5; x.setLineDash([4, 3]); x.beginPath();
+  x.moveTo(FB.X * k, Y(e.y)); x.lineTo((FB.X + dx) * k, Y(e.y)); x.lineTo((FB.X + dx) * k, Y(e.y + dy)); x.stroke(); x.setLineDash([]);
+  x.fillStyle = "#f59f00"; x.strokeStyle = "#000"; x.lineWidth = 1.5; x.beginPath(); x.arc(FB.X * k, Y(e.y), FB.R * k * 1.3, 0, 7); x.fill(); x.stroke();
+  x.fillStyle = css("--ink"); x.font = "bold 22px system-ui"; x.fillText(String(e.score), c.width / 2 - 6, 30);
+  if (fb.done) { x.fillStyle = "rgba(0,0,0,.45)"; x.fillRect(0, c.height / 2 - 24, c.width, 48); x.fillStyle = "#fff"; x.font = "bold 20px system-ui"; x.textAlign = "center"; x.fillText(`game over – ${e.score} pipes`, c.width / 2, c.height / 2 + 7); x.textAlign = "left"; }
+};
+fb.showQ = () => {
+  if (!fb.env) { $("fbQ").textContent = "Q-values of the current state appear here while a game runs.\nDashed line: what the agent measures (distance to the pipe, offset to the gap centre)."; return; }
+  const s = fb.env.state(), i = fbIndex(s), q = fb.Q[i], b = argmax(q);
+  $("fbQ").textContent = `dx ${s[2].toFixed(0)}, gap − y ${s[3].toFixed(1)}, v ${s[1].toFixed(1)}\nrow ${i}${q[0] === 0 && q[1] === 0 ? " (never visited)" : ""}\n` +
+    ["glide", "flap"].map((n, j) => `${j === b ? "▶" : " "} Q(${n.padEnd(5)}) = ${fmt(q[j])}`).join("\n");
+  fb.ui();
+};
+$("fbTrain").onclick = () => fb.train(500);
+$("fbWatch").onclick = () => fb.run(false);
+$("fbPlay").onclick = () => fb.run(true);
+$("fbTest").onclick = () => { fb.stop(); fb.evaluate(100); };
+$("fbReset").onclick = () => { fb.stop(); fb.reset(); fb.env = null; fb.who = null; fb.drawCurve(); fb.draw(); fb.showQ(); fb.ui(); };
+$("fbC").addEventListener("pointerdown", () => { if (fb.mode === "play") fb.human = true; });
+$("fbD").oninput = () => $("fbDv").textContent = $("fbD").value;
+$("fbE").oninput = () => $("fbEv").textContent = (+$("fbE").value).toFixed(3);
+$("fbA").oninput = () => $("fbAv").textContent = (+$("fbA").value).toFixed(2);
+$("fbS").oninput = () => $("fbSv").textContent = $("fbS").value;
+
+/* ================= keyboard, tabs, theme ================= */
+document.addEventListener("keydown", e => {
+  const k = e.key;
+  if (sn.mode === "play" && $("snake").classList.contains("on")) {
+    // arrow keys give an absolute direction; turn it into straight / right / left
+    const want = { ArrowUp: 0, w: 0, ArrowRight: 1, d: 1, ArrowDown: 2, s: 2, ArrowLeft: 3, a: 3 }[k];
+    if (want !== undefined) {
+      e.preventDefault();
+      const turn = (want - sn.env.heading + 4) % 4;
+      if (turn === 1) sn.human = 1; else if (turn === 3) sn.human = 2; else if (turn === 0) sn.human = 0;
+    }
+  }
+  if (fb.mode === "play" && $("flappy").classList.contains("on") && (k === " " || k === "ArrowUp" || k === "w")) { e.preventDefault(); fb.human = true; }
+});
+document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("on", x === b));
+  document.querySelectorAll("main section").forEach(s => s.classList.toggle("on", s.id === b.dataset.t));
+  sn.stop(); fb.stop(); redraw();
+});
+function redraw() { for (const lab of [sn, fb]) { lab.draw(); lab.drawCurve(); lab.showQ(); lab.ui(); } }
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", redraw);
+redraw();
+window.arcade = { sn, fb };   // handy for poking around in the console
+</script>
+</body>
+</html>
