@@ -94,7 +94,7 @@ graph LR
 - Resources: [Stanford CS224W](https://web.stanford.edu/class/cs224w/) · [Hamilton – Graph Representation Learning (free)](https://www.cs.mcgill.ca/~wlh/grl_book/) · [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/)
 
 ## Stage 11 — Reinforcement learning
-- Vault: [[RL Basics and MDPs]] · [[Q-Learning and Policy Gradients]]
+- Vault: [[RL Basics and MDPs]] · [[Q-Learning and Policy Gradients]] · learn by doing: [[RL Arcade]] (Snake and Flappy Bird, Q-table → DQN)
 - Resources: [Sutton & Barto (free)](http://incompleteideas.net/book/the-book-2nd.html) · [David Silver RL course](https://www.davidsilver.uk/teaching/) · [OpenAI Spinning Up](https://spinningup.openai.com/) · [Gymnasium](https://gymnasium.farama.org/)
 
 ## Stage 12 — LLMs & generative AI
@@ -120,7 +120,7 @@ graph LR
 - Checkpoint: reproduce one paper's main table and write it up with [[Paper Reading Template]].
 
 ## Anytime — Play
-Break up the reading: poke the [[Playgrounds]] after stages 2–5, do the [[Break the Model]] challenges after stage 2, and take the [[Guess the Output]] quiz after stage 5 (and again a month later). From stage 2 on, do one of the [[Weekly Challenges]] per week (week 03 fits best after stage 6, week 04 after stage 13). Once you can train models, keep coming back to the [[Leaderboard]]: MNIST from stage 2 (and again after stage 5), MovieLens with stage 8, M4 Hourly with stage 13.
+Break up the reading: poke the [[Playgrounds]] after stages 2–5, do the [[Break the Model]] challenges after stage 2, and take the [[Guess the Output]] quiz after stage 5 (and again a month later). From stage 2 on, do one of the [[Weekly Challenges]] per week (week 03 fits best after stage 6, week 04 after stage 13). Once you can train models, keep coming back to the [[Leaderboard]]: MNIST from stage 2 (and again after stage 5), MovieLens with stage 8, M4 Hourly with stage 13. After stage 11, build the [[RL Arcade]] agents (Snake and Flappy Bird, Q-table → DQN).
 
 ## Anytime — Learn from the masters
 From stage 3 on, alternate months: reproduce one classic paper ([[Paper-to-Code Months]]) and explain one concept in a short animation ([[Explain-it Videos]]).
