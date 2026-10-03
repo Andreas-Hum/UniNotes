@@ -67,17 +67,17 @@ graph LR
 
 ## Stage 5 — Deep learning
 - [ ] PyTorch, CNNs, RNNs, Transformers, training tricks, generative models
-- Vault: [[CNN]] · [[RNN and LSTM]] · [[Transformers]] · [[Self-Supervised and Contrastive Learning]] · [[Generative Models]] · [[Training Tricks]] · [[PyTorch Recipes]]
+- Vault: [[CNN]] · [[RNN and LSTM]] · [[Attention Mechanism]] · [[Transformers]] · [[Self-Supervised and Contrastive Learning]] · [[Generative Models]] · [[Training Tricks]] · [[PyTorch Recipes]]
 - Resources: [MIT 6.S191 — Introduction to Deep Learning (lecture playlist)](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI) · [course site & labs](https://introtodeeplearning.com/) · [Dive into Deep Learning (free, interactive)](https://d2l.ai/) · [Deep Learning book – Goodfellow et al. (free)](https://www.deeplearningbook.org/) · [Understanding Deep Learning – Prince (free)](https://udlbook.github.io/udlbook/) · [fast.ai Practical Deep Learning](https://course.fast.ai/) · [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning) · [PyTorch tutorials](https://pytorch.org/tutorials/)
 - Project: fine-tune a pretrained ResNet on your own image classes.
 - Checkpoint: explain residual connections, attention, and why AdamW.
 
 ## Stage 6 — NLP
-- Vault: [[NLP Overview]] · [[Text Representations]] · [[Transformers]]
+- Vault: [[NLP Overview]] · [[Text Representations]] · [[Attention Mechanism]] · [[Transformers]]
 - Resources: [Stanford CS224n](https://web.stanford.edu/class/cs224n/) · [Jurafsky & Martin – Speech and Language Processing (free draft)](https://web.stanford.edu/~jurafsky/slp3/) · [Hugging Face LLM Course](https://huggingface.co/learn/llm-course/chapter1/1) · [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
 
 ## Stage 7 — Computer vision
-- Vault: [[Computer Vision Overview]] · [[CNN]]
+- Vault: [[Computer Vision Overview]] · [[CNN]] · [[CNN Architectures]] · [[Object Detection]] · [[Image Segmentation]]
 - Resources: [Stanford CS231n](https://cs231n.stanford.edu/) · [CS231n notes](https://cs231n.github.io/) · [torchvision](https://pytorch.org/vision/stable/index.html)
 
 ## Stage 8 — Recommender systems
@@ -102,11 +102,11 @@ graph LR
 - Resources: [Karpathy – Let's build GPT](https://karpathy.ai/zero-to-hero.html) · [Hugging Face LLM Course](https://huggingface.co/learn/llm-course/chapter1/1) · [Lilian Weng's blog](https://lilianweng.github.io/)
 
 ## Stage 13 — Time series
-- Vault: [[Time Series Forecasting]]
+- Vault: [[Time Series Forecasting]] · [[Classical Forecasting Models]] · [[Time Series Validation and Features]] · [[Deep Learning for Time Series]]
 - Resources: [Hyndman – Forecasting: Principles and Practice (free)](https://otexts.com/fpp3/)
 
 ## Stage 14 — MLOps & production
-- Vault: [[MLOps Overview]] · [[Common Pitfalls]]
+- Vault: [[MLOps Overview]] · [[Model Deployment and Serving]] · [[Experiment Tracking and Reproducibility]] · [[Data and Feature Management]] · [[Common Pitfalls]]
 - Resources: [Made With ML](https://madewithml.com/) · [Stanford CS329S – ML Systems Design](https://stanford-cs329s.github.io/) · [Full Stack Deep Learning](https://fullstackdeeplearning.com/course/)
 
 ## Stage 15 — Responsible AI

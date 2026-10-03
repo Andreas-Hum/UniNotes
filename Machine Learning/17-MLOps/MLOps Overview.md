@@ -6,6 +6,8 @@ tags: [ml, mlops]
 > [!summary] In one sentence
 > MLOps is the engineering discipline of getting models into production and keeping them healthy: versioned data and experiments, reproducible training pipelines, safe deployment, and monitoring that notices when the world drifts away from the training data.
 
+Deeper notes: [[Model Deployment and Serving]] · [[Experiment Tracking and Reproducibility]] · [[Data and Feature Management]].
+
 ## Intuition first
 Getting models into production and keeping them healthy.
 
