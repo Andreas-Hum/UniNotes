@@ -147,6 +147,8 @@ Data augmentation (flip, crop, colour jitter, mixup/cutmix), transfer learning f
 
 [Computer Vision Overview - Exercises](Computer%20Vision%20Overview%20-%20Exercises.ipynb): matching applications to tasks, one-stage vs two-stage vs DETR, augmentation and transfer learning per task, IoU, Dice, AP, ViT tokens and COCO thresholds by hand, then code for vectorised IoU, NMS, top-k accuracy, segmentation metrics, average precision, flipping images with their boxes, CutMix and patchify for a ViT.
 
+**Project:** [[Project - Hand-Made Filters and HOG]] – hand-made convolution filters and HOG features
+
 ## Resources
 
 - [Stanford CS231n](https://cs231n.stanford.edu/) · [CS231n course notes](https://cs231n.github.io/)

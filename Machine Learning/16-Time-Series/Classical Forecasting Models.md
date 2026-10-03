@@ -87,6 +87,9 @@ $\ell_1=0.5\cdot12+0.5\cdot10=11$; $\ell_2=0.5\cdot11+0.5\cdot11=11$; $\ell_3=0.
 > [!question]- Why must every forecasting model be compared with seasonal naive?
 > It costs nothing and is often surprisingly good; if a model cannot beat it, its complexity is not justified.
 
+## Practice
+**Project:** [[Project - Forecasting Aalborg Temperature]] – forecast Aalborg's temperature with climatology + an AR(1) anomaly
+
 ## Learn more
 - [Hyndman & Athanasopoulos — *Forecasting: Principles and Practice* (free)](https://otexts.com/fpp3/) – chapters 8 (ETS) and 9 (ARIMA)
 - `statsmodels`, Nixtla `statsforecast`, `pmdarima`

@@ -83,6 +83,9 @@ Model A scores 0.842, model B 0.848 on one run each. Repeating five seeds gives 
 > [!question]- What is "continuous training"?
 > A pipeline that retrains the model automatically (on a schedule or trigger such as drift) and promotes it only if it passes evaluation gates.
 
+## Practice
+**Project:** [[Project - Build Your Own Experiment Tracker]] – build a tiny MLflow-like tracker and check reproducibility
+
 ## Learn more
 - [MLflow docs](https://mlflow.org/docs/latest/index.html) · [Weights & Biases docs](https://docs.wandb.ai/) · [DVC](https://dvc.org/doc)
 - Google Cloud, *MLOps: Continuous delivery and automation pipelines in machine learning* (source of the maturity levels)

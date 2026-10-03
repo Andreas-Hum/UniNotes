@@ -29,6 +29,11 @@ tags: [ml, project, overview]
 | [[MCMC]] | [[Project - Bayesian AB Test with MCMC]] | Metropolis–Hastings, posteriors that answer the real question |
 | [[RL Basics and MDPs]] | [[Project - Gridworld Value Iteration]] | Bellman equations, discounting, risk in stochastic MDPs |
 | [[Graph ML Overview]] | [[Project - Spectral Clustering of the Karate Club]] | graph Laplacians, Fiedler vectors, spectral cuts |
+| [[Evaluating Recommenders]] | [[Project - Sampled vs Full Ranking Metrics]] | why sampled metrics flatter models |
+| [[Computer Vision Overview]] | [[Project - Hand-Made Filters and HOG]] | convolution by hand, Sobel, HOG features |
+| [[LLMs Overview]] | [[Project - BPE Tokenizer on My Notes]] | byte-pair encoding, token costs across languages |
+| [[Classical Forecasting Models]] | [[Project - Forecasting Aalborg Temperature]] | climatology, persistence, AR(1) anomalies |
+| [[Experiment Tracking and Reproducibility]] | [[Project - Build Your Own Experiment Tracker]] | run logging, data fingerprints, seed noise |
 
 ## Elsewhere
 - [[Fun Projects]]: Connect Four AI, Danish road trip, rock–paper–scissors mind reader, Sudoku solver, evolving art.

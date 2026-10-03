@@ -111,6 +111,8 @@ Perplexity, benchmarks (MMLU, GSM8K, HumanEval…), human preference, LLM-as-jud
 ## Practice
 [LLMs Overview - Exercises](LLMs%20Overview%20-%20Exercises.ipynb): next-token loss and perplexity, temperature, top-k/top-p by hand and in code, Chinchilla budgets, counting transformer parameters, KV-cache memory, causal attention, incremental decoding with a KV cache, greedy vs beam search and fitting a scaling law.
 
+**Project:** [[Project - BPE Tokenizer on My Notes]] – train a BPE tokenizer on your own Danish notes
+
 ## Learn more
 - [Karpathy — Neural Networks: Zero to Hero (build GPT)](https://karpathy.ai/zero-to-hero.html)
 - [Hugging Face LLM Course](https://huggingface.co/learn/llm-course/chapter1/1)
