@@ -19,3 +19,5 @@ build/
 Machine Learning/21-Learn-from-the-Masters/data/
 # Manim render output
 Machine Learning/21-Learn-from-the-Masters/media/
+# Data downloaded by the Personal Projects notebooks (incl. personal exports like Spotify history)
+Machine Learning/22-Personal-Projects/data/
