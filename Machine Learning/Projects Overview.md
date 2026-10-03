@@ -21,6 +21,7 @@ tags: [ml, project, overview]
 | [[Explainability and Fairness]] | [[Project - Fairness Audit]] | demographic parity, equal opportunity, impossibility results |
 
 ## Elsewhere
+- [[Fun Projects]]: Connect Four AI, Danish road trip, rock–paper–scissors mind reader, Sudoku solver, evolving art.
 - [[Personal Projects]]: mini-GPT on your notes, your own recommender, Danish electricity prices, RAG over your notes, Danish mushrooms.
 - [[Project - MovieLens Recommender]]: a 5-milestone recommender project.
 - [[Paper-to-Code Months]] · [[Weekly Challenges]] · [[Leaderboard]] · [[Break the Model]]

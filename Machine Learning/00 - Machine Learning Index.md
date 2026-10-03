@@ -98,3 +98,7 @@ Every topic note ends with a **Learn more** section with links to external resou
 - [[Danish Electricity Prices]] – forecast DK1 spot prices with Energi Data Service + DMI data
 - [[RAG over My Notes]] – a study chatbot over this vault, with links to the right note
 - [[Danish Mushroom Classifier]] – transfer learning on Danish iNaturalist photos (or your own)
+
+## 23 · Fun projects and topic projects
+- [[Projects Overview]] – every hands-on project, by topic (Wordle, spam filter, image compression, Game of Life CNN, Kalman filter, bandits, vault PageRank, town names, drift, fairness)
+- [[Fun Projects]] – Connect Four AI, Danish road trip (GA), rock–paper–scissors mind reader, Sudoku solver, evolving art
