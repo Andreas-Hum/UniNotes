@@ -29,4 +29,4 @@ reviewed:
 > [!tip]
 > Retake the quiz a month later without looking at the answers. A score that goes up is real learning; spacing the repetition is what makes it last.
 
-Related: [[Playgrounds]] · [[Break the Model]]
+Related: [[Playgrounds]] · [[Break the Model]] · [[Leaderboard]]
