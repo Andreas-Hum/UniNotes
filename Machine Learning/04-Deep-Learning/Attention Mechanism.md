@@ -115,6 +115,10 @@ causal = torch.tril(torch.ones(n, n))          # 1 = allowed, 0 = future
 > [!question]- If you shuffle the input tokens of a self-attention layer without positional encodings, what happens to the outputs?
 > They are shuffled in the same way (permutation equivariance): attention by itself knows nothing about order.
 
+## Practice
+
+[Attention Mechanism - Exercises](Attention%20Mechanism%20-%20Exercises.ipynb): Q/K/V roles, masks and temperature, causal attention, shape and KV-cache arithmetic (with GQA) by hand, then NumPy implementations of batched masked attention, cross-attention, multi-head attention with reshapes, additive attention, incremental decoding with a KV cache, grouped-query attention, the online softmax behind FlashAttention and the backward pass.
+
 ## Learn more
 - [Attention Is All You Need — Vaswani et al. 2017](https://arxiv.org/abs/1706.03762)
 - [Neural Machine Translation by Jointly Learning to Align and Translate — Bahdanau et al. 2014](https://arxiv.org/abs/1409.0473)

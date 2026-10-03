@@ -73,6 +73,10 @@ With a few hundred images per class this usually beats training from scratch by 
 > [!question]- How many tokens does a ViT with patch size 16 get from a $384\times384$ image?
 > $(384/16)^2=576$ (+1 [CLS]).
 
+## Practice
+
+[CNN Architectures - Exercises](CNN%20Architectures%20-%20Exercises.ipynb): residual connections, inductive biases and transfer learning, then output-size, parameter and FLOP arithmetic (ResNet stem and bottleneck, depthwise separable convs, EfficientNet scaling, ViT tokens), and NumPy implementations of a VGG-16 shape tracer, plain vs residual gradient flow, 2D convolution, depthwise separable convolution, ViT patch embedding and batch normalisation.
+
 ## Learn more
 - [ResNet — He et al. 2015](https://arxiv.org/abs/1512.03385)
 - [EfficientNet — Tan & Le 2019](https://arxiv.org/abs/1905.11946)
