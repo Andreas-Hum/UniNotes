@@ -1,5 +1,9 @@
 ---
 tags: [ml, vision, index]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Computer Vision Overview
 

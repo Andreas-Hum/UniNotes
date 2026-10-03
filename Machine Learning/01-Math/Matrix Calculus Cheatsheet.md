@@ -1,5 +1,9 @@
 ---
 tags: [ml, math, cheatsheet]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Matrix Calculus Cheatsheet
 

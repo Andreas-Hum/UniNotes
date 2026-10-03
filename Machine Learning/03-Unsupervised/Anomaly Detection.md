@@ -1,5 +1,9 @@
 ---
 tags: [ml, unsupervised, anomaly]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Anomaly Detection
 

@@ -1,5 +1,9 @@
 ---
 tags: [ml, time-series]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Time Series Forecasting
 

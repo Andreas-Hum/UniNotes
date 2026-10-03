@@ -1,5 +1,9 @@
 ---
 tags: [ml, recsys, deep-learning]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Deep Learning Recommenders
 

@@ -1,5 +1,9 @@
 ---
 tags: [ml, deep-learning, attention, transformers]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Attention Mechanism
 

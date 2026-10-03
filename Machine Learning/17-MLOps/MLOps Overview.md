@@ -1,5 +1,9 @@
 ---
 tags: [ml, mlops]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # MLOps Overview
 

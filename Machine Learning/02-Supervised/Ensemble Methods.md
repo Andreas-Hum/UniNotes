@@ -1,5 +1,9 @@
 ---
 tags: [ml, supervised, ensemble]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Ensemble Methods
 

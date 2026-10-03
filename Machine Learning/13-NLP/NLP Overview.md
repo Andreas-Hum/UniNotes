@@ -1,5 +1,9 @@
 ---
 tags: [ml, nlp, index]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # NLP Overview
 

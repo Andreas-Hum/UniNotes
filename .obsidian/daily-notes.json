@@ -1,0 +1,6 @@
+{
+  "folder": "Journal/TIL",
+  "format": "YYYY-MM-DD",
+  "template": "Templates/TIL",
+  "autorun": false
+}

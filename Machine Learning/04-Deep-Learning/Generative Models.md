@@ -1,5 +1,9 @@
 ---
 tags: [ml, deep-learning, generative]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Generative Models
 

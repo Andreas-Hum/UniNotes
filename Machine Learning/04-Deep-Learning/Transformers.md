@@ -1,5 +1,9 @@
 ---
 tags: [ml, deep-learning, nlp, attention]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Transformers
 

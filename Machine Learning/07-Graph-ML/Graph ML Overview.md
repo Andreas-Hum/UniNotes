@@ -1,5 +1,9 @@
 ---
 tags: [ml, graph]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Graph ML Overview
 

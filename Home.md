@@ -2,6 +2,7 @@
 
 Start page for the vault. Each course has an index note listing its notes, exercises and lecture material.
 
+- [[Machine Learning/00 - Progress Dashboard|📈 Progress Dashboard]] · [[Journal/Today I Learned|✍️ Today I Learned]]
 - [[Machine Learning/00 - Machine Learning Index|Machine Learning knowledge base]] and its [[Machine Learning/00 - Learning Path|learning path]]
 
 ## Semester 5

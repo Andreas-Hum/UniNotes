@@ -1,5 +1,8 @@
 ---
 tags: [ml, vision, segmentation]
+status: not-started
+level:
+reviewed:
 ---
 # Image Segmentation
 

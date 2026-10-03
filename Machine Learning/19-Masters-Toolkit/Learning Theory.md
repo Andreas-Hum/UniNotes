@@ -1,5 +1,9 @@
 ---
 tags: [ml, theory, masters]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Learning Theory
 

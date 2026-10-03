@@ -1,5 +1,9 @@
 ---
 tags: [ml, fundamentals, regularization]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Overfitting and Regularization
 

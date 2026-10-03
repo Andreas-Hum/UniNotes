@@ -1,5 +1,9 @@
 ---
 tags: [ml, deep-learning, vision]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Convolutional Neural Networks
 

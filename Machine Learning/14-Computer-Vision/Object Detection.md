@@ -1,5 +1,9 @@
 ---
 tags: [ml, vision, detection]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Object Detection
 

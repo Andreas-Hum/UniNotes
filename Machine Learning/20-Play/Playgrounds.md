@@ -1,5 +1,8 @@
 ---
 tags: [ml, play, interactive]
+status: not-started
+level:
+reviewed:
 ---
 # Playgrounds
 

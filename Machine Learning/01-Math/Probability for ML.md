@@ -1,5 +1,9 @@
 ---
 tags: [ml, math, probability]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Probability for ML
 

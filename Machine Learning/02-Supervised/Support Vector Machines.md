@@ -1,5 +1,9 @@
 ---
 tags: [ml, supervised, svm]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Support Vector Machines
 

@@ -1,5 +1,8 @@
 ---
 tags: [ml, mlops, deployment]
+status: not-started
+level:
+reviewed:
 ---
 # Model Deployment and Serving
 

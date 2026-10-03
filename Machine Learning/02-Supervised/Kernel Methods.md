@@ -1,5 +1,9 @@
 ---
 tags: [ml, supervised, kernels]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Kernel Methods
 

@@ -1,5 +1,9 @@
 ---
 tags: [ml, unsupervised, dimensionality-reduction]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # PCA
 

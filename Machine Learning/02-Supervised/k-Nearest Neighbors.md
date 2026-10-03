@@ -1,5 +1,9 @@
 ---
 tags: [ml, supervised, non-parametric]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # k-Nearest Neighbors
 

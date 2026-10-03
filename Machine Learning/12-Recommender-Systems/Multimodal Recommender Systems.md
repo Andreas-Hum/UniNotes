@@ -1,5 +1,9 @@
 ---
 tags: [ml, recsys, multimodal]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Multimodal Recommender Systems
 

@@ -1,5 +1,9 @@
 ---
 tags: [ml, vision, deep-learning]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # CNN Architectures
 
