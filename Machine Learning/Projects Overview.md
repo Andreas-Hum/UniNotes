@@ -46,6 +46,12 @@ tags: [ml, project, overview]
 | [[Gaussian Processes]] | [[Project - Gaussian Process Regression]] | kernels, Cholesky, predictive uncertainty |
 | [[Gaussian Mixture Models and EM]] | [[Project - GMM and EM from Scratch]] | soft clustering, EM's monotone likelihood |
 | [[PCA]] | [[Project - Eigenfaces]] | PCA via SVD, reconstruction, face recognition |
+| [[RNN and LSTM]] | [[Project - RNN vs LSTM on the Adding Problem]] | vanishing gradients, gated memory |
+| [[Variational Inference]] | [[Project - Variational Inference for Logistic Regression]] | ELBO, reparameterisation, mean-field limits |
+| [[Graph Neural Networks]] | [[Project - GCN from Scratch]] | graph convolutions, semi-supervised learning |
+| [[Object Detection]] | [[Project - IoU and Non-Max Suppression]] | IoU, NMS, precision/recall of detections |
+| [[Fine-tuning and Alignment]] | [[Project - LoRA from Scratch]] | low-rank adaptation, parameter efficiency |
+| [[Time Series Validation and Features]] | [[Project - Walk-Forward Validation]] | why random CV lies on time series |
 
 ## Elsewhere
 - 🎮 Games that learn: [[Project - REINFORCE Plays CartPole]], [[Project - AlphaZero-Lite Tic-Tac-Toe]], [[Project - Blackjack Monte Carlo Control]], Pixel Catch (DQN from pixels) and Kuhn Poker (CFR) in [[Fun Projects]], plus [[RL Arcade]] (Snake, Flappy Bird).

@@ -128,6 +128,8 @@ Alternative: [[MCMC]]. VI is fast, deterministic and gives a cheap lower bound o
 
 [Variational Inference - Exercises](Variational%20Inference%20-%20Exercises.ipynb): why maximise the ELBO, mode-seeking vs mass-covering, EM as VI, the ELBO identity, Gaussian KL, a two-state ELBO, the reparameterization trick and mean-field updates by hand, then CAVI, reverse vs forward KL, Monte Carlo ELBOs, BBVI and score-function vs reparameterization gradients in code.
 
+**Project:** [[Project - Variational Inference for Logistic Regression]] – mean-field VI vs. MCMC for Bayesian logistic regression
+
 ## Learn more
 - [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 10
 - [Murphy – Probabilistic ML (free)](https://probml.github.io/pml-book/) vol. 2

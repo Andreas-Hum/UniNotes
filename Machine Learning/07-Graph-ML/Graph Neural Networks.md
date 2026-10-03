@@ -130,6 +130,8 @@ LeakyReLU (slope 0.2): $(0.5,\ 1.5,\ -0.4)$. Exponentials: $(1.65,\ 4.48,\ 0.67)
 
 [Graph Neural Networks - Exercises](Graph%20Neural%20Networks%20-%20Exercises.ipynb): the normalised adjacency and one GCN layer by hand, receptive fields and parameter counts, GAT attention, over-smoothing as power iteration, SGC, a 2-layer GCN with hand-written backprop, GraphSAGE with neighbour sampling, a GAT layer and sum vs mean readout.
 
+**Project:** [[Project - GCN from Scratch]] – a GCN from scratch classifies the karate club from 2 labels
+
 ## Learn more
 - [Hamilton – Graph Representation Learning (free)](https://www.cs.mcgill.ca/~wlh/grl_book/) ch. 5–7
 - [Stanford CS224W](https://web.stanford.edu/class/cs224w/)

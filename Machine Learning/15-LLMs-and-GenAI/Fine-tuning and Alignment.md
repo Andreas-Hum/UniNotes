@@ -125,6 +125,8 @@ Tools: Hugging Face `transformers`, `peft`, `trl`. Back to [[LLMs Overview]].
 ## Practice
 [Fine-tuning and Alignment - Exercises](Fine-tuning%20and%20Alignment%20-%20Exercises.ipynb): choosing a method, the alignment pipeline, why the KL penalty, LoRA initialisation, parameter counts and memory budgets, Bradley–Terry, DPO by hand and vectorised, the closed-form RLHF optimum, LoRA forward pass and training, best rank-$r$ updates via SVD, and DPO on a toy policy.
 
+**Project:** [[Project - LoRA from Scratch]] – LoRA from scratch vs. full fine-tuning
+
 ## Learn more
 - [LoRA — Hu et al. 2021](https://arxiv.org/abs/2106.09685) · [QLoRA — Dettmers et al. 2023](https://arxiv.org/abs/2305.14314)
 - [InstructGPT](https://arxiv.org/abs/2203.02155) · [DPO — Rafailov et al. 2023](https://arxiv.org/abs/2305.18290)

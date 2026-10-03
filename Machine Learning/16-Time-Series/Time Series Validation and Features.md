@@ -74,6 +74,9 @@ Seasonal-naive in-sample MAE ($m=7$) is 20 units. Your model's test MAE is 15. M
 > [!question]- What does a MASE of exactly 1 mean?
 > The model's error equals the in-sample error of seasonal naive.
 
+## Practice
+**Project:** [[Project - Walk-Forward Validation]] – random K-fold vs. walk-forward vs. the real future
+
 ## Learn more
 - [Hyndman & Athanasopoulos — *Forecasting: Principles and Practice*, ch. 5 (evaluation)](https://otexts.com/fpp3/)
 - Makridakis, Spiliotis & Assimakopoulos (2022), *M5 accuracy competition: Results, findings, and conclusions*, International Journal of Forecasting

@@ -147,6 +147,8 @@ Bidirectional, stacked, seq2seq with attention. Largely replaced by [[Transforme
 
 [RNN and LSTM - Exercises](RNN%20and%20LSTM%20-%20Exercises.ipynb): weight sharing, why the LSTM fixes vanishing gradients, GRU and bidirectional RNNs, unrolling and LSTM steps by hand, parameter counts, the constant error carousel, then NumPy implementations of an RNN forward pass, BPTT, vanishing/exploding experiments, LSTM and GRU cells, gradient clipping and a bidirectional RNN.
 
+**Project:** [[Project - RNN vs LSTM on the Adding Problem]] – hand-written LSTM cell vs. plain RNN on long-term memory
+
 ## Learn more
 
 - [Dive into Deep Learning](https://d2l.ai/)

@@ -79,6 +79,8 @@ Ground truth $(0,0,4,4)$, prediction $(2,2,6,6)$. Intersection $(2,2,4,4)$ → a
 
 [Object Detection - Exercises](Object%20Detection%20-%20Exercises.ipynb): backbone/neck/head, detector families and metrics, then IoU, box-regression targets, focal loss, AP and anchor-count arithmetic by hand, and NumPy implementations of vectorised IoU, box encoding/decoding, non-maximum suppression, focal loss, detection matching, average precision and Hungarian matching.
 
+**Project:** [[Project - IoU and Non-Max Suppression]] – IoU + non-max suppression from scratch, checked against torchvision
+
 ## Learn more
 - [Faster R-CNN — Ren et al. 2015](https://arxiv.org/abs/1506.01497)
 - [YOLO — Redmon et al. 2015](https://arxiv.org/abs/1506.02640)
