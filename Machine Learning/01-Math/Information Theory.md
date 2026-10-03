@@ -95,6 +95,8 @@ It is the drop in entropy from splitting a node into children of sizes $n_k$, ea
 ## Practice
 [Information Theory - Exercises](Information%20Theory%20-%20Exercises.ipynb): entropy as uncertainty, forward vs reverse KL, the cross-entropy = entropy + KL identity, mutual information vs correlation, by-hand KL between Gaussians and Gibbs' inequality, then code: stable cross-entropy from logits, the best split by information gain, mutual information, Jensen–Shannon and Monte Carlo KL.
 
+**Project:** [[Project - Wordle Solver]] – maximise expected information to play Wordle (and IT-ret Wordle)
+
 ## Learn more
 - [Murphy – Probabilistic ML (free)](https://probml.github.io/pml-book/)
 - [Deep Learning book – Goodfellow et al.](https://www.deeplearningbook.org/) ch. 3

@@ -21,3 +21,5 @@ Machine Learning/21-Learn-from-the-Masters/data/
 Machine Learning/21-Learn-from-the-Masters/media/
 # Data downloaded by the Personal Projects notebooks (incl. personal exports like Spotify history)
 Machine Learning/22-Personal-Projects/data/
+# Data downloaded by project notebooks in any ML folder
+Machine Learning/*/data/

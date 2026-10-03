@@ -5,7 +5,7 @@ tags: [ml, index, moc]
 
 Entry point for everything ML. Notes are linked to each other, so open the **graph view** to see how they connect.
 
-> [!tip] Start here → [[00 - Learning Path]] · track it → [[00 - Progress Dashboard]] · one line a day → [[Today I Learned]] · want to play? → [[Playgrounds]] · build something of your own → [[Personal Projects]] · feeling behind? → [[Masters Self-Assessment]]
+> [!tip] Start here → [[00 - Learning Path]] · track it → [[00 - Progress Dashboard]] · one line a day → [[Today I Learned]] · want to play? → [[Playgrounds]] · build something → [[Projects Overview]] · feeling behind? → [[Masters Self-Assessment]]
 > A step-by-step route from Python and math basics through classical ML, deep learning, NLP, vision, recommender systems, LLMs and MLOps, with links to free books, courses and papers at every stage.
 > Your own course notes live in [[8-semester/ML/ML Notes|8-semester/ML]] and [[8-semester/ML/Lecture Notes 1-12|Lecture Notes 1-12]].
 

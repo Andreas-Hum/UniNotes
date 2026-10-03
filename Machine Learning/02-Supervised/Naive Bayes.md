@@ -130,6 +130,8 @@ Naive Bayes (generative: models $p(x, y)$) and logistic regression (discriminati
 ## Practice
 [Naive Bayes - Exercises](Naive%20Bayes%20-%20Exercises.ipynb): what is naive, choosing a variant, double counting and calibration, the generative vs discriminative pair; by hand: a spam posterior, Laplace smoothing, 1-D Gaussian NB, parameter counting, MLE by counting, when Gaussian NB is linear, log space; in code: Gaussian, multinomial and Bernoulli NB from scratch, log-sum-exp and measuring over-confidence.
 
+**Project:** [[Project - SMS Spam Filter]] – a word-counting spam filter checked against scikit-learn
+
 ## Learn more
 - [scikit-learn – Naive Bayes](https://scikit-learn.org/stable/modules/naive_bayes.html)
 - [CS229 cheatsheets](https://stanford.edu/~shervine/teaching/cs-229/)
