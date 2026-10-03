@@ -5,7 +5,7 @@ tags: [ml, index, moc]
 
 Entry point for everything ML. Notes are linked to each other, so open the **graph view** to see how they connect.
 
-> [!tip] Start here → [[00 - Learning Path]] · feeling behind? → [[Masters Self-Assessment]]
+> [!tip] Start here → [[00 - Learning Path]] · want to play? → [[Playgrounds]] · feeling behind? → [[Masters Self-Assessment]]
 > A step-by-step route from Python and math basics through classical ML, deep learning, NLP, vision, recommender systems, LLMs and MLOps, with links to free books, courses and papers at every stage.
 > Your own course notes live in [[8-semester/ML/ML Notes|8-semester/ML]] and [[8-semester/ML/Lecture Notes 1-12|Lecture Notes 1-12]].
 
@@ -79,3 +79,8 @@ Every topic note ends with a **Learn more** section with links to external resou
 ## 19 · Master's toolkit
 - [[Masters Self-Assessment]] · [[Implement From Scratch]] · [[Imposter Syndrome]]
 - [[Learning Theory]] · [[Causal Inference]] · [[Research Skills]] · [[Paper Reading Template]]
+
+## 20 · Play
+- [[Playgrounds]] – interactive SVM, k-means, gradient descent, attention and XOR net
+- [[Break the Model]] – 7 break-it-then-fix-it challenges
+- [[Guess the Output]] – 12 predict-then-run quiz questions

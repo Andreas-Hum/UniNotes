@@ -119,5 +119,8 @@ graph LR
 - Resources: [Understanding Machine Learning (free PDF)](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf) · [Stanford STATS214](https://web.stanford.edu/class/stats214/) · [Causal Inference: What If](https://miguelhernan.org/whatifbook) · [Brady Neal causal course](https://www.bradyneal.com/causal-inference-course) · [Karpathy's training recipe](https://karpathy.github.io/2019/04/25/recipe/) · [Deep Learning Tuning Playbook](https://github.com/google-research/tuning_playbook)
 - Checkpoint: reproduce one paper's main table and write it up with [[Paper Reading Template]].
 
+## Anytime — Play
+Break up the reading: poke the [[Playgrounds]] after stages 2–5, do the [[Break the Model]] challenges after stage 2, and take the [[Guess the Output]] quiz after stage 5 (and again a month later).
+
 ---
 Back to [[00 - Machine Learning Index]].
