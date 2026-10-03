@@ -113,6 +113,8 @@ Now take $x=(2,1)$: $z^{(1)}=(4,-1)$, $h^{(1)}=(4,0)$, $\hat y = 4+2 = 6$. Diffe
 
 [Neural Networks - Exercises](Neural%20Networks%20-%20Exercises.ipynb): concepts (non-linearity, output/loss pairing, depth), forward passes and XOR by hand, a tent function from ReLUs, a stable softmax cross-entropy, and training small MLPs on two moons and digits.
 
+**Project:** [[Project - Weird Digit Detector]] – an autoencoder that flags weird handwritten digits
+
 ## Learn more
 - [MIT 6.S191 — Introduction to Deep Learning (lecture playlist)](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI) · [course site & labs](https://introtodeeplearning.com/)
 - [3Blue1Brown – Neural Networks](https://www.3blue1brown.com/topics/neural-networks)

@@ -124,6 +124,8 @@ Your lecture notes: [[8-semester/ML/Lecture Notes 1-12|Lectures 8–12]].
 
 **Project:** [[Project - PageRank of My Vault]] – PageRank, orphans and link suggestions for your own Obsidian vault
 
+**Project:** [[Project - Spectral Clustering of the Karate Club]] – recover the karate club split with the Fiedler vector
+
 ## Learn more
 - [Stanford CS224W](https://web.stanford.edu/class/cs224w/)
 - [Hamilton – Graph Representation Learning (free)](https://www.cs.mcgill.ca/~wlh/grl_book/)

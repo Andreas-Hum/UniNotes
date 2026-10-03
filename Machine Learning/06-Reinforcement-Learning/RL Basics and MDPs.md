@@ -168,6 +168,8 @@ Learn by doing: [[RL Arcade]] – Snake and Flappy Bird built from scratch as `r
 
 **Project:** [[Project - Study Method Bandits]] – choose study methods with ε-greedy, UCB1 and Thompson sampling
 
+**Project:** [[Project - Gridworld Value Iteration]] – solve a slippery Aalborg gridworld exactly with value iteration
+
 ## Learn more
 - [Sutton & Barto (free)](http://incompleteideas.net/book/the-book-2nd.html) ch. 3–4
 - [David Silver RL course](https://www.davidsilver.uk/teaching/)

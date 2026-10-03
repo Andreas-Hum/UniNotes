@@ -128,6 +128,8 @@ Compared with [[Variational Inference]]: slower but asymptotically exact. VI tur
 
 [MCMC - Exercises](MCMC%20-%20Exercises.ipynb): why the normaliser cancels, reading diagnostics, step-size trade-off, MH and Hastings by hand, detailed balance, Gibbs conditionals, ESS and $\hat R$ by hand, then random-walk Metropolis, Gibbs, rejection/importance sampling and HMC from scratch.
 
+**Project:** [[Project - Bayesian AB Test with MCMC]] – a Bayesian A/B test with your own Metropolis sampler
+
 ## Learn more
 - [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 11
 - [PyMC docs](https://www.pymc.io/)

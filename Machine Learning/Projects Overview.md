@@ -24,6 +24,11 @@ tags: [ml, project, overview]
 | [[Decision Trees]] | [[Project - Decision Tree from Scratch]] | Gini, greedy splits, depth vs. overfitting |
 | [[k-Nearest Neighbors]] | [[Project - kNN and the Curse of Dimensionality]] | vectorised kNN, distance concentration |
 | [[Anomaly Detection]] | [[Project - Price Anomaly Hunter]] | robust statistics, Isolation Forest, precision/recall without labels |
+| [[Backpropagation]] | [[Project - Neural Net in Pure NumPy]] | hand-written backprop and gradient checking |
+| [[Neural Networks]] | [[Project - Weird Digit Detector]] | autoencoders, reconstruction error as an anomaly score |
+| [[MCMC]] | [[Project - Bayesian AB Test with MCMC]] | Metropolis–Hastings, posteriors that answer the real question |
+| [[RL Basics and MDPs]] | [[Project - Gridworld Value Iteration]] | Bellman equations, discounting, risk in stochastic MDPs |
+| [[Graph ML Overview]] | [[Project - Spectral Clustering of the Karate Club]] | graph Laplacians, Fiedler vectors, spectral cuts |
 
 ## Elsewhere
 - [[Fun Projects]]: Connect Four AI, Danish road trip, rock–paper–scissors mind reader, Sudoku solver, evolving art.
