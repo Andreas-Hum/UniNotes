@@ -23,7 +23,7 @@ reviewed:
 | [Markov Melody Machine](Markov%20Melody%20Machine.ipynb) | order-k Markov chains, synthesised to WAV | order 2 composes new tunes; order 4 copies 72 % of 8-note stretches |
 | 🎮 [Pixel Catch - DQN from Pixels](Pixel%20Catch%20-%20DQN%20from%20Pixels.ipynb) | Deep Q-Network with replay buffer + target network, input = raw pixels | catch rate 32 % (random) → 100 % after 400 episodes |
 | 🎮 [Kuhn Poker - Learning to Bluff](Kuhn%20Poker%20-%20Learning%20to%20Bluff.ipynb) | counterfactual regret minimisation (self-play) | game value −0.0565 (theory −1/18); bluffs with the jack 22 %, bets the king 3× as often (66 %) |
-| [Cipher Breaker](Cipher%20Breaker.ipynb) | bigram language model from your IT-ret notes + simulated annealing | a 213-character Danish GDPR sentence decoded 100 % correctly |
+| [Cipher Breaker](Cipher%20Breaker.ipynb) | bigram language model from your IT-ret notes + simulated annealing | a 234-character Danish GDPR sentence decoded 100 % correctly |
 | [Battleship AI](Battleship%20AI.ipynb) | probability density over legal ship placements | 44.7 shots on average vs 96.1 for random shooting |
 | [Mastermind Solver](Mastermind%20Solver.ipynb) | Knuth's 1977 minimax strategy | never more than 5 guesses; average 4.49 on 150 random codes |
 
