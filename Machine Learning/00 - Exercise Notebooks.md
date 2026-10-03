@@ -87,6 +87,7 @@ One Jupyter notebook of exercises per topic, saved next to its note as `<Topic> 
 - [Deep Learning Recommenders](12-Recommender-Systems/Deep%20Learning%20Recommenders%20-%20Exercises.ipynb) · 17 exercises
 - [Evaluating Recommenders](12-Recommender-Systems/Evaluating%20Recommenders%20-%20Exercises.ipynb) · 18 exercises
 - [Multimodal Recommender Systems](12-Recommender-Systems/Multimodal%20Recommender%20Systems%20-%20Exercises.ipynb) · 17 exercises
+- [Project - MovieLens Recommender](12-Recommender-Systems/Project%20-%20MovieLens%20Recommender.md) · 5 starter notebooks (M1–M5, see the note)
 - [Recommender Systems Overview](12-Recommender-Systems/Recommender%20Systems%20Overview%20-%20Exercises.ipynb) · 15 exercises
 
 ## 13-NLP

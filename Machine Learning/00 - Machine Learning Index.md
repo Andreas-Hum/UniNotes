@@ -56,6 +56,7 @@ Every topic note ends with a **Learn more** section with links to external resou
 ## 12 · Recommender systems
 - [[Recommender Systems Overview]] · [[Collaborative Filtering and Matrix Factorization]] · [[Content-Based and Hybrid Recommenders]]
 - [[Deep Learning Recommenders]] · [[Multimodal Recommender Systems]] · [[Evaluating Recommenders]] · [[Recommender Systems Resources]]
+- Build-along project: [[Project - MovieLens Recommender]]
 
 ## 13 · NLP
 - [[NLP Overview]] · [[Text Representations]]

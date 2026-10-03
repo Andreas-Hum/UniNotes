@@ -83,7 +83,7 @@ graph LR
 ## Stage 8 — Recommender systems
 - Vault: [[Recommender Systems Overview]] · [[Collaborative Filtering and Matrix Factorization]] · [[Content-Based and Hybrid Recommenders]] · [[Deep Learning Recommenders]] · [[Evaluating Recommenders]] · [[Multimodal Recommender Systems]] · [[Recommender Systems Resources]]
 - Resources: [Google – Recommendation Systems course](https://developers.google.com/machine-learning/recommendation) · [Mining of Massive Datasets ch. 9 (free)](http://www.mmds.org/) · [D2L – Recommender Systems chapter](https://d2l.ai/chapter_recommender-systems/index.html)
-- Project: MovieLens recommender (MF → two-tower), then a multimodal one on [Amazon Reviews 2023](https://amazon-reviews-2023.github.io/) with [MMRec](https://github.com/enoche/MMRec).
+- Project: [[Project - MovieLens Recommender]] (popularity → MF → BPR → two-tower → posters), then a multimodal one on [Amazon Reviews 2023](https://amazon-reviews-2023.github.io/) with [MMRec](https://github.com/enoche/MMRec).
 
 ## Stage 9 — Probabilistic ML & Bayesian methods
 - Vault: [[Bayesian Inference]] · [[Probabilistic Graphical Models]] · [[Variational Inference]] · [[MCMC]] · [[Gaussian Processes]]
