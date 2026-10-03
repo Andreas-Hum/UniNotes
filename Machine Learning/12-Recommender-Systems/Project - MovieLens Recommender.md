@@ -34,7 +34,7 @@ tags: [ml, recsys, project]
 
 **Hints**
 - Never count popularity on validation or test rows (leak).
-- Break score ties randomly; with an optimistic tie rule, a constant scorer looks perfect.
+- The starter `evaluate` breaks ties at random. Keep that if you write your own: with an optimistic tie rule a constant scorer looks perfect.
 - Print the top 10 titles. A sensible-looking list of blockbusters that still wins is normal on MovieLens.
 
 **Notebook:** [M1](Project%20-%20MovieLens%20Recommender%20-%20M1%20Popularity%20Baseline.ipynb)
