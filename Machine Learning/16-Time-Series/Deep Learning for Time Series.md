@@ -1,6 +1,7 @@
 ---
 tags: [ml, time-series, deep-learning]
 status: not-started
+notebook: not-started
 level:
 reviewed:
 ---
@@ -68,6 +69,10 @@ Ensembles of statistical + ML models are hard to beat (M4/M5 competitions).
 
 > [!question]- Why does a global model help with the "cold start" of a new product?
 > It has learned patterns shared across many similar series and can use static features (category, store) even when the new series has little history.
+
+## Practice
+[Deep Learning for Time Series - Exercises](Deep%20Learning%20for%20Time%20Series%20-%20Exercises.ipynb): concepts, pen-and-paper arithmetic and NumPy implementations with hints and solutions.
+**Project:** [[Project - Global Neural Forecaster]] – one global model (linear vs. TCN) across six price areas, with quantiles
 
 ## Learn more
 - [DeepAR — Salinas et al. 2017](https://arxiv.org/abs/1704.04110)
