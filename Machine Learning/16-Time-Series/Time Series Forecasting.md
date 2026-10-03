@@ -161,6 +161,8 @@ Forecast for every future step: $21.07$. Weight on the latest observation: $0.3$
 
 [Time Series Forecasting - Exercises](Time%20Series%20Forecasting%20-%20Exercises.ipynb): stationarity and differencing, reading ACF/PACF, naive vs seasonal naive, SES and Holt, AR(p) by least squares, a Dickey–Fuller regression, MASE and pinball loss by hand, lag features with rolling-origin evaluation, and prediction-interval coverage.
 
+Then try to beat seasonal naive on real data: Task 3 of the [[Leaderboard]] (M4 Hourly, MASE).
+
 ## Resources
 - [Hyndman & Athanasopoulos — *Forecasting: Principles and Practice* (free)](https://otexts.com/fpp3/)
 - Libraries: statsmodels, Prophet, sktime, Darts, Nixtla (statsforecast/neuralforecast), GluonTS

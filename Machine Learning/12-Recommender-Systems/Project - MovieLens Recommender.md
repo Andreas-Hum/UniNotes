@@ -102,6 +102,7 @@ reviewed:
 
 ## Wrap-up checklist
 - One results table with all five models, same split, full-ranking metrics.
+- Log your best model on the [[Leaderboard]] (Task 2 uses this exact split with full-ranking NDCG@10).
 - One paragraph per milestone: what changed, what improved, what surprised you.
 - Beyond accuracy: item coverage and average popularity of the top 10 for each model ([[Evaluating Recommenders]]).
 - Optional follow-up: repeat M5 on a domain where images matter more, using the [[Recommender Systems Resources|resources]] list (Amazon Reviews 2023 with MMRec).
