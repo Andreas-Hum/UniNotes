@@ -40,6 +40,12 @@ tags: [ml, project, overview]
 | [[Q-Learning and Policy Gradients]] 🎮 | [[Project - REINFORCE Plays CartPole]] | policy gradients with a neural policy |
 | [[RL Basics and MDPs]] 🎮 | [[Project - Blackjack Monte Carlo Control]] | Monte Carlo control, ε-greedy, house edge |
 | [[Q-Learning and Policy Gradients]] 🎮 | [[Project - AlphaZero-Lite Tic-Tac-Toe]] | MCTS + policy/value net + self-play |
+| [[Calculus and Optimization]] | [[Project - Autodiff from Scratch]] | reverse-mode autodiff, the engine of deep learning |
+| [[Linear Regression]] | [[Project - Linear Regression Three Ways]] | normal equations, GD, ridge path |
+| [[Support Vector Machines]] | [[Project - SVM with Pegasos]] | hinge loss, stochastic sub-gradients, support vectors |
+| [[Gaussian Processes]] | [[Project - Gaussian Process Regression]] | kernels, Cholesky, predictive uncertainty |
+| [[Gaussian Mixture Models and EM]] | [[Project - GMM and EM from Scratch]] | soft clustering, EM's monotone likelihood |
+| [[PCA]] | [[Project - Eigenfaces]] | PCA via SVD, reconstruction, face recognition |
 
 ## Elsewhere
 - 🎮 Games that learn: [[Project - REINFORCE Plays CartPole]], [[Project - AlphaZero-Lite Tic-Tac-Toe]], [[Project - Blackjack Monte Carlo Control]], Pixel Catch (DQN from pixels) and Kuhn Poker (CFR) in [[Fun Projects]], plus [[RL Arcade]] (Snake, Flappy Bird).

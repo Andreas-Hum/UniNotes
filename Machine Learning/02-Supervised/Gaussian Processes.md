@@ -114,6 +114,8 @@ The predictive variance for a new noisy measurement at $x_*=0$ is $0.2+0.25=0.45
 ## Practice
 [Gaussian Processes - Exercises](Gaussian%20Processes%20-%20Exercises.ipynb): GPs as distributions over functions, reading hyperparameters, GP mean = kernel ridge, the cubic wall; by hand: prior correlations, posteriors from one and two observations, deriving the posterior by conditioning, noise-free interpolation, the log marginal likelihood, Bayesian linear regression as a GP; in code: sampling the prior, GP regression with Cholesky, computing the marginal likelihood, choosing the length scale, checking error-bar calibration, Bayesian optimisation with UCB, BLR = GP numerically.
 
+**Project:** [[Project - Gaussian Process Regression]] – GP regression from scratch with honest error bars
+
 ## Learn more
 - [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 6
 - [scikit-learn – Gaussian processes](https://scikit-learn.org/stable/modules/gaussian_process.html)

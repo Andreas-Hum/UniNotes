@@ -125,6 +125,8 @@ Linear only, sensitive to scale, components hard to interpret. Non-linear altern
 ## Practice
 [PCA - Exercises](PCA%20-%20Exercises.ipynb): eigendecomposition and projection by hand, the Lagrange derivation, PCA via covariance and via SVD, choosing $k$, whitening, power iteration and probabilistic PCA.
 
+**Project:** [[Project - Eigenfaces]] – eigenfaces: PCA on faces and nearest-neighbour recognition
+
 ## Learn more
 - [Mathematics for ML (free)](https://mml-book.github.io/) ch. 10
 - [ISL / ISLP (free)](https://www.statlearning.com/) ch. 12

@@ -132,6 +132,8 @@ RMSE, MAE, $R^2$ → [[Model Evaluation and Metrics]].
 ## Practice
 [Linear Regression - Exercises](Linear%20Regression%20-%20Exercises.ipynb): concepts (what "linear" means, residual plots, MLE ⇔ least squares), by-hand derivations (normal equations, MSE gradient, ridge), and NumPy implementations (GD, ridge, polynomial features, metrics, multicollinearity, columns-as-samples form).
 
+**Project:** [[Project - Linear Regression Three Ways]] – normal equations vs. gradient descent vs. scikit-learn, plus the ridge path
+
 ## Learn more
 - [ISL / ISLP (free)](https://www.statlearning.com/) ch. 3
 - [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 3
