@@ -52,6 +52,7 @@ tags: [ml, project, overview]
 | [[Object Detection]] | [[Project - IoU and Non-Max Suppression]] | IoU, NMS, precision/recall of detections |
 | [[Fine-tuning and Alignment]] | [[Project - LoRA from Scratch]] | low-rank adaptation, parameter efficiency |
 | [[Time Series Validation and Features]] | [[Project - Walk-Forward Validation]] | why random CV lies on time series |
+| [[Model Deployment and Serving]] | [[Project - Knowledge Distillation]] | teacher → student compression, temperature, dark knowledge |
 
 ## Elsewhere
 - 🎮 Games that learn: [[Project - REINFORCE Plays CartPole]], [[Project - AlphaZero-Lite Tic-Tac-Toe]], [[Project - Blackjack Monte Carlo Control]], Pixel Catch (DQN from pixels) and Kuhn Poker (CFR) in [[Fun Projects]], plus [[RL Arcade]] (Snake, Flappy Bird).
