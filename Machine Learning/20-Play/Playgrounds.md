@@ -26,4 +26,4 @@ reviewed:
 - [ ] Attention: place the keys so the query gives exactly 50/50 weight to two of them.
 - [ ] XOR: what is the smallest H that solves the *circle* dataset reliably? Why?
 
-Next: [[Break the Model]] · [[Guess the Output]] · [[RL Arcade]]
+Next: [[Break the Model]] · [[Guess the Output]] · [[Weekly Challenges]] · [[Leaderboard]] · [[RL Arcade]]

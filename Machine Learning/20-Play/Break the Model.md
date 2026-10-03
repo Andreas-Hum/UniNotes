@@ -24,4 +24,4 @@ reviewed:
 > [!tip]
 > Before opening a solution, write one sentence in your own words explaining *why* the model broke. If you can explain it, you own it.
 
-Related: [[Playgrounds]] · [[Guess the Output]] · [[RL Arcade]] · [[Common Pitfalls]]
+Related: [[Playgrounds]] · [[Guess the Output]] · [[Weekly Challenges]] · [[Leaderboard]] · [[RL Arcade]] · [[Common Pitfalls]]
