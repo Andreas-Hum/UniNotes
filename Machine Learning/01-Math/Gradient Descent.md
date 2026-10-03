@@ -110,6 +110,8 @@ Momentum by hand with $\beta=0.9$, constant gradient $g=1$: $v=1,\,1.9,\,2.71,\,
 ## Practice
 [Gradient Descent - Exercises](Gradient%20Descent%20-%20Exercises.ipynb): batch vs mini-batch, loss-curve reading, stability limit and optimal fixed step, momentum as an exponential sum, linear vs sublinear rates, then code: a generic GD loop, the divergence threshold, mini-batch SGD and its noise floor, momentum on a ravine, schedules, gradient checks and backtracking line search.
 
+**Project:** [[Project - Optimizer Race]] – race GD, momentum and Adam on Rosenbrock and an ill-conditioned ellipse
+
 ## Learn more
 - [Dive into Deep Learning](https://d2l.ai/) – Optimization chapter
 - [Mathematics for ML (free)](https://mml-book.github.io/) ch. 7

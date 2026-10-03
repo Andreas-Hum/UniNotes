@@ -151,6 +151,8 @@ Foundations: [[Probability for ML]].
 
 [Bayesian Inference - Exercises](Bayesian%20Inference%20-%20Exercises.ipynb): Bayes' terms, plug-in vs predictive, Beta–Bernoulli and Gaussian–Gaussian by hand, Dirichlet smoothing, MAP = ridge, a Bayes factor, grid posteriors, credible intervals vs HDI, Bayesian linear regression and evidence-based degree selection.
 
+**Project:** [[Project - Kalman Filter Tracker]] – track a cyclist through noisy GPS with a Kalman filter
+
 ## Learn more
 - [Murphy – Probabilistic ML (free)](https://probml.github.io/pml-book/)
 - [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 2–3

@@ -143,6 +143,8 @@ Demographic parity difference $0.20$ (ratio $0.5$, fails the 80 % rule); equal-o
 ## Practice
 [Explainability and Fairness - Exercises](Explainability%20and%20Fairness%20-%20Exercises.ipynb): placing methods on the global/local map, sources of bias, permutation importance with correlated features, LIME vs SHAP, Shapley values by hand and by enumeration, SHAP for linear models, group fairness metrics, the impossibility identity, counterfactuals, PDP/ICE, a LIME-style surrogate, group thresholds for equal opportunity and reweighing.
 
+**Project:** [[Project - Fairness Audit]] – audit a classifier for three fairness definitions and fix one
+
 ## Learn more
 - [Molnar — *Interpretable Machine Learning* (free)](https://christophm.github.io/interpretable-ml-book/)
 - [Barocas, Hardt, Narayanan — *Fairness and Machine Learning* (free)](https://fairmlbook.org/)

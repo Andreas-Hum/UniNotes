@@ -119,6 +119,8 @@ Deep learning variants: [[Optimizers]].
 ## Practice
 [Calculus and Optimization - Exercises](Calculus%20and%20Optimization%20-%20Exercises.ipynb): convexity checks, saddle points in high dimension, gradients/Hessians and Taylor approximations by hand, Lagrange and KKT, then from-scratch finite differences, Newton vs GD on Rosenbrock, condition numbers, coordinate descent for the Lasso, L-BFGS and projected gradient descent.
 
+**Project:** [[Project - Autodiff from Scratch]] – a tiny reverse-mode autograd engine (micrograd-style)
+
 ## Learn more
 - [Mathematics for ML (free)](https://mml-book.github.io/) ch. 5 & 7
 - [3Blue1Brown – Essence of Calculus](https://www.3blue1brown.com/lessons/essence-of-calculus/)

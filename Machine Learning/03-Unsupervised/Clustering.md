@@ -165,6 +165,8 @@ Internal: silhouette, Davies–Bouldin. External: ARI, NMI ([[Model Evaluation a
 ## Practice
 [Clustering - Exercises](Clustering%20-%20Exercises.ipynb): Lloyd and k-means++ from scratch, silhouette and Rand index by hand, DBSCAN and spectral clustering from scratch, and the effect of scaling and linkage.
 
+**Project:** [[Project - Image Compression]] – compress a photo with k-means colours vs. low-rank SVD
+
 ## Learn more
 - [scikit-learn – clustering](https://scikit-learn.org/stable/modules/clustering.html)
 - [ISL / ISLP (free)](https://www.statlearning.com/) ch. 12

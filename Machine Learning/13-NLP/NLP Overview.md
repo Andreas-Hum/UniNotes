@@ -138,6 +138,8 @@ Why overlap metrics can mislead: a perfect paraphrase ("the feline rested on the
 ## Practice
 [NLP Overview - Exercises](NLP%20Overview%20-%20Exercises.ipynb): normalisation choices, task heads, bigram LMs and smoothing, perplexity, entity-level F1, BLEU/ROUGE by hand, a regex tokeniser, BPE from scratch, WER via edit distance and sampling text from your own bigram model.
 
+**Project:** [[Project - Danish Town Name Generator]] – character-level language models that invent Danish town names
+
 ## Learn more
 - [Stanford CS224n](https://web.stanford.edu/class/cs224n/)
 - [Jurafsky & Martin — *Speech and Language Processing* (free draft)](https://web.stanford.edu/~jurafsky/slp3/)

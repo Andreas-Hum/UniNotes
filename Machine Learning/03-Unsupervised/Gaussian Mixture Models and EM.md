@@ -121,6 +121,8 @@ Why each matters:
 ## Practice
 [Gaussian Mixture Models and EM - Exercises](Gaussian%20Mixture%20Models%20and%20EM%20-%20Exercises.ipynb): E- and M-steps by hand, deriving the mean update, why EM is monotone, a stable log-space E-step, full EM from scratch, collapse, BIC and covariance types.
 
+**Project:** [[Project - GMM and EM from Scratch]] – GMM + EM from scratch vs. k-means
+
 ## Learn more
 - [Bishop – PRML (free PDF)](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) ch. 9
 - [Mathematics for ML (free)](https://mml-book.github.io/) ch. 11

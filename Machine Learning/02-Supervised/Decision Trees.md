@@ -127,6 +127,8 @@ Fix variance with [[Ensemble Methods]] (Random Forest, Gradient Boosting).
 ## Practice
 [Decision Trees - Exercises](Decision%20Trees%20-%20Exercises.ipynb): greedy vs optimal, why not misclassification error, gain ratio; by hand: entropy and Gini of a node, information gain, gain ratio, a regression split, weakest-link pruning, impurity bounds; in code: impurity functions, exhaustive split search, a recursive CART, depth vs overfitting, cost-complexity pruning, instability and axis-aligned staircases.
 
+**Project:** [[Project - Decision Tree from Scratch]] – CART from scratch, checked against scikit-learn
+
 ## Learn more
 - [ISL / ISLP (free)](https://www.statlearning.com/) ch. 8
 - [scikit-learn – decision trees](https://scikit-learn.org/stable/modules/tree.html)

@@ -68,6 +68,9 @@ Peak load 600 requests/s, each takes 40 ms on one worker that handles one reques
 > [!question]- 200 req/s at 50 ms each – how many single-request workers at minimum?
 > $L=200\times0.05=10$ (plus headroom).
 
+## Practice
+**Project:** [[Project - Knowledge Distillation]] – compress a CNN into a 17× smaller student with knowledge distillation
+
 ## Learn more
 - [Made With ML — serving](https://madewithml.com/)
 - [Stanford CS329S — ML Systems Design](https://stanford-cs329s.github.io/)

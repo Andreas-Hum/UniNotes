@@ -122,6 +122,8 @@ $(0.4-0.5)\ln0.8=0.022$, $(0.3-0.3)\ln1=0$, $(0.3-0.2)\ln1.5=0.041$. Total PSI $
 ## Practice
 [MLOps Overview - Exercises](MLOps%20Overview%20-%20Exercises.ipynb): drift types, batch vs online serving, shadow/canary/A/B, training–serving skew, reproducibility, PSI and KS by hand and in code, A/B significance and sample size, Little's law, a data validator, data fingerprints and seeds, why concept drift is invisible to input monitors, and behavioural tests.
 
+**Project:** [[Project - Drift Detective]] – monitor drift and decay of a Danish electricity price model
+
 ## Learn more
 - [Made With ML — MLOps course](https://madewithml.com/)
 - [Stanford CS329S — ML Systems Design (Chip Huyen)](https://stanford-cs329s.github.io/)

@@ -125,5 +125,8 @@ Break up the reading: poke the [[Playgrounds]] after stages 2–5, do the [[Brea
 ## Anytime — Learn from the masters
 From stage 3 on, alternate months: reproduce one classic paper ([[Paper-to-Code Months]]) and explain one concept in a short animation ([[Explain-it Videos]]).
 
+## Anytime — Personal projects
+Apply each stage to your own data ([[Personal Projects]]): [[Danish Electricity Prices]] after stage 2 (and the time-series notes), [[My Own Recommender]] with the recommender section, [[Danish Mushroom Classifier]] after CNNs, [[Mini-GPT on Danish]] after transformers, and [[RAG over My Notes]] after LLMs. It doubles as an IT-ret study tool.
+
 ---
 Back to [[00 - Machine Learning Index]].

@@ -77,7 +77,7 @@ In words: raise the log-probability of the preferred answer $y_w$ and lower that
 ### Distillation
 The student matches the teacher's softened distribution:
 $$\mathcal L=\tau^2\,\mathrm{KL}\big(\text{softmax}(z_t/\tau)\,\|\,\text{softmax}(z_s/\tau)\big)\ (+\text{ordinary label loss}).$$
-A temperature $\tau>1$ reveals the teacher's "dark knowledge" (which wrong answers are *almost* right). The $\tau^2$ factor keeps gradient magnitudes comparable across temperatures. For LLMs, distillation often just means SFT on the big model's generated outputs.
+A temperature $\tau>1$ reveals the teacher's "dark knowledge" (which wrong answers are *almost* right). The $\tau^2$ factor keeps gradient magnitudes comparable across temperatures. For LLMs, distillation often just means SFT on the big model's generated outputs. Try it hands-on in [[Project - Knowledge Distillation]].
 
 ## Worked example
 **LoRA parameter count.** $d=k=1024$, $r=4$: full fine-tuning of this matrix trains $1024^2=1{,}048{,}576$ parameters; LoRA trains $4(1024+1024)=8{,}192$, i.e. $0.78\%$.
@@ -124,6 +124,8 @@ Tools: Hugging Face `transformers`, `peft`, `trl`. Back to [[LLMs Overview]].
 
 ## Practice
 [Fine-tuning and Alignment - Exercises](Fine-tuning%20and%20Alignment%20-%20Exercises.ipynb): choosing a method, the alignment pipeline, why the KL penalty, LoRA initialisation, parameter counts and memory budgets, Bradley–Terry, DPO by hand and vectorised, the closed-form RLHF optimum, LoRA forward pass and training, best rank-$r$ updates via SVD, and DPO on a toy policy.
+
+**Project:** [[Project - LoRA from Scratch]] – LoRA from scratch vs. full fine-tuning
 
 ## Learn more
 - [LoRA — Hu et al. 2021](https://arxiv.org/abs/2106.09685) · [QLoRA — Dettmers et al. 2023](https://arxiv.org/abs/2305.14314)

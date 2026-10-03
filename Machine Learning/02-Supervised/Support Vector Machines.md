@@ -130,6 +130,8 @@ Also: SVR (ε-insensitive regression), one-class SVM ([[Anomaly Detection]]).
 ## Practice
 [Support Vector Machines - Exercises](Support%20Vector%20Machines%20-%20Exercises.ipynb): why the maximum margin, reading $C$ and $\gamma$, SVM vs logistic regression, primal vs dual; by hand: margins and distances, a two-point hard margin, hinge loss, soft margin = hinge + L2, deriving the dual, reading KKT conditions, recovering $w$ and $b$; in code: primal subgradient descent, solving the dual QP, kernel predictions by hand, tuning $C$ and $\gamma$, support vectors vs $C$, SVR's ε-tube.
 
+**Project:** [[Project - SVM with Pegasos]] – train an SVM with Pegasos stochastic sub-gradients
+
 ## Learn more
 - [ISL / ISLP (free)](https://www.statlearning.com/) ch. 9
 - [scikit-learn – SVMs](https://scikit-learn.org/stable/modules/svm.html)

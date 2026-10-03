@@ -5,7 +5,7 @@ tags: [ml, index, moc]
 
 Entry point for everything ML. Notes are linked to each other, so open the **graph view** to see how they connect.
 
-> [!tip] Start here → [[00 - Learning Path]] · track it → [[00 - Progress Dashboard]] · one line a day → [[Today I Learned]] · want to play? → [[Playgrounds]] · [[RL Arcade]] · feeling behind? → [[Masters Self-Assessment]]
+> [!tip] Start here → [[00 - Learning Path]] · track it → [[00 - Progress Dashboard]] · one line a day → [[Today I Learned]] · want to play? → [[Playgrounds]] · [[RL Arcade]] · build something → [[Projects Overview]] · feeling behind? → [[Masters Self-Assessment]]
 > A step-by-step route from Python and math basics through classical ML, deep learning, NLP, vision, recommender systems, LLMs and MLOps, with links to free books, courses and papers at every stage.
 > Your own course notes live in [[8-semester/ML/ML Notes|8-semester/ML]] and [[8-semester/ML/Lecture Notes 1-12|Lecture Notes 1-12]].
 
@@ -91,3 +91,16 @@ Every topic note ends with a **Learn more** section with links to external resou
 ## 21 · Learn from the masters
 - [[Paper-to-Code Months]] – reproduce ResNet, word2vec, LightGCN and DDPM, one paper a month, with a write-up
 - [[Explain-it Videos]] – make a 3-minute Manim animation explaining one concept (worked example: gradient descent)
+
+## 22 · Personal projects
+- [[Personal Projects]] – overview: five end-to-end projects on data you care about
+- [[Mini-GPT on Danish]] – a GPT from scratch, trained on your own IT-ret notes
+- [[My Own Recommender]] – fold yourself into MovieLens + artist embeddings from your Spotify history
+- [[Danish Electricity Prices]] – forecast DK1 spot prices with Energi Data Service + DMI data
+- [[RAG over My Notes]] – a study chatbot over this vault, with links to the right note
+- [[Danish Mushroom Classifier]] – transfer learning on Danish iNaturalist photos (or your own)
+
+## 23 · Fun projects and topic projects
+- ⭐ [[Project - Build a Transformer from Scratch]] – build the full encoder–decoder Transformer yourself
+- [[Projects Overview]] – every hands-on project, by topic (Wordle, spam filter, image compression, Game of Life CNN, Kalman filter, bandits, vault PageRank, town names, drift, fairness)
+- [[Fun Projects]] – Connect Four AI, Danish road trip (GA), rock–paper–scissors mind reader, Sudoku solver, evolving art

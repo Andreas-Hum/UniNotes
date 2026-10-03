@@ -119,6 +119,8 @@ General metrics: [[Model Evaluation and Metrics]].
 
 [Evaluating Recommenders - Exercises](Evaluating%20Recommenders%20-%20Exercises.ipynb): precision/recall, HitRate, MRR, AP, NDCG with graded relevance, AUC, sampled metrics and IPS by hand; split leakage, beyond-accuracy metrics, offline vs online and metric choice; then top-K metrics, NDCG checked against sklearn, AUC by counting pairs, a leave-last-out split, measuring the random-split leak, sampled vs full HitRate and IPS/SNIPS in code.
 
+**Project:** [[Project - Sampled vs Full Ranking Metrics]] – sampled vs. full-ranking hit@10 on MovieLens
+
 ## Learn more
 
 - Krichene & Rendle, *On Sampled Metrics for Item Recommendation* (KDD 2020).

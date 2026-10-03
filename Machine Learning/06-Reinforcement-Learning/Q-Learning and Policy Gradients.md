@@ -167,6 +167,10 @@ Foundations: [[RL Basics and MDPs]].
 
 Learn by doing: [[RL Arcade]] – build Snake and Flappy Bird, then beat them with tabular Q-learning and a DQN (replay buffer, target network, ε-schedule).
 
+**Project:** [[Project - REINFORCE Plays CartPole]] – REINFORCE trains a neural policy to balance CartPole
+
+**Project:** [[Project - AlphaZero-Lite Tic-Tac-Toe]] – self-play + MCTS + a neural net learn tic-tac-toe, AlphaZero style
+
 ## Learn more
 - [Sutton & Barto (free)](http://incompleteideas.net/book/the-book-2nd.html) ch. 6 & 13
 - [OpenAI Spinning Up](https://spinningup.openai.com/)

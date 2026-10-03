@@ -159,6 +159,8 @@ BatchNorm, data augmentation, transfer learning from ImageNet, mixed precision (
 
 [CNN - Exercises](CNN%20-%20Exercises.ipynb): equivariance vs invariance, why ResNet skips help, transfer learning on a small medical dataset, output sizes, conv vs dense parameter counts, convolution and receptive fields by hand, then NumPy implementations of conv2d, a Sobel edge detector, im2col, conv and max-pool backward passes, an equivariance test, residual gradients and a 1-D conv.
 
+**Project:** [[Project - Game of Life CNN]] – hand-wire a CNN that computes the Game of Life, then try to train it
+
 ## Learn more
 
 - [Stanford CS231n](https://cs231n.stanford.edu/) · [notes](https://cs231n.github.io/)

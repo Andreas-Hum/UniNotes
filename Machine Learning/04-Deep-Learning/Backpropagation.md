@@ -111,6 +111,8 @@ Check one by hand: $L(w)=(2w-9)^2$, $dL/dw = 4(2w-9) = 4(-3) = -12$, matching th
 
 [Backpropagation - Exercises](Backpropagation%20-%20Exercises.ipynb): finite differences vs. backprop, vanishing gradients, checkpointing, chain rule and full backward passes by hand, gradient-checked layers, a full MLP, and your own micrograd.
 
+**Project:** [[Project - Neural Net in Pure NumPy]] – a 2-layer network with hand-written backprop and a gradient check
+
 ## Learn more
 - [3Blue1Brown – Neural Networks](https://www.3blue1brown.com/topics/neural-networks) (chapters "What is backpropagation really doing?" and "Backpropagation calculus")
 - [Karpathy – Zero to Hero](https://karpathy.ai/zero-to-hero.html) (micrograd)
