@@ -7,6 +7,7 @@ Obsidian vault with Andreas' university notes (Aalborg University, computer scie
 - `5-semester/` … `9-semester/` – **course notes** (lectures, exercises, PDFs). Keep these separate from the ML knowledge base.
 - `Machine Learning/` – **self-study ML knowledge base** (English). Entry points: `00 - Machine Learning Index.md`, `00 - Learning Path.md`, `10-Glossary/ML Formula Sheet.md`.
 - `9-semester/IT-lov/` – IT law course, notes in **Danish** (`00 - IT-ret Oversigt.md`, `Noter/`). Lectures 6–7 (immaterialret + IT-kontrakter) not written yet.
+- `Machine Learning/20-Play/` – interactive `ML Playgrounds.html` (vanilla JS, no dependencies), `Break the Model - Challenges.ipynb`, `Guess the Output - Quiz.ipynb` + guide notes.
 - `Attachments/` – images; `Attachments/ML Animations/` – GIFs embedded in ML notes.
 - `Generalt/` – misc notes, scripts, archive.
 
