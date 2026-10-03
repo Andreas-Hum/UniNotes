@@ -287,4 +287,39 @@ aliases: [Formelsamling, Formula Sheet]
 | Equalised odds | equal TPR **and** FPR across groups |
 | Shapley value | $\phi_i=\sum_{S\subseteq F\setminus\{i\}}\frac{|S|!\,(|F|-|S|-1)!}{|F|!}\big[v(S\cup\{i\})-v(S)\big]$ |
 
+## 25. Search, games and evolution → [[Fun Projects]], [[RL Basics and MDPs]]
+| | |
+|---|---|
+| A* priority | $f(n)=g(n)+h(n)$; optimal if $h$ is admissible ($h\le$ true cost) |
+| Manhattan heuristic | $|\Delta r|+|\Delta c|$ (admissible on 4-connected unit grids) |
+| Minimax | $V(s)=\max_a V(s')$ on your turn, $\min_a V(s')$ on the opponent's |
+| Alpha–beta | prune when $\alpha\ge\beta$; best case $O(b^{d/2})$ nodes instead of $O(b^d)$ |
+| (1+λ)-ES | sample $\theta'=\theta+\sigma\epsilon$, $\epsilon\sim\mathcal N(0,I)$; keep the best if it improves |
+| Simulated annealing | accept worse moves with prob. $e^{-\Delta/T}$, lower $T$ over time |
+
+## 26. Filtering, bandits and MCMC → [[Bayesian Inference]], [[MCMC]], [[RL Basics and MDPs]]
+| | |
+|---|---|
+| Kalman predict | $x\leftarrow Fx$, $P\leftarrow FPF^\top+Q$ |
+| Kalman update | $K=PH^\top(HPH^\top+R)^{-1}$, $x\leftarrow x+K(z-Hx)$, $P\leftarrow(I-KH)P$ |
+| Gaussian fusion (1-D) | $\mu=\frac{\sigma_2^2\mu_1+\sigma_1^2\mu_2}{\sigma_1^2+\sigma_2^2}$, $\frac1{\sigma^2}=\frac1{\sigma_1^2}+\frac1{\sigma_2^2}$ |
+| UCB1 | $\arg\max_a\hat\mu_a+\sqrt{2\ln t/n_a}$ |
+| Thompson (Bernoulli) | sample $\theta_a\sim\mathrm{Beta}(1+s_a,1+f_a)$, play $\arg\max_a\theta_a$ |
+| Regret | $R_T=T\mu^*-\sum_t\mu_{a_t}$ |
+| Metropolis acceptance | $\min\big(1,\frac{p(x')}{p(x)}\big)$ for a symmetric proposal |
+| Policy evaluation (closed form) | $V^\pi=(I-\gamma P_\pi)^{-1}R_\pi$ |
+
+## 27. Graphs, features and tokens → [[Graph ML Overview]], [[Computer Vision Overview]], [[LLMs Overview]]
+| | |
+|---|---|
+| PageRank | $r=\frac{1-d}{n}\mathbf 1+d\big(P^\top r+\frac1n\sum_{j\,\text{dangling}}r_j\mathbf 1\big)$, $d=0.85$ |
+| Fiedler cut | sign of the 2nd eigenvector of $L_{sym}=I-D^{-1/2}AD^{-1/2}$ |
+| Normalised cut | $\mathrm{Ncut}(A,B)=\mathrm{cut}(A,B)\big(\frac1{\mathrm{vol}A}+\frac1{\mathrm{vol}B}\big)$ |
+| Sobel $x$ | $\begin{bmatrix}-1&0&1\\-2&0&2\\-1&0&1\end{bmatrix}$ |
+| Gradient orientation (HOG) | $\theta=\arctan2(g_y,g_x)\bmod180°$, histogram weighted by $\sqrt{g_x^2+g_y^2}$ |
+| BPE step | merge the most frequent adjacent symbol pair; repeat for $k$ merges |
+| Gini impurity / information gain | $1-\sum p_k^2$ / $H(\text{parent})-\sum_c\frac{n_c}{n}H(c)$ |
+| Robust z-score | $\frac{x-\mathrm{median}}{1.4826\,\mathrm{MAD}}$ |
+| Seasonal anomaly forecast | $\hat y_{t+h}=\mathrm{clim}_{t+h}+\phi^h(y_t-\mathrm{clim}_t)$ |
+
 See also: [[ML Glossary]] · [[Exam Checklist]] · [[8-semester/ML/cheetsheet|Course cheat sheet (8th semester)]]

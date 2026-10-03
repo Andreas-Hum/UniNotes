@@ -7,7 +7,7 @@ reviewed:
 # Fun Projects
 
 > [!summary] In one sentence
-> Five small, game-like AI projects for an evening each: a Connect Four opponent, a Danish road-trip optimiser, a rock–paper–scissors mind reader, a Sudoku solver and evolving art. Each is a notebook with TODOs, ✅ checks and hidden solutions.
+> Ten small, game-like AI projects for an evening each: a Connect Four opponent, a Danish road-trip optimiser, a rock–paper–scissors mind reader, a Sudoku solver, evolving art, an A* pathfinder, twenty questions, CartPole neuroevolution, a 1961 matchbox learner and a melody composer. Each is a notebook with TODOs, ✅ checks and hidden solutions.
 
 | Project | The AI idea | Result with the reference solution |
 |---|---|---|
@@ -16,6 +16,11 @@ reviewed:
 | [Rock Paper Scissors Mind Reader](Rock%20Paper%20Scissors%20Mind%20Reader.ipynb) | n-gram (Markov) prediction of your next move | wins 93 % vs. a patterned bot, breaks even vs. true randomness; try `play_me()` |
 | [Sudoku Solver](Sudoku%20Solver.ipynb) | constraint satisfaction: backtracking + MRV heuristic | hard puzzle: 482 search nodes with MRV vs. ~9.7 million left-to-right |
 | [Evolving Art](Evolving%20Art.ipynb) | (1+1) evolution strategy / hill climbing | 50 translucent circles approximate a photo; loss more than halves in 4,000 steps |
+| [A-Star Pathfinder](A-Star%20Pathfinder.ipynb) | A* search with an admissible heuristic | 60×60 maze: same 120-step path as BFS, 1,477 vs 2,551 squares expanded |
+| [Twenty Questions - Danish Animals](Twenty%20Questions%20-%20Danish%20Animals.ipynb) | max-entropy questions = decision-tree splits | 24 animals guessed in 4.54 questions on average; seal/porpoise and pig/horse need a new question |
+| [CartPole Neuroevolution](CartPole%20Neuroevolution.ipynb) | evolution strategy on a 4-weight linear policy | balances the full 500 steps, also from 10 unseen starts |
+| [MENACE - Matchbox Tic-Tac-Toe](MENACE%20-%20Matchbox%20Tic-Tac-Toe.ipynb) | Michie's 1961 bead-counting reinforcement learner | loss rate vs. a random player 32 % → 19 % in 4,000 games |
+| [Markov Melody Machine](Markov%20Melody%20Machine.ipynb) | order-k Markov chains, synthesised to WAV | order 2 composes new tunes; order 4 copies 72 % of 8-note stretches |
 
 ## What each one teaches
 - **Connect Four:** adversarial search, why move ordering makes pruning effective, and evaluation heuristics. It's the classical ancestor of AlphaZero (search + learned evaluation). See [[RL Basics and MDPs]].
@@ -23,6 +28,12 @@ reviewed:
 - **Mind Reader:** humans aren't random, and an n-gram model is a tiny language model over three "words". Measure your own entropy with [[Information Theory]].
 - **Sudoku:** search with good heuristics turns an impossible search into a trivial one: MRV is "fail first". See [[Probabilistic Graphical Models]] for constraints as factors.
 - **Evolving Art:** what you can and can't do without a gradient. Compare with [[Gradient Descent]] in the stretch goal (differentiable rendering).
+
+- **A\*:** heuristic search; why an admissible heuristic keeps the path optimal.
+- **Twenty questions:** entropy-maximising questions, the same rule a decision tree uses ([[Decision Trees]]).
+- **CartPole:** control without gradients; a 4-number policy is enough.
+- **MENACE:** reinforcement learning as bead counting, decades before deep RL ([[Q-Learning and Policy Gradients]]).
+- **Melodies:** the n-gram order trade-off between nonsense and copying, by ear.
 
 ## Check yourself
 > [!question]- Why does alpha–beta return exactly the same move as plain minimax?
