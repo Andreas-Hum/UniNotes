@@ -19,6 +19,11 @@ tags: [ml, project, overview]
 | [[NLP Overview]] | [[Project - Danish Town Name Generator]] | character language models, NLL, sampling |
 | [[MLOps Overview]] | [[Project - Drift Detective]] | PSI, alerting, retraining, alert fatigue |
 | [[Explainability and Fairness]] | [[Project - Fairness Audit]] | demographic parity, equal opportunity, impossibility results |
+| [[Bias-Variance Tradeoff]] | [[Project - How Much Data Do I Need]] | learning curves → more data or a better model? |
+| [[Gradient Descent]] | [[Project - Optimizer Race]] | GD vs. momentum vs. Adam on hard landscapes |
+| [[Decision Trees]] | [[Project - Decision Tree from Scratch]] | Gini, greedy splits, depth vs. overfitting |
+| [[k-Nearest Neighbors]] | [[Project - kNN and the Curse of Dimensionality]] | vectorised kNN, distance concentration |
+| [[Anomaly Detection]] | [[Project - Price Anomaly Hunter]] | robust statistics, Isolation Forest, precision/recall without labels |
 
 ## Elsewhere
 - [[Fun Projects]]: Connect Four AI, Danish road trip, rock–paper–scissors mind reader, Sudoku solver, evolving art.

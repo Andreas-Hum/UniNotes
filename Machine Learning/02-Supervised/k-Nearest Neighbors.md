@@ -113,6 +113,8 @@ For $x, z \in\mathbb R^D$:
 ## Practice
 [k-Nearest Neighbors - Exercises](k-Nearest%20Neighbors%20-%20Exercises.ipynb): lazy learning, the role of $k$, distance concentration, k-d trees and ANN; by hand: 1-D votes, weighted regression, four distances, scaling, neighbourhood size, Cover–Hart; in code: vectorised distances, a k-NN classifier and weighted regressor, choosing $k$ by CV, scaling on the wine data, the curse of dimensionality and a Cover–Hart simulation.
 
+**Project:** [[Project - kNN and the Curse of Dimensionality]] – kNN from scratch and the curse of dimensionality
+
 ## Learn more
 - [scikit-learn – nearest neighbors](https://scikit-learn.org/stable/modules/neighbors.html)
 - [ISL / ISLP (free)](https://www.statlearning.com/) ch. 2

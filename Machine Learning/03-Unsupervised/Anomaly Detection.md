@@ -136,6 +136,8 @@ Make sure higher score means more anomalous (scikit-learn's `score_samples` and 
 ## Practice
 [Anomaly Detection - Exercises](Anomaly%20Detection%20-%20Exercises.ipynb): PR-AUC baselines, z-score vs robust scores, IQR fences, Mahalanobis, Isolation Forest scores, LOF from scratch, PCA reconstruction error, time-series spikes and CUSUM.
 
+**Project:** [[Project - Price Anomaly Hunter]] – find anomalies in Danish electricity prices with robust z-scores and Isolation Forest
+
 ## Learn more
 - [scikit-learn – novelty & outlier detection](https://scikit-learn.org/stable/modules/outlier_detection.html)
 - [scikit-learn – precision-recall](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html): why average precision is the right summary for rare positives.

@@ -121,6 +121,8 @@ Related: [[Cross-Validation and Model Selection]].
 ## Practice
 [Bias-Variance Tradeoff - Exercises](Bias-Variance%20Tradeoff%20-%20Exercises.ipynb)
 
+**Project:** [[Project - How Much Data Do I Need]] – learning curves that tell you whether to collect more data or change the model
+
 ## Learn more
 - [ISL / ISLP (free)](https://www.statlearning.com/) ch. 2
 - [Elements of Statistical Learning (free)](https://hastie.su.domains/ElemStatLearn/) ch. 7
