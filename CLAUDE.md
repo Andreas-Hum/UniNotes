@@ -8,6 +8,7 @@ Obsidian vault with Andreas' university notes (Aalborg University, computer scie
 - `Machine Learning/` – **self-study ML knowledge base** (English). Entry points: `00 - Machine Learning Index.md`, `00 - Learning Path.md`, `10-Glossary/ML Formula Sheet.md`.
 - `9-semester/IT-lov/` – IT law course, notes in **Danish** (`00 - IT-ret Oversigt.md`, `Noter/`). Lectures 6–7 (immaterialret + IT-kontrakter) not written yet.
 - `Machine Learning/20-Play/` – interactive `ML Playgrounds.html` (vanilla JS, no dependencies), `Break the Model - Challenges.ipynb`, `Guess the Output - Quiz.ipynb` + guide notes.
+- `Machine Learning/21-Learn-from-the-Masters/` – `Paper-to-Code Months.md` + `Paper-to-Code 1–4` notebooks (ResNet, word2vec, LightGCN, DDPM; need PyTorch, download data to `./data`, gitignored) and `Explain-it Videos.md` + Manim example `explain_it_gradient_descent.py` (Text only, no LaTeX; preview MP4 in `Attachments/ML Animations/`).
 - `Machine Learning/00 - Progress Dashboard.md` – Dataview dashboard. Tracked topic notes carry properties `status` (not-started|reading|done), `notebook` (not-started|in-progress|done, only if a sibling notebook exists), `level` (E|D|I|C), `reviewed` (date). Give new topic notes these properties too.
 - `Journal/TIL/YYYY-MM-DD.md` – "Today I learned" daily notes (core Daily notes plugin, template `Templates/TIL.md`, inline fields `til::` and `topic::`).
 - `Attachments/` – images; `Attachments/ML Animations/` – GIFs embedded in ML notes.

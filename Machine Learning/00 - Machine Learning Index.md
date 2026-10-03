@@ -84,3 +84,7 @@ Every topic note ends with a **Learn more** section with links to external resou
 - [[Playgrounds]] – interactive SVM, k-means, gradient descent, attention and XOR net
 - [[Break the Model]] – 7 break-it-then-fix-it challenges
 - [[Guess the Output]] – 12 predict-then-run quiz questions
+
+## 21 · Learn from the masters
+- [[Paper-to-Code Months]] – reproduce ResNet, word2vec, LightGCN and DDPM, one paper a month, with a write-up
+- [[Explain-it Videos]] – make a 3-minute Manim animation explaining one concept (worked example: gradient descent)

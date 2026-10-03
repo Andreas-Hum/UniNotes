@@ -122,5 +122,8 @@ graph LR
 ## Anytime — Play
 Break up the reading: poke the [[Playgrounds]] after stages 2–5, do the [[Break the Model]] challenges after stage 2, and take the [[Guess the Output]] quiz after stage 5 (and again a month later).
 
+## Anytime — Learn from the masters
+From stage 3 on, alternate months: reproduce one classic paper ([[Paper-to-Code Months]]) and explain one concept in a short animation ([[Explain-it Videos]]).
+
 ---
 Back to [[00 - Machine Learning Index]].

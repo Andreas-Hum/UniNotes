@@ -13,3 +13,8 @@ __pycache__/
 # Flutter build output
 .dart_tool/
 build/
+
+# Datasets downloaded by the Paper-to-Code notebooks
+Machine Learning/21-Learn-from-the-Masters/data/
+# Manim render output
+Machine Learning/21-Learn-from-the-Masters/media/
