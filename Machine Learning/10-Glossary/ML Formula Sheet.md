@@ -322,4 +322,22 @@ aliases: [Formelsamling, Formula Sheet]
 | Robust z-score | $\frac{x-\mathrm{median}}{1.4826\,\mathrm{MAD}}$ |
 | Seasonal anomaly forecast | $\hat y_{t+h}=\mathrm{clim}_{t+h}+\phi^h(y_t-\mathrm{clim}_t)$ |
 
+## 28. Building blocks you implemented → [[Projects Overview]]
+| | |
+|---|---|
+| Encoder–decoder attention | self-attn (causal in the decoder) → cross-attn $\mathrm{softmax}(Q_{dec}K_{enc}^\top/\sqrt{d})V_{enc}$ → FFN, each with pre-LN residuals |
+| Teacher forcing | decoder input = target shifted right (`BOS` + $y_{<t}$), loss on $y_t$ |
+| PUCT (AlphaZero) | $a^*=\arg\max_a Q(a)+c\,P(a)\frac{\sqrt{\sum_bN(b)}}{1+N(a)}$ |
+| AlphaZero loss | $-\pi^\top\log p_\theta(s)+(v_\theta(s)-z)^2$ (+ weight decay) |
+| DQN target | $y=r+\gamma\max_{a'}Q_{\bar\theta}(s',a')(1-\text{done})$, Huber loss, target net $\bar\theta$ |
+| Monte Carlo control | $Q(s,a)\leftarrow Q(s,a)+\frac1{N(s,a)}(G-Q(s,a))$ |
+| Regret matching (CFR) | $\sigma(a)\propto\max(R(a),0)$; average strategy → Nash equilibrium |
+| ELBO (reparameterised) | $\mathbb E_{\epsilon}[\log p(y,w=\mu+\sigma\epsilon)]+\sum_j\log\sigma_j$ |
+| EM for GMMs | E: $r_{ik}\propto\pi_k\mathcal N(x_i\mid\mu_k,\Sigma_k)$; M: $\pi_k=\frac{N_k}{n}$, $\mu_k=\frac{\sum_ir_{ik}x_i}{N_k}$, $\Sigma_k=\frac{\sum_ir_{ik}(x_i-\mu_k)(x_i-\mu_k)^\top}{N_k}$ |
+| GP posterior | $\mu_*=K_*^\top(K+\sigma_n^2I)^{-1}y$, $\Sigma_*=K_{**}-K_*^\top(K+\sigma_n^2I)^{-1}K_*$ |
+| Pegasos step | $\eta_t=\frac1{\lambda t}$; $w\leftarrow(1-\eta_t\lambda)w+\eta_t y_ix_i\,[y_iw^\top x_i<1]$ |
+| Ridge closed form | $\hat w=(X^\top X+\lambda I)^{-1}X^\top y$ |
+| Knuth minimax (Mastermind) | choose $g$ minimising $\max_f|\{s\in S: \mathrm{fb}(g,s)=f\}|$ |
+| Walk-forward split $k$ | train $=[0,\,t_k-\text{gap})$, test $=[t_k,\,t_k+h)$ |
+
 See also: [[ML Glossary]] · [[Exam Checklist]] · [[8-semester/ML/cheetsheet|Course cheat sheet (8th semester)]]
