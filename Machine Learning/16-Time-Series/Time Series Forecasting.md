@@ -6,6 +6,8 @@ tags: [ml, time-series]
 > [!summary] In one sentence
 > Forecasting predicts future values of a sequence from its own past (and maybe other signals) by modelling trend, seasonality and the autocorrelation left over, and it must be evaluated strictly forward in time against simple baselines.
 
+Deeper notes: [[Classical Forecasting Models]] · [[Deep Learning for Time Series]] · [[Time Series Validation and Features]].
+
 ## Intuition first
 
 A time series is a sequence of measurements in time order: daily sales, hourly electricity load, monthly airline passengers. What makes it different from ordinary tabular data is that **order matters and the rows are not independent**: today's value is strongly related to yesterday's.

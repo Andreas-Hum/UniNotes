@@ -6,6 +6,8 @@ tags: [ml, vision, index]
 > [!summary] In one sentence
 > Computer vision tasks differ mainly in *what the output looks like* (one label, a set of boxes, a label per pixel, a mask per object, keypoints, a new image, text), and each output type comes with its own model family, its own augmentation rules and its own metric such as top-k accuracy, IoU, mAP, Dice or FID.
 
+Deeper notes: [[CNN Architectures]] · [[Object Detection]] · [[Image Segmentation]].
+
 ## Intuition first
 
 Show a photo of a street to a person and ask different questions:

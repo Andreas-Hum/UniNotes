@@ -8,6 +8,8 @@ tags: [ml, deep-learning, nlp, attention]
 
 *Attention Is All You Need* (Vaswani et al., 2017).
 
+See also [[Attention Mechanism]] for a deeper look at Q, K, V, masking, multi-head shapes and KV caching.
+
 ## Intuition first
 
 Consider "The cat sat because **it** was tired." To understand *it*, you look back at the other words and decide that *cat* is the one that matters. Attention turns that into arithmetic:

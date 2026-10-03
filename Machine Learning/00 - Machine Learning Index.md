@@ -30,7 +30,7 @@ Every topic note ends with a **Learn more** section with links to external resou
 
 ## 04 · Deep learning
 - [[Neural Networks]] · [[Backpropagation]] · [[Optimizers]] · [[Activation Functions]]
-- [[CNN]] · [[RNN and LSTM]] · [[Transformers]] · [[Self-Supervised and Contrastive Learning]] · [[Generative Models]] · [[Training Tricks]]
+- [[CNN]] · [[RNN and LSTM]] · [[Attention Mechanism]] · [[Transformers]] · [[Self-Supervised and Contrastive Learning]] · [[Generative Models]] · [[Training Tricks]]
 
 ## 05 · Probabilistic ML
 - [[Bayesian Inference]] · [[Probabilistic Graphical Models]] · [[Variational Inference]] · [[MCMC]]
@@ -48,7 +48,7 @@ Every topic note ends with a **Learn more** section with links to external resou
 - [[Books]] · [[Online Courses]] · [[Papers]] · [[Datasets]] · [[Tools and Libraries]] · [[YouTube and Blogs]] · [[Cheatsheets and Reference Sites]]
 
 ## 10 · Glossary
-- [[ML Glossary]]
+- [[ML Glossary]] · [[ML Formula Sheet]] (formelsamling)
 
 ## 11 · Code
 - [[NumPy Snippets]] · [[scikit-learn Recipes]] · [[PyTorch Recipes]]
@@ -61,16 +61,16 @@ Every topic note ends with a **Learn more** section with links to external resou
 - [[NLP Overview]] · [[Text Representations]]
 
 ## 14 · Computer vision
-- [[Computer Vision Overview]]
+- [[Computer Vision Overview]] · [[CNN Architectures]] · [[Object Detection]] · [[Image Segmentation]]
 
 ## 15 · LLMs & generative AI
 - [[LLMs Overview]] · [[Fine-tuning and Alignment]] · [[RAG and Agents]]
 
 ## 16 · Time series
-- [[Time Series Forecasting]]
+- [[Time Series Forecasting]] · [[Classical Forecasting Models]] · [[Deep Learning for Time Series]] · [[Time Series Validation and Features]]
 
 ## 17 · MLOps
-- [[MLOps Overview]]
+- [[MLOps Overview]] · [[Model Deployment and Serving]] · [[Experiment Tracking and Reproducibility]] · [[Data and Feature Management]]
 
 ## 18 · Responsible AI
 - [[Explainability and Fairness]]
