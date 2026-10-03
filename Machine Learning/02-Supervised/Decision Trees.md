@@ -127,4 +127,4 @@ Fix variance with [[Ensemble Methods]] (Random Forest, Gradient Boosting).
 - [ISL / ISLP (free)](https://www.statlearning.com/) ch. 8
 - [scikit-learn – decision trees](https://scikit-learn.org/stable/modules/tree.html)
 - [StatQuest videos](https://statquest.org/video_index.html)
-- [R2D3 – A visual introduction to machine learning](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/): a scrolling animation of a tree splitting houses in San Francisco vs New York
+- [R2D3 – A visual introduction to machine learning](https://r2d3.us/visual-intro-to-machine-learning-part-1/): a scrolling animation of a tree splitting houses in San Francisco vs New York
