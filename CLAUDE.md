@@ -14,7 +14,7 @@ Obsidian vault with Andreas' university notes (Aalborg University, computer scie
 - Frontmatter `tags: [ml, <topic>]`; sections: summary callout ("In one sentence") → Intuition first → The math, step by step → Worked example → Common confusions → Check yourself (`> [!question]-` callouts) → Practice (link to notebook) → Learn more (verified links only).
 - Each topic note may have a sibling `<Note> - Exercises.ipynb` (saved without outputs).
 - Use `[[wikilinks]]` by note name; add new notes to the index and learning path.
-- Notes without notebooks/animations yet: Attention Mechanism, CNN Architectures, Object Detection, Image Segmentation, Classical Forecasting Models, Deep Learning for Time Series, Time Series Validation and Features, Model Deployment and Serving, Experiment Tracking and Reproducibility, Data and Feature Management.
+- Notes without notebooks/animations yet: Image Segmentation, Classical Forecasting Models, Deep Learning for Time Series, Time Series Validation and Features, Model Deployment and Serving, Experiment Tracking and Reproducibility, Data and Feature Management.
 
 ## Working rules
 - Only add external links that have been verified; arXiv abs links are preferred for papers.
