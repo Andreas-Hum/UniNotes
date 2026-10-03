@@ -1,5 +1,9 @@
 ---
 tags: [ml, supervised, regression]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Linear Regression
 

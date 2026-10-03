@@ -1,5 +1,9 @@
 ---
 tags: [ml, supervised, probabilistic, kernels]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Gaussian Processes
 

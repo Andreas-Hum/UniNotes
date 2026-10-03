@@ -1,5 +1,8 @@
 ---
 tags: [ml, recsys, project]
+status: not-started
+level:
+reviewed:
 ---
 # Project - MovieLens Recommender
 

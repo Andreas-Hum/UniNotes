@@ -1,5 +1,9 @@
 ---
 tags: [ml, nlp]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Text Representations
 

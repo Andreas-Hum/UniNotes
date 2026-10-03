@@ -1,5 +1,9 @@
 ---
 tags: [ml, probabilistic, graphical-models]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Probabilistic Graphical Models
 

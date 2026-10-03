@@ -1,5 +1,9 @@
 ---
 tags: [ml, deep-learning, representation-learning]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Self-Supervised and Contrastive Learning
 

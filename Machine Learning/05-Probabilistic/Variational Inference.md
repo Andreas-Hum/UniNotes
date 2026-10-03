@@ -1,5 +1,9 @@
 ---
 tags: [ml, probabilistic, vi]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Variational Inference
 

@@ -1,5 +1,8 @@
 ---
 tags: [ml, play, challenges]
+status: not-started
+level:
+reviewed:
 ---
 # Break the Model
 

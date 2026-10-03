@@ -1,5 +1,8 @@
 ---
 tags: [ml, time-series, deep-learning]
+status: not-started
+level:
+reviewed:
 ---
 # Deep Learning for Time Series
 

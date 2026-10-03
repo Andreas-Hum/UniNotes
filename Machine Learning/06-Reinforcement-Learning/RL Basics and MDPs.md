@@ -1,5 +1,9 @@
 ---
 tags: [ml, rl]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # RL Basics and MDPs
 

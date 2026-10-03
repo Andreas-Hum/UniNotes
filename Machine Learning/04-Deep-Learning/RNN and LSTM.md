@@ -1,5 +1,9 @@
 ---
 tags: [ml, deep-learning, sequence]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # RNN and LSTM
 

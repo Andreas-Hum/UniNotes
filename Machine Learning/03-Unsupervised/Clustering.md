@@ -1,5 +1,9 @@
 ---
 tags: [ml, unsupervised, clustering]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Clustering
 

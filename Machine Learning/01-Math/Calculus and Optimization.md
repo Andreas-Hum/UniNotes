@@ -1,5 +1,9 @@
 ---
 tags: [ml, math, optimization]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Calculus and Optimization
 

@@ -1,5 +1,9 @@
 ---
 tags: [ml, fundamentals, features]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Feature Engineering
 

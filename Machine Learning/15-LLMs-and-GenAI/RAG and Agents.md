@@ -1,5 +1,9 @@
 ---
 tags: [ml, llm]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # RAG and Agents
 

@@ -1,5 +1,9 @@
 ---
 tags: [ml, fundamentals, workflow]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # ML Workflow
 

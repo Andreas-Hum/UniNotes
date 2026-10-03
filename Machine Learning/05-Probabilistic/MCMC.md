@@ -1,5 +1,9 @@
 ---
 tags: [ml, probabilistic, sampling]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # MCMC
 

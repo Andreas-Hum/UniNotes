@@ -1,5 +1,9 @@
 ---
 tags: [ml, masters, projects]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Implement From Scratch
 

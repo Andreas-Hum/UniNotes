@@ -1,5 +1,9 @@
 ---
 tags: [ml, fundamentals, theory]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Bias-Variance Tradeoff
 

@@ -1,5 +1,9 @@
 ---
 tags: [ml, math, linear-algebra]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Linear Algebra for ML
 

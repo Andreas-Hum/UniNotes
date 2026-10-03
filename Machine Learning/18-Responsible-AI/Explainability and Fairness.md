@@ -1,5 +1,9 @@
 ---
 tags: [ml, responsible-ai]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Explainability and Fairness
 

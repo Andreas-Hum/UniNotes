@@ -1,5 +1,9 @@
 ---
 tags: [ml, graph, deep-learning]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Graph Neural Networks
 

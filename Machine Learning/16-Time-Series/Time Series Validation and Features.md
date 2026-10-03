@@ -1,5 +1,8 @@
 ---
 tags: [ml, time-series, evaluation, features]
+status: not-started
+level:
+reviewed:
 ---
 # Time Series Validation and Features
 

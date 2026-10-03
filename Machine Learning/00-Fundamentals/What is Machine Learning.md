@@ -1,5 +1,9 @@
 ---
 tags: [ml, fundamentals]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # What is Machine Learning
 

@@ -1,5 +1,9 @@
 ---
 tags: [ml, supervised, classification]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Linear Models for Classification
 

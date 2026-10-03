@@ -1,5 +1,9 @@
 ---
 tags: [ml, deep-learning, optimization]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Backpropagation
 

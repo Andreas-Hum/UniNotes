@@ -1,5 +1,8 @@
 ---
 tags: [ml, masters, research]
+status: not-started
+level:
+reviewed:
 ---
 # Research Skills
 

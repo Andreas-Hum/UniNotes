@@ -1,5 +1,9 @@
 ---
 tags: [ml, probabilistic, bayesian]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Bayesian Inference
 

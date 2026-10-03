@@ -1,5 +1,9 @@
 ---
 tags: [ml, recsys]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Collaborative Filtering and Matrix Factorization
 

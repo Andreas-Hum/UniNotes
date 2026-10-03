@@ -1,5 +1,9 @@
 ---
 tags: [ml, causality, masters]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Causal Inference
 

@@ -1,5 +1,9 @@
 ---
 tags: [ml, math, information-theory]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Information Theory
 

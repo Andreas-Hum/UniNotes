@@ -1,5 +1,9 @@
 ---
 tags: [ml, supervised, probabilistic]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Naive Bayes
 

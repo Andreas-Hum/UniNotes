@@ -1,5 +1,9 @@
 ---
 tags: [ml, fundamentals, evaluation]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Model Evaluation and Metrics
 

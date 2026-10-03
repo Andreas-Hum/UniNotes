@@ -1,5 +1,9 @@
 ---
 tags: [ml, deep-learning, practice]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Training Tricks
 

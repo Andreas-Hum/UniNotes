@@ -1,5 +1,8 @@
 ---
 tags: [ml, play, quiz]
+status: not-started
+level:
+reviewed:
 ---
 # Guess the Output
 

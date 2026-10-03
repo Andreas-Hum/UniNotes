@@ -1,5 +1,9 @@
 ---
 tags: [ml, supervised, trees]
+status: not-started
+notebook: not-started
+level:
+reviewed:
 ---
 # Decision Trees
 
