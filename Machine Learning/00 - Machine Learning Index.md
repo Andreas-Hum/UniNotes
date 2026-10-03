@@ -84,3 +84,4 @@ Every topic note ends with a **Learn more** section with links to external resou
 - [[Playgrounds]] – interactive SVM, k-means, gradient descent, attention and XOR net
 - [[Break the Model]] – 7 break-it-then-fix-it challenges
 - [[Guess the Output]] – 12 predict-then-run quiz questions
+- [[Weekly Challenges]] – one evening, one dataset: beat the target score (4 challenges, increasing difficulty)
