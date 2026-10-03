@@ -143,6 +143,8 @@ Fine-tuning, LoRA, RLHF ([[Q-Learning and Policy Gradients]]), retrieval-augment
 
 [Transformers - Exercises](Transformers%20-%20Exercises.ipynb): permutation equivariance, the model families, pre-LN and warm-up, attention and $\sqrt{d_k}$ by hand, parameter, compute and KV-cache counts, then NumPy implementations of stable softmax and attention, softmax saturation, causal masking, multi-head attention, sinusoidal encodings, RoPE, LayerNorm forward/backward and a full pre-LN encoder block.
 
+**Project:** [[Project - Build a Transformer from Scratch]] – build an encoder–decoder Transformer that translates Danish dates to ISO
+
 ## Learn more
 
 - [MIT 6.S191 — sequence models & transformers lecture](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)

@@ -6,6 +6,9 @@ tags: [ml, project, overview]
 > [!summary] In one sentence
 > Every hands-on project in the knowledge base in one place: each topic project lives next to the topic it teaches, the fun ones live in [[Fun Projects]], and the ones built on your own data live in [[Personal Projects]].
 
+## ⭐ Flagship
+- [[Project - Build a Transformer from Scratch]]: the full encoder–decoder Transformer, built piece by piece, translating Danish dates. If you do one project, do this one.
+
 ## Topic projects (learn the topic by building something)
 | Topic | Project | You'll learn |
 |---|---|---|
